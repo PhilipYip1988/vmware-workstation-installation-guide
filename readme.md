@@ -176,7 +176,31 @@ An error message, failed to start monitor device will display:
 
 ## Configuring Secure Boot
 
-Secure Boot will block the Virtual Monitor Kernel Module and Virtual Network Adaptor Module. A Machine Owner Key (MOK) must be created which signs these modules.
+Secure Boot will block the Virtual Monitor Kernel Module and Virtual Network Adaptor Module. A Machine Owner Key (MOK) must be created which signs these modules. Open the Terminal:
+
+<img src='./images/img_039.png' alt='img_039' width='600'/>
+
+Navigate to Documents in the terminal using the command change directory `cd`:
+
+```bash
+cd ~/Documents
+```
+
+<img src='./images/img_040.png' alt='img_040' width='600'/>
+
+Create a new directory called mok using the command make directory:
+
+```bash
+mkdir mok
+```
+
+Navigate to this directory using:
+
+```bash
+cd mok
+```
+
+<img src='./images/img_041.png' alt='img_041' width='600'/>
 
 Generate a new Machine Owner Key:
 
@@ -184,11 +208,21 @@ Generate a new Machine Owner Key:
 openssl req -new -x509 -newkey rsa:2048 -keyout VMWARE17.priv -outform DER -out VMWARE17.der -nodes -days 36500 -subj "/CN=VMWARE/"
 ```
 
+<img src='./images/img_042.png' alt='img_042' width='600'/>
+
+The following files will be created:
+
+<img src='./images/img_043.png' alt='img_043' width='600'/>
+
 Sign the kernel module vmmon:
 
 ```bash
 sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file sha256 ./VMWARE17.priv ./VMWARE17.der $(modinfo -n vmmon)
 ```
+
+<img src='./images/img_044.png' alt='img_044' width='600'/>
+
+<img src='./images/img_045.png' alt='img_045' width='600'/>
 
 Sign the kernel module vmnet:
 
@@ -196,11 +230,16 @@ Sign the kernel module vmnet:
 sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file sha256 ./VMWARE17.priv ./VMWARE17.der $(modinfo -n vmnet)
 ```
 
+<img src='./images/img_046.png' alt='img_046' width='600'/>
+
+
 Importing the MOK with MOK management system:
 
 ```bash
 sudo mokutil --import VMWARE17.der
 ```
+
+<img src='./images/img_047.png' alt='img_047' width='600'/>
 
 In the terminal create a MOK password for example:
 
@@ -208,25 +247,55 @@ In the terminal create a MOK password for example:
 vmware1234
 ```
 
+<img src='./images/img_048.png' alt='img_048' width='600'/>
+
 Confirm the password:
 
 ```
 vmware1234
 ```
 
-Input:
+<img src='./images/img_049.png' alt='img_049' width='600'/>
+
+Reboot using:
 
 ```bash
 sudo reboot
 ```
 
-In the BIOS Setup, select Enrol MOK and supply the password above:
+<img src='./images/img_050.png' alt='img_050' width='600'/>
+
+The system will reboot to BIOS:
+
+<img src='./images/img_051.png' alt='img_051' width='600'/>
+
+And display MOK management:
+
+<img src='./images/img_052.png' alt='img_052' width='600'/>
+
+Select Enrol MOK:
+
+<img src='./images/img_053.png' alt='img_053' width='600'/>
+
+Select Continue:
+
+<img src='./images/img_054.png' alt='img_054' width='600'/>
+
+Select Yes:
+
+<img src='./images/img_055.png' alt='img_055' width='600'/>
+
+Input the MOK created earlier:
 
 ```
 vmware1234
 ```
 
-This section may need to be repeated after a significant update.
+Select Reboot:
+
+<img src='./images/img_056.png' alt='img_056' width='600'/>
+
+**This section may need to be repeated after a significant VMware or Ubuntu update.**
 
 ## Installing Windows 11 in a VM
 
