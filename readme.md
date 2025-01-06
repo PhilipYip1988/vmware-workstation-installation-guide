@@ -134,24 +134,49 @@ The ISO will download:
 
 <img src='./images/img_027.png' alt='img_027' width='600'/>
 
+Select File → Create a New Virtual Machine:
 
+<img src='./images/img_028.png' alt='img_028' width='600'/>
 
+Select the Windows 11 ISO and select Open:
 
+<img src='./images/img_030.png' alt='img_030' width='600'/>
 
+Windows 11 will automatically be detected and the default VM settings for Windows 11 will be applied:
 
+<img src='./images/img_031.png' alt='img_031' width='600'/>
 
+The name and location of the VM will be shown. Select Next:
 
+<img src='./images/img_032.png' alt='img_032' width='600'/>
 
+Windows 11 requires an encryption key for the TPM. Input an 8 digit password and confirm the password:
 
+<img src='./images/img_033.png' alt='img_033' width='600'/>
 
+The default disk size is 64 GB. This can be expanded if more disk space is required:
 
+<img src='./images/img_034.png' alt='img_034' width='600'/>
 
+Select Next:
+
+<img src='./images/img_035.png' alt='img_035' width='600'/>
+
+Select Close:
+
+<img src='./images/img_036.png' alt='img_036' width='600'/>
+
+The VM will attempt to launch however will be unable to access the virtual monitor kernel module vmmon because it is blocked by Secure Boot:
+
+<img src='./images/img_037.png' alt='img_037' width='600'/>
+
+An error message, failed to start monitor device will display:
+
+<img src='./images/img_038.png' alt='img_038' width='600'/>
 
 ## Configuring Secure Boot
 
-Secure Boot will block the Virtual Monitor Kernel Module and Virtual Network Adaptor Module.
-
-A Machine Owner Key (MOK) must be created which signs these modules.
+Secure Boot will block the Virtual Monitor Kernel Module and Virtual Network Adaptor Module. A Machine Owner Key (MOK) must be created which signs these modules.
 
 Generate a new Machine Owner Key:
 
