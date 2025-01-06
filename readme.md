@@ -299,6 +299,88 @@ Select Reboot:
 
 ## Installing Windows 11 in a VM
 
+The Windows 11 can now be selected. Select Power On:
+
+<img src='./images/img_058.png' alt='img_058' width='600'/>
+
+Select OK:
+
+<img src='./images/img_059.png' alt='img_059' width='600'/>
+
+Select Download and Install:
+
+<img src='./images/img_060.png' alt='img_060' width='600'/>
+
+To authenticate input your password:
+
+<img src='./images/img_061.png' alt='img_061' width='600'/>
+
+Select OK:
+
+<img src='./images/img_062.png' alt='img_062' width='600'/>
+
+The prompt to boot from installation media will have timed out while these prompts display. Select Virtual Machine Power and Restart Guest:
+
+<img src='./images/img_063.png' alt='img_063' width='600'/>
+
+Select Yes:
+
+<img src='./images/img_064.png' alt='img_064' width='600'/>
+
+Select Restart:
+
+<img src='./images/img_065.png' alt='img_065' width='600'/>
+
+Click in the VM and press a key like `h`:
+
+<img src='./images/img_066.png' alt='img_066' width='600'/>
+
+The VM will boot from the ISO. Select your language and select Next:
+
+<img src='./images/img_067.png' alt='img_067' width='600'/>
+
+Select the keyboard settings and select Next:
+
+<img src='./images/img_068.png' alt='img_068' width='600'/>
+
+Select Install Windows 11 and accept the agreement, then select Next:
+
+<img src='./images/img_069.png' alt='img_069' width='600'/>
+
+Select I don't have a Product Key:
+
+<img src='./images/img_070.png' alt='img_070' width='600'/>
+
+Select the Windows 11 Edition:
+
+<img src='./images/img_071.png' alt='img_071' width='600'/>
+
+Select Accept:
+
+<img src='./images/img_072.png' alt='img_072' width='600'/>
+
+Select the Virtual Disk0 and select Next: 
+
+<img src='./images/img_073.png' alt='img_073' width='600'/>
+
+Select Install:
+
+<img src='./images/img_074.png' alt='img_074' width='600'/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
