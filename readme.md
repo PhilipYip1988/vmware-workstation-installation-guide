@@ -1,6 +1,6 @@
 # VMware Workstation Pro Install Ubuntu
 
-This guide looks at installation of VMware Workstation Pro on Ubuntu 24.04 or 24.10. VMware has recently been acquired by Broadcom and VMware Workstation has been made free for non-commercial use.
+This guide looks at installation of VMware Workstation Pro on Ubuntu 24.04 or 24.10. VMware has recently been acquired by Broadcom and VMware Workstation has been made free for non-commercial use. The previous free lesser products have been depreciated in order to reduce development costs.
 
 ## Installing VMware Perquisites
 
@@ -34,7 +34,7 @@ If there are issues the backend to the software downloads can be used:
 
 * [VMware Workstation](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/)
 
-Download the compatible version of VMware Workstation from VMware. This is in the core folder and has the extensions `.bundle.tar`.
+Download the compatible version of VMware Workstation Player from VMware. This is in the core folder and has the extensions `.bundle.tar`.
 
 <img src='./images/img_005.png' alt='img_005' width='600'/>
 
@@ -46,7 +46,7 @@ Download the compatible version of VMware Workstation from VMware. This is in th
 
 <img src='./images/img_009.png' alt='img_009' width='600'/>
 
-## Installing VMWare Workstation
+## Installing VMWare Workstation Player
 
 Extract the `.tar` to get to the extracted folder with the `.bundle` file. 
 
@@ -84,7 +84,7 @@ Drag and drop the bundle file into the terminal to complete the command and run:
 
 <img src='./images/img_016.png' alt='img_016' width='600'/>
 
-VMware Player is now installed and displays in the start screen: 
+VMware Workstation Player is now installed and displays in the start screen: 
 
 <img src='./images/img_017.png' alt='img_017' width='600'/>
 
@@ -104,9 +104,9 @@ To compile the kernel modules (requires the perquisites packages to perform the 
 
 <img src='./images/img_021.png' alt='img_021' width='600'/>
 
-## Configuring a Windows 11 VM
+## Configuring a Windows 11 Virtual Machine
 
-Windows 11 has relatively high system requirements such as an 8th generation processor, 8 GB of RAM and a 1 TB SSD boot drive. To run Windows 11 as a VM, the host PC should significantly exceed these system requirements and therefore have a high end 11th generation processor, at least 16 GB of RAM and at least a 512 GB SSD. Go to Settings, to the left hand side select System:
+Windows 11 has relatively high system requirements such as an 8th generation processor, 8 GB of RAM and a 1 TB SSD boot drive. To run Windows 11 as a Virtual Machine, the host PC should significantly exceed these system requirements and therefore have a high end 11th generation processor, at least 16 GB of RAM and at least a 512 GB SSD. Go to Settings, to the left hand side select System:
 
 <img src='./images/img_022.png' alt='img_022' width='600'/>
 
@@ -142,11 +142,11 @@ Select the Windows 11 ISO and select Open:
 
 <img src='./images/img_030.png' alt='img_030' width='600'/>
 
-Windows 11 will automatically be detected and the default VM settings for Windows 11 will be applied:
+Windows 11 will automatically be detected and the default VM settings for the Windows 11 Guest will be applied:
 
 <img src='./images/img_031.png' alt='img_031' width='600'/>
 
-The name and location of the VM will be shown. Select Next:
+The name and location of the Windows 11 Guest will be shown. Select Next:
 
 <img src='./images/img_032.png' alt='img_032' width='600'/>
 
@@ -166,7 +166,7 @@ Select Close:
 
 <img src='./images/img_036.png' alt='img_036' width='600'/>
 
-The VM will attempt to launch however will be unable to access the virtual monitor kernel module vmmon because it is blocked by Secure Boot:
+The Windows 11 Guest will attempt to launch however will be unable to access the virtual monitor kernel module vmmon because it is blocked by Secure Boot:
 
 <img src='./images/img_037.png' alt='img_037' width='600'/>
 
@@ -297,9 +297,9 @@ Select Reboot:
 
 **This section may need to be repeated after a significant VMware or Ubuntu update.**
 
-## Installing Windows 11 in a VM
+## Installing Windows 11 in a Virtual Machine
 
-The Windows 11 can now be selected. Select Power On:
+The Windows 11 Guest can now be selected. Select Power On:
 
 <img src='./images/img_058.png' alt='img_058' width='600'/>
 
@@ -331,11 +331,11 @@ Select Restart:
 
 <img src='./images/img_065.png' alt='img_065' width='600'/>
 
-Click in the VM and press a key like `h`:
+Click in the Windows 11 Guest and press a key like `h`:
 
 <img src='./images/img_066.png' alt='img_066' width='600'/>
 
-The VM will boot from the ISO. Select your language and select Next:
+The Windows 11 Guest will boot from the ISO. Select your language and select Next:
 
 <img src='./images/img_067.png' alt='img_067' width='600'/>
 
@@ -367,7 +367,181 @@ Select Install:
 
 <img src='./images/img_074.png' alt='img_074' width='600'/>
 
+Select the country or region:
 
+<img src='./images/img_075.png' alt='img_075' width='600'/>
+
+Select the keyboard layout:
+
+<img src='./images/img_076.png' alt='img_076' width='600'/>
+
+Select Skip:
+
+<img src='./images/img_077.png' alt='img_077' width='600'/>
+
+Input the Device Name:
+
+<img src='./images/img_078.png' alt='img_078' width='600'/>
+
+Select Setup for Personal Use:
+
+<img src='./images/img_079.png' alt='img_079' width='600'/>
+
+A number of updates will download:
+
+<img src='./images/img_080.png' alt='img_080' width='600'/>
+
+After the updates have downloaded, select Sign In:
+
+<img src='./images/img_081.png' alt='img_081' width='600'/>
+
+By default you will be unable to create a Local Account. To get around this select Virtual Machine, Virtual Machine Settings:
+
+<img src='./images/img_082.png' alt='img_082' width='600'/>
+
+Select Network Adaptor and uncheck Connected and Connect at power on:
+
+<img src='./images/img_083.png' alt='img_083' width='600'/>
+
+Press `⇧`+`F10` to open up the command prompt and input:
+
+```powershell
+oobe/bypassnro
+```
+
+<img src='./images/img_084.png' alt='img_084' width='600'/>
+
+The Windows 11 Guest will reboot:
+
+<img src='./images/img_085.png' alt='img_085' width='600'/>
+
+Select the keyboard layout:
+
+<img src='./images/img_086.png' alt='img_086' width='600'/>
+
+Select skip:
+
+<img src='./images/img_087.png' alt='img_087' width='600'/>
+
+Select I don't have internet:
+
+<img src='./images/img_088.png' alt='img_088' width='600'/>
+
+Input your local account name and select Next:
+
+<img src='./images/img_089.png' alt='img_089' width='600'/>
+
+Input your (optional) local account password and select next: 
+
+<img src='./images/img_090.png' alt='img_090' width='600'/>
+
+Once all the privacy settings have been selected. Select Virtual Machine → Virtual Machine Settings:
+
+<img src='./images/img_091.png' alt='img_091' width='600'/>
+
+Select Network Adaptor and check Connected and Connect at power on:
+
+<img src='./images/img_092.png' alt='img_092' width='600'/>
+
+Windows 11 is now installed:
+
+<img src='./images/img_093.png' alt='img_093' width='600'/>
+
+## Installing VMware Tools
+
+VMware tools are essentially the Virtual Machiens device drivers. Select Virtual Machine → Install VMware Tools:
+
+<img src='./images/img_094.png' alt='img_094' width='600'/>
+
+Select Install:
+
+<img src='./images/img_095.png' alt='img_095' width='600'/>
+
+Launch the setup64.exe:
+
+<img src='./images/img_096.png' alt='img_096' width='600'/>
+
+Accept the User Account Control Prompt:
+
+<img src='./images/img_097.png' alt='img_097' width='600'/>
+
+Select Next:
+
+<img src='./images/img_098.png' alt='img_098' width='600'/>
+
+Select Typical and then Next:
+
+<img src='./images/img_099.png' alt='img_099' width='600'/>
+
+Select Install:
+
+<img src='./images/img_100.png' alt='img_100' width='600'/>
+
+Select Finish:
+
+<img src='./images/img_101.png' alt='img_101' width='600'/>
+
+Select Yes to Reboot the Windows 11 Guest:
+
+<img src='./images/img_102.png' alt='img_102' width='600'/>
+
+Now that VMware tools are installed, the Windows 11 Guest can be resized:
+
+<img src='./images/img_103.png' alt='img_103' width='600'/>
+
+Drag and drop from the Ubuntu Host to the Windows 11 Guest works:
+
+<img src='./images/img_104.png' alt='img_104' width='600'/>
+
+But drag and drop from the Windows 11 Guest to the Ubuntu Host doesn't work:
+
+<img src='./images/img_105.png' alt='img_105' width='600'/>
+
+## Shared Folders
+
+A folder can be created in Documents of the Host PC:
+
+<img src='./images/img_106.png' alt='img_106' width='600'/>
+
+Name it VMShared:
+
+<img src='./images/img_107.png' alt='img_107' width='600'/>
+
+Select Virtual Machine → Virtual Machine Settings:
+
+<img src='./images/img_108.png' alt='img_108' width='600'/>
+
+Select Shared fodlers, check always enabled and map as a network drive. Select Add:
+
+<img src='./images/img_109.png' alt='img_109' width='600'/>
+
+Name it VMShared and select Browse:
+
+<img src='./images/img_110.png' alt='img_110' width='600'/>
+
+Navigate to Documents and select the folder VMShared:
+
+<img src='./images/img_111.png' alt='img_111' width='600'/>
+
+Slect Save:
+
+<img src='./images/img_112.png' alt='img_112' width='600'/>
+
+Shared folders display as a network drive in the Windows 11 Guest:
+
+<img src='./images/img_113.png' alt='img_113' width='600'/>
+
+<img src='./images/img_114.png' alt='img_114' width='600'/>
+
+<img src='./images/img_115.png' alt='img_115' width='600'/>
+
+A file from the Windows 11 Guest can be added to it:
+
+<img src='./images/img_116.png' alt='img_116' width='600'/>
+
+And retrieved in the Ubuntu Host:
+
+<img src='./images/img_117.png' alt='img_117' width='600'/>
 
 
 
