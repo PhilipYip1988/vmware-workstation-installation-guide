@@ -235,7 +235,13 @@ Select Reboot:
 
 **This section may need to be repeated after a significant VMware or Ubuntu update.**
 
-## Windows 11 Guest
+## Windows Guest
+
+<details>
+
+<summary>Windows Guest</summary>
+
+Instructions are similar for both Windows 10 and Windows 11 Guests.
 
 ### System Requirements
 
@@ -249,9 +255,16 @@ Then select About:
 
 ### Download ISO
 
-A Windows 11 ISO can be downloaded from Microsoft:
+A Windows ISO can be downloaded from Microsoft:
 
 * [Windows 11](https://www.microsoft.com/en-us/software-download/windows11)
+* [Windows 10](https://www.microsoft.com/en-gb/software-download/windows10ISO)
+
+\* Microsoft removed old Windows 10 Builds and Windows 8.1 after Windows 8.1 reached end of life.
+
+Dell ISO images for Windows 7, 8.1 and 10 can be downloaded from the Windows ISO Download Tool and used in VMware to make a Virtual Machine:
+
+* [Windows ISO Download Tool](./windows_iso_download_tool.md)
 
 Select the Windows 11 ISO and select Download now:
 
@@ -455,9 +468,17 @@ Windows 11 is now installed:
 
 ### Installing VMware Tools
 
-VMware tools are essentially the Virtual Machiens device drivers. Select Virtual Machine → Install VMware Tools:
+VMware tools are essentially the Virtual Machines device drivers. Select Virtual Machine → Install VMware Tools:
 
 <img src='./images/img_094.png' alt='img_094' width='600'/>
+
+If this is grayed out. Manually download the ISO:
+
+* [VMware Tools ISO](https://packages.vmware.com/tools/releases/)
+
+Use 11.0.6 for Windows Vista and Windows 7. Use 10.0.12 for Windows XP.
+
+Mount the ISO in the VM and begin the install as normal.
 
 Select Install:
 
@@ -549,83 +570,242 @@ And retrieved in the Ubuntu Host:
 
 <img src='./images/img_117.png' alt='img_117' width='600'/>
 
-## Ubuntu 24.10 Guest
+</details>
+
+## Ubuntu Guest
+
+<details>
+
+<summary>Ubuntu Guest</summary>
+
+Instructions are similar for both Ubuntu 24.04 and Ubuntu 24.10 Guests.
 
 ### System Requirements
 
+To run Ubuntu as a Virtual Machine, the host PC should have a high end 11th generation processor, at least 16 GB of RAM and at least a 512 GB SSD. Go to Settings, to the left hand side select System:
+
+<img src='./images/img_022.png' alt='img_022' width='600'/>
+
+Then select About:
+
+<img src='./images/img_023.png' alt='img_023' width='600'/>
 
 ### Download ISO
 
+The Ubuntu 24.10 or 24.04 LTS ISO can be downloaded from Canonical:
+
+* [Download Ubuntu Desktop](https://ubuntu.com/download/desktop)
+
 <img src='./images/img_118.png' alt='img_118' width='600'/>
+
 <img src='./images/img_119.png' alt='img_119' width='600'/>
 
 ### Configure VM
 
+Select File → Create a New Virtual Machine:
+
 <img src='./images/img_120.png' alt='img_120' width='600'/>
+
+Under select ISO Image, select Browse:
+
 <img src='./images/img_121.png' alt='img_121' width='600'/>
+
+Select the Ubuntu 24.10 ISO and select open:
+
 <img src='./images/img_122.png' alt='img_122' width='600'/>
+
+Ubuntu 24.10 will be detected:
+
 <img src='./images/img_123.png' alt='img_123' width='600'/>
+
+Input your full name, username and password:
+
 <img src='./images/img_124.png' alt='img_124' width='600'/>
+
+The name and location of the Ubuntu 24.10 Guest will be shown. Select Next:
+
 <img src='./images/img_125.png' alt='img_125' width='600'/>
+
+The default disk size is 20 GB. This can be expanded if more disk space is required:
+
 <img src='./images/img_126.png' alt='img_126' width='600'/>
+
+Select Finish:
+
 <img src='./images/img_127.png' alt='img_127' width='600'/>
-<img src='./images/img_128.png' alt='img_128' width='600'/>
-
-
 
 ### Installing Ubuntu 24.10 in the Ubuntu 24.10 Guest VM
 
-<img src='./images/img_129.png' alt='img_129' width='600'/>
-<img src='./images/img_130.png' alt='img_130' width='600'/>
-<img src='./images/img_131.png' alt='img_131' width='600'/>
-<img src='./images/img_132.png' alt='img_132' width='600'/>
-<img src='./images/img_133.png' alt='img_133' width='600'/>
-<img src='./images/img_134.png' alt='img_134' width='600'/>
-<img src='./images/img_135.png' alt='img_135' width='600'/>
-<img src='./images/img_136.png' alt='img_136' width='600'/>
-<img src='./images/img_137.png' alt='img_137' width='600'/>
-<img src='./images/img_138.png' alt='img_138' width='600'/>
-<img src='./images/img_139.png' alt='img_139' width='600'/>
-<img src='./images/img_140.png' alt='img_140' width='600'/>
-<img src='./images/img_141.png' alt='img_141' width='600'/>
-<img src='./images/img_142.png' alt='img_142' width='600'/>
-<img src='./images/img_143.png' alt='img_143' width='600'/>
-<img src='./images/img_144.png' alt='img_144' width='600'/>
-<img src='./images/img_145.png' alt='img_145' width='600'/>
-<img src='./images/img_146.png' alt='img_146' width='600'/>
+The Ubuntu 24.10 Guest will start booting from the Ubuntu 24.10 Live ISO:
 
+<img src='./images/img_128.png' alt='img_128' width='600'/>
+
+<img src='./images/img_129.png' alt='img_129' width='600'/>
+
+Select your Language:
+
+<img src='./images/img_130.png' alt='img_130' width='600'/>
+
+Select Next:
+
+<img src='./images/img_131.png' alt='img_131' width='600'/>
+
+Select your keyboard layout and then select Next:
+
+<img src='./images/img_132.png' alt='img_132' width='600'/>
+
+Select use wired connection and select Next:
+
+<img src='./images/img_133.png' alt='img_133' width='600'/>
+
+Select Install Ubuntu:
+
+<img src='./images/img_134.png' alt='img_134' width='600'/>
+
+Select Interactive Installation:
+
+<img src='./images/img_135.png' alt='img_135' width='600'/>
+
+Select Default Selection:
+
+<img src='./images/img_136.png' alt='img_136' width='600'/>
+
+Check Install third-party software for graphics and Wi-Fi hardware and Download and install support for additional media formats and select Next:
+
+<img src='./images/img_137.png' alt='img_137' width='600'/>
+
+Select Erase DIsk and install Ubuntu:
+
+<img src='./images/img_138.png' alt='img_138' width='600'/>
+
+Input your full name, computer name\*, username\* and password:
+
+\* These should be lower case characters with no spaces, the `-` is the only special character allowed. The user name `philip` becomes the name of the home folder `/home/philip` which is also represented by `~` in the terminal:
+
+<img src='./images/img_139.png' alt='img_139' width='600'/>
+
+Select your time zone and select Next:
+
+<img src='./images/img_140.png' alt='img_140' width='600'/>
+
+Select Next:
+
+<img src='./images/img_141.png' alt='img_141' width='600'/>
+
+Select Reboot Now:
+
+<img src='./images/img_142.png' alt='img_142' width='600'/>
+
+Select Next:
+
+<img src='./images/img_143.png' alt='img_143' width='600'/>
+
+Select Next:
+
+<img src='./images/img_144.png' alt='img_144' width='600'/>
+
+Select Finish:
+
+<img src='./images/img_145.png' alt='img_145' width='600'/>
+
+Ubuntu 24.10 is now installed in the Ubuntu 24.10 Guest Virtual Machine. The system drivers (`open-vm-tools`) are included in the Linux Kernel and do not have to be installed. The Ubuntu 24.10 guest can be maximised to full size:
+
+<img src='./images/img_146.png' alt='img_146' width='600'/>
 
 ### Shared Folders
 
+Power off the Ubuntu 24.10 Guest:
+
 <img src='./images/img_147.png' alt='img_147' width='600'/>
+
+Open VMware player, highlight the Ubunti 24.10 Guest and select Virtual Machine Settings. Select Options and Shared Folders. Select Always Enabled and select Add:
+
 <img src='./images/img_148.png' alt='img_148' width='600'/>
+
+Under name select VMShared:
+
 <img src='./images/img_149.png' alt='img_149' width='600'/>
+
+Select the VMShared folder under the Ubuntu 24.04 host Documents folder:
+
 <img src='./images/img_150.png' alt='img_150' width='600'/>
+
+Select OK:
+
 <img src='./images/img_151.png' alt='img_151' width='600'/>
+
+Select Save:
+
 <img src='./images/img_152.png' alt='img_152' width='600'/>
+
+Launch the Ubuntu 24.10 Guest, the shared folder will not automatically be mounted. Under `home` also known as `~` create a folder called `vmshared` where the shared folder can be mounted to:
+
 <img src='./images/img_153.png' alt='img_153' width='600'/>
+
 <img src='./images/img_154.png' alt='img_154' width='600'/>
+
 <img src='./images/img_155.png' alt='img_155' width='600'/>
+
+Launch Startup Applications:
+
 <img src='./images/img_156.png' alt='img_156' width='600'/>
-<img src='./images/img_157.png' alt='img_157' width='600'/>
-<img src='./images/img_158.png' alt='img_158' width='600'/>
-<img src='./images/img_159.png' alt='img_159' width='600'/>
-<img src='./images/img_160.png' alt='img_160' width='600'/>
-<img src='./images/img_161.png' alt='img_161' width='600'/>
+
+Under name select `VMware Shared Folder`. 
+
+Under command input the following command
 
 ```bash
 /usr/bin/vmhgfs-fuse .host:/ /home/philip/vmshared -o subtype=vmhgfs-fuse
 ```
 
-Replacing `philip` with your user name.
+Replacing `philip` with your user name and `vmshared` with the name of the folder. If `vmshared` is under `Documents` use:
 
+```bash
+/usr/bin/vmhgfs-fuse .host:/ /home/philip/Documents/vmshared -o subtype=vmhgfs-fuse
+```
+
+<img src='./images/img_157.png' alt='img_157' width='600'/>
+
+Restart the Ubuntu 24.10 Guest:
+
+<img src='./images/img_158.png' alt='img_158' width='600'/>
+
+The folder `vmshared` is now mounted as a shared folder:
+
+<img src='./images/img_159.png' alt='img_159' width='600'/>
+
+And the files can be accessed from the Ubuntu 24.10 Guest and Ubuntu 24.04 Host:
+
+<img src='./images/img_160.png' alt='img_160' width='600'/>
+
+<img src='./images/img_161.png' alt='img_161' width='600'/>
+
+</details>
 
 ## Uninstall VMware Workstation
+
+It is common to uninstall VMware Workstation in order to install the latest version, when a new version is released. Open up the Terminal and change directory to:
 
 ```bash
 cd /usr/bin
 ```
 
+<img src='./images/img_162.png' alt='img_162' width='600'/>
+
 ```bash
 sudo vmware-installer -u vmware-workstation
 ```
+
+Uninstallation is an operation in a system directory, input your password to authenticate:
+
+<img src='./images/img_163.png' alt='img_163' width='600'/>
+
+Input `y` in order to proceed:
+
+<img src='./images/img_164.png' alt='img_164' width='600'/>
+
+VMware Workstation is now uninstalled:
+
+<img src='./images/img_165.png' alt='img_165' width='600'/>
+
+The latest version of VMware Workstation can now be installed. A MOK for the kernel services blocked by Secure Boot will need to be created.
