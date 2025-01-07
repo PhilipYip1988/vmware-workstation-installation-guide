@@ -104,77 +104,15 @@ To compile the kernel modules (requires the perquisites packages to perform the 
 
 <img src='./images/img_021.png' alt='img_021' width='600'/>
 
-## Configuring a Windows 11 Virtual Machine
+## Configuring Secure Boot
 
-Windows 11 has relatively high system requirements such as an 8th generation processor, 8 GB of RAM and a 1 TB SSD boot drive. To run Windows 11 as a Virtual Machine, the host PC should significantly exceed these system requirements and therefore have a high end 11th generation processor, at least 16 GB of RAM and at least a 512 GB SSD. Go to Settings, to the left hand side select System:
-
-<img src='./images/img_022.png' alt='img_022' width='600'/>
-
-Then select About:
-
-<img src='./images/img_023.png' alt='img_023' width='600'/>
-
-A Windows 11 ISO can be downloaded from Microsoft:
-
-* [Windows 11](https://www.microsoft.com/en-us/software-download/windows11)
-
-Select the Windows 11 ISO and select Download now:
-
-<img src='./images/img_024.png' alt='img_024' width='600'/>
-
-Select the Language and select Confirm:
-
-<img src='./images/img_025.png' alt='img_025' width='600'/>
-
-Select 64 Bit Download:
-
-<img src='./images/img_026.png' alt='img_026' width='600'/>
-
-The ISO will download:
-
-<img src='./images/img_027.png' alt='img_027' width='600'/>
-
-Select File → Create a New Virtual Machine:
-
-<img src='./images/img_028.png' alt='img_028' width='600'/>
-
-Select the Windows 11 ISO and select Open:
-
-<img src='./images/img_030.png' alt='img_030' width='600'/>
-
-Windows 11 will automatically be detected and the default VM settings for the Windows 11 Guest will be applied:
-
-<img src='./images/img_031.png' alt='img_031' width='600'/>
-
-The name and location of the Windows 11 Guest will be shown. Select Next:
-
-<img src='./images/img_032.png' alt='img_032' width='600'/>
-
-Windows 11 requires an encryption key for the TPM. Input an 8 digit password and confirm the password:
-
-<img src='./images/img_033.png' alt='img_033' width='600'/>
-
-The default disk size is 64 GB. This can be expanded if more disk space is required:
-
-<img src='./images/img_034.png' alt='img_034' width='600'/>
-
-Select Next:
-
-<img src='./images/img_035.png' alt='img_035' width='600'/>
-
-Select Close:
-
-<img src='./images/img_036.png' alt='img_036' width='600'/>
-
-The Windows 11 Guest will attempt to launch however will be unable to access the virtual monitor kernel module vmmon because it is blocked by Secure Boot:
+An attempt to launch a VM will fail because access the virtual monitor kernel module vmmon because it is blocked by Secure Boot:
 
 <img src='./images/img_037.png' alt='img_037' width='600'/>
 
 An error message, failed to start monitor device will display:
 
 <img src='./images/img_038.png' alt='img_038' width='600'/>
-
-## Configuring Secure Boot
 
 Secure Boot will block the Virtual Monitor Kernel Module and Virtual Network Adaptor Module. A Machine Owner Key (MOK) must be created which signs these modules. Open the Terminal:
 
@@ -297,7 +235,75 @@ Select Reboot:
 
 **This section may need to be repeated after a significant VMware or Ubuntu update.**
 
-## Installing Windows 11 in a Virtual Machine
+## Windows 11 Guest
+
+### System Requirements
+
+Windows 11 has relatively high system requirements such as an 8th generation processor, 8 GB of RAM and a 1 TB SSD boot drive. To run Windows 11 as a Virtual Machine, the host PC should significantly exceed these system requirements and therefore have a high end 11th generation processor, at least 16 GB of RAM and at least a 512 GB SSD. Go to Settings, to the left hand side select System:
+
+<img src='./images/img_022.png' alt='img_022' width='600'/>
+
+Then select About:
+
+<img src='./images/img_023.png' alt='img_023' width='600'/>
+
+### Download ISO
+
+A Windows 11 ISO can be downloaded from Microsoft:
+
+* [Windows 11](https://www.microsoft.com/en-us/software-download/windows11)
+
+Select the Windows 11 ISO and select Download now:
+
+<img src='./images/img_024.png' alt='img_024' width='600'/>
+
+Select the Language and select Confirm:
+
+<img src='./images/img_025.png' alt='img_025' width='600'/>
+
+Select 64 Bit Download:
+
+<img src='./images/img_026.png' alt='img_026' width='600'/>
+
+The ISO will download:
+
+<img src='./images/img_027.png' alt='img_027' width='600'/>
+
+### Configure VM
+
+Select File → Create a New Virtual Machine:
+
+<img src='./images/img_028.png' alt='img_028' width='600'/>
+
+Select the Windows 11 ISO and select Open:
+
+<img src='./images/img_030.png' alt='img_030' width='600'/>
+
+Windows 11 will automatically be detected and the default VM settings for the Windows 11 Guest will be applied:
+
+<img src='./images/img_031.png' alt='img_031' width='600'/>
+
+The name and location of the Windows 11 Guest will be shown. Select Next:
+
+<img src='./images/img_032.png' alt='img_032' width='600'/>
+
+Windows 11 requires an encryption key for the TPM. Input an 8 digit password and confirm the password:
+
+<img src='./images/img_033.png' alt='img_033' width='600'/>
+
+The default disk size is 64 GB. This can be expanded if more disk space is required:
+
+<img src='./images/img_034.png' alt='img_034' width='600'/>
+
+Select Next:
+
+<img src='./images/img_035.png' alt='img_035' width='600'/>
+
+Select Close:
+
+<img src='./images/img_036.png' alt='img_036' width='600'/>
+
+### Installing Windows 11 in the Windows 11 Guest VM
 
 The Windows 11 Guest can now be selected. Select Power On:
 
@@ -447,7 +453,7 @@ Windows 11 is now installed:
 
 <img src='./images/img_093.png' alt='img_093' width='600'/>
 
-## Installing VMware Tools
+### Installing VMware Tools
 
 VMware tools are essentially the Virtual Machiens device drivers. Select Virtual Machine → Install VMware Tools:
 
@@ -497,7 +503,7 @@ But drag and drop from the Windows 11 Guest to the Ubuntu Host doesn't work:
 
 <img src='./images/img_105.png' alt='img_105' width='600'/>
 
-## Shared Folders
+### Shared Folders
 
 A folder can be created in Documents of the Host PC:
 
@@ -543,19 +549,24 @@ And retrieved in the Ubuntu Host:
 
 <img src='./images/img_117.png' alt='img_117' width='600'/>
 
+## Ubuntu 24.10 Guest
+
+### System Requirements
 
 
+### Download ISO
 
+### Configure VM
 
+### Installing Ubuntu 24.10 in the Ubuntu 24.10 Guest VM
 
+### Shared Folders
 
+```bash
+/usr/bin/vmhgfs-fuse .host:/ /home/philip/vmshared -o subtype=vmhgfs-fuse
+```
 
-
-
-
-
-
-
+Replacing `philip` with your user name.
 
 
 ## Uninstall VMware Workstation
