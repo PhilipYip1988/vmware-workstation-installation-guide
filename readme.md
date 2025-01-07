@@ -556,11 +556,62 @@ And retrieved in the Ubuntu Host:
 
 ### Download ISO
 
+<img src='./images/img_118.png' alt='img_118' width='600'/>
+<img src='./images/img_119.png' alt='img_119' width='600'/>
+
 ### Configure VM
+
+<img src='./images/img_120.png' alt='img_120' width='600'/>
+<img src='./images/img_121.png' alt='img_121' width='600'/>
+<img src='./images/img_122.png' alt='img_122' width='600'/>
+<img src='./images/img_123.png' alt='img_123' width='600'/>
+<img src='./images/img_124.png' alt='img_124' width='600'/>
+<img src='./images/img_125.png' alt='img_125' width='600'/>
+<img src='./images/img_126.png' alt='img_126' width='600'/>
+<img src='./images/img_127.png' alt='img_127' width='600'/>
+<img src='./images/img_128.png' alt='img_128' width='600'/>
+
+
 
 ### Installing Ubuntu 24.10 in the Ubuntu 24.10 Guest VM
 
+<img src='./images/img_129.png' alt='img_129' width='600'/>
+<img src='./images/img_130.png' alt='img_130' width='600'/>
+<img src='./images/img_131.png' alt='img_131' width='600'/>
+<img src='./images/img_132.png' alt='img_132' width='600'/>
+<img src='./images/img_133.png' alt='img_133' width='600'/>
+<img src='./images/img_134.png' alt='img_134' width='600'/>
+<img src='./images/img_135.png' alt='img_135' width='600'/>
+<img src='./images/img_136.png' alt='img_136' width='600'/>
+<img src='./images/img_137.png' alt='img_137' width='600'/>
+<img src='./images/img_138.png' alt='img_138' width='600'/>
+<img src='./images/img_139.png' alt='img_139' width='600'/>
+<img src='./images/img_140.png' alt='img_140' width='600'/>
+<img src='./images/img_141.png' alt='img_141' width='600'/>
+<img src='./images/img_142.png' alt='img_142' width='600'/>
+<img src='./images/img_143.png' alt='img_143' width='600'/>
+<img src='./images/img_144.png' alt='img_144' width='600'/>
+<img src='./images/img_145.png' alt='img_145' width='600'/>
+<img src='./images/img_146.png' alt='img_146' width='600'/>
+
+
 ### Shared Folders
+
+<img src='./images/img_147.png' alt='img_147' width='600'/>
+<img src='./images/img_148.png' alt='img_148' width='600'/>
+<img src='./images/img_149.png' alt='img_149' width='600'/>
+<img src='./images/img_150.png' alt='img_150' width='600'/>
+<img src='./images/img_151.png' alt='img_151' width='600'/>
+<img src='./images/img_152.png' alt='img_152' width='600'/>
+<img src='./images/img_153.png' alt='img_153' width='600'/>
+<img src='./images/img_154.png' alt='img_154' width='600'/>
+<img src='./images/img_155.png' alt='img_155' width='600'/>
+<img src='./images/img_156.png' alt='img_156' width='600'/>
+<img src='./images/img_157.png' alt='img_157' width='600'/>
+<img src='./images/img_158.png' alt='img_158' width='600'/>
+<img src='./images/img_159.png' alt='img_159' width='600'/>
+<img src='./images/img_160.png' alt='img_160' width='600'/>
+<img src='./images/img_161.png' alt='img_161' width='600'/>
 
 ```bash
 /usr/bin/vmhgfs-fuse .host:/ /home/philip/vmshared -o subtype=vmhgfs-fuse
