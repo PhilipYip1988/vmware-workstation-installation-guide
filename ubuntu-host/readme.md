@@ -262,10 +262,6 @@ A Windows ISO can be downloaded from Microsoft:
 
 \* Microsoft removed old Windows 10 Builds and Windows 8.1 after Windows 8.1 reached end of life.
 
-Dell ISO images for Windows 7, 8.1 and 10 can be downloaded from the Windows ISO Download Tool and used in VMware to make a Virtual Machine:
-
-* [Windows ISO Download Tool](./windows_iso_download_tool.md)
-
 Select the Windows 11 ISO and select Download now:
 
 <img src='./images/img_024.png' alt='img_024' width='600'/>
@@ -476,7 +472,7 @@ If this is grayed out. Manually download the ISO:
 
 * [VMware Tools ISO](https://packages.vmware.com/tools/releases/)
 
-Use 11.0.6 for Windows Vista and Windows 7. Use 10.0.12 for Windows XP.
+Use the latest release for Windows 11. Use 11.0.6 for Windows Vista and Windows 7. Use 10.0.12 for Windows XP.
 
 Mount the ISO in the VM and begin the install as normal.
 
