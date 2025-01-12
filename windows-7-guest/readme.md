@@ -2,9 +2,9 @@
 
 Setting up a Windows 7 Guest using VMware Workstation Player.
 
-## Download Windows 7 ISO
+## Download Dell Windows 7 Reinstallation ISO
 
-To download the Dell Windows 7 Professional ISO Media Refresh 2016. Use the Windows ISO Download Tool:
+To download the Dell Windows 7 Professional Reinstallation ISO Media Refresh 2016. Use the Windows ISO Download Tool:
 
 * [Windows ISO Download Tool](https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool)
 
@@ -55,7 +55,7 @@ Microsoft .Net Framework:
 
 </details>
 
-## Download VMware Tools
+## Download VMware Tools ISO
 
 The Windows 7 drivers for the Windows 7 Guest are contained in the VMware Tools Installation ISO. VMware tools for legacy versions of Windows needs to be downloaded from VMware separately:
 
