@@ -12,7 +12,7 @@ The Windows XP Professional SP3 Volume License ISO and associated Product Key is
 
 * [WinWorld Placeholder: Windows XP ISO and Product Key](https://winworldpc.com/product/windows-xp/final) 
 
-Which otherwise lists abandoned Windows Versions from Windows 1 through to Windows ME. 
+Which otherwise lists abandoned Windows Versions from Windows 1 through to Windows ME.
 
 The Windows XP Professional SP3 Volume License ISO was used for large organisations such as Universities, Governments and Enterprise companies and is preferred for a Windows XP Professional VM as it activates offline and does not have the hassles of Microsoft Product Activation.
 
@@ -114,18 +114,96 @@ The default memory used by the Windows XP Guest is 512 MB (0.5 GB). If the Windo
 
 <img src='./images/img_008.png' alt='img_008' width='600'/>
 
+The default number of processors cores used by the Windows XP Guest is 1. This can be upped to 2 if the Windows 11 Host has a processor with ≥ 16 cores. If the Windows 11 Host PC has ≤16 cores, setting this to a higher value may throttle the Host PC leading to an overall decreased performance:
+
 <img src='./images/img_009.png' alt='img_009' width='600'/>
+
 <img src='./images/img_010.png' alt='img_010' width='600'/>
+
+The CD/DVD should be configured to load the Dell Windows 7 Reinstallation ISO or Windows XP Volume License Installation iSO:
+
 <img src='./images/img_011.png' alt='img_011' width='600'/>
+
+Windows XP has reached end of life and should be deemed unsafe to use online. The virtual network adaptor is connected by default and can optionally be disabled:
+
 <img src='./images/img_012.png' alt='img_012' width='600'/>
+
+The default USB Controller for Windows XP is USB 2.0 and WIndows XP does not have any drivers for USB 3.0:
+
 <img src='./images/img_013.png' alt='img_013' width='600'/>
+
+The default Sound Card can be used for the Windows XP Guest:
+
 <img src='./images/img_014.png' alt='img_014' width='600'/>
+
+The default Display can be used for the Windows XP Guest:
+
 <img src='./images/img_015.png' alt='img_015' width='600'/>
+
+Select Close and Finish.
+
 <img src='./images/img_016.png' alt='img_016' width='600'/>
+
+## Windows XP Guest Virtual Machine Configuration File
+
+Navigate to the directory on the Windows 11 Host that the Windows XP Guest is installed: 
+
 <img src='./images/img_017.png' alt='img_017' width='600'/>
+
+Look for the `Windows XP.vmx` file:
+
 <img src='./images/img_018.png' alt='img_018' width='600'/>
+
+Open in Notepad or Notepad++ (recommended):
+
 <img src='./images/img_019.png' alt='img_019' width='600'/>
+
+Press `Ctrl+f` to begin a search for an option for example `bios.bootDelay`:
+
 <img src='./images/img_020.png' alt='img_020' width='600'/>
+
+If the line exists it can be modified to a new value. In this case it doesn't exist so can be appended to the end:
+
+```
+bios.bootDelay = "20000"
+```
+
+The command above will change the time the Windows 7 Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
+
+<details>
+  <summary>SLIC 2.1 Passthrough</summary>
+
+If the Windows 11 Host PC came with a Windows 10 Professional OEM License, it has upgrade rights to Windows 11 Professional and downgrade right to Windows 7 Professional. The downgrade rights to Windows 7 Professional can be used by passing through the SLIC 2.1 to the Virtual Machine by adding the line to the Virtual Machines Configuration File:
+
+```
+acpi.passthru.slic = "TRUE"
+acpi.passthru.slicvendor = "TRUE"
+SMBIOS.reflecthost = "TRUE"
+```
+
+Note if the Windows 11 Host PC doesn't have a SLIC 2.1, the above lines of code will prevent the Windows 7 Guest from booting and should be removed.
+
+<details>
+  <summary>Modded ROMs</summary>
+
+The my digital life forums has a post about a modded Virtual BIOS which includes a Dell SLIC 2.1 compatible with Dell Windows 7 Professional OEM SLP. These ROMs are not supported by Microsoft or Dell (but then neither is Windows 7). You will need to log into their forums to view the files:
+
+* [My Digital Life: SLIC 2.1 Mod](https://forums.mydigitallife.net/threads/vmware-workstation-esxi-bios-efi-slic-mod.64693/#post-1132133)
+
+Extract the downloaded file and navigate to the `17.6.0 Modded ROMs` folder. Rename `WORKSTATION_17.6.0_DELL2.7_SLIC_EFI20-64.ROM` to `EFI20-64.ROM` and copy the modded ROM to the directory of the Windows 7 Guest. Update the Virtual Machine Configuration file to:
+
+```
+efi20-64.filename = "modded_EFI20-64.ROM"
+```
+
+Note if the corresponding ROM is not found in the directory the above line of code will prevent the Windows 7 Guest from booting.
+
+</details>
+
+</details>
+
+
+
 <img src='./images/img_021.png' alt='img_021' width='600'/>
 <img src='./images/img_022.png' alt='img_022' width='600'/>
 <img src='./images/img_023.png' alt='img_023' width='600'/>

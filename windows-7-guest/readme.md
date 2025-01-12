@@ -168,7 +168,7 @@ The default memory used by the Windows 7 Guest is 2048 MB (2 GB). If the Windows
 
 <img src='./images/img_014.png' alt='img_014' width='600'/>
 
-The default number of processors cores used by the Windows 7 Guest is 1. This can be upped to 2 or 4 if the Windows 11 Guest PC has a processor with ≥ 16 cores. If the Windows 11 Host PC has ≤16 cores, setting this to a higher value may throttle the Host PC leading to an overall decreased performance:
+The default number of processors cores used by the Windows 7 Guest is 1. This can be upped to 2 or 4 if the Windows 11 Host has a processor with ≥ 16 cores. If the Windows 11 Host PC has ≤16 cores, setting this to a higher value may throttle the Host PC leading to an overall decreased performance:
 
 <img src='./images/img_015.png' alt='img_015' width='600'/>
 
