@@ -31,6 +31,8 @@ Unofficially Volume License Keys are listed on this GitHub repository:
 
 ### Dell Windows XP OEM Reinstallation ISO
 
+The Dell Windows XP Reinstallation ISO is also not available to download from WinWorld but can be created by converting a Windows XP Reinstallation CD/DVD to an ISO using ImgBurn.
+
 OEM SLP activation is not carried out by default when using a Windows XP Virtual Machine as the Virtual Machine lacks the SLIC 1.0, SLIC 2.0 (Windows Vista Business Edition to Windows XP Professional Downgrade Rights) or SLIC 2.1 (Windows 7 Professional Downgrade Rights to Windows XP Professional Downgrade Rights) in the Virtual BIOS by default. This will result in a 30 Day Trial.
 
 <details>
@@ -49,13 +51,20 @@ Unofficially a copy of the Dell Windows XP SP3 Reinstallation ISO appears to be 
 
 </details>
 
-### Windows XP Mode Notes (Not Recommended)
+### Windows XP Mode
 
-A common question is conversion of the Windows XP Mode VM into a VMware Workstation VM:
+The mouse in the Windows XP Mode VM cannot be used in VMware and installation of VMware tools gives a black screen resulting in poor performance:
+
+<details>
+  <summary>Windows XP Mode</summary>
+
+Windows XP Mode can be downloaded from:
 
 * [Windows XP Mode](https://download.cnet.com/windows-xp-mode/3000-18513_4-77683344.html)
 
 A VM can be created from this by renaming the file `WindowsXPMode_en-us.exe` to `WindowsXPMode_en-us.zip`. Then extracting the zip file and going to the sources folder. Then renaming the `xpm` to `xpm.zip` and renaming the `VirtualXPVHD` to `VirtualXP.VHD`. The `VirtualXP.VHD` can be used as a Virtual Drive in VMware Workstation Player but results in a VM where the mouse doesn't work. Installation of VMware tools gives a black screen.
+
+</details>
 
 ## VMware Tools ISO
 
@@ -105,3 +114,81 @@ The default memory used by the Windows XP Guest is 512 MB (0.5 GB). If the Windo
 
 <img src='./images/img_008.png' alt='img_008' width='600'/>
 
+<img src='./images/img_009.png' alt='img_009' width='600'/>
+<img src='./images/img_010.png' alt='img_010' width='600'/>
+<img src='./images/img_011.png' alt='img_011' width='600'/>
+<img src='./images/img_012.png' alt='img_012' width='600'/>
+<img src='./images/img_013.png' alt='img_013' width='600'/>
+<img src='./images/img_014.png' alt='img_014' width='600'/>
+<img src='./images/img_015.png' alt='img_015' width='600'/>
+<img src='./images/img_016.png' alt='img_016' width='600'/>
+<img src='./images/img_017.png' alt='img_017' width='600'/>
+<img src='./images/img_018.png' alt='img_018' width='600'/>
+<img src='./images/img_019.png' alt='img_019' width='600'/>
+<img src='./images/img_020.png' alt='img_020' width='600'/>
+<img src='./images/img_021.png' alt='img_021' width='600'/>
+<img src='./images/img_022.png' alt='img_022' width='600'/>
+<img src='./images/img_023.png' alt='img_023' width='600'/>
+<img src='./images/img_024.png' alt='img_024' width='600'/>
+<img src='./images/img_025.png' alt='img_025' width='600'/>
+<img src='./images/img_026.png' alt='img_026' width='600'/>
+<img src='./images/img_027.png' alt='img_027' width='600'/>
+<img src='./images/img_028.png' alt='img_028' width='600'/>
+<img src='./images/img_029.png' alt='img_029' width='600'/>
+<img src='./images/img_030.png' alt='img_030' width='600'/>
+<img src='./images/img_031.png' alt='img_031' width='600'/>
+<img src='./images/img_032.png' alt='img_032' width='600'/>
+<img src='./images/img_033.png' alt='img_033' width='600'/>
+<img src='./images/img_034.png' alt='img_034' width='600'/>
+<img src='./images/img_035.png' alt='img_035' width='600'/>
+<img src='./images/img_036.png' alt='img_036' width='600'/>
+<img src='./images/img_037.png' alt='img_037' width='600'/>
+<img src='./images/img_038.png' alt='img_038' width='600'/>
+<img src='./images/img_039.png' alt='img_039' width='600'/>
+<img src='./images/img_040.png' alt='img_040' width='600'/>
+<img src='./images/img_041.png' alt='img_041' width='600'/>
+<img src='./images/img_042.png' alt='img_042' width='600'/>
+<img src='./images/img_043.png' alt='img_043' width='600'/>
+<img src='./images/img_044.png' alt='img_044' width='600'/>
+<img src='./images/img_045.png' alt='img_045' width='600'/>
+<img src='./images/img_046.png' alt='img_046' width='600'/>
+<img src='./images/img_047.png' alt='img_047' width='600'/>
+<img src='./images/img_048.png' alt='img_048' width='600'/>
+<img src='./images/img_049.png' alt='img_049' width='600'/>
+<img src='./images/img_050.png' alt='img_050' width='600'/>
+<img src='./images/img_051.png' alt='img_051' width='600'/>
+<img src='./images/img_052.png' alt='img_052' width='600'/>
+<img src='./images/img_053.png' alt='img_053' width='600'/>
+<img src='./images/img_054.png' alt='img_054' width='600'/>
+<img src='./images/img_055.png' alt='img_055' width='600'/>
+<img src='./images/img_056.png' alt='img_056' width='600'/>
+<img src='./images/img_057.png' alt='img_057' width='600'/>
+<img src='./images/img_058.png' alt='img_058' width='600'/>
+<img src='./images/img_059.png' alt='img_059' width='600'/>
+<img src='./images/img_060.png' alt='img_060' width='600'/>
+<img src='./images/img_061.png' alt='img_061' width='600'/>
+<img src='./images/img_062.png' alt='img_062' width='600'/>
+<img src='./images/img_063.png' alt='img_063' width='600'/>
+<img src='./images/img_064.png' alt='img_064' width='600'/>
+
+
+
+
+
+
+
+
+
+```
+bios.bootDelay = "20000"
+```
+
+```
+bios440.filename = "modded_BIOS.440.ROM"
+```
+
+
+
+```
+oobe/msoobe /a
+```
