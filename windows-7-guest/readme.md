@@ -1,5 +1,7 @@
 # Windows 7 Guest
 
+Setting up a Windows 7 Guest using VMware Workstation Player.
+
 ## Download Windows 7 ISO
 
 To download the Dell Windows 7 Professional ISO Media Refresh 2016. Use the Windows ISO Download Tool:
