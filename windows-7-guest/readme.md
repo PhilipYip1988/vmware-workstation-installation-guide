@@ -67,7 +67,7 @@ The Windows 7 drivers for the Windows 7 Guest are contained in the VMware Tools 
 
 OEM SLP activation is not carried out by default when using a Windows 7 Virtual Machine as the Virtual Machine lacks the SLIC 2.1 in the Virtual BIOS by default. This will result in a 30 Day Trial.
 
-On Dell Devices (and Devices manufactured by other major OEMs such as Lenovo and HP) with Windows 10 Pro OEM Licenses such as the OptiPlex 7040, the Host Device has a System License Internal Code 2.1 which is used for OEM Downgrade Rights. This can be passed through to the Windows 7 Guest by modifying the Windows 7 Guests Virtual Machines Configuration File and will result in a Virtual Machine that is activated using Dell OEM System Locked Preinstallation.
+On Dell Devices (and Devices manufactured by other major OEMs such as Lenovo and HP) with Windows 10 Pro OEM Licenses such as the OptiPlex 7040, the Host Device has a System License Internal Code 2.1 which is used for OEM Downgrade Rights. This can be passed through to the Windows 7 Guest by modifying the Windows 7 Guests Virtual Machines Configuration File and will result in a Virtual Machine that is activated offline using Dell OEM System Locked Preinstallation (SLP).
 
 <details>
   <summary>30 Day Trial...</summary>
@@ -108,13 +108,13 @@ and then changing the `SkipRearm` value from `0` to `1` and then rebooting.
 </details>
 
 <details>
-  <summary>`Retail Licenses</summary>
+  <summary>Retail Licenses</summary>
 
 The Retail License for Windows 7 is the correct license for a Virtual Machine however:
 
-Online product activation for Windows 7 using a Retail Product key cannot be carried out because Microsoft have decommissioned the Product Activation servers and Windows 7 Retail Product Keys can therefore no longer be sued to activate Windows 7 or Windows 11.
+Online product activation for Windows 7 using a Retail Product key cannot be carried out because Microsoft have decommissioned the Product Activation servers and Windows 7 Retail Product Keys can therefore no longer be used to activate Windows 7 or Windows 11.
 
-Phone product activation to an automated line for Windows 7 using a Retail Product key may still work. You are unlikely to be passed through to a Microsoft employee if the automated process does not work because the product has passed end of life and is no longer supported. You may have issues transferring your Windows 7 Retail License from one Vitual Machine to another.
+Phone product activation to an automated line for Windows 7 using a Retail Product key may still work. You are unlikely to be passed through to a Microsoft employee if the automated process does not work because the product has passed end of life and is no longer supported. You may have issues transferring your Windows 7 Retail License from one Virtual Machine to another.
 
 </details>
 
@@ -374,7 +374,7 @@ If Computer is right clicked and properties selected:
 
 <img src='./images/img_055.png' alt='img_055' width='600'/>
 
-To the bottom, the Activation status will display. This Windows 7 Guest is not activated because the SLIC 2.1 has not been passed through.
+To the bottom, the Activation status will display. This Windows 7 Guest is not activated because the VM does not have a SLIC 2.1. The Windows 7 Guest is activated when a SLIC 2.1 is passed through from the Windows 11 Host or Ubutun 24.10 Host.
 
 To the left the Device Manager will display:
 
@@ -384,13 +384,16 @@ The drivers should be installed:
 
 <img src='./images/img_057.png' alt='img_057' width='600'/>
 
-On a Windows 11 Host, drag and drop to the Windows 7 Guest is bi-directional. On a Ubuntu Host, drag and drop from the Ubuntu Host to the Windows 7 Guests works but does not work from the Windows 7 Guest to Ubuntu Host (Shared Folders can be configured for that). The Standalone Updates can be copied to Downloads:
+On a Windows 11 Host, drag and drop to the Windows 7 Guest is bi-directional. On a Ubuntu Host, drag and drop from the Ubuntu Host to the Windows 7 Guest works but does not work from the Windows 7 Guest to Ubuntu Host (Shared Folders can be configured for that). The Standalone Updates can be copied to Downloads:
 
 <img src='./images/img_058.png' alt='img_058' width='600'/>
 
 Note install the updates in the order listed above and not by the KB numbers, as some updates require other updates as perquisites. When the last update is installed and the Windows 7 Guest has restarted you will be informed that Windows 7 has Reached End of Life:
 
 <img src='./images/img_059.png' alt='img_059' width='600'/>
+
+## Windows XP S
+
 
 ## Shared Folders
 
@@ -406,7 +409,7 @@ Select Options → Shared Folders and change the setting to Always Enabled and c
 
 <img src='./images/img_062.png' alt='img_062' width='600'/>
 
-Select Add, select the folder vmshared on the Windows 11 Host PC or Ubuntu 24.10 Host PC and then enxt:
+Select Add, select the folder vmshared on the Windows 11 Host PC or Ubuntu 24.10 Host PC and then next:
 
 <img src='./images/img_063.png' alt='img_063' width='600'/>
 

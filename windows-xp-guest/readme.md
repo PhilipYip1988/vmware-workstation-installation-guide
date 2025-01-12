@@ -4,7 +4,7 @@ Setting up a Windows XP Guest using VMware Workstation Player.
 
 ## Installation Media
 
-The biggest difficulty to setting up a Windows XP VM is obtaining the installation as Microsoft nor its OEMs provided official download links.
+The biggest difficulty to setting up a Windows XP Virtual Machine is obtaining the installation as Microsoft nor its OEMs provided official download links.
 
 ### Windows XP Windows Volume License Installation ISO
 
@@ -14,10 +14,10 @@ The Windows XP Professional SP3 Volume License ISO and associated Product Key is
 
 Which otherwise lists abandoned Windows Versions from Windows 1 through to Windows ME.
 
-The Windows XP Professional SP3 Volume License ISO was used for large organisations such as Universities, Governments and Enterprise companies and is preferred for a Windows XP Professional VM as it activates offline and does not have the hassles of Microsoft Product Activation.
+The Windows XP Professional SP3 Volume License ISO was sold to large organisations such as Universities, Governments and Enterprise companies and is preferred for a Windows XP Professional Virtual Machine as it activates offline and does not have the hassles of Microsoft Product Activation.
 
 <details>
-  <summary>Unofficial Links (Untested)</summary>
+  <summary>Unofficial Download Links (Untested)</summary>
 
 Unofficially a copy of the Volume License ISO appears to be listed here:
 
@@ -31,14 +31,44 @@ Unofficially Volume License Keys are listed on this GitHub repository:
 
 ### Dell Windows XP OEM Reinstallation ISO
 
-The Dell Windows XP Reinstallation ISO is also not available to download from WinWorld but can be created by converting a Windows XP Reinstallation CD/DVD to an ISO using ImgBurn.
+The Dell Windows XP Professional SP3 Reinstallation ISO and associated Product Key is not yet available to download on WinWorld:
 
-OEM SLP activation is not carried out by default when using a Windows XP Virtual Machine as the Virtual Machine lacks the SLIC 1.0, SLIC 2.0 (Windows Vista Business Edition to Windows XP Professional Downgrade Rights) or SLIC 2.1 (Windows 7 Professional Downgrade Rights to Windows XP Professional Downgrade Rights) in the Virtual BIOS by default. This will result in a 30 Day Trial.
+* [WinWorld Placeholder: Windows XP ISO and Product Key](https://winworldpc.com/product/windows-xp/final) 
+
+The Dell Windows XP Reinstallation CD/DVD was fairly common and an ISO can be created by converting the Windows XP Reinstallation CD/DVD to an ISO using ImgBurn.
+
+OEM SLP activation is not carried out by default when using a Windows XP Virtual Machine as the Virtual Machine lacks the SLIC 1.0, SLIC 2.0 (Windows Vista Business Edition to Windows XP Professional Downgrade Rights) or SLIC 2.1 (Windows 7 Professional Downgrade Rights to Windows XP Professional Downgrade Rights) in the Virtual BIOS by default. This will result in a 30 Day Trial:
 
 <details>
   <summary>30 Day Trial...</summary>
 
 Windows XP has an initial 30 day grace period. After this grace period you are forcefully logged out and can only login to activate.
+
+Details about the days remaining in grace period can be seen when going to Start and selecting run and then inputting:
+
+```
+%systemroot%\system32\oobe\msoobe.exe /a
+```
+
+The windows product activation timer can be reset four times by opening the registry editor and navigating to:
+
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\WPAEvents
+```
+
+and then changing the `OOBETimer` value from `FF` to `00` and then rebooting. 
+
+Once again go to Start and select run and then input:
+
+```
+%systemroot%\system32\oobe\msoobe.exe /a
+```
+
+Select Activate by Telephone, then back and remind me later. Restart Windows XP. Go to Start and select run and then input:
+
+```
+rundll32.exe syssetup,SetupOobeBnk
+```
 
 </details>
 
@@ -47,7 +77,39 @@ Windows XP has an initial 30 day grace period. After this grace period you are f
 
 Unofficially a copy of the Dell Windows XP SP3 Reinstallation ISO appears to be listed here:
 
-* [Archive Org Dell Windows XP SP3 Reinstallation ISO](https://archive.org/details/dell.-xp-pro-sp-3)
+* [Archive Org Dell Windows XP SP3 Professional Reinstallation ISO](https://archive.org/details/dell.-xp-pro-sp-3)
+* [Archive Org Dell Windows XP SP2 Home Reinstallation ISO](https://archive.org/details/dell-xp-home-sp-2)
+* [Archive Org Dell Windows XP SP2 Media Center Reinstallation ISO](https://archive.org/details/xp-mce-sp-2)
+
+</details>
+
+### Windows XP Full Retail ISO
+
+Windows XP had Retail and Retail Upgrade Licenses and the Product Keys for these Licenses are incompatible with each others installation media and incompatible with the Volume License and OEM installation media. Only the Retain Full Licenses can be used in a Virtual Machine as upgrading a Windows 2000 Virtual Machine to Windows XP is not supported and will not work properly:
+
+The Windows XP Professional or Home SP3 Retail License ISO and associated Product Key is not yet available to download on WinWorld:
+
+* [WinWorld Placeholder: Windows XP ISO and Product Key](https://winworldpc.com/product/windows-xp/final) 
+
+Which otherwise lists abandoned Windows Versions from Windows 1 through to Windows ME.
+
+<details>
+  <summary>Retail Licenses</summary>
+
+The Full Retail License for Windows XP Home or Professional is the correct license for a Virtual Machine however:
+
+* Online product activation for Windows XP Professional using a Retail Product key cannot be carried out because Microsoft have decommissioned the Product Activation servers and Windows XP Professional Retail Product Keys can therefore no longer be used to activate Windows XP.
+
+* Phone product activation to an automated line for Windows XP using a Retail Product key may still work. You are unlikely to be passed through to a Microsoft employee if the automated process does not work because the product has passed end of life and is no longer supported. You may have issues transferring your Windows XP Retail License from one Virtual Machine to another.
+
+</details>
+
+<details>
+  <summary>Unofficial Links (Untested)</summary>
+
+Unofficially a copy of the Windows XP Retail SP3 Installation ISO appears to be listed here:
+
+* [Archive Org Windows XP SP3 Retail Full Installation ISO](https://archive.org/details/5.1.2600.5512.xpsp.-080413-2111-x-86fre-client-professional-retail-en-us-grtmpfpp-en
 
 </details>
 
@@ -71,6 +133,14 @@ A VM can be created from this by renaming the file `WindowsXPMode_en-us.exe` to 
 The Windows XP drivers for the Windows XP Guest are contained in the VMware Tools Installation ISO. VMware tools for legacy versions of Windows needs to be downloaded from VMware separately:
 
 * [VMware Tools Version 10.0.12 ISO](https://packages.vmware.com/tools/releases/10.0.12/windows/)
+
+## Windows XP Service Packs
+
+The Windows XP Standalone Updates have been grouped together in an unofficial Windows XP Service Pack 4 Update. This update will patch any Windows XP Installation with SP1 or later:
+
+* [Windows XP Service Pack 4](https://www.majorgeeks.com/files/details/windows_xp_service_pack_4_unofficial.html)
+
+**Note in my case the Windows XP VM Fails to Shut Down Properly After Installation of this Service Pack.**
 
 ## Windows 11 Host or Ubuntu 24.10 Host System Requirements
 
@@ -168,12 +238,14 @@ If the line exists it can be modified to a new value. In this case it doesn't ex
 bios.bootDelay = "20000"
 ```
 
-The command above will change the time the Windows 7 Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
+<img src='./images/img_021.png' alt='img_021' width='600'/>
+
+The command above will change the time the Windows XP Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
 
 <details>
   <summary>SLIC 2.1 Passthrough</summary>
 
-If the Windows 11 Host PC came with a Windows 10 Professional OEM License, it has upgrade rights to Windows 11 Professional and downgrade right to Windows 7 Professional. The downgrade rights to Windows 7 Professional can be used by passing through the SLIC 2.1 to the Virtual Machine by adding the line to the Virtual Machines Configuration File:
+If the Windows 11 Host PC came with a Windows 10 Professional OEM License, it has upgrade rights to Windows 11 Professional and downgrade right to Windows 7 Professional. The downgrade rights to Windows 7 Professional can be used by passing through the SLIC 2.1 to the Virtual Machine by adding the line to the Virtual Machines Configuration File however this SLIC 2.1 doesn't typically activate Windows XP Professional:
 
 ```
 acpi.passthru.slic = "TRUE"
@@ -181,92 +253,221 @@ acpi.passthru.slicvendor = "TRUE"
 SMBIOS.reflecthost = "TRUE"
 ```
 
-Note if the Windows 11 Host PC doesn't have a SLIC 2.1, the above lines of code will prevent the Windows 7 Guest from booting and should be removed.
+Note if the Windows 11 Host PC doesn't have a SLIC 2.1, the above lines of code will prevent the Windows XP Guest from booting and should be removed.
 
 <details>
   <summary>Modded ROMs</summary>
 
-The my digital life forums has a post about a modded Virtual BIOS which includes a Dell SLIC 2.1 compatible with Dell Windows 7 Professional OEM SLP. These ROMs are not supported by Microsoft or Dell (but then neither is Windows 7). You will need to log into their forums to view the files:
+The my digital life forums has a post about a modded Virtual BIOS which includes a Dell SLIC 1.0 compatible with Dell Windows XP Professional OEM SLP. These ROMs are not supported by Microsoft or Dell (but then neither is Windows XP). You will need to log into their forums to view the files:
 
-* [My Digital Life: SLIC 2.1 Mod](https://forums.mydigitallife.net/threads/vmware-workstation-esxi-bios-efi-slic-mod.64693/#post-1132133)
+* [My Digital Life: SLIC 1.0, 2.1 Mod](https://forums.mydigitallife.net/threads/vmware-workstation-esxi-bios-efi-slic-mod.64693/#post-1132133)
 
-Extract the downloaded file and navigate to the `17.6.0 Modded ROMs` folder. Rename `WORKSTATION_17.6.0_DELL2.7_SLIC_EFI20-64.ROM` to `EFI20-64.ROM` and copy the modded ROM to the directory of the Windows 7 Guest. Update the Virtual Machine Configuration file to:
-
-```
-efi20-64.filename = "modded_EFI20-64.ROM"
-```
-
-Note if the corresponding ROM is not found in the directory the above line of code will prevent the Windows 7 Guest from booting.
-
-</details>
-
-</details>
-
-
-
-<img src='./images/img_021.png' alt='img_021' width='600'/>
-<img src='./images/img_022.png' alt='img_022' width='600'/>
-<img src='./images/img_023.png' alt='img_023' width='600'/>
-<img src='./images/img_024.png' alt='img_024' width='600'/>
-<img src='./images/img_025.png' alt='img_025' width='600'/>
-<img src='./images/img_026.png' alt='img_026' width='600'/>
-<img src='./images/img_027.png' alt='img_027' width='600'/>
-<img src='./images/img_028.png' alt='img_028' width='600'/>
-<img src='./images/img_029.png' alt='img_029' width='600'/>
-<img src='./images/img_030.png' alt='img_030' width='600'/>
-<img src='./images/img_031.png' alt='img_031' width='600'/>
-<img src='./images/img_032.png' alt='img_032' width='600'/>
-<img src='./images/img_033.png' alt='img_033' width='600'/>
-<img src='./images/img_034.png' alt='img_034' width='600'/>
-<img src='./images/img_035.png' alt='img_035' width='600'/>
-<img src='./images/img_036.png' alt='img_036' width='600'/>
-<img src='./images/img_037.png' alt='img_037' width='600'/>
-<img src='./images/img_038.png' alt='img_038' width='600'/>
-<img src='./images/img_039.png' alt='img_039' width='600'/>
-<img src='./images/img_040.png' alt='img_040' width='600'/>
-<img src='./images/img_041.png' alt='img_041' width='600'/>
-<img src='./images/img_042.png' alt='img_042' width='600'/>
-<img src='./images/img_043.png' alt='img_043' width='600'/>
-<img src='./images/img_044.png' alt='img_044' width='600'/>
-<img src='./images/img_045.png' alt='img_045' width='600'/>
-<img src='./images/img_046.png' alt='img_046' width='600'/>
-<img src='./images/img_047.png' alt='img_047' width='600'/>
-<img src='./images/img_048.png' alt='img_048' width='600'/>
-<img src='./images/img_049.png' alt='img_049' width='600'/>
-<img src='./images/img_050.png' alt='img_050' width='600'/>
-<img src='./images/img_051.png' alt='img_051' width='600'/>
-<img src='./images/img_052.png' alt='img_052' width='600'/>
-<img src='./images/img_053.png' alt='img_053' width='600'/>
-<img src='./images/img_054.png' alt='img_054' width='600'/>
-<img src='./images/img_055.png' alt='img_055' width='600'/>
-<img src='./images/img_056.png' alt='img_056' width='600'/>
-<img src='./images/img_057.png' alt='img_057' width='600'/>
-<img src='./images/img_058.png' alt='img_058' width='600'/>
-<img src='./images/img_059.png' alt='img_059' width='600'/>
-<img src='./images/img_060.png' alt='img_060' width='600'/>
-<img src='./images/img_061.png' alt='img_061' width='600'/>
-<img src='./images/img_062.png' alt='img_062' width='600'/>
-<img src='./images/img_063.png' alt='img_063' width='600'/>
-<img src='./images/img_064.png' alt='img_064' width='600'/>
-
-
-
-
-
-
-
-
-
-```
-bios.bootDelay = "20000"
-```
+Extract the downloaded file and navigate to the `17.6.0 Modded ROMs` folder. Rename `WORKSTATION_17.6.0_DELL2.7_SLIC_BIOS.440_(497).ROM` to `modded_BIOS.440.ROM` and copy the modded ROM to the directory of the Windows XP Guest. Update the Virtual Machine Configuration file to:
 
 ```
 bios440.filename = "modded_BIOS.440.ROM"
 ```
 
+Note if the corresponding ROM is not found in the directory the above line of code will prevent the Windows XP Guest from booting.
 
+</details>
+
+## Installing the Windows XP Guest OS
+
+Select the Windows XP Virtual Machine and select Play:
+
+<img src='./images/img_022.png' alt='img_022' width='600'/>
+
+The WIndows XP Setup will begin:
+
+<img src='./images/img_023.png' alt='img_023' width='600'/>
+
+Press `↵` to continue:
+
+<img src='./images/img_024.png' alt='img_024' width='600'/>
+
+Press `F8` to proceed:
+
+<img src='./images/img_025.png' alt='img_025' width='600'/>
+
+Press `↵` to install Windows XP on the unpartitioned space:
+
+<img src='./images/img_026.png' alt='img_026' width='600'/>
+
+Select Format the SYstem using NTFS (quick):
+
+<img src='./images/img_027.png' alt='img_027' width='600'/>
+
+Select Customise and change the Regional Settings, Location and Keyboard Settings:
+
+<img src='./images/img_028.png' alt='img_028' width='600'/>
+
+<img src='./images/img_029.png' alt='img_029' width='600'/>
+
+<img src='./images/img_030.png' alt='img_030' width='600'/>
+
+Select Next:
+
+<img src='./images/img_031.png' alt='img_031' width='600'/>
+
+Input your User Name and select Next:
+
+<img src='./images/img_032.png' alt='img_032' width='600'/>
+
+Input the computer name and select Next:
+
+<img src='./images/img_033.png' alt='img_033' width='600'/>
+
+Select the Time Zone and select Next:
+
+<img src='./images/img_034.png' alt='img_034' width='600'/>
+
+Select Typical Settings:
+
+<img src='./images/img_035.png' alt='img_035' width='600'/>
+
+Select No, leaving WORKGROUP as the default and then next:
+
+<img src='./images/img_036.png' alt='img_036' width='600'/>
+
+Select OK:
+
+<img src='./images/img_037.png' alt='img_037' width='600'/>
+
+Select OK:
+
+<img src='./images/img_038.png' alt='img_038' width='600'/>
+
+You will be taken to the Windows XP Desktop:
+
+<img src='./images/img_039.png' alt='img_039' width='600'/>
+
+## Installing VMware Tools
+
+Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src='./images/img_040.png' alt='img_040' width='600'/>
+
+Load the `VMware-tools-windows-10.0.12-4448496.iso`:
+
+<img src='./images/img_041.png' alt='img_041' width='600'/>
+
+Windows XP has autoplay enabled by default and the VMware Tools installation should begin. If it does not go to Computer in the Windows XP Guest and start the setup from the CD/DVD:
+
+<img src='./images/img_042.png' alt='img_042' width='600'/>
+
+Select Next:
+
+<img src='./images/img_043.png' alt='img_043' width='600'/>
+
+Select Next:
+
+<img src='./images/img_044.png' alt='img_044' width='600'/>
+
+Select Install:
+
+<img src='./images/img_045.png' alt='img_045' width='600'/>
+
+Select Yes to restart:
+
+<img src='./images/img_046.png' alt='img_046' width='600'/>
+
+The Windows XP Guest will restart and the window in the Windows 11 Host can now be resized, resizing the Windows XP Guest:
+
+<img src='./images/img_047.png' alt='img_047' width='600'/>
+
+On a Windows 11 Host, drag and drop to the Windows XP Guest is bi-directional. On a Ubuntu Host, drag and drop from the Ubuntu Host to the Windows XP Guest works but does not work from the Windows XP Guest to Ubuntu Host (Shared Folders can be configured for that). The Standalone Windows XP Service Pack 4 Update can be copied to the Windows XP Guest:
+
+<img src='./images/img_048.png' alt='img_048' width='600'/>
+
+<img src='./images/img_049.png' alt='img_049' width='600'/>
+
+## Windows Product Activation Timer
+
+The Windows Security Center Notifications can be changed:
+
+<img src='./images/img_050.png' alt='img_050' width='600'/>
+
+Notifications about Automatic Updates and Virus Protection can be Disabled:
+
+<img src='./images/img_051.png' alt='img_051' width='600'/>
+
+The activation status can be seen by going to Start and selecting run:
+
+<img src='./images/img_052.png' alt='img_052' width='600'/>
+
+and then inputting:
 
 ```
-oobe/msoobe /a
+%systemroot%\system32\oobe\msoobe.exe /a
 ```
+
+<img src='./images/img_053.png' alt='img_053' width='600'/>
+
+Details about the days remaining in grace period can be seen:
+
+<img src='./images/img_054.png' alt='img_054' width='600'/>
+
+If a Windows XP Professional Volume License ISO was used, Windows XP Professional should be activated. Alternatively if a Dell Windows XP Professional OEM on a Virtual Machine with a SLIC 1.0 passed through, Windows XP Professional should be activated.
+
+## Shared Folders
+
+Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmshared`:
+
+<img src='./images/img_055.png' alt='img_055' width='600'/>
+
+Select Player → Manage → Virtual Machine Settings:
+
+<img src='./images/img_056.png' alt='img_056' width='600'/>
+
+Select Options → Shared Folders and change the setting to Always Enabled and check Map Network Drive:
+
+<img src='./images/img_057.png' alt='img_057' width='600'/>
+
+Select Add, select the folder vmshared on the Windows 11 Host PC or Ubuntu 24.10 Host PC and then next:
+
+<img src='./images/img_058.png' alt='img_058' width='600'/>
+
+Select Enable this Share and Finish:
+
+<img src='./images/img_059.png' alt='img_059' width='600'/>
+
+<img src='./images/img_060.png' alt='img_060' width='600'/>
+
+The shared folder is now mapped as a network drive in the Windows XP Guest:
+
+<img src='./images/img_061.png' alt='img_061' width='600'/>
+
+And the file created on the Windows XP Guest in this shared folder can be accessed in the Windows 11 Host or Ubuntu 24.10 Host:
+
+<img src='./images/img_062.png' alt='img_062' width='600'/>
+
+## USB Devices
+
+A USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows XP Guest:
+
+<img src='./images/img_063.png' alt='img_063' width='600'/>
+
+The Device Drivers for the USB Device and software can be installed in the Windows 7 Guest.
+
+## Serial Ports
+
+It is also possible to pass a Serial Port from the Windows 11 Host or Ubuntu 24.10 Host to the Windows XP Guest. Select Player → Manage → Virtual Machine Settings:
+
+<img src='./images/img_064.png' alt='img_064' width='600'/>
+
+Under hardware select Add...
+
+<img src='./images/img_065.png' alt='img_065' width='600'/>
+
+Then select Serial Port:
+
+<img src='./images/img_066.png' alt='img_066' width='600'/>
+
+This needs to be done when the Windows 7 Guest is powered off. In this example, the Windows 11 Host doesn't have a Serial Port, so I'm not going to add a Serial Port.
+
+Note the Serial Port number should be configured in the Device Manager in the Windows 11 Host, then added to the Windows XP Guest, then the Serial Port number should be configured in the Windows XP Guest. It is recommended to do this one at a time, to avoid confusion between Serial Ports.
+
+The Windows XP Guest is now setup:
+
+* [VMware Installation Guide](../readme.md)
