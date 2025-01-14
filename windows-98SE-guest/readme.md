@@ -527,92 +527,190 @@ This process repeats for a number of other drivers. Select yes to restart the Wi
 
 ## NUSB - USB Mass Storage
 
+Drag the `nusb36e.exe` to the WIndows 98 Guest desktop and launch the application:
+
 <img src='./images/img_107.png' alt='img_107' width='600'/>
+
+Select yes:
+
 <img src='./images/img_108.png' alt='img_108' width='600'/>
+
+Select yes:
+
 <img src='./images/img_109.png' alt='img_109' width='600'/>
+
+Select My Computer:
+
 <img src='./images/img_110.png' alt='img_110' width='600'/>
+
+Select Control Panel:
+
 <img src='./images/img_111.png' alt='img_111' width='600'/>
+
+Select System:
+
 <img src='./images/img_112.png' alt='img_112' width='600'/>
+
+Select Device Manager:
+
 <img src='./images/img_113.png' alt='img_113' width='600'/>
+
+Select PCI Universal Serial BUS and select properties:
+
 <img src='./images/img_114.png' alt='img_114' width='600'/>
+
+Select Driver → Update Driver:
+
 <img src='./images/img_115.png' alt='img_115' width='600'/>
+
+Select next:
+
 <img src='./images/img_116.png' alt='img_116' width='600'/>
+
+Select finish:
+
 <img src='./images/img_117.png' alt='img_117' width='600'/>
+
+The PCI Universal Serial BUS is no longer listed under Other devices because it has its driver installed:
+
 <img src='./images/img_118.png' alt='img_118' width='600'/>
-
-
-
-
-
-
-
-
-
-Drag driver across and install...
-
-Update for new version...
-
-Update in Device Manager
 
 ## Crucial Soundblaster
 
+Drag `SBPCI_WebDrvsV5_12_01.exe` to the Windows 98 Guest Desktop and launch the setup:
+
 <img src='./images/img_119.png' alt='img_119' width='600'/>
+
+Select yes:
+
 <img src='./images/img_120.png' alt='img_120' width='600'/>
+
+If the following error displays, check the Windows 98 Installation Disk is mounted in `D:` (just mount it on both optical drives). Select Removable Devices → CD/DVD → Settings:
+
 <img src='./images/img_121.png' alt='img_121' width='600'/>
+
+Under Use ISO file image, select the Windows 98 Installation Disk. Repeat for CD/DVD and select OK:
+
 <img src='./images/img_122.png' alt='img_122' width='600'/>
+
+Select OK:
+
 <img src='./images/img_123.png' alt='img_123' width='600'/>
+
+Select finish:
+
 <img src='./images/img_124.png' alt='img_124' width='600'/>
 
+Open the Device Manager, the PCI Multimedia Audio Device listed under Other Device is gone because the driver is installed:
 
+<img src='./images/img_125.png' alt='img_125' width='600'/>
 
+Drag the `eapci8m.ecw` waveset to `C:\WINDOWS\SYSTEM`:
 
-Insert Windows 98 SE Disk into D:
+<img src='./images/img_126.png' alt='img_126' width='600'/>
 
+Expand Sound, video and game controllers. Select SB PCI(WDM) and select Properties:
 
+<img src='./images/img_127.png' alt='img_127' width='600'/>
 
-Launch Setup
+Select Settings and select Add WaveSet:
 
+<img src='./images/img_128.png' alt='img_128' width='600'/>
 
-Do the other file...
+Select the `system` folder:
 
+<img src='./images/img_129.png' alt='img_129' width='600'/>
+
+Select the `eapci8m.ecw` waveset and select Ok:
+
+<img src='./images/img_130.png' alt='img_130' width='600'/>
+
+Select Ok:
+
+<img src='./images/img_131.png' alt='img_131' width='600'/>
+
+Restart the Windows 98 SE Guest.
 
 ## Hardware IDs
 
-Start Run
+There is still a PCI System Peripheral in the Device Manager without a driver. To get the Hardware IDs press Start and select Run:
 
+<img src='./images/img_132.png' alt='img_132' width='600'/>
+
+Input the following command:
 
 ```
 hwinfo /ui
 ```
 
+<img src='./images/img_133.png' alt='img_133' width='600'/>
+
+In the output file, press `Ctrl+f` and search for PCI System Peripheral:
+
+<img src='./images/img_134.png' alt='img_134' width='600'/>
+
+This is:
 
 ```
 HKEY_LOCAL_MACHINE\enum\PCI\VEN_15AD&DEV_0740&SUBSYS_074015AD&REV_10\BUS_00&DEV_07&FUNC_07
 ```
 
+which is the VMware VMCI Bus which is used by VMware for folder sharing and dragging and dropping files:
 
-VMware VMCI Bus
+<img src='./images/img_135.png' alt='img_135' width='600'/>
 
-For Windows 98 and Windows 98SE, there is no support for the VMCI device in VMware Tools. One workaround is to disable the VMCI device using the Device Manager so that it is ignored by Windows, and diagnostic tools stop reporting errors. 
+According to Broadcom there is no Windows 98 driver for this device:
 
-https://knowledge.broadcom.com/external/article?legacyId=1023129
+> For Windows 98 and Windows 98SE, there is no support for the VMCI device in VMware Tools. 
 
-
+[Broadcom Legacy Article 1023129](https://knowledge.broadcom.com/external/article?legacyId=1023129)
 
 ## Installing Unofficial Service Pack
 
+Drag `U98SESP3.EXE` to the Windows 98 Guest Desktop and launch the setup:
 
-* Install Main Updates/System Core Files
+<img src='./images/img_136.png' alt='img_136' width='600'/>
 
-* Install latest DirectX 9C
+Select yes:
 
+<img src='./images/img_137.png' alt='img_137' width='600'/>
 
-## Drivers
+Installation instructions will display, the first 3 perquisite steps have been completed. Close the instructions:
 
-https://www.conceptworks.io/en/knowledge-base/289/
+<img src='./images/img_138.png' alt='img_138' width='600'/>
 
+Select **ONLY** Main Updates/System Core Files and select ok:
 
-* [Logitech Mouse](https://download.cnet.com/mw980enu-exe/3000-2108_4-157438.html)
+<img src='./images/img_139.png' alt='img_139' width='600'/>
 
+Select Ok:
 
-https://startup.retropc.se/win98.html
+<img src='./images/img_140.png' alt='img_140' width='600'/>
+
+Select yes to restart the Windows 98 Guest:
+
+<img src='./images/img_141.png' alt='img_141' width='600'/>
+
+Relaunch the setup and select **ONLY** DirectX 9C and select ok:
+
+<img src='./images/img_142.png' alt='img_142' width='600'/>
+
+Select ok:
+
+<img src='./images/img_143.png' alt='img_143' width='600'/>
+
+Select yes to restart the Windows 98 Guest:
+
+<img src='./images/img_144.png' alt='img_144' width='600'/>
+
+Additional components in the unofficial service pack can be installed. 
+
+**It is recommended to copy the Windows 98 folder on the Windows 11 Host or Ubuntu 24.10 to backup the Windows 98 Guest before installing any of these additional components.**
+
+The Windows XP Guest is now setup:
+
+* [VMware Installation Guide](../readme.md)
+
+Additional Windows 98 software can be found in:
+
+* [Retro PC installation files](https://startup.retropc.se/win98.html)
