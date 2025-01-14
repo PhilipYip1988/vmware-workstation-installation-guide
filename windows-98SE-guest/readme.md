@@ -6,25 +6,275 @@ Windows 98SE is considered abandonware and the Windows 98SE ISO and Product Key 
 
 * [WinWorld](https://winworldpc.com/product/windows-98/98-second-edition)
 
-Use the OEM Full ISO (the Retail Full ISO doesn't boot in VMware Player) and the provided product key. For this version of Windows there was only a Product Key and there was no concept of Product Activation.
-
-## Windows 98SE Service Pack
-
-* [Windows 98SE Unofficial Service Pack](https://www.softpedia.com/get/System/OS-Enhancements/Unofficial-Windows-SE-Service-Pack.shtml)
+Use the OEM Full ISO as the Retail Full ISO doesn't boot in VMware Player and the provided product key. For this version of Windows there was only a Product Key and there was no concept of Product Activation.
 
 ## VMware Tools ISO
 
 * [VMware Tools Pre2k](https://packages-prod.broadcom.com/tools/frozen/windows/winPre2k.iso)
 
+## Patcher9x
+
+The Windows 98SE installation errors out on a VM on a modern computer:
+
+> This program has performed an illegal operation and will be shut down.
+
+> If the problem persists, contact the program vendor
+
+<img src='./images/img_001.png' alt='img_001' width='600'/>
+
+Essentially the processor is too fast and windows 98SE expects to wait more than "zero seconds" for an operation.
+
+Download the `patcher9x.ima` from the assets of the latest release:
+
+* [patcher9x](https://github.com/JHRobotics/patcher9x/releases/)
+
+Right click the downloaded file and select rename: 
+
+<img src='./images/img_002.png' alt='img_002' width='600'/>
+
+Change the file extension from `.ima` to `.img`:
+
+<img src='./images/img_003.png' alt='img_003' width='600'/>
+
+Select Yes:
+
+<img src='./images/img_004.png' alt='img_004' width='600'/>
+
+The virtual floppy disk is now compatible with VMware:
+
+<img src='./images/img_005.png' alt='img_005' width='600'/>
+
+## NUSB
+
+NUSB is a fix to allow USB flash drives in Windows 98SE: 
+
+* [NUSB](https://www.philscomputerlab.com/windows-98-usb-storage-driver.html)
+
+## Creative SoundBlaster
+
+* [Creative SBPCI_WebDrvsV5_12_01.exe](https://support.creative.com/downloads/download.aspx?nDownloadId=1843)
+
+## Windows 98SE Service Pack
+
+* [Windows 98SE Unofficial Service Pack](https://www.majorgeeks.com/files/details/unofficial_windows98_se_service_pack.html)
+
 ## Drivers
 
 * [Intel USB 2.0 Drivers for Windows 98 ISO](https://archive.org/details/usb-20-driver-win-98)
 * [Intel Chipset Software Installation Utility (5.0.1.1015)](https://archive.org/details/Intel_Chipset_Software_Installation_Utility_5.0.1.1015)
-* [Creative SBPCI_WebDrvsV5_12_01.exe](https://support.creative.com/downloads/download.aspx?nDownloadId=1843)
+
 * [Direct X 9.0c](https://archive.org/details/directx9-dec2006-redist)
 * [Logitech Mouse](https://download.cnet.com/mw980enu-exe/3000-2108_4-157438.html)
 
+## Configuring the Windows 98 Guest
+
+Select File → New Virtual Machine:
+
+<img src='./images/img_006.png' alt='img_006' width='600'/>
+
+It is recommended to instead use "I Will Install this Operating System Later":
+
+<img src='./images/img_007.png' alt='img_007' width='600'/>
+
+Select Microsoft Windows and Windows 98 and select Next:
+
+<img src='./images/img_008.png' alt='img_008' width='600'/>
+
+The VM Name and Location will be shown. Note when used on a Windows 11 Host which is signed in with a Microsoft Account and integrated with OneDrive, the default location will be on OneDrive. The VM can be quite large and the location can be changed to local Documents by removing the OneDrive folder:
+
+<img src='./images/img_009.png' alt='img_009' width='600'/>
+
+Note the name and location as these will be used later.
+
+The default maximum size of the Windows 98 Guest is 8 GB which is a bit too restrictive. I recommend increasing this to 32 GB. Note the files on the Windows 11 Host won't be 32 GB but can be up to 32 GB if the Windows 98 Guests Virtual Drive is fully occupied with files. Windows 98 may struggle with a Virtual Drive > 32 GB:
+
+<img src='./images/img_010.png' alt='img_010' width='600'/>
+
+Select Customise Hardware:
+
+<img src='./images/img_011.png' alt='img_011' width='600'/>
+
+Change the memory to 512 MB (Windows 98 has issues with larger memory sizes):
+
+<img src='./images/img_012.png' alt='img_012' width='600'/>
+
+Leave the processor options to their default. Windows 98 does not support any of the unticked technologies and only supports 1 processor. A modern processor may be too fast for it and the patcher9x will need to later be used to address this:
+
+<img src='./images/img_013.png' alt='img_013' width='600'/>
+
+In CD/DVD select the Windows 98 SE OEM ISO:
+
+<img src='./images/img_014.png' alt='img_014' width='600'/>
+
+Leave Network Adaptor at the default setting:
+
+<img src='./images/img_015.png' alt='img_015' width='600'/>
+
+Leave the USB Controller at the default setting. NUSB will need to be installed later to access USB Devices:
+
+<img src='./images/img_016.png' alt='img_016' width='600'/>
+
+Leave the Sound Card at the default setting:
+
+<img src='./images/img_017.png' alt='img_017' width='600'/>
+
+Leave display at the default setting and select Close:
+
+<img src='./images/img_018.png' alt='img_018' width='600'/>
+
+Select Finish:
+
+<img src='./images/img_019.png' alt='img_019' width='600'/>
+
+## Installing the Windows 98 Guest
+
+<img src='./images/img_020.png' alt='img_020' width='600'/>
+<img src='./images/img_021.png' alt='img_021' width='600'/>
+<img src='./images/img_022.png' alt='img_022' width='600'/>
+<img src='./images/img_023.png' alt='img_023' width='600'/>
+<img src='./images/img_024.png' alt='img_024' width='600'/>
+<img src='./images/img_025.png' alt='img_025' width='600'/>
+<img src='./images/img_026.png' alt='img_026' width='600'/>
+<img src='./images/img_027.png' alt='img_027' width='600'/>
+<img src='./images/img_028.png' alt='img_028' width='600'/>
+<img src='./images/img_029.png' alt='img_029' width='600'/>
+
+
+<img src='./images/img_030.png' alt='img_030' width='600'/>
+<img src='./images/img_031.png' alt='img_031' width='600'/>
+<img src='./images/img_032.png' alt='img_032' width='600'/>
+<img src='./images/img_033.png' alt='img_033' width='600'/>
+<img src='./images/img_034.png' alt='img_034' width='600'/>
+<img src='./images/img_035.png' alt='img_035' width='600'/>
+<img src='./images/img_036.png' alt='img_036' width='600'/>
+<img src='./images/img_037.png' alt='img_037' width='600'/>
+<img src='./images/img_038.png' alt='img_038' width='600'/>
+<img src='./images/img_039.png' alt='img_039' width='600'/>
+<img src='./images/img_039.png' alt='img_039' width='600'/>
+<img src='./images/img_040.png' alt='img_040' width='600'/>
+<img src='./images/img_041.png' alt='img_041' width='600'/>
+<img src='./images/img_042.png' alt='img_042' width='600'/>
+
+## Patcher 9x
+
+<img src='./images/img_043.png' alt='img_043' width='600'/>
+<img src='./images/img_044.png' alt='img_044' width='600'/>
+<img src='./images/img_045.png' alt='img_045' width='600'/>
+<img src='./images/img_046.png' alt='img_046' width='600'/>
+<img src='./images/img_047.png' alt='img_047' width='600'/>
+<img src='./images/img_048.png' alt='img_048' width='600'/>
+<img src='./images/img_049.png' alt='img_049' width='600'/>
+<img src='./images/img_050.png' alt='img_050' width='600'/>
+<img src='./images/img_051.png' alt='img_051' width='600'/>
+<img src='./images/img_052.png' alt='img_052' width='600'/>
+<img src='./images/img_053.png' alt='img_053' width='600'/>
+<img src='./images/img_054.png' alt='img_054' width='600'/>
+<img src='./images/img_055.png' alt='img_055' width='600'/>
+<img src='./images/img_056.png' alt='img_056' width='600'/>
+<img src='./images/img_057.png' alt='img_057' width='600'/>
+<img src='./images/img_058.png' alt='img_058' width='600'/>
+<img src='./images/img_059.png' alt='img_059' width='600'/>
+<img src='./images/img_060.png' alt='img_060' width='600'/>
+<img src='./images/img_061.png' alt='img_061' width='600'/>
+<img src='./images/img_062.png' alt='img_062' width='600'/>
+<img src='./images/img_063.png' alt='img_063' width='600'/>
+<img src='./images/img_064.png' alt='img_064' width='600'/>
+<img src='./images/img_065.png' alt='img_065' width='600'/>
+<img src='./images/img_066.png' alt='img_066' width='600'/>
+<img src='./images/img_067.png' alt='img_067' width='600'/>
+<img src='./images/img_068.png' alt='img_068' width='600'/>
+<img src='./images/img_069.png' alt='img_069' width='600'/>
+<img src='./images/img_070.png' alt='img_070' width='600'/>
+<img src='./images/img_071.png' alt='img_071' width='600'/>
+<img src='./images/img_072.png' alt='img_072' width='600'/>
+<img src='./images/img_073.png' alt='img_073' width='600'/>
+<img src='./images/img_074.png' alt='img_074' width='600'/>
+<img src='./images/img_075.png' alt='img_075' width='600'/>
+<img src='./images/img_076.png' alt='img_076' width='600'/>
+<img src='./images/img_077.png' alt='img_077' width='600'/>
+<img src='./images/img_078.png' alt='img_078' width='600'/>
+<img src='./images/img_079.png' alt='img_079' width='600'/>
+<img src='./images/img_080.png' alt='img_080' width='600'/>
+<img src='./images/img_081.png' alt='img_081' width='600'/>
+<img src='./images/img_082.png' alt='img_082' width='600'/>
+<img src='./images/img_083.png' alt='img_083' width='600'/>
+<img src='./images/img_084.png' alt='img_084' width='600'/>
+<img src='./images/img_085.png' alt='img_085' width='600'/>
+<img src='./images/img_086.png' alt='img_086' width='600'/>
+<img src='./images/img_087.png' alt='img_087' width='600'/>
+<img src='./images/img_088.png' alt='img_088' width='600'/>
+<img src='./images/img_089.png' alt='img_089' width='600'/>
+<img src='./images/img_090.png' alt='img_090' width='600'/>
+<img src='./images/img_091.png' alt='img_091' width='600'/>
+<img src='./images/img_092.png' alt='img_092' width='600'/>
+<img src='./images/img_093.png' alt='img_093' width='600'/>
+<img src='./images/img_094.png' alt='img_094' width='600'/>
+<img src='./images/img_095.png' alt='img_095' width='600'/>
+<img src='./images/img_096.png' alt='img_096' width='600'/>
+<img src='./images/img_097.png' alt='img_097' width='600'/>
+<img src='./images/img_098.png' alt='img_098' width='600'/>
+<img src='./images/img_099.png' alt='img_099' width='600'/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 With VMWare tools you can drag and drop files from the host to the VM or vice versa from folder to folder or folder to desktop. Dragging all these updates across:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Content from Old Guide
 
