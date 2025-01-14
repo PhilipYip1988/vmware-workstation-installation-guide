@@ -276,7 +276,7 @@ Note if the corresponding ROM is not found in the directory the above line of co
 
 ## Installing the Windows XP Guest OS
 
-Select the Windows XP Virtual Machine and select Play:
+Select the Windows XP Guest and select Play:
 
 <img src='./images/img_022.png' alt='img_022' width='600'/>
 

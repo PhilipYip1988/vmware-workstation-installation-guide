@@ -141,92 +141,354 @@ Select Finish:
 
 ## Installing the Windows 98 Guest
 
+Select the Windows 98 Guest and select Play:
+
 <img src='./images/img_020.png' alt='img_020' width='600'/>
+
+Select Boot from CD-ROM:
+
 <img src='./images/img_021.png' alt='img_021' width='600'/>
+
+Select Start Windows 98 Setup from CD-ROM:
+
 <img src='./images/img_022.png' alt='img_022' width='600'/>
+
+Press `↵`:
+
 <img src='./images/img_023.png' alt='img_023' width='600'/>
+
+Select Configure Allocated SPace (Recommended):
+
 <img src='./images/img_024.png' alt='img_024' width='600'/>
+
+Select Yes Enable Large Disk Support:
+
 <img src='./images/img_025.png' alt='img_025' width='600'/>
+
+Press `↵`:
+
 <img src='./images/img_026.png' alt='img_026' width='600'/>
+
+Select Boot from CD-ROM:
+
 <img src='./images/img_027.png' alt='img_027' width='600'/>
+
+Select Start Windows 98 Setup from CD-ROM:
+
 <img src='./images/img_028.png' alt='img_028' width='600'/>
+
+The Windows Setup will format the Virtual Drive:
+
 <img src='./images/img_029.png' alt='img_029' width='600'/>
 
+Press `↵`:
 
 <img src='./images/img_030.png' alt='img_030' width='600'/>
+
+Select Continue:
+
 <img src='./images/img_031.png' alt='img_031' width='600'/>
+
+Select the default `C:/Windows` and select Next:
+
 <img src='./images/img_032.png' alt='img_032' width='600'/>
+
+Select Typical and press Next:
+
 <img src='./images/img_033.png' alt='img_033' width='600'/>
+
+Select Install the most common components (recommended):
+
 <img src='./images/img_034.png' alt='img_034' width='600'/>
+
+Use the default computer name or amend as desired and select next:
+
 <img src='./images/img_035.png' alt='img_035' width='600'/>
+
+Select your location and select next:
+
 <img src='./images/img_036.png' alt='img_036' width='600'/>
+
+Select next:
+
 <img src='./images/img_037.png' alt='img_037' width='600'/>
+
+Input your user name and select next:
+
 <img src='./images/img_038.png' alt='img_038' width='600'/>
+
+Accept the License Agreement and select Next:
+
 <img src='./images/img_039.png' alt='img_039' width='600'/>
-<img src='./images/img_039.png' alt='img_039' width='600'/>
+
+Input the provided Product Key and select next:
+
 <img src='./images/img_040.png' alt='img_040' width='600'/>
+
+Select Finish:
+
 <img src='./images/img_041.png' alt='img_041' width='600'/>
+
+On a Windows 11 Host or Ubuntu 24.10 Host with a modern processor. The Windows 98SE installation errors out on a VM on a modern computer:
+
+> This program has performed an illegal operation and will be shut down.
+
+> If the problem persists, contact the program vendor
+
 <img src='./images/img_042.png' alt='img_042' width='600'/>
+
+Essentially the processor is too fast and windows 98SE expects to wait more than "zero seconds" for an operation.
 
 ## Patcher 9x
 
+Select Power → Shut Down Guest:
+
 <img src='./images/img_043.png' alt='img_043' width='600'/>
+
+Select Yes:
+
 <img src='./images/img_044.png' alt='img_044' width='600'/>
+
+Select the Windows 98 Guest and select Edit Virtual Machine Settings:
+
 <img src='./images/img_045.png' alt='img_045' width='600'/>
+
+Under Hardware select Add:
+
 <img src='./images/img_046.png' alt='img_046' width='600'/>
+
+Select Floppy Drive and Finish:
+
 <img src='./images/img_047.png' alt='img_047' width='600'/>
+
+Select Use Floppy Drive and select the `patcher9x-0.8.50-boot.img`:
+
 <img src='./images/img_048.png' alt='img_048' width='600'/>
+
+Select the Windows 98 Guest and select Play:
+
 <img src='./images/img_049.png' alt='img_049' width='600'/>
+
+The Windows 98 Guest will boot to the floppy drive, select FreeDOS/XMS with CD-ROM (default):
+
 <img src='./images/img_050.png' alt='img_050' width='600'/>
+
+Input:
+
+```
+patch9x
+```
+
 <img src='./images/img_051.png' alt='img_051' width='600'/>
+
+Press `↵`:
+
 <img src='./images/img_052.png' alt='img_052' width='600'/>
+
+Input 
+
+```
+2
+``` 
+
+to select VMM32.VXB will be patched directly (default):
+
 <img src='./images/img_053.png' alt='img_053' width='600'/>
+
+Input:
+
+```
+y
+```
+
 <img src='./images/img_054.png' alt='img_054' width='600'/>
+
+
+The Windows 98 Guest is patched press `↵` to exit:
+
 <img src='./images/img_055.png' alt='img_055' width='600'/>
+
+A new DOS prompt will display:
+
 <img src='./images/img_056.png' alt='img_056' width='600'/>
+
+Select Removable Devices → Floppy Settings:
+
 <img src='./images/img_057.png' alt='img_057' width='600'/>
+
+Select Floppy and uncheck Connected and Connect at Power On. Select OK:
+
 <img src='./images/img_058.png' alt='img_058' width='600'/>
+
+Select Power → Restart Guest:
+
 <img src='./images/img_059.png' alt='img_059' width='600'/>
+
+Select Yes:
+
 <img src='./images/img_060.png' alt='img_060' width='600'/>
+
+The Windows 98 setup will proceed:
+
 <img src='./images/img_061.png' alt='img_061' width='600'/>
+
+Log in:
+
 <img src='./images/img_062.png' alt='img_062' width='600'/>
+
+Select your Time Zone and select apply and close:
+
 <img src='./images/img_063.png' alt='img_063' width='600'/>
+
+Select restart now:
+
 <img src='./images/img_064.png' alt='img_064' width='600'/>
+
+Log in:
+
 <img src='./images/img_065.png' alt='img_065' width='600'/>
+
+You are now on the Windows 98 Desktop:
+
 <img src='./images/img_066.png' alt='img_066' width='600'/>
+
+Select Start → Shut Down:
+
 <img src='./images/img_067.png' alt='img_067' width='600'/>
+
+Select Shut Down and then OK:
+
 <img src='./images/img_068.png' alt='img_068' width='600'/>
+
+## Installing VMware Tools
+
+Installing VMware tools will install some of the Windows 98 System Drivers. Installation of drivers also uses the Windows 98 Installation CD, so it is recommended to use a second virtual drive for VMware Tools.
+
+Select the Windows 98 Guest and select Edit Virtual Machine Settings:
+
 <img src='./images/img_069.png' alt='img_069' width='600'/>
+
+Under Hardware select Add:
+
 <img src='./images/img_070.png' alt='img_070' width='600'/>
+
+Select CD/DVD Drive and select Finish:
+
 <img src='./images/img_071.png' alt='img_071' width='600'/>
+
+Select use ISO Image and select the `winPre2k.iso`:
+
 <img src='./images/img_072.png' alt='img_072' width='600'/>
+
+Select the Windows 98 Guest and select Play:
+
 <img src='./images/img_073.png' alt='img_073' width='600'/>
+
+In the Windows 98 Guest, navigate to My Computer:
+
 <img src='./images/img_074.png' alt='img_074' width='600'/>
+
+Select VMware Tools:
+
 <img src='./images/img_075.png' alt='img_075' width='600'/>
+
+Select Next:
+
 <img src='./images/img_076.png' alt='img_076' width='600'/>
+
+Select Typical (I select Complete and the same number of drivers were installed, some system drivers are missing and need to be manually installed) and Next:
+
 <img src='./images/img_077.png' alt='img_077' width='600'/>
+
+Select Install:
+
 <img src='./images/img_078.png' alt='img_078' width='600'/>
+
+Select Finish:
+
 <img src='./images/img_079.png' alt='img_079' width='600'/>
+
+Select Yes:
+
 <img src='./images/img_080.png' alt='img_080' width='600'/>
+
+The Windows 98 Guest will restart. Select My Computer:
+
 <img src='./images/img_081.png' alt='img_081' width='600'/>
+
+Select Control Panel:
+
 <img src='./images/img_082.png' alt='img_082' width='600'/>
+
+Select Display:
+
 <img src='./images/img_083.png' alt='img_083' width='600'/>
+
+Select Settings and change the resolution to the maximum value and select apply:
+
 <img src='./images/img_084.png' alt='img_084' width='600'/>
+
+Select OK:
+
 <img src='./images/img_085.png' alt='img_085' width='600'/>
+
+Select Yes:
+
 <img src='./images/img_086.png' alt='img_086' width='600'/>
+
+Select the Windows 98 Guest window in the Windows 11 Host or Ubuntu 24.10 Host and resize it, the Windows 98 Guest will automatically update its resolution to match the window size:
+
 <img src='./images/img_087.png' alt='img_087' width='600'/>
+
+Select System:
+
 <img src='./images/img_088.png' alt='img_088' width='600'/>
+
+Select Device Manager:
+
 <img src='./images/img_089.png' alt='img_089' width='600'/>
+
+Notice that the:
+
+* Multimedia Audio Device
+* System Peripheral
+* PCI Universal Serial Bus
+
+do not have driver.
+
+## Backing Up the Windows 98 Guest
+
+Select Start → Shut Down:
+
 <img src='./images/img_090.png' alt='img_090' width='600'/>
+
+Select Shut Down and then OK:
+
 <img src='./images/img_091.png' alt='img_091' width='600'/>
+
+On the Windows 11 Host or Ubuntu 24.10 Host, navigate to Documents and the Virtual Machines folder:
+
 <img src='./images/img_092.png' alt='img_092' width='600'/>
+
+Copy the Windows 98 folder to back it up:
+
 <img src='./images/img_093.png' alt='img_093' width='600'/>
+
+This will give you a working state to revert back to if you encounter an issue during driver installation or use of the Unofficial Service Pack.
+
+## Intel Chipset Device Software
+
 <img src='./images/img_094.png' alt='img_094' width='600'/>
+
 <img src='./images/img_095.png' alt='img_095' width='600'/>
 <img src='./images/img_096.png' alt='img_096' width='600'/>
 <img src='./images/img_097.png' alt='img_097' width='600'/>
 <img src='./images/img_098.png' alt='img_098' width='600'/>
 <img src='./images/img_099.png' alt='img_099' width='600'/>
+
+
+## USB Mass Storage
+
 
 
 
