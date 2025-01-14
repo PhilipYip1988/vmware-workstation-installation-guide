@@ -6,9 +6,11 @@ Windows 98SE is considered abandonware and the Windows 98SE ISO and Product Key 
 
 * [WinWorld](https://winworldpc.com/product/windows-98/98-second-edition)
 
-Use the OEM Full ISO as the Retail Full ISO doesn't boot in VMware Player and the provided product key. For this version of Windows there was only a Product Key and there was no concept of Product Activation.
+Use the OEM Full ISO as the Retail Full ISO doesn't boot in VMware Player without use of a floppy disk and use the provided Product Key. For this version of Windows there was only a Product Key and there was no concept of Product Activation.
 
 ## VMware Tools ISO
+
+Windows 98SE requires the Pre2k version of VMware Tools which installs some of the System Drivers such as the virtual display driver and also allows dragging and dropping files to the Windows 98 Guest:
 
 * [VMware Tools Pre2k](https://packages-prod.broadcom.com/tools/frozen/windows/winPre2k.iso)
 
@@ -46,34 +48,29 @@ The virtual floppy disk is now compatible with VMware:
 
 ## Intel Chipset Installation Utility
 
+VMware tools is missing the Intel Chipset driver:
+
 * [6.3.0.1007](https://www.philscomputerlab.com/intel-chipset-drivers.html)
 
-## NUSB
+## NUSB Storage Driver
+
+VMware tools is missing the NUSB Storage driver
 
 * [NUSB36e](https://www.philscomputerlab.com/windows-98-usb-storage-driver.html)
 
 ## Creative SoundBlaster
 
+VMware tools is missing the Creative SoundBlaster driver:
+
 * [Creative SBPCI_WebDrvsV5_12_01.exe](https://support.creative.com/downloads/download.aspx?nDownloadId=1843)
 
 * [Creative eapci8m.ecw](https://support.creative.com/downloads/download.aspx?nDownloadId=1825)
 
-https://www.conceptworks.io/en/knowledge-base/289/
-
 ## Windows 98SE Service Pack
 
+An unofficial Service pack for Windows 98 is available:
+
 * [Windows 98SE Unofficial Service Pack](https://www.majorgeeks.com/files/details/unofficial_windows98_se_service_pack.html)
-
-## Drivers
-
-
-
-* [Direct X 9.0c](https://archive.org/details/directx9-dec2006-redist)
-* [Logitech Mouse](https://download.cnet.com/mw980enu-exe/3000-2108_4-157438.html)
-
-
-https://startup.retropc.se/win98.html
-
 
 ## Configuring the Windows 98 Guest
 
@@ -474,14 +471,82 @@ This will give you a working state to revert back to if you encounter an issue d
 
 ## Intel Chipset Device Software
 
-VMware Tools is installed meaning drag and drop to the Virtual Machine works bi-directionally on a Windows 11 Host and on a Ubuntu 24.10 only from the Ubuntu 24.10 Host to the Windows 98 Guest.
+VMware Tools is installed meaning drag and drop to the Virtual Machine works bi-directionally on a Windows 11 Host and on a Ubuntu 24.10 only from the Ubuntu 24.10 Host to the Windows 98 Guest:
 
-Update for new version...
+Extract the `6.3.0.1007.zip` folder:
 
-Drag the `setup.exe` for the Intel Chipset Software Installation Utility to the Windows 98 Guest:
+<img src='./images/img_094.png' alt='img_094' width='600'/>
 
+View the extracted folder and drag the `infinst_enu.exe` for the Intel Chipset Software Installation Utility to the Windows 98 Guest:
+
+<img src='./images/img_095.png' alt='img_095' width='600'/>
+
+Launch the `infinst_enu.exe`:
+
+<img src='./images/img_096.png' alt='img_096' width='600'/>
+
+Select next:
+
+<img src='./images/img_097.png' alt='img_097' width='600'/>
+
+Select yes:
+
+<img src='./images/img_098.png' alt='img_098' width='600'/>
+
+Select next:
+
+<img src='./images/img_099.png' alt='img_099' width='600'/>
+
+Select next to restart the Windows 98 Guest:
+
+<img src='./images/img_100.png' alt='img_100' width='600'/>
+
+Select next:
+
+<img src='./images/img_101.png' alt='img_101' width='600'/>
+
+Select next:
+
+<img src='./images/img_102.png' alt='img_102' width='600'/>
+
+Select next:
+
+<img src='./images/img_103.png' alt='img_103' width='600'/>
+
+Select next:
+
+<img src='./images/img_104.png' alt='img_104' width='600'/>
+
+Select finish:
+
+<img src='./images/img_105.png' alt='img_105' width='600'/>
+
+This process repeats for a number of other drivers. Select yes to restart the Windows 98 Guest:
+
+<img src='./images/img_106.png' alt='img_106' width='600'/>
 
 ## NUSB - USB Mass Storage
+
+<img src='./images/img_107.png' alt='img_107' width='600'/>
+<img src='./images/img_108.png' alt='img_108' width='600'/>
+<img src='./images/img_109.png' alt='img_109' width='600'/>
+<img src='./images/img_110.png' alt='img_110' width='600'/>
+<img src='./images/img_111.png' alt='img_111' width='600'/>
+<img src='./images/img_112.png' alt='img_112' width='600'/>
+<img src='./images/img_113.png' alt='img_113' width='600'/>
+<img src='./images/img_114.png' alt='img_114' width='600'/>
+<img src='./images/img_115.png' alt='img_115' width='600'/>
+<img src='./images/img_116.png' alt='img_116' width='600'/>
+<img src='./images/img_117.png' alt='img_117' width='600'/>
+<img src='./images/img_118.png' alt='img_118' width='600'/>
+
+
+
+
+
+
+
+
 
 Drag driver across and install...
 
@@ -491,8 +556,18 @@ Update in Device Manager
 
 ## Crucial Soundblaster
 
+<img src='./images/img_119.png' alt='img_119' width='600'/>
+<img src='./images/img_120.png' alt='img_120' width='600'/>
+<img src='./images/img_121.png' alt='img_121' width='600'/>
+<img src='./images/img_122.png' alt='img_122' width='600'/>
+<img src='./images/img_123.png' alt='img_123' width='600'/>
+<img src='./images/img_124.png' alt='img_124' width='600'/>
+
+
+
 
 Insert Windows 98 SE Disk into D:
+
 
 
 Launch Setup
@@ -527,154 +602,17 @@ https://knowledge.broadcom.com/external/article?legacyId=1023129
 ## Installing Unofficial Service Pack
 
 
-Install Main Updates/System Core Files
+* Install Main Updates/System Core Files
 
+* Install latest DirectX 9C
 
 
+## Drivers
 
+https://www.conceptworks.io/en/knowledge-base/289/
 
 
+* [Logitech Mouse](https://download.cnet.com/mw980enu-exe/3000-2108_4-157438.html)
 
 
-
-
-Installation of the Unofficial Service Pack
-The unofficial service pack can be downloaded from Softpedia:
-http://www.softpedia.com/get/System/OS-Enhancements/Unofficial-Windows-SE-Service-Pack.shtml
-It is unfortunately only available as a .exe and not a .iso files so can't be loaded to the VM until its part of a .iso:
-
-I use ImgBurn to make it a .iso. Be careful with installation of ImgBurn as it preinstalls some junk if you don't opt to install only ImgBurn see my instructions here. Once ImgBurn is installed launch it:
-
-Select create image file from files/folders:
-
-Select to browse for a file:
-
-Select the unofficial service pack then select open:
-
-Select the folders to image button:
-
-Select a location for the .iso and select save:
-
-Change the volume label and then select yes:
-
-You will be told the .iso is made:
-
-Select ok and then close ImgBurn:
-
-Now select the player menu → Removable Devices → CD-DVD Drive → Settings:
-
-Select Browse and load the .iso you just created with the Unofficial Service Pack Update:
-
-Select the .iso and select open:
-
-Select ok:
-
-This annoying error message comes up just select yes (whenever you see it after changing CD-DVD .iso):
-
-Go to computer:
-
-Open the .iso:
-
-Launch the unofficial Service Pack:
-
-Select yes:
-
-I advise selecting most the options however I unchecked the new boot and shut down logos. When ready select ok:
-
-Select ok and then yes:
-
-You will see the Windows 98SEshutting down screen, VMWare virtual BIOS and then the Windows 98SE Starting screen:
-
-You will be prompted to login. If you have set a password input it and then select ok:
-
-It will continue to install:
-
-You'll reach the Windows 98SE Desktop:
-
-Installation of VMWare Tools
-In order to get a decent resolution (video) and be able to drag and drop files over to the VM you will need to install VMWare tools. Select player → manage → install VMWare Tools:
-
-This will load the VMWare Tools .iso in the optical drive. Select yes at the annoying error message.
-
-The VMWare tools installation should autorun if not go to computer and launch it from the optical drive.
-
-Select next:
-
-Select typical and then next:
-
-Select install:
-
-Select okay, yes and ok for the annoying error messages (again to do with the virtual optical drive):
-
-Select Finish:
-
-Select yes to restart:
-
-You will see the Windows is shutting down screen, the VMWare BIOS and the Windows is starting screen:  
-Input your password if you've set one and select ok:
-
-To get a decent resolution, right click the desktop and select properties:
-
-Select settings:
-
-Maximise the resolution and then select apply and then ok, then yes:
-
- 
-The resolution will be too much. Left click the top of the VMWare Window in the host. Hold down the left click and drag the Window around.
-
-It will then get smaller. Then just snap it to the top again:
-
-The resolution of the VM should now resize automatically to fit the VM Window within the host machine.
-
-Installation of Missing Drivers
-Although VMWare tools installs the display driver and allows bidirectional drag and drop it is missing some of the drivers in particular the audio. Looking at the device manager gives 3 unknown devices. Go to start → settings → Control Panel:
-
-Select System:
-
-The main missing device is the audio:
-
-As far as I can tell there are not any system drivers for the 2 additional devices and they are not necessary for the function of the VM. If someone has installed drivers let me know so I can update the guide.
-Download the following on your host PC.
-Intel Chipset
-http://downloadcenter.intel.com/Detail_Desc.aspx?agr=Y&DwnldID=8178&ProdId=816&lang=eng
-Intel USB 2.0:
-http://downloadcenter.intel.com/Detail_Desc.aspx?agr=Y&DwnldID=5829&ProdId=950&lang=eng
-NUSB:
-http://www.mdgx.com/spx/NUSB.EXE
-Creative Sound Driver:
-http://ccftp.creative.com/manualdn/Drivers/Others/1843/SBPCI_WebDrvsV5_12_01.exe
-Direct X 9.0c:
-http://www.oldapps.com/directx.php?system=Windows_98
-Logitech Mouse
-http://affiliates.digitalriver.com/z/140280/CD133407/ihgvhd38gd010nwu00jmo&lnkurl=http://www.logitech.com/pub/techsupport/mouse/mw980enu.exe
-With VMWare tools you can drag and drop files from the host to the VM or vice versa from folder to folder or folder to desktop. Dragging all these updates across:
- 
-As some of these drivers will refer to the Windows 98SE installation CD so its best to load the Windows 98 SE .iso. Go to player → Removable Devices → CD/DVD and then settings:
-
-Browse for the Windows 98SE .iso:
-
-Load the .iso:
-
-Select yes at the annoying warnings:
-
-Close the Windows 98SE setup if automatically runs:
-
-Installing the drivers is fairly straightforward but some additional notes.
-Intel Chipset - The find new hardware wizard will show select Next, Check Search for the best driver for your device then select Next. Check Specify a Location and the default as C:\Windows\CATROOT and then select next. Repeat several times.
-Creative Sound Driver - Wait for al the New Hardware Found Windows to show and disappear before restarting.
-Direct X 9.0c - Make a folder on the Desktop and extract the files to it. In the folder launch the DirectX Setup.
-Logitech Mouse - Install this and then configure your mouse cursor to suit a speed you are comfortable with.
-Addition of Legacy Devices
-You can add more hardware such as a floppy drive (virtual floppy drive with .flp images or an onboard/USB floppy drive), serial port (onboard or USB serial port) and parallel port (onboard or USB serial port). Power off the VM and right click your VM and select settings:
-
-Select Add Hardware:
-
-Select yes at the User Account Control:
-
-You may add a floppy drive, parallel port and/or serial port depending on the legacy hardware you wish to connect to:
-
-I advise not setting the Floppy to Connect at Power on otherwise the system will try to boot from the Floppy Disk before the HDD> This can be amended in the BIOS setup however:
-
- 
-
-These and USB devices can be accessed via the Player Menu. Each optical drive, floppy drive, network adapter, serial port, parallel port and soundcard will be listed separately. Below these any USB device are listed. If the USB devices have a tick they are connected to the VM (and removed from the Host OS). The Ability to connect to all of these Removable Devices and the installation of legacy Windows OS make the VM very powerful:
+https://startup.retropc.se/win98.html
