@@ -44,11 +44,18 @@ The virtual floppy disk is now compatible with VMware:
 
 <img src='./images/img_005.png' alt='img_005' width='600'/>
 
+## Intel Chipset Installation Utility
+
+* [Intel Chipset Software Installation Utility (5.0.1.1015)](https://archive.org/details/Intel_Chipset_Software_Installation_Utility_5.0.1.1015)
+
 ## NUSB
 
 NUSB is a fix to allow USB flash drives in Windows 98SE: 
 
 * [NUSB](https://www.philscomputerlab.com/windows-98-usb-storage-driver.html)
+
+Check these...
+* [USB Drivers](https://archive.org/details/GX270Windows98Drivers)
 
 ## Creative SoundBlaster
 
@@ -61,7 +68,7 @@ NUSB is a fix to allow USB flash drives in Windows 98SE:
 ## Drivers
 
 * [Intel USB 2.0 Drivers for Windows 98 ISO](https://archive.org/details/usb-20-driver-win-98)
-* [Intel Chipset Software Installation Utility (5.0.1.1015)](https://archive.org/details/Intel_Chipset_Software_Installation_Utility_5.0.1.1015)
+
 
 * [Direct X 9.0c](https://archive.org/details/directx9-dec2006-redist)
 * [Logitech Mouse](https://download.cnet.com/mw980enu-exe/3000-2108_4-157438.html)
