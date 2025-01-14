@@ -46,26 +46,19 @@ The virtual floppy disk is now compatible with VMware:
 
 ## Intel Chipset Installation Utility
 
-* [Intel Chipset Software Installation Utility (5.0.1.1015)](https://archive.org/details/Intel_Chipset_Software_Installation_Utility_5.0.1.1015)
-
-https://www.dell.com/support/home/en-uk/drivers/driversdetails?driverid=r32265
+* [6.3.0.1007](https://www.philscomputerlab.com/intel-chipset-drivers.html)
 
 ## NUSB
 
-NUSB is a fix to allow USB flash drives in Windows 98SE: 
-
-* [NUSB](https://www.philscomputerlab.com/windows-98-usb-storage-driver.html)
-
-Check these...
-* [USB Drivers](https://archive.org/details/GX270Windows98Drivers)
+* [NUSB36e](https://www.philscomputerlab.com/windows-98-usb-storage-driver.html)
 
 ## Creative SoundBlaster
 
 * [Creative SBPCI_WebDrvsV5_12_01.exe](https://support.creative.com/downloads/download.aspx?nDownloadId=1843)
 
-https://www.conceptworks.io/en/knowledge-base/289/
+* [Creative eapci8m.ecw](https://support.creative.com/downloads/download.aspx?nDownloadId=1825)
 
-https://support.creative.com/downloads/searchdownloads.aspx?filename=eapci8m.ecw#
+https://www.conceptworks.io/en/knowledge-base/289/
 
 ## Windows 98SE Service Pack
 
@@ -73,11 +66,14 @@ https://support.creative.com/downloads/searchdownloads.aspx?filename=eapci8m.ecw
 
 ## Drivers
 
-* [Intel USB 2.0 Drivers for Windows 98 ISO](https://archive.org/details/usb-20-driver-win-98)
 
 
 * [Direct X 9.0c](https://archive.org/details/directx9-dec2006-redist)
 * [Logitech Mouse](https://download.cnet.com/mw980enu-exe/3000-2108_4-157438.html)
+
+
+https://startup.retropc.se/win98.html
+
 
 ## Configuring the Windows 98 Guest
 
@@ -478,41 +474,57 @@ This will give you a working state to revert back to if you encounter an issue d
 
 ## Intel Chipset Device Software
 
-<img src='./images/img_094.png' alt='img_094' width='600'/>
+VMware Tools is installed meaning drag and drop to the Virtual Machine works bi-directionally on a Windows 11 Host and on a Ubuntu 24.10 only from the Ubuntu 24.10 Host to the Windows 98 Guest.
 
-<img src='./images/img_095.png' alt='img_095' width='600'/>
-<img src='./images/img_096.png' alt='img_096' width='600'/>
-<img src='./images/img_097.png' alt='img_097' width='600'/>
-<img src='./images/img_098.png' alt='img_098' width='600'/>
-<img src='./images/img_099.png' alt='img_099' width='600'/>
+Update for new version...
 
+Drag the `setup.exe` for the Intel Chipset Software Installation Utility to the Windows 98 Guest:
 
-## USB Mass Storage
 
+## NUSB - USB Mass Storage
 
+Drag driver across and install...
 
+Update for new version...
 
+Update in Device Manager
 
+## Crucial Soundblaster
 
 
+Insert Windows 98 SE Disk into D:
 
 
+Launch Setup
 
 
+Do the other file...
 
 
+## Hardware IDs
 
+Start Run
 
 
+```
+hwinfo /ui
+```
 
 
+```
+HKEY_LOCAL_MACHINE\enum\PCI\VEN_15AD&DEV_0740&SUBSYS_074015AD&REV_10\BUS_00&DEV_07&FUNC_07
+```
 
 
+VMware VMCI Bus
 
+For Windows 98 and Windows 98SE, there is no support for the VMCI device in VMware Tools. One workaround is to disable the VMCI device using the Device Manager so that it is ignored by Windows, and diagnostic tools stop reporting errors. 
 
+https://knowledge.broadcom.com/external/article?legacyId=1023129
 
 
 
+## Installing Unofficial Service Pack
 
 
 
@@ -525,165 +537,6 @@ This will give you a working state to revert back to if you encounter an issue d
 
 
 
-
-With VMWare tools you can drag and drop files from the host to the VM or vice versa from folder to folder or folder to desktop. Dragging all these updates across:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Content from Old Guide
-
-Setup of Windows 98SE on a VM
-The most difficult thing about setting a Windows 98SE VM up is obtaining the installation media and Retail Product Key in the first place. For one installing this OS for legacy hardware/software this guide assumes you have a Retail or Volume License of Windows 98SE and have Converted the installation CD into a .iso and installed VMWare Player.
-Select player File → File → New Virtual machine:
-
-Then load the .iso:
-
-Select your Windows 98SE .iso and select open:
-
-VMWare should detect that its Windows 98SE and set up the conditions appropriately. Select next:
-
-Name your VM and select its storage location on your host HDD/SSD select next:
-
-You may change the size of the virtual HDD if you want when ready select next. I advise leaving the default option to split the disk into multiple files:
-
-Select customise hardware:
-
-Select the network adapter and I advise ensuring that connect at power on is disabled. Windows 98SE has reached end of life and is very insecure. It should not be connected to the internet:
-
-Then select ok. Then Finish:
-
-The Windows 98SE VM will launch:
-
-You may get some notifications select Ok to change to the recommended settings:
-
-You will get a warning about removable devices, select Do not show me this hint again and select ok:
-
-Select Download and Install:
-
-VMWare Tools for 95, 98, ME and NT will download and install:
-
-Select yes at the UAC:
-
-Unfortunately during the time it took to install these tools you lost the 10 seconds to select the boot device and the VM automatically booted to the HDD which has no OS. You will therefore have a black screen.
-
-Select player → "Send Ctrl, Alt and Delete":
-
-The VM will restart and you'll see the VMWare BIOS screen:
-
-Left click in the VM and select option 2. Boot from the CD-Rom:
-
-Select option 1. Start Windows 98 Setup from CD-Rom:
-
-The setup will load:
-
-Press Enter at this screen:
-
-Highlight configure unallocated disk space and press Enter:
-
-Select Yes Enable Large Disk Support and press Enter:
-
-Ignore the message about the floppy boot drive and press Enter:
-
-You will see the VMWare BIOS screen:
-
-Again select option 1. Boot from CD-Rom (the virtual HDD is still blank):
-
-Again select option 1 Start Windows setup from CD-Rom:
-
-Again the setup will load:
-
-The setup will now format the Virtual HDD:
-
-After the format you will need to press Enter to continue the setup:
-
-The Windows setup will then begin to copy the files across:
-
-The setup will then initialise:
-
-Select continue:
-
-The setup will prepare:
-
-Select C:\Windows as the directory and select Next:
-
-Select Next:
-
-Select typical and select Next:
-
-Opt to install the most common components and then select next:
-
-Input the computers name, workgroup and the computer's description and then select next:
-
-Select your language and then select next:
-
-Select next again:
-
-The setup will then copy over the Windows 98 files to the virtual HDD:
-
-Select restart now when prompted:
-
-You will see the VMWare virtual BIOS again:
-
-You will see the Windows 98 SE logo:
-
-Input your name and select next:
-
-Now accept the license agreement and select next:
-
-Input your retail product key and select next:
-
-Select Finish:
-
-Windows 98SE will now detect and install drivers for some of the hardware:
-
-You will be prompted to restart again, select restart now:
-
-You will see the Windows 98SE is shutting down screen, the VMWare virtual BIOS and the Windows 98SE is starting screen:
-
-More hardware will be setup:
-
-Windows setup will continue:
-
-You will be prompted for your date and time settings:
-
-I will select the English UK time zone:
-
-Then apply it:
-
-Then select ok:
-
-The control panel and other items will now install:
-
-Again you will be prompted to restart so select restart now:
-
-You will see the Windows 98SE is shutting down screen, the VMWare virtual BIOS and the Windows 98SE is starting screen:
-
-You will be prompted to login, input your password if set and then press ok:
-
-Windows will install drivers for more devices:
-
-The welcome to Windows 98SE screen will take an age to load. Ensure you uncheck Show this screen each time Windows 98 starts and then select close:
 
 Installation of the Unofficial Service Pack
 The unofficial service pack can be downloaded from Softpedia:
