@@ -48,6 +48,8 @@ The virtual floppy disk is now compatible with VMware:
 
 * [Intel Chipset Software Installation Utility (5.0.1.1015)](https://archive.org/details/Intel_Chipset_Software_Installation_Utility_5.0.1.1015)
 
+https://www.dell.com/support/home/en-uk/drivers/driversdetails?driverid=r32265
+
 ## NUSB
 
 NUSB is a fix to allow USB flash drives in Windows 98SE: 
