@@ -63,6 +63,10 @@ Check these...
 
 * [Creative SBPCI_WebDrvsV5_12_01.exe](https://support.creative.com/downloads/download.aspx?nDownloadId=1843)
 
+https://www.conceptworks.io/en/knowledge-base/289/
+
+https://support.creative.com/downloads/searchdownloads.aspx?filename=eapci8m.ecw#
+
 ## Windows 98SE Service Pack
 
 * [Windows 98SE Unofficial Service Pack](https://www.majorgeeks.com/files/details/unofficial_windows98_se_service_pack.html)
