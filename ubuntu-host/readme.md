@@ -660,7 +660,7 @@ Select use wired connection and select Next:
 
 <img src='./images/img_133.png' alt='img_133' width='600'/>
 
-Select Install Ubuntu:
+Select Install Ubuntu and select next:
 
 <img src='./images/img_134.png' alt='img_134' width='600'/>
 
@@ -676,7 +676,7 @@ Check Install third-party software for graphics and Wi-Fi hardware and Download 
 
 <img src='./images/img_137.png' alt='img_137' width='600'/>
 
-Select Erase DIsk and install Ubuntu:
+Select Erase Disk and install Ubuntu:
 
 <img src='./images/img_138.png' alt='img_138' width='600'/>
 

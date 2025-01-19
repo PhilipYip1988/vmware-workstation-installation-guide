@@ -4,7 +4,7 @@
 
 This guide looks at the setup of VMWare Workstation on Windows and Ubuntu and creating a Virtual Machine of a supported version of Windows or Ubuntu:
 
-* ~~[Windows Host](./windows-host/readme.md)~~ (Not complete)
+* [Windows Host](./windows-host/readme.md)
 * [Ubuntu Host](./ubuntu-host/readme.md)
 
 ## Legacy Windows Guest Virtual Machines
