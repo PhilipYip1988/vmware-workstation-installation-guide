@@ -243,10 +243,6 @@ Select Reboot:
 
 ## Windows Guest
 
-<details>
-
-<summary>Windows Guest</summary>
-
 Instructions are similar for both Windows 10 and Windows 11 Guests.
 
 ### System Requirements
@@ -572,13 +568,7 @@ And retrieved in the Ubuntu Host:
 
 <img src='./images/img_117.png' alt='img_117' width='600'/>
 
-</details>
-
 ## Ubuntu Guest
-
-<details>
-
-<summary>Ubuntu Guest</summary>
 
 Instructions are similar for both Ubuntu 24.04 and Ubuntu 24.10 Guests.
 
@@ -781,8 +771,6 @@ And the files can be accessed from the Ubuntu 24.10 Guest and Ubuntu 24.04 Host:
 <img src='./images/img_160.png' alt='img_160' width='600'/>
 
 <img src='./images/img_161.png' alt='img_161' width='600'/>
-
-</details>
 
 ## Uninstall VMware Workstation
 

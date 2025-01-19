@@ -96,10 +96,6 @@ Select Restart Now:
 
 ## Ubuntu Guest
 
-<details>
-
-<summary>Ubuntu Guest</summary>
-
 Instructions are similar for both Ubuntu 24.04 and Ubuntu 24.10 Guests.
 
 ### System Requirements
@@ -468,13 +464,7 @@ Note the shared folder needs to be refreshed in the Ubuntu 24.10 Guest in order 
 
 <img src='./images/img_108.png' alt='img_108' width='600'/>
 
-</details>
-
 ## Windows Guest
-
-<details>
-
-<summary>Windows Guest</summary>
 
 Instructions are similar for both Windows 10 and Windows 11 Guests.
 
@@ -543,5 +533,3 @@ Select the Windows 11 ISO and select Download now:
 <img src='./images/img_148.png' alt='img_148' width='600'/>
 <img src='./images/img_149.png' alt='img_149' width='600'/>
 <img src='./images/img_150.png' alt='img_150' width='600'/>
-
-</details>
