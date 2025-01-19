@@ -427,7 +427,7 @@ Select Network Adaptor and uncheck Connected and Connect at power on:
 Press `⇧`+`F10` to open up the command prompt and input:
 
 ```powershell
-oobe/bypassnro
+oobe\bypassnro
 ```
 
 <img src='./images/img_084.png' alt='img_084' width='600'/>
