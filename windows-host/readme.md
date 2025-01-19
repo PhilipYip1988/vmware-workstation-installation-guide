@@ -324,7 +324,7 @@ And floppy and then select ok:
 
 Select yes:
 
-<img src='./images/img_073.png' alt='img_073' width='600'/>
+<img src='./images/img_073.png' alt='img_073' width='400'/>
 
 The mounted optical drive icon now disappears but the floppy drive icon remains: 
 
