@@ -310,7 +310,7 @@ Select Player → Removable Devices → CD/DVD → Settings:
 
 <img src='./images/img_069.png' alt='img_069' width='600'/>
 
-Ensure connected and COnencted at Power On are unchecked:
+Ensure connected and Connected at Power On are unchecked:
 
 <img src='./images/img_070.png' alt='img_070' width='600'/>
 
