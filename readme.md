@@ -15,6 +15,6 @@ A Virtual Machine Guest of the Expected Legacy Versions of Windows Version can b
 
 * [Windows 7 Guest (2009-2020)](./windows-7-guest/readme.md)
 * [Windows Vista Guest (2007-2017)](./windows-vista-guest/readme.md)
-* [Windows XP Guest (2001-2020)](./windows-xp-guest/readme.md)
+* [Windows XP Guest (2001-2014)](./windows-xp-guest/readme.md)
 * [Windows 2000 Guest (2000-2010)](./windows-2000-guest/readme.md)
 * [Windows 98SE Guest (1998-2006)](./windows-98SE-guest/readme.md)
