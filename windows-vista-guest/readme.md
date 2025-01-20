@@ -24,3 +24,8 @@ Unofficially a copy of the Dell Windows Vista ISO appears to be listed here:
 * [Windows Vista Service Pack 2](https://www.softpedia.com/get/Others/Signatures-Updates/Windows-Vista-Service-Pack-2.shtml)
 * [Internet Explorer 9](https://www.softpedia.com/get/Internet/Browsers/Internet-Explorer-9.shtml)
 
+## Download VMware Tools ISO
+
+The Windows Vista drivers for the Windows Vista Guest are contained in the VMware Tools Installation ISO. VMware tools for legacy versions of Windows needs to be downloaded from VMware separately:
+
+* [VMware Tools Version 11.0.6](https://packages.vmware.com/tools/releases/11.0.6/windows/)
