@@ -21,6 +21,6 @@ Unofficially a copy of the Dell Windows Vista ISO appears to be listed here:
 
 ## Windows Vista Standalone Updates
 
-
-
+* [Windows Vista Service Pack 2](https://www.softpedia.com/get/Others/Signatures-Updates/Windows-Vista-Service-Pack-2.shtml)
+* [Internet Explorer 9](https://www.softpedia.com/get/Internet/Browsers/Internet-Explorer-9.shtml)
 
