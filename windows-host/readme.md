@@ -162,11 +162,11 @@ Under memory, the default memory is 4096 GB, this should only be increased if th
 
 <img src='./images/img_035.png' alt='img_035' width='600'/>
 
-Under processors, the number of processors is 2, this can be insreased if the processor has more cores and threads but increasing this too much can cripple the Windows 11 Host and therefore this will cripple the Ubuntu 24.10 Guest leading to poor performance:
+Under processors, the number of processors is 2, this can be increased if the processor has more cores and threads but increasing this too much can cripple the Windows 11 Host and therefore this will cripple the Ubuntu 24.10 Guest leading to poor performance:
 
 <img src='./images/img_036.png' alt='img_036' width='600'/>
 
-SeeUnder CD/DVD, ensure that the Ubuntu 24.10 ISO is selected and that Connect at Power On is checked:
+Under CD/DVD, ensure that the Ubuntu 24.10 ISO is selected and that Connect at Power On is checked:
 
 <img src='./images/img_037.png' alt='img_037' width='600'/>
 
@@ -493,67 +493,271 @@ A Windows ISO can be downloaded from Microsoft:
 
 \* Microsoft removed old Windows 10 Builds and Windows 8.1 after Windows 8.1 reached end of life.
 
-Select the Windows 11 ISO and select Download now:
+Select the Windows 11 ISO and select download now:
 
 <img src='./images/img_113.png' alt='img_113' width='600'/>
+
+Select the language and select confirm:
+
 <img src='./images/img_114.png' alt='img_114' width='600'/>
+
+Select 64 Bit download:
+
 <img src='./images/img_115.png' alt='img_115' width='600'/>
+
+The ISO will download:
+
 <img src='./images/img_116.png' alt='img_116' width='600'/>
+
+### Configure VM
+
+Select Player → File → Create a New Virtual Machine:
+
 <img src='./images/img_117.png' alt='img_117' width='600'/>
+
+Select installer disc image (ISO) and load the Windows 11 ISO:
+
 <img src='./images/img_118.png' alt='img_118' width='600'/>
+
+Windows 11 will automatically be detected and the default VM settings for the Windows 11 Guest will be applied. The name and location of the Windows 11 Guest will be shown. Select next:
+
 <img src='./images/img_119.png' alt='img_119' width='600'/>
+
+Windows 11 requires an encryption key for the TPM. Input an 8 digit password and confirm the password:
+
 <img src='./images/img_120.png' alt='img_120' width='600'/>
+
+The default disk size is 64 GB which is quite restrictive. It is recommended to expand this to 256 GB. 
+
+> Note the Windows 11 Guest won't occupy the full 256 GB. This setting means the disk can reach up to a maximum value of 256 GB.
+
+Select next:
+
 <img src='./images/img_121.png' alt='img_121' width='600'/>
+
+Select customise hardware:
+
 <img src='./images/img_122.png' alt='img_122' width='600'/>
+
+Under memory, the default memory is 4096 GB, this should only be increased if the system has >32 GB of RAM:
+
 <img src='./images/img_123.png' alt='img_123' width='600'/>
+
+Under processors, the number of processors is 2, this can be increased if the processor has more cores and threads but increasing this too much can cripple the Windows 11 Host and therefore this will cripple the Windows 11 Guest leading to poor performance:
+
 <img src='./images/img_124.png' alt='img_124' width='600'/>
+
+Under CD/DVD, ensure that the Windows 11 ISO is selected and that Connect at Power On is checked:
+
 <img src='./images/img_125.png' alt='img_125' width='600'/>
+
+Under Network Adapter, leave the default settings:
+
 <img src='./images/img_126.png' alt='img_126' width='600'/>
+
+Under USB Controller, leave the default settings at USB 3.1:
+
 <img src='./images/img_127.png' alt='img_127' width='600'/>
+
+Under Sound Card, leave the default settings:
+
 <img src='./images/img_128.png' alt='img_128' width='600'/>
+
+Under Display, leave the default settings and select close:
+
 <img src='./images/img_129.png' alt='img_129' width='600'/>
+
+Select finish:
+
 <img src='./images/img_130.png' alt='img_130' width='600'/>
+
+### Installing Windows 11 in the Windows 11 Guest VM
+
+The Windows 11 Guest will now launch however a dialog box will display to download VMware tools, select download and install:
+
 <img src='./images/img_131.png' alt='img_131' width='600'/>
+
+Accept the user account control prompt:
+
 <img src='./images/img_132.png' alt='img_132' width='600'/>
+
+The VMware tools ISO will be loaded. However as VMware does not let you click into the Windows 11 Guest at this time, the boot menu will have timed out taking you to the Windows 11 Guest's BIOS setup. Select restart the system:
+
 <img src='./images/img_133.png' alt='img_133' width='600'/>
+
+Click into the Windows 11 Guest and press any key such as `h`:
+
 <img src='./images/img_134.png' alt='img_134' width='600'/>
+
+The Windows 11 Guest will boot from the ISO. Select your language and select next:
+
 <img src='./images/img_135.png' alt='img_135' width='600'/>
+
+Select the keyboard settings and select next:
+
 <img src='./images/img_136.png' alt='img_136' width='600'/>
+
+Select Install Windows 11 and accept the agreement, then select next:
+
 <img src='./images/img_137.png' alt='img_137' width='600'/>
+
+Select I don't have a Product Key:
+
 <img src='./images/img_138.png' alt='img_138' width='600'/>
+
+Select the Windows 11 Edition and select next:
+
 <img src='./images/img_139.png' alt='img_139' width='600'/>
+
+Select accept:
+
 <img src='./images/img_140.png' alt='img_140' width='600'/>
+
+Select the virtual disk 0: Unallocated Space and select next:
+
 <img src='./images/img_141.png' alt='img_141' width='600'/>
+
+Select install: 
+
 <img src='./images/img_142.png' alt='img_142' width='600'/>
+
+Select the country or region and select yes:
+
 <img src='./images/img_143.png' alt='img_143' width='600'/>
+
+Select the keyboard layout and select yes:
+
 <img src='./images/img_144.png' alt='img_144' width='600'/>
+
+Select skip:
+
 <img src='./images/img_145.png' alt='img_145' width='600'/>
+
+Input the name of your Windows 11 Guest and select next:
+
 <img src='./images/img_146.png' alt='img_146' width='600'/>
+
+Select setup for personal use and select next:
+
 <img src='./images/img_147.png' alt='img_147' width='600'/>
+
+A number of updates will download:
+
 <img src='./images/img_148.png' alt='img_148' width='600'/>
+
 <img src='./images/img_149.png' alt='img_149' width='600'/>
+
+After the updates have downloaded, select sign in:
+
 <img src='./images/img_150.png' alt='img_150' width='600'/>
+
+By default you will be unable to create a local account. To get around this select Virtual Machine → Virtual Machine Settings:
+
 <img src='./images/img_151.png' alt='img_151' width='600'/>
+
+Select player → Removable Devices → Network Adapter → Settings...
+
 <img src='./images/img_152.png' alt='img_152' width='600'/>
+
+Select Network Adaptor and uncheck Connected and Connect at power on, then select ok:
+
 <img src='./images/img_153.png' alt='img_153' width='600'/>
+
+Press `⇧`+`F10` to open up the command prompt:
+
 <img src='./images/img_154.png' alt='img_154' width='600'/>
+
+Input:
+
+```powershell
+oobe\bypassnro
+```
+
 <img src='./images/img_155.png' alt='img_155' width='600'/>
+
+The Windows 11 Guest will reboot. Select the country or region and select yes:
+
 <img src='./images/img_156.png' alt='img_156' width='600'/>
+
+Select the keyboard layout and select yes:
+
 <img src='./images/img_157.png' alt='img_157' width='600'/>
+
+Select skip:
+
 <img src='./images/img_158.png' alt='img_158' width='600'/>
+
+Select I don't have internet:
+
 <img src='./images/img_159.png' alt='img_159' width='600'/>
+
+Input your local account name and select next:
+
 <img src='./images/img_160.png' alt='img_160' width='600'/>
+
+Input your (optional) local account password and select next: 
+
 <img src='./images/img_161.png' alt='img_161' width='600'/>
+
+The privacy settings will now display. Select Virtual Machine → Virtual Machine Settings:
+
 <img src='./images/img_162.png' alt='img_162' width='600'/>
+
+Select Network Adaptor and check Connected and Connect at power on and select ok:
+
 <img src='./images/img_163.png' alt='img_163' width='600'/>
+
+Once all the privacy questions have been answered, the Windows 11 Guest will be installed:
+
 <img src='./images/img_164.png' alt='img_164' width='600'/>
+
+### Installing VMware Tools
+
+VMware tools are essentially the Virtual Machines device drivers. Select Player → Virtual Machine → Install VMware Tools:
+
 <img src='./images/img_165.png' alt='img_165' width='600'/>
+
+If this is grayed out. Manually download the ISO:
+
+* [VMware Tools ISO](https://packages.vmware.com/tools/releases/)
+
+Use the latest release for Windows 11. Use 11.0.6 for Windows Vista and Windows 7. Use 10.0.12 for Windows XP.
+
+Mount the ISO in the VM and begin the install as normal.
+
+Launch the setup64.exe:
+
 <img src='./images/img_166.png' alt='img_166' width='600'/>
+
+Accept the User Account Control Prompt:
+
 <img src='./images/img_167.png' alt='img_167' width='600'/>
+
+Select next:
+
 <img src='./images/img_168.png' alt='img_168' width='600'/>
+
+Select next:
+
 <img src='./images/img_169.png' alt='img_169' width='600'/>
+
+Select install:
+
 <img src='./images/img_170.png' alt='img_170' width='600'/>
+
+Select finish:
+
 <img src='./images/img_171.png' alt='img_171' width='600'/>
+
+Select yes:
+
 <img src='./images/img_172.png' alt='img_172' width='600'/>
+
+Now that VMware tools are installed, the Windows 11 Guest can be resized:
+
 <img src='./images/img_173.png' alt='img_173' width='600'/>
+
+Bi-directional drag and drop from the Windows 11 Host to the Windows 11 Guest works:
+
 <img src='./images/img_174.png' alt='img_174' width='600'/>
+
