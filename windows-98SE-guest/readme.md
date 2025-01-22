@@ -46,6 +46,13 @@ The virtual floppy disk is now compatible with VMware:
 
 <img src='./images/img_005.png' alt='img_005' width='600'/>
 
+## ImgBurn
+
+Needed to recreate the ISO:
+
+* [ImgBurn](https://www.imgburn.com/)
+
+
 ## Intel Chipset Installation Utility
 
 VMware tools is missing the Intel Chipset driver:
@@ -66,11 +73,9 @@ VMware tools is missing the Creative SoundBlaster driver:
 
 * [Creative eapci8m.ecw](https://support.creative.com/downloads/download.aspx?nDownloadId=1825)
 
-## Windows 98SE Service Pack
+## Windows 98SE Autopatcher
 
-An unofficial Service pack for Windows 98 is available:
-
-* [Windows 98SE Unofficial Service Pack](https://www.majorgeeks.com/files/details/unofficial_windows98_se_service_pack.html)
+* [Windows 98SE Autopatcher](https://download.cnet.com/auto-patcher-for-windows-98se-english/3000-2094_4-10653137.html)
 
 ## Configuring the Windows 98 Guest
 
@@ -131,6 +136,31 @@ Leave display at the default setting and select Close:
 Select Finish:
 
 <img src='./images/img_019.png' alt='img_019' width='600'/>
+
+## Patching Windows 98SE Installation Media
+
+Information
+MODE1/2048
+ISO9660 + Joliet
+
+Advanced
+Bootable Disk
+Make Image Bootable
+Emulation Type: Floppy 1.44 MB
+Boot Image: Boot-1.44M.img
+Platform ID: 80x86
+Developer ID: Microsoft Corporation
+Load Segment: 07C0
+Sectors to Load: 4
+
+Labels
+ISO9660: WIN98_SE
+Joliet: WIN98_SE
+
+
+
+
+
 
 ## Installing the Windows 98 Guest
 
