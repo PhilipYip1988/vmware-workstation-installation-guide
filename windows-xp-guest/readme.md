@@ -25,7 +25,7 @@ The ISO Checksums can be used to ensure a complete download but these do not mat
 |---|---|
 |XP Pro|a4cf4e53ac9157cf20913a77f438a64e4fa3b908e4e28cb0d2a08d49fa62e49f|
 |XP Home|aa0629a1d076c835b49b4b4e97d6f7717813d051cfbeba8d9d69ee6d8f6e8866|
-|XP MCE||
+|XP MCE|293a5f6424888f78865e78f33dfd0714bbe54e61dcf27c9c16cacfa08eb4fa0a|
 
 </details>
 
