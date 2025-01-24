@@ -37,7 +37,7 @@ Dell Systems came with a Windows XP Reinstallation CD/DVD which can be converted
 
 ## WSUS Offline Update
 
-The last version of WSUS Offline Update to support Windows XP was 9.2.1:
+The last version of WSUS Offline Update to support Windows XP was 9.2.5:
 
 * ~~[WSUS Offline Update](https://download.wsusoffline.net/)~~
 
