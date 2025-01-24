@@ -722,7 +722,56 @@ It is recommended to backup the Virtual Machine by copying the Windows 98 folder
 
 Drag `Auto-Patcher_for_Win98se_August_2007_FULL.EXE` to the Windows 98 Guest Desktop and launch the application:
 
-
+<img src='./images/img_156.png' alt='img_156' width='600'/>
+<img src='./images/img_157.png' alt='img_157' width='600'/>
+<img src='./images/img_158.png' alt='img_158' width='600'/>
+<img src='./images/img_159.png' alt='img_159' width='600'/>
+<img src='./images/img_160.png' alt='img_160' width='600'/>
+<img src='./images/img_161.png' alt='img_161' width='600'/>
+<img src='./images/img_162.png' alt='img_162' width='600'/>
+<img src='./images/img_163.png' alt='img_163' width='600'/>
+<img src='./images/img_164.png' alt='img_164' width='600'/>
+<img src='./images/img_165.png' alt='img_165' width='600'/>
+<img src='./images/img_166.png' alt='img_166' width='600'/>
+<img src='./images/img_167.png' alt='img_167' width='600'/>
+<img src='./images/img_168.png' alt='img_168' width='600'/>
+<img src='./images/img_169.png' alt='img_169' width='600'/>
+<img src='./images/img_170.png' alt='img_170' width='600'/>
+<img src='./images/img_171.png' alt='img_171' width='600'/>
+<img src='./images/img_172.png' alt='img_172' width='600'/>
+<img src='./images/img_173.png' alt='img_173' width='600'/>
+<img src='./images/img_174.png' alt='img_174' width='600'/>
+<img src='./images/img_175.png' alt='img_175' width='600'/>
+<img src='./images/img_176.png' alt='img_176' width='600'/>
+<img src='./images/img_177.png' alt='img_177' width='600'/>
+<img src='./images/img_178.png' alt='img_178' width='600'/>
+<img src='./images/img_179.png' alt='img_179' width='600'/>
+<img src='./images/img_180.png' alt='img_180' width='600'/>
+<img src='./images/img_181.png' alt='img_181' width='600'/>
+<img src='./images/img_182.png' alt='img_182' width='600'/>
+<img src='./images/img_183.png' alt='img_183' width='600'/>
+<img src='./images/img_184.png' alt='img_184' width='600'/>
+<img src='./images/img_185.png' alt='img_185' width='600'/>
+<img src='./images/img_186.png' alt='img_186' width='600'/>
+<img src='./images/img_187.png' alt='img_187' width='600'/>
+<img src='./images/img_188.png' alt='img_188' width='600'/>
+<img src='./images/img_189.png' alt='img_189' width='600'/>
+<img src='./images/img_190.png' alt='img_190' width='600'/>
+<img src='./images/img_191.png' alt='img_191' width='600'/>
+<img src='./images/img_192.png' alt='img_192' width='600'/>
+<img src='./images/img_193.png' alt='img_193' width='600'/>
+<img src='./images/img_194.png' alt='img_194' width='600'/>
+<img src='./images/img_195.png' alt='img_195' width='600'/>
+<img src='./images/img_196.png' alt='img_196' width='600'/>
+<img src='./images/img_197.png' alt='img_197' width='600'/>
+<img src='./images/img_198.png' alt='img_198' width='600'/>
+<img src='./images/img_199.png' alt='img_199' width='600'/>
+<img src='./images/img_200.png' alt='img_200' width='600'/>
+<img src='./images/img_201.png' alt='img_201' width='600'/>
+<img src='./images/img_202.png' alt='img_202' width='600'/>
+<img src='./images/img_203.png' alt='img_203' width='600'/>
+<img src='./images/img_204.png' alt='img_204' width='600'/>
+<img src='./images/img_205.png' alt='img_205' width='600'/>
 
 
 
