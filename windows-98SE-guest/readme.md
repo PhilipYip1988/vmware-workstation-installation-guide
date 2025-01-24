@@ -16,16 +16,6 @@ Windows 98SE requires the Pre2k version of VMware Tools which installs some of t
 
 ## Patcher9x
 
-The Windows 98SE installation errors out on a VM on a modern computer:
-
-> This program has performed an illegal operation and will be shut down.
-
-> If the problem persists, contact the program vendor
-
-<img src='./images/img_001.png' alt='img_001' width='600'/>
-
-Essentially the processor is too fast and windows 98SE expects to wait more than "zero seconds" for an operation.
-
 Download the `patcher9x-win64.zip` from the assets of the latest release:
 
 * [patcher9x](https://github.com/JHRobotics/patcher9x/releases/)
@@ -44,151 +34,179 @@ Download and install on the Windows 11 Guest:
 
 ## Patching the Installation ISO
 
+The Windows 98SE installation errors out on a VM on a modern computer:
+
+> This program has performed an illegal operation and will be shut down.
+
+> If the problem persists, contact the program vendor
+
 <img src='./images/img_001.png' alt='img_001' width='600'/>
+
+Essentially the processor is too fast and windows 98SE expects to wait more than "zero seconds" for an operation. Therefore the WIndows 98SE installation media needs to be patched with patcher9x. Extract patcher9x:
+
 <img src='./images/img_002.png' alt='img_002' width='600'/>
+
 <img src='./images/img_003.png' alt='img_003' width='600'/>
+
 <img src='./images/img_004.png' alt='img_004' width='600'/>
+
+Now extract the WIdnows 98 SE ISO:
+
 <img src='./images/img_005.png' alt='img_005' width='600'/>
+
 <img src='./images/img_006.png' alt='img_006' width='600'/>
+
+The files from the ISO need to be extracted, to do this right click the ISO and select Show More Options:
+
 <img src='./images/img_007.png' alt='img_007' width='600'/>
+
 <img src='./images/img_008.png' alt='img_008' width='600'/>
+
+Select 7zip and then extract to:
+
 <img src='./images/img_009.png' alt='img_009' width='600'/>
+
 <img src='./images/img_010.png' alt='img_010' width='600'/>
+
+Cut the extracted folder and paste to Downloads:
+
 <img src='./images/img_011.png' alt='img_011' width='600'/>
+
 <img src='./images/img_012.png' alt='img_012' width='600'/>
+
+Rename the folder WIN98_SE and delete the old ISO and zip files:
+
 <img src='./images/img_013.png' alt='img_013' width='600'/>
+
 <img src='./images/img_014.png' alt='img_014' width='600'/>
+
+Navigate to the extracted `patcher-win64` folder:
+
 <img src='./images/img_015.png' alt='img_015' width='600'/>
+
+Launch `patcher9x.exe`:
+
 <img src='./images/img_016.png' alt='img_016' width='600'/>
+
+Select More Info and Run Anyway:
+
 <img src='./images/img_017.png' alt='img_017' width='600'/>
+
 <img src='./images/img_018.png' alt='img_018' width='600'/>
+
+In file explorer navigate to `WIN98_SE` and then `win98` which is the folder that contains the `.cab` files:
+
 <img src='./images/img_019.png' alt='img_019' width='600'/>
+
+Copy the file path:
+
 <img src='./images/img_020.png' alt='img_020' width='600'/>
+
+And paste it into the terminal (note the file path should be entered without quotes):
+
 <img src='./images/img_021.png' alt='img_021' width='600'/>
+
+Input `4` scan \*.CAB archives and patch them directly. Input:
+
 <img src='./images/img_022.png' alt='img_022' width='600'/>
+
+Input `y`:
+
 <img src='./images/img_023.png' alt='img_023' width='600'/>
+
+The \*.CAB files will now be patched. Press `↵` to exit:
+
 <img src='./images/img_024.png' alt='img_024' width='600'/>
+
+The following folder now needs to be converted back into an .iso and this .iso needs to be bootable:
+
 <img src='./images/img_025.png' alt='img_025' width='600'/>
+
+Launch ImgBurn and select Create Image File from Files/Folders:
+
 <img src='./images/img_026.png' alt='img_026' width='600'/>
+
+Load a folder:
+
 <img src='./images/img_027.png' alt='img_027' width='600'/>
+
+Select `WIN98_SE`:
+
 <img src='./images/img_028.png' alt='img_028' width='600'/>
+
+Select, select folder:
+
 <img src='./images/img_029.png' alt='img_029' width='600'/>
+
+Select options and change the data type to MODE1/2048 and the file system to ISO9660 + Joliet. Ensure Recurse subdirectories is checked:
+
 <img src='./images/img_030.png' alt='img_030' width='600'/>
+
+Select Labels and under ISO9660 input WIN98_SE and under Joliet input WIN98_SE:
+
 <img src='./images/img_031.png' alt='img_031' width='600'/>
+
+Under Advanced, select Bootable Disc. In Bootable Disc select Make Image Bootable and change the emulation type to Floppy Disk 1.44 MB. Change the Platform ID to 80x86 and set the Developer ID as Microsoft Corporation:
+
 <img src='./images/img_032.png' alt='img_032' width='600'/>
+
+Under Boot image select load folder:
+
 <img src='./images/img_033.png' alt='img_033' width='600'/>
+
+Go to the \[Boot\] folder and select the Boot-1.44M.img:
+
 <img src='./images/img_034.png' alt='img_034' width='600'/>
+
 <img src='./images/img_035.png' alt='img_035' width='600'/>
+
+Under destination select the folder icon:
+
 <img src='./images/img_036.png' alt='img_036' width='600'/>
+
+Navigate to Downloads and save the .iso as WIN98_SE_PATCHER9X:
+
 <img src='./images/img_037.png' alt='img_037' width='600'/>
+
+Select the Create Image File from Files/Folder icon:
+
 <img src='./images/img_038.png' alt='img_038' width='600'/>
+
+Select Yes and Ok:
+
 <img src='./images/img_039.png' alt='img_039' width='600'/>
+
 <img src='./images/img_040.png' alt='img_040' width='600'/>
+
+The patched .iso will now be created, select OK:
+
 <img src='./images/img_041.png' alt='img_041' width='600'/>
+
+Delete the previous files:
+
 <img src='./images/img_042.png' alt='img_042' width='600'/>
+
+There should now be the patched .iso and the vmware tools .iso:
+
 <img src='./images/img_043.png' alt='img_043' width='600'/>
-<img src='./images/img_044.png' alt='img_044' width='600'/>
-<img src='./images/img_045.png' alt='img_045' width='600'/>
 
+## System Drivers
 
+Download the following drivers
 
+### Intel Chipset Installation Utility
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Right click the downloaded file and select rename: 
-
-<img src='./images/img_002.png' alt='img_002' width='600'/>
-
-Change the file extension from `.ima` to `.img`:
-
-<img src='./images/img_003.png' alt='img_003' width='600'/>
-
-Select Yes:
-
-<img src='./images/img_004.png' alt='img_004' width='600'/>
-
-The virtual floppy disk is now compatible with VMware:
-
-<img src='./images/img_005.png' alt='img_005' width='600'/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Intel Chipset Installation Utility
-
-VMware tools is missing the Intel Chipset driver:
+VMware tools is missing the Intel Chipset driver (use the latest at the bottom):
 
 * [6.3.0.1007](https://www.philscomputerlab.com/intel-chipset-drivers.html)
 
-## NUSB Storage Driver
+### NUSB Storage Driver
 
-VMware tools is missing the NUSB Storage driver
+VMware tools is missing the NUSB Storage driver (use the 33 version, it reported works better with Windows 98 SE and the 36 version reportedly works better with Windows ME)
 
-* [NUSB36e](https://www.philscomputerlab.com/windows-98-usb-storage-driver.html)
+* [NUSB33e](https://www.philscomputerlab.com/windows-98-usb-storage-driver.html)
 
-## Creative SoundBlaster
+### Creative SoundBlaster
 
 VMware tools is missing the Creative SoundBlaster driver:
 
@@ -196,15 +214,23 @@ VMware tools is missing the Creative SoundBlaster driver:
 
 * [Creative eapci8m.ecw](https://support.creative.com/downloads/download.aspx?nDownloadId=1825)
 
-## Windows 98SE Autopatcher
+### Windows 98SE Autopatcher
 
 * [Windows 98SE Autopatcher](https://download.cnet.com/auto-patcher-for-windows-98se-english/3000-2094_4-10653137.html)
+
+Extract the Intel Chipset driver:
+
+<img src='./images/img_044.png' alt='img_044' width='600'/>
+
+You should have the following and are now ready to create a Windows 98SE Guest Virtual Machine:
+
+<img src='./images/img_045.png' alt='img_045' width='600'/>
 
 ## Configuring the Windows 98 Guest
 
 Select File → New Virtual Machine:
 
-<img src='./images/img_006.png' alt='img_006' width='600'/>
+<img src='./images/img_046.png' alt='img_046' width='600'/>
 
 It is recommended to instead use "I Will Install this Operating System Later":
 
