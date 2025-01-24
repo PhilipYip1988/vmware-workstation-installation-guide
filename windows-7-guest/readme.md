@@ -59,7 +59,20 @@ Microsoft .Net Framework:
 
 The last version of WSUS Offline Update to support Windows 7 was 11.9:
 
-* [WSUS Offline Update](https://download.wsusoffline.net/)
+* ~~[WSUS Offline Update](https://download.wsusoffline.net/)~~
+
+This no longer works as Microsoft removed the downloads WSUS Offline updates uses from their servers.
+
+<details>
+  <summary>Archive.org</summary>
+
+The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windwos XP downloads from their download servers:
+
+* [WSUS Offline Update Windows 7](https://archive.org/details/wsus-offline-windows-7-and-windows-2008-updates)
+
+I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
+
+</details>
 
 ## Download VMware Tools ISO
 
