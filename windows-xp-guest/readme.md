@@ -4,127 +4,59 @@ Setting up a Windows XP Guest using VMware Workstation Player.
 
 ## Installation Media
 
-The biggest difficulty to setting up a Windows XP Virtual Machine is obtaining the installation as Microsoft nor its OEMs provided official download links.
-
-### Windows XP Windows Volume License Installation ISO
-
-The Windows XP Professional SP3 Volume License ISO and associated Product Key is not yet available to download on WinWorld:
+The biggest difficulty to setting up a Windows XP Virtual Machine is obtaining the installation as Microsoft nor its OEMs provided official download links. WinWorld hasn't been updated to include Windows XP:
 
 * [WinWorld Placeholder: Windows XP ISO and Product Key](https://winworldpc.com/product/windows-xp/final) 
 
-Which otherwise lists abandoned Windows Versions from Windows 1 through to Windows ME.
-
-The Windows XP Professional SP3 Volume License ISO was sold to large organisations such as Universities, Governments and Enterprise companies and is preferred for a Windows XP Professional Virtual Machine as it activates offline and does not have the hassles of Microsoft Product Activation.
-
 <details>
-  <summary>Unofficial Download Links (Untested)</summary>
+  <summary>Archive.org</summary>
 
-Unofficially a copy of the Volume License ISO appears to be listed here:
+The Website Archive.org hosts each Unofficial Dell Windows XP Reinstallation ISO:
 
-* [Archive Org Microsoft Windows XP SP3 Reinstallation ISO](https://archive.org/details/win-xp-pro-sp-3-x-86)
+* [Dell Windows XP SP3 Professional Reinstallation ISO](https://archive.org/details/dell.-xp-pro-sp-3)
+* [Dell Windows XP SP2 Home Reinstallation ISO](https://archive.org/details/dell-xp-home-sp-2)
+* [Dell Windows XP SP2 Media Center Reinstallation ISO](https://archive.org/details/xp-mce-sp-2)
 
-Unofficially Volume License Keys are listed on this GitHub repository:
+I have tested installation of the three ISOs in a Virtual Machine but as this is an unofficial source and should be used with caution. 
 
-* [GitHub: Windows XP All Keys Universal Product Key Collection All Keys](https://github.com/Fuwn/xp)
+The ISO Checksums can be used to ensure a complete download but these do not match official Dell or Microsoft records as they would have been created from a CD/DVD by an end user:
+
+|ISO|sha256 ISO Checksum|
+|---|---|
+|XP Pro|a4cf4e53ac9157cf20913a77f438a64e4fa3b908e4e28cb0d2a08d49fa62e49f|
+|XP Home|aa0629a1d076c835b49b4b4e97d6f7717813d051cfbeba8d9d69ee6d8f6e8866|
+|XP MCE||
 
 </details>
 
-### Dell Windows XP OEM Reinstallation ISO
+### Creating a Installation ISO from a CD
 
-The Dell Windows XP Professional SP3 Reinstallation ISO and associated Product Key is not yet available to download on WinWorld:
+Dell Systems came with a Windows XP Reinstallation CD/DVD which can be converted into an ISO using nLite:
 
-* [WinWorld Placeholder: Windows XP ISO and Product Key](https://winworldpc.com/product/windows-xp/final) 
+* [Using nLite to Create a Windows XP Installation ISO from a Dell Windows Reinstallation CD/DVD](./integration/readme.md)
 
-The Dell Windows XP Reinstallation CD/DVD was fairly common and an ISO can be created by converting the Windows XP Reinstallation CD/DVD to an ISO using ImgBurn.
+## WSUS Offline Update
 
-OEM SLP activation is not carried out by default when using a Windows XP Virtual Machine as the Virtual Machine lacks the SLIC 1.0, SLIC 2.0 (Windows Vista Business Edition to Windows XP Professional Downgrade Rights) or SLIC 2.1 (Windows 7 Professional Downgrade Rights to Windows XP Professional Downgrade Rights) in the Virtual BIOS by default. This will result in a 30 Day Trial:
+The last version of WSUS Offline Update to support Windows XP was 9.2.1:
 
-<details>
-  <summary>30 Day Trial...</summary>
+* ~~[WSUS Offline Update](https://download.wsusoffline.net/)~~
 
-Windows XP has an initial 30 day grace period. After this grace period you are forcefully logged out and can only login to activate.
-
-Details about the days remaining in grace period can be seen when going to Start and selecting run and then inputting:
-
-```
-%systemroot%\system32\oobe\msoobe.exe /a
-```
-
-The windows product activation timer can be reset four times by opening the registry editor and navigating to:
-
-```
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\WPAEvents
-```
-
-and then changing the `OOBETimer` value from `FF` to `00` and then rebooting. 
-
-Once again go to Start and select run and then input:
-
-```
-%systemroot%\system32\oobe\msoobe.exe /a
-```
-
-Select Activate by Telephone, then back and remind me later. Restart Windows XP. Go to Start and select run and then input:
-
-```
-rundll32.exe syssetup,SetupOobeBnk
-```
-
-</details>
+This no longer works as Microsoft removed the downloads WSUS Offline updates uses from their servers.
 
 <details>
-  <summary>Unofficial Links (Untested)</summary>
+  <summary>Archive.org</summary>
 
-Unofficially a copy of the Dell Windows XP SP3 Reinstallation ISO appears to be listed here:
+The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windwos XP downloads from their download servers:
 
-* [Archive Org Dell Windows XP SP3 Professional Reinstallation ISO](https://archive.org/details/dell.-xp-pro-sp-3)
-* [Archive Org Dell Windows XP SP2 Home Reinstallation ISO](https://archive.org/details/dell-xp-home-sp-2)
-* [Archive Org Dell Windows XP SP2 Media Center Reinstallation ISO](https://archive.org/details/xp-mce-sp-2)
+* [WSUS Offline Update Windows XP](https://archive.org/details/wsusoffline-wxp-enu_final)
 
-</details>
+I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
 
-### Windows XP Full Retail ISO
+The ISO Checksum can be used to ensure a complete download but this does not match official Dell or Microsoft records as this ISO would have been created by an end user:
 
-Windows XP had Retail and Retail Upgrade Licenses and the Product Keys for these Licenses are incompatible with each others installation media and incompatible with the Volume License and OEM installation media. Only the Retain Full Licenses can be used in a Virtual Machine as upgrading a Windows 2000 Virtual Machine to Windows XP is not supported and will not work properly:
-
-The Windows XP Professional or Home SP3 Retail License ISO and associated Product Key is not yet available to download on WinWorld:
-
-* [WinWorld Placeholder: Windows XP ISO and Product Key](https://winworldpc.com/product/windows-xp/final) 
-
-Which otherwise lists abandoned Windows Versions from Windows 1 through to Windows ME.
-
-<details>
-  <summary>Retail Licenses</summary>
-
-The Full Retail License for Windows XP Home or Professional is the correct license for a Virtual Machine however:
-
-* Online product activation for Windows XP Professional using a Retail Product key cannot be carried out because Microsoft have decommissioned the Product Activation servers and Windows XP Professional Retail Product Keys can therefore no longer be used to activate Windows XP.
-
-* Phone product activation to an automated line for Windows XP using a Retail Product key may still work. You are unlikely to be passed through to a Microsoft employee if the automated process does not work because the product has passed end of life and is no longer supported. You may have issues transferring your Windows XP Retail License from one Virtual Machine to another.
-
-</details>
-
-<details>
-  <summary>Unofficial Links (Untested)</summary>
-
-Unofficially a copy of the Windows XP Retail SP3 Installation ISO appears to be listed here:
-
-* [Archive Org Windows XP SP3 Retail Full Installation ISO](https://archive.org/details/5.1.2600.5512.xpsp.-080413-2111-x-86fre-client-professional-retail-en-us-grtmpfpp-en
-
-</details>
-
-### Windows XP Mode
-
-The mouse in the Windows XP Mode VM cannot be used in VMware and installation of VMware tools gives a black screen resulting in poor performance:
-
-<details>
-  <summary>Windows XP Mode</summary>
-
-Windows XP Mode can be downloaded from:
-
-* [Windows XP Mode](https://download.cnet.com/windows-xp-mode/3000-18513_4-77683344.html)
-
-A VM can be created from this by renaming the file `WindowsXPMode_en-us.exe` to `WindowsXPMode_en-us.zip`. Then extracting the zip file and going to the sources folder. Then renaming the `xpm` to `xpm.zip` and renaming the `VirtualXPVHD` to `VirtualXP.VHD`. The `VirtualXP.VHD` can be used as a Virtual Drive in VMware Workstation Player but results in a VM where the mouse doesn't work. Installation of VMware tools gives a black screen.
+|ISO|sha256 ISO Checksum|
+|---|---|
+|WSUS Offline||
 
 </details>
 
@@ -133,20 +65,6 @@ A VM can be created from this by renaming the file `WindowsXPMode_en-us.exe` to 
 The Windows XP drivers for the Windows XP Guest are contained in the VMware Tools Installation ISO. VMware tools for legacy versions of Windows needs to be downloaded from VMware separately:
 
 * [VMware Tools Version 10.0.12 ISO](https://packages.vmware.com/tools/releases/10.0.12/windows/)
-
-## Windows XP Service Packs
-
-The Windows XP Standalone Updates have been grouped together in an unofficial Windows XP Service Pack 4 Update. This update will patch any Windows XP Installation with SP1 or later:
-
-* [Windows XP Service Pack 4](https://www.majorgeeks.com/files/details/windows_xp_service_pack_4_unofficial.html)
-
-**Note in my case the Windows XP VM Fails to Shut Down Properly After Installation of this Service Pack.**
-
-## WSUS Offline Update
-
-The last version of WSUS Offline Update to support Windows XP was 9.2.1:
-
-* [WSUS Offline Update](https://download.wsusoffline.net/)
 
 ## Windows 11 Host or Ubuntu 24.10 Host System Requirements
 
@@ -249,19 +167,6 @@ bios.bootDelay = "20000"
 The command above will change the time the Windows XP Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
 
 <details>
-  <summary>SLIC 2.1 Passthrough</summary>
-
-If the Windows 11 Host PC came with a Windows 10 Professional OEM License, it has upgrade rights to Windows 11 Professional and downgrade right to Windows 7 Professional. The downgrade rights to Windows 7 Professional can be used by passing through the SLIC 2.1 to the Virtual Machine by adding the line to the Virtual Machines Configuration File however this SLIC 2.1 doesn't typically activate Windows XP Professional:
-
-```
-acpi.passthru.slic = "TRUE"
-acpi.passthru.slicvendor = "TRUE"
-SMBIOS.reflecthost = "TRUE"
-```
-
-Note if the Windows 11 Host PC doesn't have a SLIC 2.1, the above lines of code will prevent the Windows XP Guest from booting and should be removed.
-
-<details>
   <summary>Modded ROMs</summary>
 
 The my digital life forums has a post about a modded Virtual BIOS which includes a Dell SLIC 1.0 compatible with Dell Windows XP Professional OEM SLP. These ROMs are not supported by Microsoft or Dell (but then neither is Windows XP). You will need to log into their forums to view the files:
@@ -275,8 +180,6 @@ bios440.filename = "modded_BIOS.440.ROM"
 ```
 
 Note if the corresponding ROM is not found in the directory the above line of code will prevent the Windows XP Guest from booting.
-
-</details>
 
 </details>
 
@@ -302,7 +205,7 @@ Press `↵` to install Windows XP on the unpartitioned space:
 
 <img src='./images/img_026.png' alt='img_026' width='600'/>
 
-Select Format the SYstem using NTFS (quick):
+Select Format the System using NTFS (quick):
 
 <img src='./images/img_027.png' alt='img_027' width='600'/>
 
