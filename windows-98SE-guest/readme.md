@@ -90,9 +90,9 @@ Launch `patcher9x.exe`:
 
 Select More Info and Run Anyway:
 
-<img src='./images/img_017.png' alt='img_017' width='600'/>
+<img src='./images/img_017.png' alt='img_017' width='300'/>
 
-<img src='./images/img_018.png' alt='img_018' width='600'/>
+<img src='./images/img_018.png' alt='img_018' width='300'/>
 
 In file explorer navigate to `WIN98_SE` and then `win98` which is the folder that contains the `.cab` files:
 
@@ -174,13 +174,13 @@ Select the Create Image File from Files/Folder icon:
 
 Select Yes and Ok:
 
-<img src='./images/img_039.png' alt='img_039' width='600'/>
+<img src='./images/img_039.png' alt='img_039' width='300'/>
 
-<img src='./images/img_040.png' alt='img_040' width='600'/>
+<img src='./images/img_040.png' alt='img_040' width='200'/>
 
 The patched .iso will now be created, select OK:
 
-<img src='./images/img_041.png' alt='img_041' width='600'/>
+<img src='./images/img_041.png' alt='img_041' width='300'/>
 
 Delete the previous files:
 
@@ -724,58 +724,210 @@ Drag `Auto-Patcher_for_Win98se_August_2007_FULL.EXE` to the Windows 98 Guest Des
 
 <img src='./images/img_156.png' alt='img_156' width='600'/>
 
-Select Yes:
-
+Select next:
 
 <img src='./images/img_157.png' alt='img_157' width='600'/>
+
+Select next:
+
 <img src='./images/img_158.png' alt='img_158' width='600'/>
+
+Select next:
+
 <img src='./images/img_159.png' alt='img_159' width='600'/>
+
+Select next:
+
 <img src='./images/img_160.png' alt='img_160' width='600'/>
+
+Select install:
+
 <img src='./images/img_161.png' alt='img_161' width='600'/>
+
+Select finish:
+
 <img src='./images/img_162.png' alt='img_162' width='600'/>
+
+The autopatcher will launch, input:
+
+```
+a
+```
+
 <img src='./images/img_163.png' alt='img_163' width='600'/>
+
+Then:
+
+```
+i
+```
+
 <img src='./images/img_164.png' alt='img_164' width='600'/>
+
+The autopatcher will begin installing updates:
+
 <img src='./images/img_165.png' alt='img_165' width='600'/>
+
+Restart the Windows 98 Guest:
+
 <img src='./images/img_166.png' alt='img_166' width='600'/>
+
+When you login back in, the autopatcher will display as a blank screen. Click into the terminal:
+
 <img src='./images/img_167.png' alt='img_167' width='600'/>
+
+Press:
+
+```
+f
+```
+
 <img src='./images/img_168.png' alt='img_168' width='600'/>
+
+Updates will proceed:
+
 <img src='./images/img_169.png' alt='img_169' width='600'/>
+
+Multiple restart cycles will be required. Eventually all the updates will be installed, press:
+
+```
+h
+```
+
 <img src='./images/img_170.png' alt='img_170' width='600'/>
+
+The log file will display the updates installed:
+
 <img src='./images/img_171.png' alt='img_171' width='600'/>
-<img src='./images/img_172.png' alt='img_172' width='600'/>
 
+## Serial Ports and USB Devices
 
+Devices can be attached from the Windows 11 Host to the WIndows 98SE via USB or Serial Port. For a Serial Port a USB to Serial Port adaptor is required. In the Windows 11 Host, right click the start menu and select Device Manager:
 
+<img src='./images/img_172.png' alt='img_172' width='200'/>
 
-
+The USB to Serial Port Adaptor should be listed under Ports:
 
 <img src='./images/img_173.png' alt='img_173' width='600'/>
+
+Its properties can be examined:
+
 <img src='./images/img_174.png' alt='img_174' width='600'/>
+
+The Serial Port Speed in bits per second is displayed and Advanced can be selected to change the Serial Port number:
+
 <img src='./images/img_175.png' alt='img_175' width='600'/>
+
+Changing the Port number requires a reboot, in this case it will be left as Com3:
+
 <img src='./images/img_176.png' alt='img_176' width='600'/>
+
+The Windows 98SE Virtual Machine Settings can be modified:
+
 <img src='./images/img_177.png' alt='img_177' width='600'/>
+
+Select add:
+
 <img src='./images/img_178.png' alt='img_178' width='600'/>
+
+Select Serial Port and Finish:
+
 <img src='./images/img_179.png' alt='img_179' width='600'/>
+
+If multiple Serial Ports are used, the specific Port can be selected (otherwise for a single Serial Port, Autodetect can be used). Select ok:
+
 <img src='./images/img_180.png' alt='img_180' width='600'/>
+
 <img src='./images/img_181.png' alt='img_181' width='600'/>
+
+When the WIndows 98SE Guest boots, it will add the Serial Port using the Windows 98SE CD/DVD in Drive D:\ to find the driver:
+
 <img src='./images/img_182.png' alt='img_182' width='600'/>
+
+The Serial Port properties can be examined in the Windows 98SE Guest:
+
 <img src='./images/img_183.png' alt='img_183' width='600'/>
+
+Note this is Com3 in the Windows 11 Host and Com1 in the Windows 98SE Guest:
+
 <img src='./images/img_184.png' alt='img_184' width='600'/>
+
+The Serial Port Speed in bits per second is displayed and needs to be set to the expected value for the Device connected via Serial Port:
+
 <img src='./images/img_185.png' alt='img_185' width='600'/>
+
+## Physical Media
+
+The procedure to copy a CD/DVD to ISO has been examined already using ImgBurn. However most installation media does not need to be bootable and there is therefore no requirement to use the Advanced Bootable settings.
+
+For a floppy disk. It can be converted into an image using WinImage:
+
+* [WinImage](https://www.winimage.com/download.htm)
+
+The USB to Floppy Drive driver should be installed on a Windows 11 Host however may not display as a drive in Computer:
+
 <img src='./images/img_186.png' alt='img_186' width='600'/>
+
 <img src='./images/img_187.png' alt='img_187' width='600'/>
+
+If it doesn't input:
+
+```
+A:\
+```
+
+into the address bar:
+
 <img src='./images/img_188.png' alt='img_188' width='600'/>
+
 <img src='./images/img_189.png' alt='img_189' width='600'/>
+
 <img src='./images/img_190.png' alt='img_190' width='600'/>
+
+Select Disk and make sure Use Floppy A:\ is selected then select Read Disk:
+
 <img src='./images/img_191.png' alt='img_191' width='600'/>
+
+Select save:
+
 <img src='./images/img_192.png' alt='img_192' width='600'/>
+
+WinImage uses the format `.ima`:
+
 <img src='./images/img_193.png' alt='img_193' width='600'/>
+
+However VMware requires the file extension `.img`, rename the file and change the file extension:
+
 <img src='./images/img_194.png' alt='img_194' width='600'/>
+
 <img src='./images/img_195.png' alt='img_195' width='600'/>
-<img src='./images/img_196.png' alt='img_196' width='600'/>
+
+Select ok:
+
+<img src='./images/img_196.png' alt='img_196' width='200'/>
+
+## Floppy Drive
+
+The flooppy disk created is a copy of the `patcher9x-0.8.50-boot.ima` from the assets of the latest release. Download this floppy image and change the file extensions from `.ima` to `.img`:
+
+* [patcher9x](https://github.com/JHRobotics/patcher9x/releases/)
+
+Edit the Windows 98SE Guest Virtual Machine Settings:
+
 <img src='./images/img_197.png' alt='img_197' width='600'/>
+
+Select Add:
+
 <img src='./images/img_198.png' alt='img_198' width='600'/>
+
+Then Floppy Drive:
+
 <img src='./images/img_199.png' alt='img_199' width='600'/>
+
+And select this floppy drive image:
+
+
+
 <img src='./images/img_200.png' alt='img_200' width='600'/>
 <img src='./images/img_201.png' alt='img_201' width='600'/>
 <img src='./images/img_202.png' alt='img_202' width='600'/>
@@ -783,21 +935,28 @@ Select Yes:
 <img src='./images/img_204.png' alt='img_204' width='600'/>
 <img src='./images/img_205.png' alt='img_205' width='600'/>
 
+<img src='./images/img_206.png' alt='img_206' width='600'/>
+<img src='./images/img_207.png' alt='img_207' width='600'/>
+<img src='./images/img_208.png' alt='img_208' width='600'/>
+<img src='./images/img_209.png' alt='img_209' width='600'/>
+<img src='./images/img_210.png' alt='img_210' width='600'/>
+<img src='./images/img_211.png' alt='img_211' width='600'/>
 
+<img src='./images/img_212.png' alt='img_212' width='600'/>
+<img src='./images/img_213.png' alt='img_213' width='600'/>
 
+<img src='./images/img_214.png' alt='img_214' width='600'/>
+<img src='./images/img_215.png' alt='img_215' width='600'/>
 
+<img src='./images/img_216.png' alt='img_216' width='600'/>
+<img src='./images/img_217.png' alt='img_217' width='600'/>
+<img src='./images/img_218.png' alt='img_218' width='600'/>
 
-## Serial Ports
-
-
+<img src='./images/img_219.png' alt='img_219' width='600'/>
 
 Additional Windows 98 software can be found in:
 
 * [Retro PC installation files](https://startup.retropc.se/win98.html)
-
-
-
-
 
 The Windows 98 SE Guest is now setup:
 
