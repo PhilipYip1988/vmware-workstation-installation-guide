@@ -55,6 +55,12 @@ Microsoft .Net Framework:
 
 </details>
 
+## WSUS Offline Update
+
+The last version of WSUS Offline Update to support Windows 7 was 11.9:
+
+* [WSUS Offline Update](https://download.wsusoffline.net/)
+
 ## Download VMware Tools ISO
 
 The Windows 7 drivers for the Windows 7 Guest are contained in the VMware Tools Installation ISO. VMware tools for legacy versions of Windows needs to be downloaded from VMware separately:
@@ -391,9 +397,6 @@ On a Windows 11 Host, drag and drop to the Windows 7 Guest is bi-directional. On
 Note install the updates in the order listed above and not by the KB numbers, as some updates require other updates as perquisites. When the last update is installed and the Windows 7 Guest has restarted you will be informed that Windows 7 has Reached End of Life:
 
 <img src='./images/img_059.png' alt='img_059' width='600'/>
-
-## Windows XP S
-
 
 ## Shared Folders
 

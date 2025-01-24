@@ -142,6 +142,12 @@ The Windows XP Standalone Updates have been grouped together in an unofficial Wi
 
 **Note in my case the Windows XP VM Fails to Shut Down Properly After Installation of this Service Pack.**
 
+## WSUS Offline Update
+
+The last version of WSUS Offline Update to support Windows XP was 9.2.1:
+
+* [WSUS Offline Update](https://download.wsusoffline.net/)
+
 ## Windows 11 Host or Ubuntu 24.10 Host System Requirements
 
 Your Windows 11 Host PC or Ubuntu Host PC should satisfy the minimum system the system requirements of Windows 11 and have additional overhead to run a Virtual Machine in addition to these requirements. It is recommended to have a Host PC with at least:
