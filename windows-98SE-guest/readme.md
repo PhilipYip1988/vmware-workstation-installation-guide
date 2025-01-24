@@ -906,9 +906,11 @@ Select ok:
 
 <img src='./images/img_196.png' alt='img_196' width='200'/>
 
-## Floppy Drive
+## Reapplying Patcher9x from a Bootable Floppy Drive
 
-The flooppy disk created is a copy of the `patcher9x-0.8.50-boot.ima` from the assets of the latest release. Download this floppy image and change the file extensions from `.ima` to `.img`:
+Patching Windows 98SE removed some of the patches made by patcher9x. 
+
+The floppy disk created above is a copy of the `patcher9x-0.8.50-boot.ima` from the assets of the latest release. Download this floppy image and change the file extensions from `.ima` to `.img`:
 
 * [patcher9x](https://github.com/JHRobotics/patcher9x/releases/)
 
@@ -924,35 +926,89 @@ Then Floppy Drive:
 
 <img src='./images/img_199.png' alt='img_199' width='600'/>
 
-And select this floppy drive image:
-
-
+And select this floppy drive image and then select ok:
 
 <img src='./images/img_200.png' alt='img_200' width='600'/>
+
+When the Windows 98SE Guest launches:
+
 <img src='./images/img_201.png' alt='img_201' width='600'/>
+
+It will boot to the Floppy Disk DOS program:
+
 <img src='./images/img_202.png' alt='img_202' width='600'/>
+
+Input:
+
+```
+patch9x
+```
+
 <img src='./images/img_203.png' alt='img_203' width='600'/>
+
+Press `↵` to select the default Widnows system path:
+
 <img src='./images/img_204.png' alt='img_204' width='600'/>
+
+Input:
+
+```
+2
+```
+
 <img src='./images/img_205.png' alt='img_205' width='600'/>
 
+and input:
+
+```
+y
+```
+
 <img src='./images/img_206.png' alt='img_206' width='600'/>
+
+Press `↵` to exit:
+
 <img src='./images/img_207.png' alt='img_207' width='600'/>
+
+The next DOS prompt will display:
+
 <img src='./images/img_208.png' alt='img_208' width='600'/>
+
+The floppy disk image needs to be disconnected to prevent the WIndows 98SE from booting to the DOS program. Select Player → Removable Devices → Floppy → Settings:
+
 <img src='./images/img_209.png' alt='img_209' width='600'/>
+
+Uncheck Connected and Connected at Power On:
+
 <img src='./images/img_210.png' alt='img_210' width='600'/>
+
+Select Player → Power → Restart Guest:
+
 <img src='./images/img_211.png' alt='img_211' width='600'/>
 
-<img src='./images/img_212.png' alt='img_212' width='600'/>
+Select yes:
+
+<img src='./images/img_212.png' alt='img_212' width='200'/>
+
+When the Windows 98SE Guest boots, it will install the floppy drive driver using drive D:\ hich contains the Windows 98SE CD:
+
 <img src='./images/img_213.png' alt='img_213' width='600'/>
 
-<img src='./images/img_214.png' alt='img_214' width='600'/>
+The floppy drive image can be reselected now that Windows 98SE has booted:
+
+<img src='./images/img_214.png' alt='img_214' width='200'/>
+
+The floppy drive now shows up as `A:\` and can be selected:
+
 <img src='./images/img_215.png' alt='img_215' width='600'/>
 
-<img src='./images/img_216.png' alt='img_216' width='600'/>
-<img src='./images/img_217.png' alt='img_217' width='600'/>
-<img src='./images/img_218.png' alt='img_218' width='600'/>
+The DOS program can be launched:
 
-<img src='./images/img_219.png' alt='img_219' width='600'/>
+<img src='./images/img_216.png' alt='img_216' width='600'/>
+
+There is no need to run the program as Windows 98SE is already patched:
+
+<img src='./images/img_217.png' alt='img_217' width='600'/>
 
 Additional Windows 98 software can be found in:
 
@@ -961,4 +1017,3 @@ Additional Windows 98 software can be found in:
 The Windows 98 SE Guest is now setup:
 
 * [VMware Installation Guide](../readme.md)
-
