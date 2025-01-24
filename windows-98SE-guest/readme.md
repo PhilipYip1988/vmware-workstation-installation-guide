@@ -26,9 +26,77 @@ The Windows 98SE installation errors out on a VM on a modern computer:
 
 Essentially the processor is too fast and windows 98SE expects to wait more than "zero seconds" for an operation.
 
-Download the `patcher9x.ima` from the assets of the latest release:
+Download the `patcher9x-win64.zip` from the assets of the latest release:
 
 * [patcher9x](https://github.com/JHRobotics/patcher9x/releases/)
+
+## 7-zip
+
+Download and install on the Windows 11 Guest:
+
+* [7-zip](https://7-zip.org/download.html)
+
+## ImgBurn
+
+Download and install on the Windows 11 Guest:
+
+* [ImgBurn](https://www.imgburn.com/)
+
+## Patching the Installation ISO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Right click the downloaded file and select rename: 
 
@@ -46,11 +114,22 @@ The virtual floppy disk is now compatible with VMware:
 
 <img src='./images/img_005.png' alt='img_005' width='600'/>
 
-## ImgBurn
 
-Needed to recreate the ISO:
 
-* [ImgBurn](https://www.imgburn.com/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Intel Chipset Installation Utility
@@ -136,31 +215,6 @@ Leave display at the default setting and select Close:
 Select Finish:
 
 <img src='./images/img_019.png' alt='img_019' width='600'/>
-
-## Patching Windows 98SE Installation Media
-
-Information
-MODE1/2048
-ISO9660 + Joliet
-
-Advanced
-Bootable Disk
-Make Image Bootable
-Emulation Type: Floppy 1.44 MB
-Boot Image: Boot-1.44M.img
-Platform ID: 80x86
-Developer ID: Microsoft Corporation
-Load Segment: 07C0
-Sectors to Load: 4
-
-Labels
-ISO9660: WIN98_SE
-Joliet: WIN98_SE
-
-
-
-
-
 
 ## Installing the Windows 98 Guest
 
