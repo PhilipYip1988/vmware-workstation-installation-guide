@@ -6,7 +6,7 @@ Windows 98SE is considered abandonware and the Windows 98SE ISO and Product Key 
 
 * [WinWorld](https://winworldpc.com/product/windows-98/98-second-edition)
 
-Use the OEM Full ISO as the Retail Full ISO doesn't boot in VMware Player without use of a floppy disk and use the provided Product Key. For this version of Windows there was only a Product Key and there was no concept of Product Activation.
+Use the OEM Full ISO as the Retail Full ISO doesn't boot in VMware Player without use of a floppy disk and use the provided Product Key. For this version of Windows there was only a Product Key. Windows 98 SE was too primitive for Product Activation and a high proportion of Windows 98 SE computers were offline meaning internet activation mechanisms were unfeasible during this version fo Windows lifecycle.
 
 ## VMware Tools ISO
 
@@ -728,6 +728,15 @@ Drag `Auto-Patcher_for_Win98se_August_2007_FULL.EXE` to the Windows 98 Guest Des
 
 
 
+## Serial Ports
+
+
+
+Additional Windows 98 software can be found in:
+
+* [Retro PC installation files](https://startup.retropc.se/win98.html)
+
+
 
 
 
@@ -735,6 +744,3 @@ The Windows 98 SE Guest is now setup:
 
 * [VMware Installation Guide](../readme.md)
 
-Additional Windows 98 software can be found in:
-
-* [Retro PC installation files](https://startup.retropc.se/win98.html)
