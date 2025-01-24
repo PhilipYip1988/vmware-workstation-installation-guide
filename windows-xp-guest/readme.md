@@ -52,12 +52,6 @@ The Website Archive.org appears to host the ISO created from WSUS Offline Update
 
 I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
 
-The ISO Checksum can be used to ensure a complete download but this does not match official Dell or Microsoft records as this ISO would have been created by an end user:
-
-|ISO|sha256 ISO Checksum|
-|---|---|
-|WSUS Offline||
-
 </details>
 
 ## VMware Tools ISO
