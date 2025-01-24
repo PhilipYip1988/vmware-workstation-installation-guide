@@ -773,7 +773,18 @@ Drag `Auto-Patcher_for_Win98se_August_2007_FULL.EXE` to the Windows 98 Guest Des
 <img src='./images/img_204.png' alt='img_204' width='600'/>
 <img src='./images/img_205.png' alt='img_205' width='600'/>
 
-
+<img src='./images/img_206.png' alt='img_206' width='600'/>
+<img src='./images/img_207.png' alt='img_207' width='600'/>
+<img src='./images/img_208.png' alt='img_208' width='600'/>
+<img src='./images/img_209.png' alt='img_209' width='600'/>
+<img src='./images/img_210.png' alt='img_210' width='600'/>
+<img src='./images/img_211.png' alt='img_211' width='600'/>
+<img src='./images/img_212.png' alt='img_212' width='600'/>
+<img src='./images/img_213.png' alt='img_213' width='600'/>
+<img src='./images/img_214.png' alt='img_214' width='600'/>
+<img src='./images/img_215.png' alt='img_215' width='600'/>
+<img src='./images/img_216.png' alt='img_216' width='600'/>
+<img src='./images/img_217.png' alt='img_217' width='600'/>
 
 
 
