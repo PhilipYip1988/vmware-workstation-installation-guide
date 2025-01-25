@@ -2,11 +2,9 @@
 
 This guide looks at installation of VMware Workstation Pro on Ubuntu 24.04 or 24.10. VMware has recently been acquired by Broadcom and VMware Workstation has been made free for non-commercial use. The previous free lesser products have been depreciated in order to reduce development costs.
 
-## YouTube Video Tutorial
+## YouTube Video
 
-The video tutorial associated with this guide is here:
-
-* [YouTube](https://www.youtube.com/watch?v=lcGVWj8q46U&ab_channel=PhilipYip)
+* [YouTube](https://www.youtube.com/watch?v=lcGVWj8q46U)
 
 ## Installing VMware Perquisites
 

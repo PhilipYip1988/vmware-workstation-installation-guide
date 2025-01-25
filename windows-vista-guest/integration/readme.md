@@ -6,6 +6,8 @@ In this guide, a Dell Windows DVD Reinstallation DVD will be converted into a .I
 
 Insert your Windows Vista Reinstallation DVD:
 
-## vLite
+## NTLite
 
-* [vLite](https://www.softpedia.com/get/System/OS-Enhancements/vLite.shtml)
+NTLite does not officially support Windows Vista. However it can be used on a Windows 11 host to convert a Reinstallation DVD into a Bootable ISO:
+
+* [NTLite](https://www.ntlite.com/download/)

@@ -2,6 +2,10 @@
 
 Setting up a Windows XP Guest using VMware Workstation Player.
 
+## YouTube Video
+
+* [YouTube](https://www.youtube.com/watch?v=UCgV4CsyyIE)
+
 ## Installation Media
 
 The biggest difficulty to setting up a Windows XP Virtual Machine is obtaining the installation as Microsoft nor its OEMs provided official download links. WinWorld hasn't been updated to include Windows XP:

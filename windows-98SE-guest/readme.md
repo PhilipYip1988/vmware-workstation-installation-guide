@@ -1,5 +1,9 @@
 # Windows 98SE
 
+## YouTube Video
+
+* [YouTube](https://www.youtube.com/watch?v=cxW57znmmu8)
+
 ## Windows 98SE ISO
 
 Windows 98SE is considered abandonware and the Windows 98SE ISO and Product Key can be obtained from WinWorld:

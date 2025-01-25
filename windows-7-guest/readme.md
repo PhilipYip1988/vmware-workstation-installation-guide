@@ -279,6 +279,15 @@ efi20-64.filename = "modded_EFI20-64.ROM"
 
 Note if the corresponding ROM is not found in the directory the above line of code will prevent the Windows 7 Guest from booting.
 
+For Windows Vista extract the downloaded file and navigate to the `17.6.0 Modded ROMs` folder. Rename `WORKSTATION_17.6.0_DELL2.7_SLIC_BIOS.440_(497).ROM` to `modded_BIOS.440.ROM` and copy the modded ROM to the directory of the Windows Vista Guest. Update the Virtual Machine Configuration file to:
+
+```
+bios440.filename = "modded_BIOS.440.ROM"
+```
+
+Note if the corresponding ROM is not found in the directory the above line of code will prevent the Windows Vista Guest from booting.
+
+
 </details>
 
 </details>

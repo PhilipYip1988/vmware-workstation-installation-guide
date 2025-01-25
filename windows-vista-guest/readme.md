@@ -30,11 +30,13 @@ The ISO Checksums can be used to ensure a complete download but these do not mat
 
 </details>
 
-### Creating a Installation ISO from a CD
+### Creating a Installation ISO from a DVD
 
-Dell Systems came with a Windows Vista Reinstallation CD/DVD which can be converted into an ISO using vLite:
+Dell Systems came with a Windows Vista Reinstallation DVD which can be converted into an ISO using NTLite:
 
-* [Using vLite to Create a Windows Vista Reinstallation ISO from a Dell Windows Reinstallation CD/DVD](./integration/readme.md)
+* [Using NTLite to Create a Windows Vista Reinstallation ISO from a Dell Windows Reinstallation CD/DVD](./integration/readme.md)
+
+This works on a Windows 11 Host to convert a Windows Vista folder to a ISO. Windows Vista is otherwise unsupported by NTLite.
 
 ## Windows Vista Standalone Updates
 
@@ -73,6 +75,6 @@ The Windows Vista drivers for the Windows Vista Guest are contained in the VMwar
 
 * [VMware Tools Version 11.0.6](https://packages.vmware.com/tools/releases/11.0.6/windows/)
 
-Windows Vista setup is similar to Windows 7 setup confer with:
+Windows Vista setup is very similar to Windows 7 setup confer with:
 
 * [VMware Installation Guide](../windows-7-guest/readme.md)
