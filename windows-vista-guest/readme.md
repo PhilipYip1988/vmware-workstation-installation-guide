@@ -25,8 +25,8 @@ The ISO Checksums can be used to ensure a complete download but these do not mat
 
 |ISO|sha256 ISO Checksum|
 |---|---|
-|Business (x64)||
-|Business (x86)||
+|Business (x64)|ae468896767b27f9f53441ac09865872ae546449ac1f406ba9c1df409de85f7f|
+|Business (x86)|b0898da188b90c40c47a231b8a8a1a8ec761efd5c6c4f39a3b01bd8aaa743db0|
 
 </details>
 
@@ -35,22 +35,6 @@ The ISO Checksums can be used to ensure a complete download but these do not mat
 Dell Systems came with a Windows Vista Reinstallation CD/DVD which can be converted into an ISO using vLite:
 
 * [Using vLite to Create a Windows Vista Reinstallation ISO from a Dell Windows Reinstallation CD/DVD](./integration/readme.md)
-
-
-
-
-
-
-## Dell Windows Vista Reinstallation ISO
-
-<details>
-  <summary>Unofficial Links (Untested)</summary>
-
-Unofficially a copy of the Dell Windows Vista ISO appears to be listed here:
-
-
-
-</details>
 
 ## Windows Vista Standalone Updates
 
@@ -89,6 +73,6 @@ The Windows Vista drivers for the Windows Vista Guest are contained in the VMwar
 
 * [VMware Tools Version 11.0.6](https://packages.vmware.com/tools/releases/11.0.6/windows/)
 
-Confer with
+Windows Vista setup is similar to Windows 7 setup confer with:
 
 * [VMware Installation Guide](../windows-7-guest/readme.md)

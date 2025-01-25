@@ -4,7 +4,7 @@ In this guide, a Dell Windows DVD Reinstallation DVD will be converted into a .I
 
 ## Dell Windows Vista Reinstallation DVD
 
-Insert your WIndows Vista Reinstallation DVD:
+Insert your Windows Vista Reinstallation DVD:
 
 ## vLite
 
