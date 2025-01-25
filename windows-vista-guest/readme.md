@@ -38,18 +38,6 @@ Dell Systems came with a Windows Vista Reinstallation DVD which can be converted
 
 This works on a Windows 11 Host to convert a Windows Vista folder to a ISO. Windows Vista is otherwise unsupported by NTLite.
 
-## Windows Vista Standalone Updates
-
-Windows Vista Service Pack 2 and Internet Explorer 9 can be installed using the standalone updates. However patching with WSUS Offline Update is preferred:
-
-<details>
-  <summary>Windows 7 Standalone Updates Microsoft Update Catalog</summary>
-
-* [Windows Vista Service Pack 2](https://www.softpedia.com/get/Others/Signatures-Updates/Windows-Vista-Service-Pack-2.shtml)
-* [Internet Explorer 9](https://www.softpedia.com/get/Internet/Browsers/Internet-Explorer-9.shtml)
-
-</details>
-
 ## WSUS Offline Update
 
 The last version of WSUS Offline Update to support Windows Vista was 10.9.2:
@@ -69,11 +57,31 @@ I have tested installation of the ISO in a Virtual Machine but as this is an uno
 
 </details>
 
+## Windows Vista Standalone Updates
+
+WSUS Offline update may hang, the following updates should be installed manually:
+
+<details>
+  <summary>Windows 7 Standalone Updates Microsoft Update Catalog</summary>
+
+* [KB3205638](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3205638)
+* [KB4012583](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4012583)
+* [KB4015195](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015195)
+* [KB4015380](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015380)
+
+</details>
+
 ## Download VMware Tools ISO
 
 The Windows Vista drivers for the Windows Vista Guest are contained in the VMware Tools Installation ISO. VMware tools for legacy versions of Windows needs to be downloaded from VMware separately:
 
 * [VMware Tools Version 11.0.6](https://packages.vmware.com/tools/releases/11.0.6/windows/)
+
+
+
+
+
+
 
 Windows Vista setup is very similar to Windows 7 setup confer with:
 
