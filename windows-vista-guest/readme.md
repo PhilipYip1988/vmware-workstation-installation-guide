@@ -62,7 +62,7 @@ I have tested installation of the ISO in a Virtual Machine but as this is an uno
 WSUS Offline update may hang, the following updates should be installed manually:
 
 <details>
-  <summary>Windows 7 Standalone Updates Microsoft Update Catalog</summary>
+  <summary>Windows Vista Standalone Updates Microsoft Update Catalog</summary>
 
 * [KB3205638](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3205638)
 * [KB4012583](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4012583)
