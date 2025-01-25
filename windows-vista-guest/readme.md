@@ -64,6 +64,7 @@ WSUS Offline update may hang, the following updates should be installed manually
 <details>
   <summary>Windows Vista Standalone Updates Microsoft Update Catalog</summary>
 
+* [KB948465](https://catalog.update.microsoft.com/Search.aspx?q=KB948465)
 * [KB3205638](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3205638)
 * [KB4012583](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4012583)
 * [KB4015195](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015195)
