@@ -46,7 +46,7 @@ This no longer works as Microsoft removed the downloads WSUS Offline updates use
 <details>
   <summary>Archive.org</summary>
 
-The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windwos XP downloads from their download servers:
+The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windows XP downloads from their download servers:
 
 * [WSUS Offline Update Windows XP](https://archive.org/details/wsusoffline-wxp-enu_final)
 
@@ -108,7 +108,7 @@ The default number of processors cores used by the Windows XP Guest is 1. This c
 
 <img src='./images/img_010.png' alt='img_010' width='600'/>
 
-The CD/DVD should be configured to load the Dell Windows 7 Reinstallation ISO or Windows XP Volume License Installation iSO:
+The CD/DVD should be configured to load the Dell Windows XP Reinstallation ISO or Windows XP Volume License Installation iSO:
 
 <img src='./images/img_011.png' alt='img_011' width='600'/>
 

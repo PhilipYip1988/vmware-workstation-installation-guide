@@ -1,10 +1,10 @@
-# Converting a Windows XP CD Into an ISO
+# Converting a Windows XP CD/DVD Into an ISO
 
 In this guide, a Dell Windows XP Reinstallation CD will be converted into a .ISO. The guide will also work for Retail CDs.
 
-## Dell Windows Reinstallation CD
+## Dell Windows XP Reinstallation CD/DVD
 
-Insert your WIndows XP Reinstallation CD:
+Insert your Windows XP Reinstallation CD/DVD:
 
 <img src='./images/img_001.png' alt='img_001' width='600'/>
 
@@ -68,7 +68,6 @@ To a WinXP folder in Downloads:
 
 <img src='./images/img_013.png' alt='img_013' width='600'/>
 
-
 ## Service Pack Integration and ISO Creation
 
 Launch nLLite and select next:
@@ -106,7 +105,6 @@ Select yes and ok:
 <img src='./images/img_021.png' alt='img_021' width='300'/>
 
 <img src='./images/img_022.png' alt='img_022' width='300'/>
-
 
 Select the Windows XP Service Pack 3 Update and select Open:
 

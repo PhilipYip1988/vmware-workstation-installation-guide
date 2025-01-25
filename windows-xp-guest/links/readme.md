@@ -120,16 +120,3 @@ A VM can be created from this by renaming the file `WindowsXPMode_en-us.exe` to 
 
 </details>
 
-## VMware Tools ISO
-
-The Windows XP drivers for the Windows XP Guest are contained in the VMware Tools Installation ISO. VMware tools for legacy versions of Windows needs to be downloaded from VMware separately:
-
-* [VMware Tools Version 10.0.12 ISO](https://packages.vmware.com/tools/releases/10.0.12/windows/)
-
-## Windows XP Service Packs
-
-The Windows XP Standalone Updates have been grouped together in an unofficial Windows XP Service Pack 4 Update. This update will patch any Windows XP Installation with SP1 or later:
-
-* [Windows XP Service Pack 4](https://www.majorgeeks.com/files/details/windows_xp_service_pack_4_unofficial.html)
-
-**Note in my case the Windows XP VM Fails to Shut Down Properly After Installation of this Service Pack.**
