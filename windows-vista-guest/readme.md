@@ -38,6 +38,21 @@ Dell Systems came with a Windows Vista Reinstallation DVD which can be converted
 
 This works on a Windows 11 Host to convert a Windows Vista folder to a ISO. Windows Vista is otherwise unsupported by NTLite.
 
+## Windows Vista Standalone Updates
+
+WSUS Offline update may hang, the following updates should be installed manually before using WSUS Offline Update:
+
+<details>
+  <summary>Windows Vista Standalone Updates Microsoft Update Catalog</summary>
+
+* [KB948465](https://catalog.update.microsoft.com/Search.aspx?q=KB948465)
+* [KB3205638](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3205638)
+* [KB4012583](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4012583)
+* [KB4015195](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015195)
+* [KB4015380](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015380)
+
+</details>
+
 ## WSUS Offline Update
 
 The last version of WSUS Offline Update to support Windows Vista was 10.9.2:
@@ -53,22 +68,17 @@ The Website Archive.org appears to host the ISO created from WSUS Offline Update
 
 * [WSUS Offline Update Windows Vista](https://archive.org/details/winvsta-upd-arc)
 
-I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
-
-</details>
-
-## Windows Vista Standalone Updates
-
-WSUS Offline update may hang, the following updates should be installed manually:
-
-<details>
-  <summary>Windows Vista Standalone Updates Microsoft Update Catalog</summary>
+Install:
 
 * [KB948465](https://catalog.update.microsoft.com/Search.aspx?q=KB948465)
 * [KB3205638](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3205638)
 * [KB4012583](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4012583)
 * [KB4015195](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015195)
 * [KB4015380](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015380)
+
+
+
+I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
 
 </details>
 
