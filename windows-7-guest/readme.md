@@ -68,7 +68,7 @@ This no longer works as Microsoft removed the downloads WSUS Offline updates use
 
 The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windows 7 downloads from their download servers:
 
-* [WSUS Offline Update Windows 7](https://archive.org/details/wsus-offline-windows-7-and-windows-2008-updates)
+* [WSUS Offline Update Windows 7 (Windows 7 32 Bit=w61 and Windows 7 64 Bit=w61-x64)](https://archive.org/details/wsusoffline-eol-windows)
 
 I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
 

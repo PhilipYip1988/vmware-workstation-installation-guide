@@ -66,9 +66,11 @@ This no longer works as Microsoft removed the downloads WSUS Offline updates use
 
 The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windows Vista downloads from their download servers:
 
-* [WSUS Offline Update Windows Vista](https://archive.org/details/winvsta-upd-arc)
+* [WSUS Offline Update Windows Vista (Windows Vista 32 Bit=w60 and Windows Vista 64 Bit=w60-x64)](https://archive.org/details/wsusoffline-eol-windows)
 
-Install:
+I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
+
+The following updates should be installed manually before using the WSUS Offline Update ISO as Windows Vista has a bug and enters an infinite loop when checking for updates. This issue is addressed if the following 5 updates are manually installed:
 
 * [KB948465](https://catalog.update.microsoft.com/Search.aspx?q=KB948465)
 * [KB3205638](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3205638)
@@ -76,9 +78,7 @@ Install:
 * [KB4015195](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015195)
 * [KB4015380](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015380)
 
-
-
-I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
+Copy the following 5 updates to a folder and convert the folder to an ISO using [ImgBurn](https://www.imgburn.com/). Mount this ISO and install these updates immediately after installing Windows Vista. Then mount the WSUS Offline Update ISO and use it to patch Windows Vista fully until end of life. 
 
 </details>
 
@@ -87,12 +87,6 @@ I have tested installation of the ISO in a Virtual Machine but as this is an uno
 The Windows Vista drivers for the Windows Vista Guest are contained in the VMware Tools Installation ISO. VMware tools for legacy versions of Windows needs to be downloaded from VMware separately:
 
 * [VMware Tools Version 11.0.6](https://packages.vmware.com/tools/releases/11.0.6/windows/)
-
-
-
-
-
-
 
 Windows Vista setup is very similar to Windows 7 setup confer with:
 

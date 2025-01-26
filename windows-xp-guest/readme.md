@@ -52,7 +52,7 @@ This no longer works as Microsoft removed the downloads WSUS Offline updates use
 
 The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windows XP downloads from their download servers:
 
-* [WSUS Offline Update Windows XP](https://archive.org/details/wsusoffline-wxp-enu_final)
+* [WSUS Offline Update Windows XP (Windows XP 32 Bit=wxp-enu)](https://archive.org/details/wsusoffline-eol-windows)
 
 I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
 

@@ -2,7 +2,27 @@
 
 This guide looks at installation of VMware Workstation Pro on Windows 11 or Windows 10. VMware has recently been acquired by Broadcom and VMware Workstation has been made free for non-commercial use. The previous free lesser products have been depreciated in order to reduce development costs.
 
-## Installing VMware Perquisites
+## Installing Windows Virtualisation Features
+
+Press `⊞+r` to bring up the run dialog and input:
+
+```
+appwiz.cpl
+```
+
+<img src='./images/img_018.png' alt='img_018' width='400'/>
+
+Select Turn Windows Features on or off:
+
+<img src='./images/img_019.png' alt='img_019' width='600'/>
+
+Select Virtual Machine Platform and Windows Hypervisor Platform:
+
+<img src='./images/img_020.png' alt='img_020' width='600'/>
+
+Select Restart Now:
+
+<img src='./images/img_021.png' alt='img_021' width='600'/>
 
 ## Downloading VMware Workstation
 
@@ -71,28 +91,6 @@ Select install:
 Select finish:
 
 <img src='./images/img_017.png' alt='img_017' width='600'/>
-
-## Installing Windows Virtualisation Features
-
-Press `⊞+r` to bring up the run dialog and input:
-
-```
-appwiz.cpl
-```
-
-<img src='./images/img_018.png' alt='img_018' width='400'/>
-
-Select Turn Windows Features on or off:
-
-<img src='./images/img_019.png' alt='img_019' width='600'/>
-
-Select Virtual Machine Platform and Windows Hypervisor Platform:
-
-<img src='./images/img_020.png' alt='img_020' width='600'/>
-
-Select Restart Now:
-
-<img src='./images/img_021.png' alt='img_021' width='600'/>
 
 ## Ubuntu Guest
 
