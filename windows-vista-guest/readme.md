@@ -1,5 +1,9 @@
 # Windows Vista
 
+## YouTube Video
+
+* [YouTube](https://www.youtube.com/watch?v=oysZWd6vPhA)
+
 ## Installation Media
 
 The biggest difficulty to setting up a Windows Vista Virtual Machine is obtaining the installation as Microsoft nor its OEMs provided official download links to an Installation ISO. Windows Vista Setup Files were available from Microsoft and the ISO needed to manually be created from them but these download links have long been removed:

@@ -2,6 +2,10 @@
 
 Setting up a Windows 7 Guest using VMware Workstation Player.
 
+## YouTube Video
+
+* [YouTube](https://www.youtube.com/watch?v=rZ8DaVV_skk)
+
 ## Download Dell Windows 7 Reinstallation ISO
 
 To download the Dell Windows 7 Professional Reinstallation ISO Media Refresh 2016. Use the Windows ISO Download Tool:
@@ -484,6 +488,6 @@ This needs to be done when the Windows 7 Guest is powered off. In this example, 
 
 Note the Serial Port number should be configured in the Device Manager in the Windows 11 Host, then added to the Windows 7 Guest, then the Serial Port number should be configured in the Windows 7 Guest. It is recommended to do this one at a time, to avoid confusion between Serial Ports.
 
-The Windows 7 Guest is now setup:
+The Windows 7 Guest is now setup.
 
-* [VMware Installation Guide](../readme.md)
+Return to [VMware Installation Guide](../readme.md).

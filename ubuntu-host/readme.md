@@ -797,3 +797,5 @@ VMware Workstation is now uninstalled:
 <img src='./images/img_165.png' alt='img_165' width='600'/>
 
 The latest version of VMware Workstation can now be installed. A MOK for the kernel services blocked by Secure Boot will need to be created.
+
+Return to [VMware Installation Guide](../readme.md)

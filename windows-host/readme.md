@@ -1,6 +1,10 @@
-# VMware Workstation Pro Install Ubuntu
+# VMware Workstation Pro Install Windows
 
 This guide looks at installation of VMware Workstation Pro on Windows 11 or Windows 10. VMware has recently been acquired by Broadcom and VMware Workstation has been made free for non-commercial use. The previous free lesser products have been depreciated in order to reduce development costs.
+
+## YouTube Video
+
+* [YouTube](https://www.youtube.com/watch?v=94pTlBtrMb8)
 
 ## Installing Windows Virtualisation Features
 
@@ -759,3 +763,4 @@ Bi-directional drag and drop from the Windows 11 Host to the Windows 11 Guest wo
 
 <img src='./images/img_174.png' alt='img_174' width='600'/>
 
+Return to [VMware Installation Guide](../readme.md)

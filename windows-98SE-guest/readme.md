@@ -1018,6 +1018,6 @@ Additional Windows 98 software can be found in:
 
 * [Retro PC installation files](https://startup.retropc.se/win98.html)
 
-The Windows 98 SE Guest is now setup:
+The Windows 98 SE Guest is now setup.
 
-* [VMware Installation Guide](../readme.md)
+Return to [VMware Installation Guide](../readme.md)
