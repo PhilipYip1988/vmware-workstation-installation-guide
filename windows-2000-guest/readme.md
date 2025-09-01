@@ -6,18 +6,53 @@ monitor.virtual_mmu = "software"
 mks.enableVulkanRenderer = "FALSE"
 cpuid.0.eax = "0000000X"
 cpuid.1.ecx = "00000001"
-scsi0.present = "FALSE"
-ide0:0.present = "TRUE"
 ```
 
+Select Playser → File → New Virtual machine...
 
+<img hsrc="https://github.com/user-attachments/assets/9f228229-2d40-4682-9e37-fae103f60410" width="600"/>
 
+Select I will install this operating system later and then next:
 
+<img src="https://github.com/user-attachments/assets/580444bd-cb3d-41a2-8fad-3e434c248bab" width="600"/>
 
+Select Windows 2000 Professional and then next:
 
+<img src="https://github.com/user-attachments/assets/15133c99-2dba-4ef2-87d8-e319a19e1f03" width="600"/>
 
+Use the default Virtual Machine Name and Location (if Documents is integrated with OneDrive. you may want to move this to a loal only location) and select next:
 
+<img src="https://github.com/user-attachments/assets/d1b95fda-74a1-4730-a05d-5ef8b1159ab0" width="600"/>
 
+Select 20 GB and select enxt:
+
+<img src="https://github.com/user-attachments/assets/24dd4b12-5717-4265-a185-09ca82041a2c" width="600"/>
+
+Select customise hardware:
+
+<img src="https://github.com/user-attachments/assets/2fd1b7c9-c122-430b-9fab-0307fe2fb325" width="600"/>
+
+Set the memory to 512 MB:
+
+<img src="https://github.com/user-attachments/assets/67232df2-7094-48e7-8289-b2280ee6fd98" width="600"/>
+
+Set the number of processors to 1:
+
+<img src="https://github.com/user-attachments/assets/19602989-7bee-4685-b05c-9877ccc89f65" width="600"/>
+
+Under CD/DVD ensure connected at power on is checked and select browse to browse for the Windows 2000 Professional ISO:
+
+<img src="https://github.com/user-attachments/assets/94f3f417-cc69-4d9a-99a0-92565da23117" width="600"/>
+
+Select the Windows 2000 Professional ISO:
+
+<img src="https://github.com/user-attachments/assets/2e4ea6ac-1a57-4424-b160-dd87f2c609f1" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/11877ead-169f-4cf3-883a-5a024d6e458e" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/6381c218-4692-45d5-91a7-9b3a33555ab1" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/2a969d3f-a3cb-408b-9103-d697b5baf44b" width="600"/>
 
 
 
