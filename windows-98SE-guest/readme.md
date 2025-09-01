@@ -290,6 +290,55 @@ Select Finish:
 
 <img src='./images/img_059.png' alt='img_059' width='600'/>
 
+## Windows XP Guest Virtual Machine Configuration File
+
+Navigate to the directory on the Windows 11 Host that the Windows XP Guest is installed: 
+
+Look for the `Windows 98 SE.vmx` file:
+
+Open in Notepad or Notepad++ (recommended):
+
+Press `Ctrl+f` to begin a search for an option for example `bios.bootDelay`:
+
+
+If the line exists it can be modified to a new value. In this case it doesn't exist so can be appended to the end:
+
+```
+bios.bootDelay = "20000"
+```
+
+The command above will change the time the Windows98 SE Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
+
+### 12th-14 Generation Processors
+
+On a 12th–14th Generation Intel processor, certain legacy settings may need to be configured to run older guest operating systems such as Windows 98 SE.
+
+Legacy CPU settings:
+
+```
+cpuid.0.eax = "0000000X"
+cpuid.1.ecx = "00000001"
+```
+
+These settings help emulate older CPU instructions that Windows 98 SE (patched) expects.
+
+Legacy monitor / virtualization settings
+
+```
+mks.enableVulkanRenderer = "FALSE"
+```
+
+This disables the Vulkan renderer, forcing VMware to use a more compatible DirectX/software renderer.
+
+Legacy monitor / virtualization settings:
+
+```
+monitor.virtual_exec = "hardware"
+monitor.virtual_mmu = "software"
+```
+
+These settings ensure proper CPU and MMU handling for legacy guests.
+
 ## Installing the Windows 98 Guest
 
 Select the Windows 98 Guest and select Play:

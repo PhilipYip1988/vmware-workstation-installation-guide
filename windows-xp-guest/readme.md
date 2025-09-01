@@ -164,6 +164,40 @@ bios.bootDelay = "20000"
 
 The command above will change the time the Windows XP Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
 
+### 12th-14 Generation Processors
+
+On a 12th–14th Generation Intel processor, certain legacy settings may need to be configured to run older guest operating systems such as Windows XP.
+
+Legacy CPU settings:
+
+```
+cpuid.0.eax = "0000000X"
+cpuid.1.ecx = "00000001"
+```
+
+These settings help emulate older CPU instructions that XP expects.
+
+Legacy monitor / virtualization settings
+
+```
+mks.enableVulkanRenderer = "FALSE"
+```
+
+This disables the Vulkan renderer, forcing VMware to use a more compatible DirectX/software renderer.
+
+Legacy monitor / virtualization settings:
+
+```
+monitor.virtual_exec = "hardware"
+monitor.virtual_mmu = "software"
+```
+
+These settings ensure proper CPU and MMU handling for legacy guests.
+
+### OEM SLP
+
+OEM SLP is not applied by default:
+
 <details>
   <summary>Modded ROMs</summary>
 
