@@ -6,11 +6,11 @@
 
 ## Notes
 
-VMware Workstation Player 17.6.4 has Windows 98 SE as an option for a Virtual Machine. However Windows 98 SE is regarded as an ancient legacy Operating System and isn't tested by Broadcom. Moreover the VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows 98SE and the following errors will display if they are attempted to be installed in the Windows 98 SE VM:
+VMware Workstation Player 17.6.4 has Windows 98 SE as an option for a Virtual Machine. However Windows 98 SE is regarded as an ancient legacy Operating System and isn't tested by Broadcom. Modern processors are significantly faster than the processers available when WIndows 98 SE was released. As a consequence the timing for some operations is divided by 0 and there is a divide-by-zero error that needs to be addressed using patcher9x.
 
-VMware Tools WinPre2k is the last version of VMware Tools to support Windows XP and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
+VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows 98SE. VMware Tools WinPre2k is the last version of VMware Tools to support Windows XP and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
 
-On modern hardware with a 12th-14th Generation Processor. The installation media needs to be patched using Patcher9 and the following entries should be added to the VMX file:
+On modern hardware with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
 
 ```
 monitor.virtual_exec = "hardware"
@@ -308,16 +308,25 @@ Select Finish:
 
 <img src='./images/img_059.png' alt='img_059' width='600'/>
 
-## Windows XP Guest Virtual Machine Configuration File
+## Windows 98 SE Guest Virtual Machine Configuration File
 
-Navigate to the directory on the Windows 11 Host that the Windows XP Guest is installed: 
+Navigate to the directory on the Windows 11 Host that the Windows 98 SE Guest is installed: 
+
+<img src="https://github.com/user-attachments/assets/0ef95099-1ab9-42a0-bc4e-fc09e03dbff1" width='600'/>
 
 Look for the `Windows 98 SE.vmx` file:
 
+<img src="https://github.com/user-attachments/assets/84da345f-cb0d-4d7b-ab89-d231fd9d3a7a" width='600'/>
+
 Open in Notepad or Notepad++ (recommended):
+
+<img src="https://github.com/user-attachments/assets/b9735045-7549-42f3-8333-c4ca3007288f" width='600'/>
+
+The option `bios.ootDelay` for example will change the time the Windows98 SE Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation, returning to the default value.
 
 Press `Ctrl+f` to begin a search for an option for example `bios.bootDelay`:
 
+<img src="https://github.com/user-attachments/assets/accae0e7-da9f-4077-93a9-9491d77f3f6b" width='600' />
 
 If the line exists it can be modified to a new value. In this case it doesn't exist so can be appended to the end:
 
@@ -325,7 +334,7 @@ If the line exists it can be modified to a new value. In this case it doesn't ex
 bios.bootDelay = "20000"
 ```
 
-The command above will change the time the Windows98 SE Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
+<img src="https://github.com/user-attachments/assets/0e82afed-fe7e-4718-a315-5d85c6898436" width='600'/>
 
 ### 12th-14 Generation Processors
 
@@ -356,6 +365,9 @@ monitor.virtual_mmu = "software"
 ```
 
 These settings ensure proper CPU and MMU handling for legacy guests.
+
+<img src="https://github.com/user-attachments/assets/1176ef78-a6fb-49a7-8def-96b679d54309" width='600'/>
+
 
 ## Installing the Windows 98 Guest
 
