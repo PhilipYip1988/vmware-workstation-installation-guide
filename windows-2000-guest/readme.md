@@ -10,7 +10,7 @@ cpuid.1.ecx = "00000001"
 
 ## Configuring Virtual Hardware for a Windows 2000 Guest
 
-Select Playser → File → New Virtual machine...
+Select Player → File → New Virtual machine...
 
 <img hsrc="https://github.com/user-attachments/assets/9f228229-2d40-4682-9e37-fae103f60410" width="600"/>
 
