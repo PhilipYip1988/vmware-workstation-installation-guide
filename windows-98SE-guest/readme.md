@@ -10,7 +10,7 @@ VMware Workstation Player 17.6.4 has Windows 98 SE as an option for a Virtual Ma
 
 VMware Tools WinPre2k is the last version of VMware Tools to support Windows XP and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
 
-On modern hardware, with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
+On modern hardware with a 12th-14th Generation Processor. The installation media needs to be patched using Patcher9 and the following entries should be added to the VMX file:
 
 ```
 monitor.virtual_exec = "hardware"
