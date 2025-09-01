@@ -22,7 +22,7 @@ cpuid.0.eax = "0000000X"
 cpuid.1.ecx = "00000001"
 ```
 
-The first setting allows the CPU to optimise the VM performance, the VM may be very slow without this setting. The second setting prevents use of a memory management unit that Windows 7 doesn't understand and can lead to a Blue Screen of Death (BSOD). The third setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows 7 and often leads to black screens. The last two settings prevent Windows 7 from seeing unsupported CPU features which Windows 7 doesn't understand and can lead to a Blue Screen of Death (BSOD).
+The first setting allows the CPU to optimise the VM performance, the VM may be very slow without this setting. The second setting prevents use of a memory management unit that Windows XP doesn't understand and can lead to a Blue Screen of Death (BSOD). The third setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows XP and often leads to black screens. The last two settings prevent Windows XP from seeing unsupported CPU features which Windows XP doesn't understand and can lead to a Blue Screen of Death (BSOD).
 
 ## Installation Media
 
