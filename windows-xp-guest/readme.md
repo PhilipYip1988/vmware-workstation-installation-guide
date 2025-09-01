@@ -6,6 +6,24 @@ Setting up a Windows XP Guest using VMware Workstation Player.
 
 * [YouTube](https://www.youtube.com/watch?v=UCgV4CsyyIE)
 
+## Notes
+
+VMware Workstation Player 17.6.4 has Windows XP as an option for a Virtual Machine. However Windows XP is regarded as a legacy Operating System and isn't tested by Broadcom. Moreover the VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows XP and the following errors will display if they are attempted to be installed in the Windows XP VM:
+
+VMware Tools 10.0.12 is the last version of VMware Tools to support Windows XP and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
+
+On modern hardware, with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
+
+```
+monitor.virtual_exec = "hardware"
+monitor.virtual_mmu = "software"
+mks.enableVulkanRenderer = "FALSE"
+cpuid.0.eax = "0000000X"
+cpuid.1.ecx = "00000001"
+```
+
+The first setting allows the CPU to optimise the VM performance, the VM may be very slow without this setting. The second setting prevents use of a memory management unit that Windows 7 doesn't understand and can lead to a Blue Screen of Death (BSOD). The third setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows 7 and often leads to black screens. The last two settings prevent Windows 7 from seeing unsupported CPU features which Windows 7 doesn't understand and can lead to a Blue Screen of Death (BSOD).
+
 ## Installation Media
 
 The biggest difficulty to setting up a Windows XP Virtual Machine is obtaining the installation as Microsoft nor its OEMs provided official download links. WinWorld hasn't been updated to include Windows XP:
@@ -60,9 +78,9 @@ I have tested installation of the ISO in a Virtual Machine but as this is an uno
 
 ## VMware Tools ISO
 
-The Windows XP drivers for the Windows XP Guest are contained in the VMware Tools Installation ISO. VMware tools for legacy versions of Windows needs to be downloaded from VMware separately:
+The Windows XP drivers for the Windows XP Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
 
-* [VMware Tools Version 10.0.12 ISO](https://packages.vmware.com/tools/releases/10.0.12/windows/)
+* [VMware Tools Version 10.0.12 ISO](https://archive.org/details/vmware_tools_pre_vista)
 
 ## Windows 11 Host or Ubuntu 24.10 Host System Requirements
 
