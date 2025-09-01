@@ -4,6 +4,24 @@
 
 * [YouTube](https://www.youtube.com/watch?v=cxW57znmmu8)
 
+## Notes
+
+VMware Workstation Player 17.6.4 has Windows 98 SE as an option for a Virtual Machine. However Windows 98 SE is regarded as an ancient legacy Operating System and isn't tested by Broadcom. Moreover the VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows 98SE and the following errors will display if they are attempted to be installed in the Windows 98 SE VM:
+
+VMware Tools WinPre2k is the last version of VMware Tools to support Windows XP and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
+
+On modern hardware, with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
+
+```
+monitor.virtual_exec = "hardware"
+monitor.virtual_mmu = "software"
+mks.enableVulkanRenderer = "FALSE"
+cpuid.0.eax = "0000000X"
+cpuid.1.ecx = "00000001"
+```
+
+The first setting allows the CPU to optimise the VM performance, the VM may be very slow without this setting. The second setting prevents use of a memory management unit that Windows 98SE doesn't understand and can lead to a Blue Screen of Death (BSOD). The third setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows 98SE and often leads to black screens. The last two settings prevent Windows 98SE from seeing unsupported CPU features which Windows 98SE doesn't understand and can lead to a Blue Screen of Death (BSOD).
+
 ## Windows 98SE ISO
 
 Windows 98SE is considered abandonware and the Windows 98SE ISO and Product Key can be obtained from WinWorld:
@@ -14,9 +32,9 @@ Use the OEM Full ISO as the Retail Full ISO doesn't boot in VMware Player withou
 
 ## VMware Tools ISO
 
-Windows 98SE requires the Pre2k version of VMware Tools which installs some of the System Drivers such as the virtual display driver and also allows dragging and dropping files to the Windows 98 Guest:
+The Windows 98SE drivers for the Windows 98SE Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
 
-* [VMware Tools Pre2k](https://packages-prod.broadcom.com/tools/frozen/windows/winPre2k.iso)
+* [VMware Tools Pre2k](https://archive.org/details/winPre2k)
 
 ## Patcher9x
 
