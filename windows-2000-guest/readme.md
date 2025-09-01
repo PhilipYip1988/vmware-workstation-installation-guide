@@ -78,6 +78,26 @@ Select Finish:
 
 ## Windows 2000 Guest Virtual Machine Configuration File
 
+Navigate to the directory on the Windows 11 Host that the Windows 2000 Guest is installed:
+
+<img src="https://github.com/user-attachments/assets/2dc2d68d-16c3-446b-b3bc-7a3e59934cd8" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/831ea4e7-db53-421d-ad2a-08d13999eb03" width='600'/>
+
+<img src="https://github.com/user-attachments/assets/6233c0ed-cbbb-42a4-b649-2fcccf52208d" width='600'/>
+
+Look for the `Windows 2000.vmx` file:
+
+
+
+
+
+
+
+
+
+
+
 
 
 
