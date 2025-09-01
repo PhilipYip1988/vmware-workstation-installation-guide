@@ -8,6 +8,8 @@ cpuid.0.eax = "0000000X"
 cpuid.1.ecx = "00000001"
 ```
 
+## Configuring Virtual Hardware for a Windows 2000 Guest
+
 Select Playser → File → New Virtual machine...
 
 <img hsrc="https://github.com/user-attachments/assets/9f228229-2d40-4682-9e37-fae103f60410" width="600"/>
@@ -70,8 +72,11 @@ Under display uncheck accelerate 3d Graphics:
 
 <img src="https://github.com/user-attachments/assets/c21bbe05-3e1d-42e7-b699-911e62109ecb" width="600"/>
 
+Select Finish:
 
+<img src="https://github.com/user-attachments/assets/128a6d37-4c68-4708-a6bb-06aee806a56f" width="600"/>
 
+## Windows 2000 Guest Virtual Machine Configuration File
 
 
 
