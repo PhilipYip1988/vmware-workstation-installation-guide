@@ -105,7 +105,9 @@ Windows 2000 is considered abandonware and the Windows 2000 ISO and Product Key 
 
 ## VMware Tools ISO
 
-* [VMware Tools 10.0.12](https://packages.vmware.com/tools/releases/10.0.12/windows/)
+The Windows XP drivers for the Windows XP Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
+
+* [VMware Tools 6.5.5](https://archive.org/details/vmware-tools-collectio](https://archive.org/details/vmware-tools-collection)
 
 ## WSUS Offline Update
 
@@ -120,7 +122,7 @@ This no longer works as Microsoft removed the downloads WSUS Offline updates use
 
 The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windows Vista downloads from their download servers:
 
-* [WSUS Offline Update Windows 2000 (Windows 2000=w2k-enu)](https://archive.org/details/wsusoffline-eol-windows)
+* [WSUS Offline Update Windows 2000](https://archive.org/details/wsusoffline-w2k-enu)
 
 Install manually from `w2k\enu`:
 
