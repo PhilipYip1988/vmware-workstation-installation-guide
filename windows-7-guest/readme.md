@@ -14,7 +14,7 @@ VMware Workstation Player 17.6.4 has Windows 7 as an option for a Virtual Machin
 
 VMware Tools 11.0.6 is the last version of VMware Tools to support Windows 7 and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
 
-On modern hardware, with a 12th Generation Processor, the following entries should be added to the VMX file:
+On modern hardware, with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
 
 ```
 monitor.virtual_exec = "hardware"
