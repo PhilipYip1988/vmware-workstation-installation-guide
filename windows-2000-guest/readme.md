@@ -54,12 +54,30 @@ Select the Windows 2000 Professional ISO:
 
 <img src="https://github.com/user-attachments/assets/2a969d3f-a3cb-408b-9103-d697b5baf44b" width="600"/>
 
+Uncheck Connect at Power On for Network Adaptor:
+
+<img src="https://github.com/user-attachments/assets/cac9fc38-ba76-4710-90c1-7367616a79b5" width="600"/>
+
+Under USB Controller, select USB 2.0:
+
+<img src="https://github.com/user-attachments/assets/e6d01ffb-2694-47b1-8018-c917d45f130a" width="600"/>
+
+Under Sound Card, use the default settings:
+
+<img src="https://github.com/user-attachments/assets/b65b5f79-16e8-49f9-8f7f-161345489d72" width="600"/>
+
+Under display uncheck accelerate 3d Graphics:
+
+<img src="https://github.com/user-attachments/assets/c21bbe05-3e1d-42e7-b699-911e62109ecb" width="600"/>
+
+
 
 
 
 
 
 ## Windows 2000 ISO
+
 
 Windows 2000 is considered abandonware and the Windows 2000 ISO and Product Key can be obtained from WinWorld:
 
