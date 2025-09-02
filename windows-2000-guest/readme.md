@@ -258,101 +258,7 @@ Uncheck show this screen at startup and select exit:
 
 <img src="https://github.com/user-attachments/assets/bcbc535c-9748-43fe-be8e-d5303de64bd0" width="600"/>
 
-## Installing Service Pack 4
-
-Service Pack 4 is a prequisite for installing VMware tools. Since VMware tools are not installed drag and drop to the virtual machine won't work and the Windows application has to be supplied as part of an ISO file. The Service Pack 4 is a `.7z` archive. Extract the `.7z` archive:
-
-<img src="https://github.com/user-attachments/assets/ac4403e1-d3c6-4e16-a62f-bd8a555778bf" width="600"/>
-
-<img src="https://github.com/user-attachments/assets/07618f5c-8dc6-4cad-b591-8bcf33feebd0" width="600"/>
-
-To get to the `.exe`:
-
-<img src="https://github.com/user-attachments/assets/80f23711-8063-464d-ad2a-8cd67440b7ea" width="600"/>
-
-Launch ImgBurn and select Create Image file from File/Folders:
-
-<img src="https://github.com/user-attachments/assets/d096aaee-4355-4fae-b98a-bc09bdd0d9df" width="600"/>
-
-Select the folder icon:
-
-<img src="https://github.com/user-attachments/assets/311fc8b0-7d7b-462e-b387-86f37565a924" width="600"/>
-
-Select the Windows 2000 Service Pack 4 folder and select, select folder:
-
-<img src="https://github.com/user-attachments/assets/504308fc-b2cc-4ee2-8cc0-9034b07a6838" width="600"/>
-
-Select the destination folder:
-
-<img src="https://github.com/user-attachments/assets/8f68e921-cb0f-493c-b018-1a9340ca4448" width="600"/>
-
-And save the ISO to downloads:
-
-<img src="https://github.com/user-attachments/assets/389571ef-a9c7-4e80-96cb-c61d161705c7" width="600"/>
-
-Select the File/Folders to Image button:
-
-<img src="https://github.com/user-attachments/assets/301d6eda-7e9b-47ee-a77c-35b534a041fe" width="600"/>
-
-Select yes:
-
-<img src="https://github.com/user-attachments/assets/bbfaf87b-cf83-4366-9851-01f7ebba9f5e" width="300"/>
-
-Select yes:
-
-<img src="https://github.com/user-attachments/assets/85b1f66e-8ea0-4995-b3b2-151120ba699e" width="300"/>
-
-Select ok:
-
-<img src="https://github.com/user-attachments/assets/b7161ca3-7d92-498e-86ff-ea8ee7d9fafe" width="300"/>
-
-Select ok:
-
-<img src="https://github.com/user-attachments/assets/c40f454c-44db-4c63-976c-286cacdc4fed" width="300"/>
-
-In the Windows 2000 VM. Select Player → Removable Drives → CD/DVD and then settings:
-
-<img src="https://github.com/user-attachments/assets/cccdc86b-9153-4571-8c36-0a8e50a901ce" width="600"/>
-
-Select Browse:
-
-<img src="https://github.com/user-attachments/assets/af70e675-9261-40c2-b981-272a55ea7b87" width="600"/>
-
-Select the Windows 2000 SP4 ISO:
-
-<img src="https://github.com/user-attachments/assets/67e0a69d-1bef-4f37-880c-e825ddc18c55" width="600"/>
-
-Select OK:
-
-<img src="https://github.com/user-attachments/assets/8fbefd1d-a416-424e-a230-af257fa8d6d8" width="600"/>
-
-Open My Computer and select the CD/DVD:
-
-<img src="https://github.com/user-attachments/assets/4eb06676-0521-4832-874c-5770074c5d77" width="600"/>
-
-Launch the application to install the Service Pack:
-
-<img src="https://github.com/user-attachments/assets/89fa3e49-5248-4647-8e53-7e3740d79b74" width="600"/>
-
-<img src="https://github.com/user-attachments/assets/f9ed24f6-c104-47c2-8628-58f4690a1338" width="600"/>
-
-Select next:
-
-<img src="https://github.com/user-attachments/assets/e9431064-11ea-4a79-af4b-7325b53088c4" width="600"/>
-
-Select I agree and next:
-
-<img src="https://github.com/user-attachments/assets/b13d10be-d781-4793-a208-bcd4c94abceb" width="600"/>
-
-Select next:
-
-<img src="https://github.com/user-attachments/assets/12ae3611-8742-4035-93a2-1489ebbbc317" width="600"/>
-
-Select Finish:
-
-<img src="https://github.com/user-attachments/assets/688544fa-bb0a-48db-81c6-af4f70e7c856" width="600"/>
-
-## Install Windows 2000 SP4 Updates
+## Install Windows 2000 SP4 and Post-SP4 Updates
 
 Select Player → Manage → CD/DVD and select Settings:
 
@@ -388,24 +294,29 @@ The service pack will install:
 
 <img src="https://github.com/user-attachments/assets/939e60aa-b65d-45fa-a319-b50461f2efca" width="600"/>
 
+<img src="https://github.com/user-attachments/assets/fbbdedc6-b9b7-463f-b2f4-86927b56f933" width="600"/>
+
 Restart the VM when prompted:
 
+<img src="https://github.com/user-attachments/assets/8dd78b26-ee70-40d2-baa8-8fd2f94cdf7a" width="600" />
 
+Select Restart and OK:
 
+<img src="https://github.com/user-attachments/assets/cb62ae99-74b0-4d35-aa5d-60b1f3e57e08" width="600"/>
+
+Relaunch the `update` script (2) and restart the VM when prompted:
 
 <img src="https://github.com/user-attachments/assets/4600dc58-05f2-41e8-96fc-a83bf3156d8e" width="600"/>
 
-Restart the VM when prompted:
-
 <img src="https://github.com/user-attachments/assets/ece3a986-75da-43ee-85d1-42aa43a38f63" width="600"/>
 
-Relaunch the `update` script (2) and restart the VM when prompted:
+Relaunch the `update` script (3) and restart the VM when prompted:
 
 <img src="https://github.com/user-attachments/assets/ab4ac236-d651-434e-9b83-1073115246e2" width="600"/>
 
 <img src="https://github.com/user-attachments/assets/e5936bcf-fa28-4101-a6e7-5315b9b5a3d2" width="600"/>
 
-Relaunch the `update` script (3) and restart the VM when prompted:
+Relaunch the `update` script (4):
 
 <img src="https://github.com/user-attachments/assets/f8e4578c-7f40-4dd9-af72-71f1fb0f48b8" width="600"/>
 
@@ -505,29 +416,24 @@ Now there are no errors in the Device Manager:
 
 <img src="https://github.com/user-attachments/assets/007d79f7-9052-4b68-9bfc-1c928536f477" width="600"/>
 
-With VMware tools installed, the VM can be resized and drag and drop will work bi-directionally from the Windows 11 Desktop.
+With VMware tools installed, the VM can be resized:
 
+<img src="https://github.com/user-attachments/assets/a4669e36-9128-4d04-9616-467e3819bad0" width="600"/>
 
+Drag and drop should work bi-directionally from the Windows 11 Desktop but often does not work correctly:
 
+<img src="https://github.com/user-attachments/assets/ead35b6b-9db0-4aff-bd93-ed61e92f6070" width="600"/>
 
+Bi-directional copy and paste is more reliable:
 
-## Other Check
+<img src="https://github.com/user-attachments/assets/19754735-8378-46ac-bb19-0e4693501bcd" width="600"/>
 
-Install the 2005 and 2008:
+<img src="https://github.com/user-attachments/assets/498e39c2-83fd-4a84-bed2-2f4489c7010d" width="600"/>
 
-* [Microsoft Visual C++ Redistributable](https://archive.org/details/microsoftvisualcredistributable_202004)
+<img src="https://github.com/user-attachments/assets/eb067509-a371-4c75-9137-ac38a0ed4a16" width="600"/>
 
-Install:
+## Upgrade Memory
 
-* [Microsoft .NET Framework Version 2.0](https://archive.org/details/dotnetfx2_202301)
-
-Install:
-
-* [Direct X 9.0C](https://archive.org/details/directx9-dec2006-redist)
-
-Additional Windows 98 software can be found in:
-
-* [Retro PC installation files](https://startup.retropc.se/win2k.html)
-
+Now that Service Pack 4 and the post-SP4 Updates have been installed
 
 
