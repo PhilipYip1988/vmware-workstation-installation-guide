@@ -420,20 +420,58 @@ With VMware tools installed, the VM can be resized:
 
 <img src="https://github.com/user-attachments/assets/a4669e36-9128-4d04-9616-467e3819bad0" width="600"/>
 
-Drag and drop should work bi-directionally from the Windows 11 Desktop but often does not work correctly:
+When the VM is powered down the VM can be backed up by copying the folder Windows 2000 Professional found in Documents → Virtual Machines on the Windows 11 Host PC.
+
+## Installing Python
+
+Python will be used as an example of installing a program on Windows 2000. [python-2.4.4.msi](https://www.python.org/downloads/release/python-244/) is the latest version of Python to work on Windows 2000. In theory drag and drop should work bi-directionally from the Windows 11 Desktop to the Windows 2000 VM. However it typically does not work correctly with a Windows 2000 VM and its older implementation of VMware tools... The python-2.4.4.msi can be copied from the Host PC and pasted to the Windows 2000 VM:
 
 <img src="https://github.com/user-attachments/assets/ead35b6b-9db0-4aff-bd93-ed61e92f6070" width="600"/>
 
-Bi-directional copy and paste is more reliable:
-
 <img src="https://github.com/user-attachments/assets/19754735-8378-46ac-bb19-0e4693501bcd" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/498e39c2-83fd-4a84-bed2-2f4489c7010d" width="600"/>
+Launch the Python 2.4.4 setup and select install for all users and then select next:
 
-<img src="https://github.com/user-attachments/assets/eb067509-a371-4c75-9137-ac38a0ed4a16" width="600"/>
+<img src="https://github.com/user-attachments/assets/35599691-869f-4296-b00d-b7d7c33250cf" width="600"/>
 
-## Upgrade Memory
+Select next:
 
-Now that Service Pack 4 and the post-SP4 Updates have been installed
+<img src="https://github.com/user-attachments/assets/d0d0c9f3-ed7f-4813-b71d-4149cb549a88" width="600"/>
 
+Select next again:
 
+<img src="https://github.com/user-attachments/assets/ce390724-0253-436e-bb12-2d4b9574a6c2" wodth="600"/>
+
+Select finish:
+
+<img src="https://github.com/user-attachments/assets/77d59572-773d-44e6-901d-e9edd6648f47" width="600"/>
+
+Open the command prompt:
+
+<img src="https://github.com/user-attachments/assets/3a23d84f-d1eb-4ae9-84f6-78afc9122b7d" width="600"/>
+
+Change directory to the python directory and launch Python using:
+
+```
+cd C:\python24
+python
+print 'Hello World!'
+```
+
+<img src="https://github.com/user-attachments/assets/ff49f6d3-1a9b-4827-a68f-0e5b747f8ae6" width="600" />
+
+## Upgrade Virtual Hardware
+
+Now that Service Pack 4 and the post-SP4 Updates have been installed, the virtual hardware used by the VM can be upgraded. Shut down the VM and select Edit Virtual Machine Settings:
+
+<img src="https://github.com/user-attachments/assets/9d493a75-cf01-4820-8992-f6db27123bb7" width="600"/>
+
+Update the memory to 4096 MB:
+
+<img src="https://github.com/user-attachments/assets/05810138-0b76-4d1c-9d76-e57680845208" width="600"/>
+
+And the processor cores to 2:
+
+<img src="https://github.com/user-attachments/assets/97492860-4b62-4b18-8e5f-3686f4b91fa9" width="600"/>
+
+Relaunch the Virtual Machine.
