@@ -8,7 +8,7 @@
 
 VMware Workstation Player 17.6.4 has Windows 98 SE as an option for a Virtual Machine. However Windows 98 SE is regarded as an ancient legacy Operating System and isn't tested by Broadcom. Modern processors are significantly faster than the processers available when WIndows 98 SE was released. As a consequence the timing for some operations is divided by 0 and there is a divide-by-zero error that needs to be addressed using patcher9x.
 
-VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows 98SE. VMware Tools WinPre2k is the last version of VMware Tools to support Windows XP and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
+VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows 98SE. VMware Tools WinPre2k is the last version of VMware Tools to support Windows 98SE and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
 
 On modern hardware with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
 
@@ -22,7 +22,9 @@ cpuid.1.ecx = "00000001"
 
 The first setting allows the CPU to optimise the VM performance, the VM may be very slow without this setting. The second setting prevents use of a memory management unit that Windows 98SE doesn't understand and can lead to a Blue Screen of Death (BSOD). The third setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows 98SE and often leads to black screens. The last two settings prevent Windows 98SE from seeing unsupported CPU features which Windows 98SE doesn't understand and can lead to a Blue Screen of Death (BSOD).
 
-## Windows 98SE ISO
+## Downloads
+
+### Windows 98SE ISO
 
 Windows 98SE is considered abandonware and the Windows 98SE ISO and Product Key can be obtained from WinWorld:
 
@@ -30,31 +32,31 @@ Windows 98SE is considered abandonware and the Windows 98SE ISO and Product Key 
 
 Use the OEM Full ISO as the Retail Full ISO doesn't boot in VMware Player without use of a floppy disk and use the provided Product Key. For this version of Windows there was only a Product Key. Windows 98 SE was too primitive for Product Activation and a high proportion of Windows 98 SE computers were offline meaning internet activation mechanisms were unfeasible during this version fo Windows lifecycle.
 
-## VMware Tools ISO
+## #VMware Tools ISO
 
 The Windows 98SE drivers for the Windows 98SE Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
 
 * [VMware Tools Pre2k](https://archive.org/details/winPre2k)
 
-## Patcher9x
+### Patcher9x
 
 Download the `patcher9x-win64.zip` from the assets of the latest release:
 
 * [patcher9x](https://github.com/JHRobotics/patcher9x/releases/)
 
-## 7-zip
+### 7-zip
 
 Download and install on the Windows 11 Guest:
 
 * [7-zip](https://7-zip.org/download.html)
 
-## ImgBurn
+### ImgBurn
 
 Download and install on the Windows 11 Guest:
 
 * [ImgBurn](https://www.imgburn.com/)
 
-## Patching the Installation ISO
+### Patching the Installation ISO
 
 The Windows 98SE installation errors out on a VM on a modern computer:
 
