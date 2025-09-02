@@ -8,36 +8,29 @@ cpuid.0.eax = "0000000X"
 cpuid.1.ecx = "00000001"
 ```
 
-## Windows 2000 ISO
+## Downloads
+
+### Windows 2000 ISO
 
 Windows 2000 is considered abandonware and the Windows 2000 ISO and Product Key can be obtained from WinWorld:
 
 * [WinWorld](https://winworldpc.com/library/operating-systems)
 
-## Windows 2000 SP4
+### Windows 2000 SP4
 
 * [Windows 2000 SP4](https://winworldpc.com/download/41c38361-6518-c39a-11c3-a4e284a2c3a5)
 
-## WSUS Offline Update
+### WSUS Offline Update
 
-The last version of WSUS Offline Update to support Windows 2000:
+The last version of WSUS Offline Update to support Windows 2000 was 6.6.5. 
 
-* ~~[WSUS Offline Update](https://download.wsusoffline.net/)~~
-
-This no longer works as Microsoft removed the downloads WSUS Offline updates uses from their servers.
-
-<details>
-  <summary>Archive.org</summary>
-
-The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windows Vista downloads from their download servers:
+This no longer works as Microsoft removed the downloads WSUS Offline updates uses from their servers. The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 2000 downloads from their download servers:
 
 * [WSUS Offline Update Windows 2000](https://archive.org/details/wsusoffline-w2k-enu)
 
-</details>
+### VMware Tools ISO
 
-## VMware Tools ISO
-
-The Windows 2000 drivers for the Windows 2000 Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
+The Windows 2000 drivers for the Windows 2000 Guest are contained in the VMware Tools Installation ISO. The Website Archive.org hosts the ISO created by VMware before Broadcom removed it:
 
 * [VMware Tools 6.5.5](https://archive.org/details/vmware-tools-collectio](https://archive.org/details/vmware-tools-collection)
 
