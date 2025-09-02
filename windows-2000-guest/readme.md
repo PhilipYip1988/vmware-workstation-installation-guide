@@ -4,7 +4,7 @@
 
 VMware Workstation Player 17.6.4 has Windows 2000 as an option for a Virtual Machine. However Windows 2000 is regarded as a legacy Operating System and isn't tested by Broadcom. Moreover the VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows 2000. VMware Tools 6.5.5 is the last version of VMware Tools to support Windows 2000 and should be downloaded seperately as an ISO. 
 
-On modern hardware, with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
+On modern hardware, with a 11th-14th Generation Processor, the following entries should be added to the VMX file:
 
 ```
 monitor.virtual_exec = "hardware"
@@ -135,9 +135,9 @@ bios.bootDelay = "20000"
 
 <img src="https://github.com/user-attachments/assets/5dc470aa-83e2-4f7a-a064-98f1b806bd67" width="600"/>
 
-### 12th-14 Generation Processors
+### Modern Generation Processors (11-14th Generation)
 
-On a 12th–14th Generation Intel processor, certain legacy settings may need to be configured to run older guest operating systems such as Windows 2000.
+Certain legacy settings may need to be configured to run older guest operating systems such as Windows 2000.
 
 Legacy CPU settings:
 
