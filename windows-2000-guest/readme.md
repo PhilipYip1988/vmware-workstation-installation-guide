@@ -475,3 +475,74 @@ And the processor cores to 2:
 <img src="https://github.com/user-attachments/assets/97492860-4b62-4b18-8e5f-3686f4b91fa9" width="600"/>
 
 Relaunch the Virtual Machine.
+
+## USB Devices
+
+A Logitech Pro 9000 can be used as an example USB device. When it is attached to the Host PC USB port, an option will display to connect it to the Windows 11 Host PC or the Windows 2000 VM:
+
+<img src="https://github.com/user-attachments/assets/bc4a926a-b216-4df6-ac70-1ef5b5f1fc66" width="600"/>
+
+The USB Device cam also be connected to the Windows 2000 VM by selecting Player → Manager and then selecting the USB Device and selecting Connect:
+
+<img src="https://github.com/user-attachments/assets/23afdaaf-1c6d-49db-8fa8-12b7fa2f4c86" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/4a1791de-1634-4aa9-8524-c037ade1561f" width="600"/>
+
+The found new hardward wizard will display:
+
+<img src="https://github.com/user-attachments/assets/e726b33f-f8c2-48c3-be72-3cd63a70e96a" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/764e0bd6-ddfd-42e3-b6c0-25fe176a34a6" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/5695f18b-edce-4d37-b9c6-e5ad22c9c00c" width="600"/>
+
+The driver won't be found select Finish:
+
+<img src="https://github.com/user-attachments/assets/c74886bb-b4ce-4caf-9092-3f47a980a46b" width="600"/>
+
+Copy the installer for the device over to the VM:
+
+<img src="https://github.com/user-attachments/assets/53cde465-0c0f-4746-997b-b3de0b07f381" width="600"/>
+
+Note many installers are Windows XP and later:
+
+<img src="https://github.com/user-attachments/assets/b1523191-1826-4321-a8ba-7a71fe3c03d6" width="600"/>
+
+There is a Windows 2000 installer [qc1051enu-logicool-exe](https://download.cnet.com/download/qc1051enu-logicool-exe/3000-18493_4-157513.html):
+
+<img src="https://github.com/user-attachments/assets/85188fa0-9523-4b79-83b1-73f2906e1c00" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/bdc0a471-9d88-4006-8c5f-b8143cf81502" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/5bc930b2-2118-4c4f-9ce6-c6f6391805af" width="600"/>
+
+Select cancel:
+
+<img src="https://github.com/user-attachments/assets/34ba3fee-cd8b-40c5-abe4-261f2488d538" width="600"/>
+
+Select I accept and next:
+
+<img src="https://github.com/user-attachments/assets/256f14b3-324c-42f4-8f00-5dbe08f1666f" width="600"/>
+
+Select I do not want to activate this service and select next:
+
+<img src="https://github.com/user-attachments/assets/d6d598b7-4121-44d7-a495-9b15fa9e9fe5" width="600"/>
+
+In this example, the Windows 2000 driver does not work on the Logitech Pro 9000 and therefore the webcam is not detected:
+
+<img src="https://github.com/user-attachments/assets/0db20c47-c3d4-417a-94ff-9d6b4e0cdf90" width="600"/>
+
+
+
+
+
