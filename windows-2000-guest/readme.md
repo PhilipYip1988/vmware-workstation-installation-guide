@@ -167,7 +167,7 @@ These settings ensure proper CPU and MMU handling for legacy guests.
 
 <img src="https://github.com/user-attachments/assets/a29ba670-d136-4198-a3d7-64ec96083a01" width="600"/>
 
-## Installing the Windows 200 Guest
+## Installing the Windows 2000 Guest
 
 Select the Windows 98 Guest and select Play:
 
