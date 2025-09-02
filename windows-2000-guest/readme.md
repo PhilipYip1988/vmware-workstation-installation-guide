@@ -307,8 +307,7 @@ Select ok:
 
 <img src="https://github.com/user-attachments/assets/c40f454c-44db-4c63-976c-286cacdc4fed" width="300"/>
 
-In the Windows 2000 VM. Select Player → Removable Drives 26 CD/DVD and then settings:
-
+In the Windows 2000 VM. Select Player → Removable Drives → CD/DVD and then settings:
 
 <img src="https://github.com/user-attachments/assets/cccdc86b-9153-4571-8c36-0a8e50a901ce" width="600"/>
 
@@ -350,9 +349,71 @@ Select Finish:
 
 <img src="https://github.com/user-attachments/assets/688544fa-bb0a-48db-81c6-af4f70e7c856" width="600"/>
 
+Select the `vmware-tools-655-win.iso`:
+
+<img src="https://github.com/user-attachments/assets/705aed7c-3a7b-40d8-a34c-929bc344a225" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/7466cbdb-7e4d-4649-b404-a8dc20ec4f67" width="600"/>
+
+Open My Computer and select the CD/DVD (the CD/DVD label and icon are sometimes slow to update on Windows 2000):
+
+<img src="https://github.com/user-attachments/assets/cbb59fec-9c31-4868-a998-8cca91942a89" width="600"/>
+
+Launch the setup:
+
+<img src="https://github.com/user-attachments/assets/bdcb2756-4db9-4d7b-9f48-7a48d75d24f1" width="600"/>
+
+Select enxt:
+
+<img src="https://github.com/user-attachments/assets/4b20cddb-121e-4566-a910-2aff5028ec59" width="600"/>
+
+Select typical and next:
+
+<img src="https://github.com/user-attachments/assets/65977ac1-3028-46a7-81bb-2ff9d7d4c093" width="600"/>
+
+Select Install:
+
+<img src="https://github.com/user-attachments/assets/026e55d1-6790-4c94-9dd6-e22b495e91dd" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/c6e5fefb-92aa-437c-a1ec-4a76722151d6" width="600"/>
+
+Select Yes:
+
+<img src="https://github.com/user-attachments/assets/6795fdd8-f14e-4337-b1d6-6b9c6f5c2cbc" width="600"/>
+
 ## Install Windows 2000 SP4 Updates
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Install VMware Tools
+
+In the Windows 2000 VM. Select Player → Removable Drives → CD/DVD and then settings:
+
+<img src="https://github.com/user-attachments/assets/c4d69023-2708-4cdd-8d02-9dd422620cf5" width="600"/>
+
+Select Browse:
+
+<img src="https://github.com/user-attachments/assets/61d2612c-2b24-416e-a149-a93e89a6bc25" width="600"/>
+
 
 ## Other Check
 
