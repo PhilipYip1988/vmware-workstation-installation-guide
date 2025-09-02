@@ -1079,7 +1079,7 @@ When the Windows 98SE Guest boots, it will install the floppy drive driver using
 
 The floppy drive image can be reselected now that Windows 98SE has booted:
 
-<img src='./images/img_214.png' alt='img_214' width='200'/>
+<img src='./images/img_214.png' alt='img_214' width='600'/>
 
 The floppy drive now shows up as `A:\` and can be selected:
 
