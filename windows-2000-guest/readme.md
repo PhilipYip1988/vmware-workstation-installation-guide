@@ -349,6 +349,35 @@ Select Finish:
 
 <img src="https://github.com/user-attachments/assets/688544fa-bb0a-48db-81c6-af4f70e7c856" width="600"/>
 
+## Install Windows 2000 SP4 Updates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Install VMware Tools
+
+In the Windows 2000 VM. Select Player → Removable Drives → CD/DVD and then settings:
+
+<img src="https://github.com/user-attachments/assets/c4d69023-2708-4cdd-8d02-9dd422620cf5" width="600"/>
+
+Select Browse:
+
+<img src="https://github.com/user-attachments/assets/61d2612c-2b24-416e-a149-a93e89a6bc25" width="600"/>
+
 Select the `vmware-tools-655-win.iso`:
 
 <img src="https://github.com/user-attachments/assets/705aed7c-3a7b-40d8-a34c-929bc344a225" width="600"/>
@@ -381,11 +410,10 @@ Select Finish:
 
 <img src="https://github.com/user-attachments/assets/c6e5fefb-92aa-437c-a1ec-4a76722151d6" width="600"/>
 
-Select Yes:
+Select Yes to restart the VM:
 
 <img src="https://github.com/user-attachments/assets/6795fdd8-f14e-4337-b1d6-6b9c6f5c2cbc" width="600"/>
 
-## Install Windows 2000 SP4 Updates
 
 
 
@@ -402,17 +430,6 @@ Select Yes:
 
 
 
-
-
-## Install VMware Tools
-
-In the Windows 2000 VM. Select Player → Removable Drives → CD/DVD and then settings:
-
-<img src="https://github.com/user-attachments/assets/c4d69023-2708-4cdd-8d02-9dd422620cf5" width="600"/>
-
-Select Browse:
-
-<img src="https://github.com/user-attachments/assets/61d2612c-2b24-416e-a149-a93e89a6bc25" width="600"/>
 
 
 ## Other Check
