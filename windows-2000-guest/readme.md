@@ -1,5 +1,11 @@
 # Windows 2000
 
+## Notes
+
+VMware Workstation Player 17.6.4 has Windows 2000 as an option for a Virtual Machine. However Windows 2000 is regarded as a legacy Operating System and isn't tested by Broadcom. Moreover the VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows 2000. VMware Tools 6.5.5 is the last version of VMware Tools to support Windows 2000 and should be downloaded seperately as an ISO. 
+
+On modern hardware, with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
+
 ```
 monitor.virtual_exec = "hardware"
 monitor.virtual_mmu = "software"
@@ -7,6 +13,8 @@ mks.enableVulkanRenderer = "FALSE"
 cpuid.0.eax = "0000000X"
 cpuid.1.ecx = "00000001"
 ```
+
+Before installing VMWare Tools 6.6.5, Windows 2000 SP4 should be installed alongside post-SP4 updates. An ISO of the SP4 update will need to be created and mounted to the VM for installation. The post-SP4 updates should be installed using the WSUS Offline Update 6.6.5 ISO.
 
 ## Downloads
 
@@ -22,9 +30,7 @@ Windows 2000 is considered abandonware and the Windows 2000 ISO and Product Key 
 
 ### WSUS Offline Update
 
-The last version of WSUS Offline Update to support Windows 2000 was 6.6.5. 
-
-This no longer works as Microsoft removed the downloads WSUS Offline updates uses from their servers. The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 2000 downloads from their download servers:
+The last version of WSUS Offline Update to support Windows 2000 was 6.6.5. The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 2000 downloads from their download servers:
 
 * [WSUS Offline Update Windows 2000](https://archive.org/details/wsusoffline-w2k-enu)
 
@@ -32,7 +38,7 @@ This no longer works as Microsoft removed the downloads WSUS Offline updates use
 
 The Windows 2000 drivers for the Windows 2000 Guest are contained in the VMware Tools Installation ISO. The Website Archive.org hosts the ISO created by VMware before Broadcom removed it:
 
-* [VMware Tools 6.5.5](https://archive.org/details/vmware-tools-collectio](https://archive.org/details/vmware-tools-collection)
+* [vmware-tools-655-win.iso](https://archive.org/details/vmware-tools-collection)
 
 ## Configuring Virtual Hardware for a Windows 2000 Guest
 
@@ -52,7 +58,7 @@ Use the default Virtual Machine Name and Location (if Documents is integrated wi
 
 <img src="https://github.com/user-attachments/assets/d1b95fda-74a1-4730-a05d-5ef8b1159ab0" width="600"/>
 
-Select 20 GB and select enxt:
+Select 20 GB and select next:
 
 <img src="https://github.com/user-attachments/assets/24dd4b12-5717-4265-a185-09ca82041a2c" width="600"/>
 
@@ -162,7 +168,7 @@ These settings ensure proper CPU and MMU handling for legacy guests.
 
 ## Installing the Windows 2000 Guest
 
-Select the Windows 98 Guest and select Play:
+Select the Windows 2000 Guest and select Play:
 
 <img src="https://github.com/user-attachments/assets/3baaf7f0-4ed2-49ae-95a8-c05e7db914d4" width="600"/>
 
@@ -220,6 +226,10 @@ Input the computer name and select next:
 
 <img src="https://github.com/user-attachments/assets/0109eb5d-3545-4018-8d6f-a7c67f920f62" width="600"/>
 
+Select your timezone and select next:
+
+<img src="https://github.com/user-attachments/assets/a898c401-a46a-4a6c-a406-9924153c714c" width="600"/>
+
 Select typical settings and select next:
 
 <img src="https://github.com/user-attachments/assets/3ef270a0-b740-4c6c-bd72-967cb8838f4d" width="600"/>
@@ -248,7 +258,7 @@ Uncheck show this screen at startup and select exit:
 
 <img src="https://github.com/user-attachments/assets/bcbc535c-9748-43fe-be8e-d5303de64bd0" width="600"/>
 
-## Installing Windows 2000 SP4
+## Installing Service Pack 4
 
 Service Pack 4 is a prequisite for installing VMware tools. Since VMware tools are not installed drag and drop to the virtual machine won't work and the Windows application has to be supplied as part of an ISO file. The Service Pack 4 is a `.7z` archive. Extract the `.7z` archive:
 
@@ -344,22 +354,62 @@ Select Finish:
 
 ## Install Windows 2000 SP4 Updates
 
+Select Player → Manage → CD/DVD and select Settings:
+
+<img src="https://github.com/user-attachments/assets/d3209bbe-966a-4050-bd42-9a82af59dcf6" width="600"/>
+
+Select Browse:
+
+<img src="https://github.com/user-attachments/assets/88a3be7c-fc69-48be-8809-b9bd146d4a69" width="600"/>
+
+Select the `wsusoffline-w2k-enu.iso`:
+
+<img src="https://github.com/user-attachments/assets/1cfd94f7-69ce-41d2-a186-44b94da7ae34" widh="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/ea84822c-f0bf-49c5-90e3-dab42b376a8a" width="600"/>
+
+Select My Computer:
+
+<img src="https://github.com/user-attachments/assets/f6646040-5dfd-4ce1-bade-e4cd4477a3c4" width="600"/>
+
+Right click the `D:` drive and select explore:
+
+<img src="https://github.com/user-attachments/assets/5580dcc0-8bab-4518-96d2-e84cf3ad3213" width="600"/>
+
+Launch the `update` command script (1):
+
+<img src="https://github.com/user-attachments/assets/04e053c1-6f68-404d-bcf0-761f2ca1a832" width="600"/>
+
+The service pack will install:
+
+<img src="https://github.com/user-attachments/assets/5b4014b3-f0b0-4c82-aec8-0f30f8a71f13" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/939e60aa-b65d-45fa-a319-b50461f2efca" width="600"/>
+
+Restart the VM when prompted:
 
 
 
 
+<img src="https://github.com/user-attachments/assets/4600dc58-05f2-41e8-96fc-a83bf3156d8e" width="600"/>
 
+Restart the VM when prompted:
 
+<img src="https://github.com/user-attachments/assets/ece3a986-75da-43ee-85d1-42aa43a38f63" width="600"/>
 
+Relaunch the `update` script (2) and restart the VM when prompted:
 
+<img src="https://github.com/user-attachments/assets/ab4ac236-d651-434e-9b83-1073115246e2" width="600"/>
 
+<img src="https://github.com/user-attachments/assets/e5936bcf-fa28-4101-a6e7-5315b9b5a3d2" width="600"/>
 
+Relaunch the `update` script (3) and restart the VM when prompted:
 
+<img src="https://github.com/user-attachments/assets/f8e4578c-7f40-4dd9-af72-71f1fb0f48b8" width="600"/>
 
-
-
-
-
+When all updates are installed no missing update found. Nothing to do! will display.
 
 ## Install VMware Tools
 
@@ -385,9 +435,9 @@ Open My Computer and select the CD/DVD (the CD/DVD label and icon are sometimes 
 
 Launch the setup:
 
-<img src="https://github.com/user-attachments/assets/bdcb2756-4db9-4d7b-9f48-7a48d75d24f1" width="600"/>
+<img src="https://github.com/user-attachments/assets/3d1ae51d-508a-43ac-89fb-31824b318c53" width="600"/>
 
-Select enxt:
+Select next:
 
 <img src="https://github.com/user-attachments/assets/4b20cddb-121e-4566-a910-2aff5028ec59" width="600"/>
 
@@ -407,19 +457,55 @@ Select Yes to restart the VM:
 
 <img src="https://github.com/user-attachments/assets/6795fdd8-f14e-4337-b1d6-6b9c6f5c2cbc" width="600"/>
 
+Right click My Computer and select Properties:
 
+<img src="https://github.com/user-attachments/assets/3eeeb0cc-1ca8-434c-9da2-f0afba2350b3" width="600"/>
 
+Select the hardware tab and select Device Manager:
 
+<img src="https://github.com/user-attachments/assets/28c1cd96-beba-4a2f-be61-4af7d04ed92c" width="600"/>
 
+There is one unknown device:
 
+<img src="https://github.com/user-attachments/assets/c8e25c41-cfb9-41b9-820b-5114b9d43ec5" width="600"/>
 
+Right click it and select Properties:
 
+<img src="https://github.com/user-attachments/assets/6412b478-8a8b-45a8-89bb-bb8cce28c9a6" width="600"/>
 
+Select Reinstall Driver:
 
+<img src="https://github.com/user-attachments/assets/dcd9d58f-0e9d-44f2-8a90-dac747ba4ca1" width="600"/>
 
+Select next:
 
+<img src="https://github.com/user-attachments/assets/51e6d2f6-e214-4178-a091-c1923627da68" width="600"/>
 
+Select next:
 
+<img src="https://github.com/user-attachments/assets/114f2aa9-2856-4d46-a784-6be3946efb34" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/dcad2478-e42c-43a9-a847-f543626c7153" width="600"/>
+
+Selet next:
+
+<img src="https://github.com/user-attachments/assets/91c0a86a-642c-4d70-bbc5-7fc5e122a3f6" width="600"/>
+
+Select finish:
+
+<img src="https://github.com/user-attachments/assets/eec565a5-2fe7-48e9-a188-00c207cf1678" width="600"/>
+
+Select close:
+
+<img src="https://github.com/user-attachments/assets/c2050036-7124-4e4b-abd7-4a98f7d72bea" width="600"/>
+
+Now there are no errors in the Device Manager:
+
+<img src="https://github.com/user-attachments/assets/007d79f7-9052-4b68-9bfc-1c928536f477" width="600"/>
+
+With VMware tools installed, the VM can be resized and drag and drop will work bi-directionally from the Windows 11 Desktop.
 
 
 
