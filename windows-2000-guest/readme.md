@@ -24,10 +24,6 @@ Windows 2000 is considered abandonware and the Windows 2000 ISO and Product Key 
 
 * [WinWorld](https://winworldpc.com/library/operating-systems)
 
-### Windows 2000 SP4
-
-* [Windows 2000 SP4](https://winworldpc.com/download/41c38361-6518-c39a-11c3-a4e284a2c3a5)
-
 ### WSUS Offline Update
 
 The last version of WSUS Offline Update to support Windows 2000 was 6.6.5. The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 2000 downloads from their download servers:
@@ -604,7 +600,7 @@ Right click it and select properties:
 
 <img src="https://github.com/user-attachments/assets/530c8c0b-ac42-4ad8-8ef4-7d1dbbe75aa5" width="600"/>
 
-The Baud rate will be shown, in this case 9600 Bits per second:
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects:
 
 <img src="https://github.com/user-attachments/assets/60686db0-b415-4ea7-a82e-a758329f4fb0" width="600"/>
 
@@ -656,8 +652,27 @@ Right click the communication port and select properties:
 
 <img src="https://github.com/user-attachments/assets/e85d671c-7b30-45c1-9016-fa6b55da28da" width="600"/>
 
-Select Advanced:
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
 
 <img src="https://github.com/user-attachments/assets/af4fa0e1-acdc-481f-a1d6-be3e1799c5ab" width="600"/>
 
-To chang
+Select Advanced:
+
+<img src="https://github.com/user-attachments/assets/b25ca227-6356-4da1-ad17-8c4b40ff92f5" width="600"/>
+
+Update the COM Port Number to be consistent with the Windows 11 Host:
+
+<img src="https://github.com/user-attachments/assets/dd217523-f84b-415e-a9f7-5730f57ff293" width="600"/>
+
+In this case COM3. Select OK:
+
+<img src="https://github.com/user-attachments/assets/8b395e07-919e-4b87-8acb-07e98dd2fc88" width="600"/>
+
+The Serial Port COM3 is now ready for use in the Windows 2000 VM:
+
+<img src="https://github.com/user-attachments/assets/a2fa4051-045f-4861-9aa4-d8c613e4db07" width="600"/>
+
+
+
+
+
