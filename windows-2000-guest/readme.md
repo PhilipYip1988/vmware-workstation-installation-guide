@@ -478,71 +478,61 @@ Relaunch the Virtual Machine.
 
 ## USB Devices
 
-A Logitech Pro 9000 can be used as an example USB device. When it is attached to the Host PC USB port, an option will display to connect it to the Windows 11 Host PC or the Windows 2000 VM:
+A Brother QL-570 label printer will be used as an example of a USB Device that can be connected to the Windows 2000 VM. The [Brother QL-570 Windows 2000](https://support.brother.com/g/b/downloadlist.aspx?c=nz&lang=en&prod=lpql570eas&os=43) Driver can be downloaded from from the Brother website using the Windows 11 Hst PC and copied over to the Windows 2000 VM Desktop:
 
-<img src="https://github.com/user-attachments/assets/bc4a926a-b216-4df6-ac70-1ef5b5f1fc66" width="600"/>
+<img src="https://github.com/user-attachments/assets/23de78d9-4710-43c4-bd88-26296cf46a4d" width="600"/>
 
-The USB Device cam also be connected to the Windows 2000 VM by selecting Player → Manager and then selecting the USB Device and selecting Connect:
+The driver can be installed:
 
-<img src="https://github.com/user-attachments/assets/23afdaaf-1c6d-49db-8fa8-12b7fa2f4c86" width="600"/>
+<img src="https://github.com/user-attachments/assets/5d65733a-7301-4df4-8293-024db6afe83c" widthh="600"/>
+
+Select unzip:
+
+<img src="https://github.com/user-attachments/assets/88b090fa-0773-46ed-b9c2-c33503008e3f" width="600"/>
 
 Select OK:
 
-<img src="https://github.com/user-attachments/assets/4a1791de-1634-4aa9-8524-c037ade1561f" width="600"/>
+<img src="https://github.com/user-attachments/assets/ba47ea42-3bc0-490f-a03b-6142d69ecf43" width="600"/>
 
-The found new hardward wizard will display:
+Select close:
 
-<img src="https://github.com/user-attachments/assets/e726b33f-f8c2-48c3-be72-3cd63a70e96a" width="600"/>
+<img src="https://github.com/user-attachments/assets/4972149e-56e8-4297-a681-68c55c66c559" width="600"/>
 
-Select next:
+Go to the extracted folder:
 
-<img src="https://github.com/user-attachments/assets/764e0bd6-ddfd-42e3-b6c0-25fe176a34a6" width="600"/>
+<img src="https://github.com/user-attachments/assets/8efcc74e-874b-45c7-8193-ea19c6ab3c47" width="600"/>
 
-Select next:
+Launch the setup:
 
-<img src="https://github.com/user-attachments/assets/5695f18b-edce-4d37-b9c6-e5ad22c9c00c" width="600"/>
+<img src="https://github.com/user-attachments/assets/ef8b20f1-9beb-4e2a-b8cb-937cd5b8399b" width="600"/>
 
-The driver won't be found select Finish:
+Select Start:
 
-<img src="https://github.com/user-attachments/assets/c74886bb-b4ce-4caf-9092-3f47a980a46b" width="600"/>
+<img src="https://github.com/user-attachments/assets/f2d0c8a5-017a-4a3e-b8bd-cde4a32d506a" width="600"/>
 
-Copy the installer for the device over to the VM:
+The driver install will prompt for connection to the printer:
 
-<img src="https://github.com/user-attachments/assets/53cde465-0c0f-4746-997b-b3de0b07f381" width="600"/>
+<img src="https://github.com/user-attachments/assets/5076eb5d-cf36-4c82-8237-d775351b3b27" width="600"/>
 
-Note many installers are Windows XP and later:
+When a USB device is connected to the Windows 11 Host PC and the Windows 2000 VM is launched, there will be a prompt to connect it to the Windows 11 Host PC or the Windows 2000 VM:
 
-<img src="https://github.com/user-attachments/assets/b1523191-1826-4321-a8ba-7a71fe3c03d6" width="600"/>
+<img src="https://github.com/user-attachments/assets/c96f66a3-ffad-4a80-8256-a604c2103eb4" width="600"/>
 
-There is a Windows 2000 installer [qc1051enu-logicool-exe](https://download.cnet.com/download/qc1051enu-logicool-exe/3000-18493_4-157513.html):
+Alternatively the USB device can be connected by going to Player → Removable Devices → Brother QL-570 and selecting Connect:
 
-<img src="https://github.com/user-attachments/assets/85188fa0-9523-4b79-83b1-73f2906e1c00" width="600"/>
+<img src="https://github.com/user-attachments/assets/b82aee5b-9757-4821-8ace-8e2540336a16" width="600"/>
 
-Select next:
+Sellect OK:
 
-<img src="https://github.com/user-attachments/assets/bdc0a471-9d88-4006-8c5f-b8143cf81502" width="600"/>
+<img src="https://github.com/user-attachments/assets/fefa2ae7-28c1-4579-a620-15b28b50fd70" width="600"/>
 
-Select next:
+The Brother QL-570 passes through to the Windows 2000 VM via the Windows 11 host USB port is detected:
 
-<img src="https://github.com/user-attachments/assets/5bc930b2-2118-4c4f-9ce6-c6f6391805af" width="600"/>
+<img src="https://github.com/user-attachments/assets/a751ce38-4394-4d4f-af9a-9a5097031185" width="600"/>
 
-Select cancel:
+To complete the printer driver installation the Windows 2000 VM needs to be restarted:
 
-<img src="https://github.com/user-attachments/assets/34ba3fee-cd8b-40c5-abe4-261f2488d538" width="600"/>
-
-Select I accept and next:
-
-<img src="https://github.com/user-attachments/assets/256f14b3-324c-42f4-8f00-5dbe08f1666f" width="600"/>
-
-Select I do not want to activate this service and select next:
-
-<img src="https://github.com/user-attachments/assets/d6d598b7-4121-44d7-a495-9b15fa9e9fe5" width="600"/>
-
-In this example, the Windows 2000 driver does not work on the Logitech Pro 9000 and therefore the webcam is not detected:
-
-<img src="https://github.com/user-attachments/assets/0db20c47-c3d4-417a-94ff-9d6b4e0cdf90" width="600"/>
-
-
+<img src="https://github.com/user-attachments/assets/92c00a06-aa10-489d-a400-bceb47b2b63d" wodth="600"/>
 
 
 
