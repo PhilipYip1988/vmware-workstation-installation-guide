@@ -391,14 +391,6 @@ On a Windows 11 Host, drag and drop to the Windows XP Guest is bi-directional. O
 
 ## Windows Product Activation Timer
 
-The Windows Security Center Notifications can be changed:
-
-<img src='./images/img_050.png' alt='img_050' width='600'/>
-
-Notifications about Automatic Updates and Virus Protection can be Disabled:
-
-<img src='./images/img_051.png' alt='img_051' width='600'/>
-
 The activation status can be seen by going to Start and selecting run:
 
 <img src='./images/img_052.png' alt='img_052' width='600'/>
