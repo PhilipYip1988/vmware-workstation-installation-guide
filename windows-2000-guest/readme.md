@@ -534,5 +534,54 @@ To complete the printer driver installation the Windows 2000 VM needs to be rest
 
 <img src="https://github.com/user-attachments/assets/92c00a06-aa10-489d-a400-bceb47b2b63d" width="600"/>
 
+The p-touch editor can now be installed:
 
+<img src="https://github.com/user-attachments/assets/5141a7c1-5976-46f6-b588-78f534f3bbf8" wodth="600"/>
 
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/7697e79d-44e9-4faa-8c9c-b915d2d3a615" width="600"/>
+
+Input your user name and select next:
+
+<img src="https://github.com/user-attachments/assets/5344cafa-9245-46d6-a60b-60a2002dcc69" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/0b38c79d-a95b-4153-b6a1-eeb5e9a93f9d" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/e855638a-50ae-479c-a5d7-81b43e6340b5" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/d805eb43-e690-48c7-94da-b3dde348806e" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/0bda3352-56a4-4898-8ace-245f65483348" width="600"/>
+
+Select finish and restart the Windows 2000 VM:
+
+<img src="https://github.com/user-attachments/assets/e3a40afd-3db8-40ce-8513-f917f8d689c4" width="600"/>
+
+Launch the p-touch editor:
+
+<img src="https://github.com/user-attachments/assets/9b640093-b1c5-49b0-8db8-6838ddd00868" width="600"/>
+
+Select the BrotherQL-570 printer:
+
+<img src="https://github.com/user-attachments/assets/66d489bc-5998-415f-be5b-f71375db8787" width="600"/>
+
+Create a test label:
+
+<img src="https://github.com/user-attachments/assets/7e17576e-63de-404a-a01b-5370cff561cd" width="600"/>
+
+Select print:
+
+<img src="https://github.com/user-attachments/assets/d3f090f4-587e-4ecb-a011-bc3a83a02220" width="600"/>
+
+The ptouch editor on the Windows 2000 VM prints to the QL-570 attached to the host PC using VMwares USB passthrough:
+
+<img src="https://github.com/user-attachments/assets/cd119cbf-51b5-4274-9715-b4646a5d361c" width="600"/>
