@@ -39,8 +39,6 @@ The Website Archive.org hosts each Unofficial Dell Windows XP Reinstallation ISO
 * [Dell Windows XP SP2 Home Reinstallation ISO](https://archive.org/details/dell-xp-home-sp-2)
 * [Dell Windows XP SP2 Media Center Reinstallation ISO](https://archive.org/details/xp-mce-sp-2)
 
-I have tested installation of the three ISOs in a Virtual Machine but as this is an unofficial source and should be used with caution. 
-
 The ISO Checksums can be used to ensure a complete download but these do not match official Dell or Microsoft records as they would have been created from a CD/DVD by an end user:
 
 |ISO|sha256 ISO Checksum|
@@ -59,20 +57,9 @@ Dell Systems came with a Windows XP Reinstallation CD/DVD which can be converted
 
 ## WSUS Offline Update
 
-The last version of WSUS Offline Update to support Windows XP was 9.2.5:
-
-* ~~[WSUS Offline Update](https://download.wsusoffline.net/)~~
-
-This no longer works as Microsoft removed the downloads WSUS Offline updates uses from their servers.
-
-<details>
-  <summary>Archive.org</summary>
-
-The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windows XP downloads from their download servers:
+The last version of WSUS Offline Update to support Windows 2000 was 9.2.5. The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 2000 downloads from their download servers:
 
 * [WSUS Offline Update Windows XP (Windows XP 32 Bit=wxp-enu)](https://archive.org/details/wsusoffline-eol-windows)
-
-I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
 
 </details>
 
@@ -92,7 +79,7 @@ Your Windows 11 Host PC or Ubuntu Host PC should satisfy the minimum system the 
 
 ## Configuring Virtual Hardware for a Windows XP Guest
 
-Select File → New Virtual Machine:
+Select Player → File → New Virtual machine...
 
 <img src='./images/img_001.png' alt='img_001' width='600'/>
 
@@ -110,7 +97,7 @@ The VM Name and Location will be shown. Note when used on a Windows 11 Host whic
 
 Note the name and location as these will be used later.
 
-The default maximum size of the Windows XP Guest is 40 GB which is a bit too restrictive. I recommend increasing this to 120 GB. Note the files on the Windows 11 Host won't be 120 GB but can be up to 120 GB if the Windows XP Guests Virtual Drive is fully occupied with files:
+The default maximum size of the Windows XP Guest is 40 GB which is too small, I recommend increasing this to 120 GB. Note the files on the Windows 11 Host won't be 120 GB but can be up to 120 GB if the Windows XP Guests Virtual Drive is fully occupied with files:
 
 <img src='./images/img_005.png' alt='img_005' width='600'/>
 
@@ -138,7 +125,7 @@ Windows XP has reached end of life and should be deemed unsafe to use online. Th
 
 <img src='./images/img_012.png' alt='img_012' width='600'/>
 
-The default USB Controller for Windows XP is USB 2.0 and WIndows XP does not have any drivers for USB 3.0:
+The default USB Controller for Windows XP is USB 2.0 and Windows XP does not have any drivers for USB 3.0:
 
 <img src='./images/img_013.png' alt='img_013' width='600'/>
 
