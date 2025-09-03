@@ -396,7 +396,7 @@ A USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to t
 
 <img src='./images/img_063.png' alt='img_063' width='600'/>
 
-The Device Drivers for the USB Device and software can be installed in the Windows 7 Guest.
+The Device Drivers for the USB Device and software can be installed in the Windows XP Guest.
 
 ## Serial Ports
 
@@ -412,7 +412,7 @@ Then select Serial Port:
 
 <img src='./images/img_066.png' alt='img_066' width='600'/>
 
-This needs to be done when the Windows 7 Guest is powered off. In this example, the Windows 11 Host doesn't have a Serial Port, so I'm not going to add a Serial Port.
+This needs to be done when the Windows XP Guest is powered off. In this example, the Windows 11 Host doesn't have a Serial Port, so I'm not going to add a Serial Port.
 
 Note the Serial Port number should be configured in the Device Manager in the Windows 11 Host, then added to the Windows XP Guest, then the Serial Port number should be configured in the Windows XP Guest. It is recommended to do this one at a time, to avoid confusion between Serial Ports.
 
