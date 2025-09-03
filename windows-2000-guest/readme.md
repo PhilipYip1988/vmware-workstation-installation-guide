@@ -476,7 +476,7 @@ And the processor cores to 2:
 
 Relaunch the Virtual Machine.
 
-## USB Devices
+## USB Device Passthrough
 
 A Brother QL-570 label printer will be used as an example of a USB Device that can be connected to the Windows 2000 VM. The [Brother QL-570 Windows 2000](https://support.brother.com/g/b/downloadlist.aspx?c=nz&lang=en&prod=lpql570eas&os=43) Driver can be downloaded from from the Brother website using the Windows 11 Hst PC and copied over to the Windows 2000 VM Desktop:
 
@@ -585,3 +585,21 @@ Select print:
 The ptouch editor on the Windows 2000 VM prints to the QL-570 attached to the host PC using VMwares USB passthrough:
 
 <img src="https://github.com/user-attachments/assets/cd119cbf-51b5-4274-9715-b4646a5d361c" width="600"/>
+
+## Serial Port Passthrough
+
+Attach a USB to Serial Port to the Window 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/0ef84622-10c0-4bff-8cf1-9edf492137ba" width="600"/>
+
+On the Windows 11 Host PC, right click the Start Button and select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/622bcb44-367d-42b6-aaf8-fea04bf18ebd" width="400"/>
+
+
+
+
+
+
+
+
