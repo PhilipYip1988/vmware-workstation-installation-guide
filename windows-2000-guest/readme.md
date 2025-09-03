@@ -532,7 +532,7 @@ The Brother QL-570 passes through to the Windows 2000 VM via the Windows 11 host
 
 To complete the printer driver installation the Windows 2000 VM needs to be restarted:
 
-<img src="https://github.com/user-attachments/assets/92c00a06-aa10-489d-a400-bceb47b2b63d" wodth="600"/>
+<img src="https://github.com/user-attachments/assets/92c00a06-aa10-489d-a400-bceb47b2b63d" width="600"/>
 
 
 
