@@ -270,7 +270,7 @@ Select Browse:
 
 Select the `wsusoffline-w2k-enu.iso`:
 
-<img src="https://github.com/user-attachments/assets/1cfd94f7-69ce-41d2-a186-44b94da7ae34" widh="600"/>
+<img src="https://github.com/user-attachments/assets/1cfd94f7-69ce-41d2-a186-44b94da7ae34" width="600"/>
 
 Select OK:
 
