@@ -12,7 +12,7 @@ VMware Workstation Player 17.6.4 has Windows XP as an option for a Virtual Machi
 
 VMware Tools 10.0.12 is the last version of VMware Tools to support Windows XP and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
 
-On modern hardware, with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
+On modern hardware, with a 11th-14th Generation Processor, the following entries should be added to the VMX file:
 
 ```
 monitor.virtual_exec = "hardware"
@@ -172,9 +172,11 @@ bios.bootDelay = "20000"
 
 The command above will change the time the Windows XP Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
 
-### 12th-14 Generation Processors
+### Modern Generation Processors (11-14th Generation)
 
-On a 12th–14th Generation Intel processor, certain legacy settings may need to be configured to run older guest operating systems such as Windows XP.
+Certain legacy settings may need to be configured to run older guest operating systems such as Windows XP.
+
+<img src="https://github.com/user-attachments/assets/0ab7f057-a395-46bb-a2e6-01cf4dd5c92d" width="600"/>
 
 Legacy CPU settings:
 
@@ -292,6 +294,68 @@ Select OK:
 You will be taken to the Windows XP Desktop:
 
 <img src='./images/img_039.png' alt='img_039' width='600'/>
+
+Select the red warning in the system tray, then select Change the way Security Centre Alerts Me:
+
+<img src="https://github.com/user-attachments/assets/8a338f00-979a-40d7-812a-47498ce0f21f" width="600"/>
+
+Uncheck the three boxes:
+
+<img src="https://github.com/user-attachments/assets/67044f4e-3b39-40d7-98f9-cae1ae91e748" width="600"/>
+
+## Installing Windows SP3 and Post-SP3 Updates
+
+Select Player → Manage → CD/DVD and select Settings:
+
+<img src="https://github.com/user-attachments/assets/d3c5d77d-7ece-4916-baff-4af608f7b5ce" width="600"/>
+
+Select browse:
+
+<img src="https://github.com/user-attachments/assets/93f07d33-04b8-4637-babc-bc873699398a" width="600"/>
+
+Select `wsusoffline-wxp-enu.iso`:
+
+<img src="https://github.com/user-attachments/assets/7dec184f-4e9f-4f07-9768-cd754c46ee69" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/593b2247-3cc7-460f-99ec-0553697b38dd" width="600"/>
+
+Select My Computer:
+
+<img src="https://github.com/user-attachments/assets/db0044ea-8918-435b-8f60-985c459fda34" width="600"/>
+
+Right click the D: drive and select explore:
+
+<img src="https://github.com/user-attachments/assets/8f0e8a17-7199-4d38-9151-b8be2cf3a78e" width="600"/>
+
+Select UpdateInstaller:
+
+<img src="https://github.com/user-attachments/assets/20846e29-071e-4983-938d-7d21bc379041" width="600"/>
+
+Select the following options:
+
+<img src="https://github.com/user-attachments/assets/e6fe201f-7fe1-4c11-b93d-de81f7e1aef7" width="600"/>
+
+Updates will install and the VM will reboot multiple ties:
+
+<img src="https://github.com/user-attachments/assets/06350ff9-7d6a-4395-8fa6-87c3d2b9d92a" width="600"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Installing VMware Tools
 
