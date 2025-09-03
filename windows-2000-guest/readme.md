@@ -484,7 +484,7 @@ A Brother QL-570 label printer will be used as an example of a USB Device that c
 
 The driver can be installed:
 
-<img src="https://github.com/user-attachments/assets/5d65733a-7301-4df4-8293-024db6afe83c" widthh="600"/>
+<img src="https://github.com/user-attachments/assets/5d65733a-7301-4df4-8293-024db6afe83c" width="600"/>
 
 Select unzip:
 
