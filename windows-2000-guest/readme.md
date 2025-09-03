@@ -588,7 +588,7 @@ The ptouch editor on the Windows 2000 VM prints to the QL-570 attached to the ho
 
 ## Serial Port Passthrough
 
-Attach a USB to Serial Port to the Window 11 Host PC:
+Close the Windows 2000 VM. Attach a USB to Serial Port to the Window 11 Host PC:
 
 <img src="https://github.com/user-attachments/assets/0ef84622-10c0-4bff-8cf1-9edf492137ba" width="600"/>
 
@@ -596,10 +596,35 @@ On the Windows 11 Host PC, right click the Start Button and select Device Manage
 
 <img src="https://github.com/user-attachments/assets/622bcb44-367d-42b6-aaf8-fea04bf18ebd" width="400"/>
 
+Expand ports (COM & LPT). In this example, the USB Serial COM Port is COM3:
 
+<img src="https://github.com/user-attachments/assets/7a133968-f0fc-4b26-9d75-2e4233f0dc1e" width="600"/>
 
+Right click it and select properties:
 
+<img src="https://github.com/user-attachments/assets/530c8c0b-ac42-4ad8-8ef4-7d1dbbe75aa5" width="600"/>
 
+The Baud rate will be shown, in this case 9600 Bits per second:
 
+<img src="https://github.com/user-attachments/assets/60686db0-b415-4ea7-a82e-a758329f4fb0" width="600"/>
 
+The port number can be changed by selecting Advanced:
+
+<img src="https://github.com/user-attachments/assets/3ac282d1-9dbc-4a17-b42f-bb3c9aab24f2" width="600"/>
+
+In this case it will be left at port 3:
+
+<img src="https://github.com/user-attachments/assets/04cd83bf-c91f-4ca1-84ae-f93b09257e10" width="600"/>
+
+Opn VMware Player and select Edit Virtul Machine Settings:
+
+<img src="https://github.com/user-attachments/assets/865199af-f476-4d3a-b821-41d5568a7058" width="600"/>
+
+Select Add...:
+
+<img src="https://github.com/user-attachments/assets/8ed534f3-f9a8-4c54-b5fc-2103d640e700" width="600"/>
+
+Select Serial Port and Finish:
+
+<img src="https://github.com/user-attachments/assets/3b4c2dc4-84e5-4f27-91df-773f3a9bb67b" width="600"/>
 
