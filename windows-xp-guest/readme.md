@@ -55,7 +55,7 @@ Dell Systems came with a Windows XP Reinstallation CD/DVD which can be converted
 
 * [Using nLite to Create a Windows XP Installation ISO from a Dell Windows Reinstallation CD/DVD](./integration/readme.md)
 
-## WSUS Offline Update
+### WSUS Offline Update
 
 The last version of WSUS Offline Update to support Windows 2000 was 9.2.5. The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 2000 downloads from their download servers:
 
@@ -63,7 +63,7 @@ The last version of WSUS Offline Update to support Windows 2000 was 9.2.5. The W
 
 </details>
 
-## VMware Tools ISO
+### VMware Tools ISO
 
 The Windows XP drivers for the Windows XP Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
 
