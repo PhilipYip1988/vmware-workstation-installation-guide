@@ -91,11 +91,9 @@ Select Microsoft Windows and Windows XP Professional and select Next:
 
 <img src='./images/img_003.png' alt='img_003' width='600'/>
 
-The VM Name and Location will be shown. Note when used on a Windows 11 Host which is signed in with a Microsoft Account and integrated with OneDrive, the default location will be on OneDrive. The VM can be quite large and the location can be changed to local Documents by removing the OneDrive folder:
+Use the default Virtual Machine Name and Location (if Documents is integrated with OneDrive, you may want to move this to a local only location) and select next:
 
-<img src='./images/img_004.png' alt='img_004' width='600'/>
-
-Note the name and location as these will be used later.
+<img src="https://github.com/user-attachments/assets/0fc05e4e-7148-422a-b3e7-872b6bf7377b" width="600"/>
 
 The default maximum size of the Windows XP Guest is 40 GB which is too small, I recommend increasing this to 120 GB. Note the files on the Windows 11 Host won't be 120 GB but can be up to 120 GB if the Windows XP Guests Virtual Drive is fully occupied with files:
 
@@ -105,25 +103,30 @@ Select Customise Hardware:
 
 <img src='./images/img_006.png' alt='img_006' width='600'/>
 
-The default memory used by the Windows XP Guest is 512 MB (0.5 GB). If the Windows 11 Host PC has ≥32 GB RAM, this can be upped to 4096 MB (4 GB) for increased performance in the Windows XP Guest, if the Windows 11 Host PC has ≤16 GB of RAM, setting this to 4096 MB (4 GB) may throttle the Host PC leading to an overall decreased performance so use 2048 MB (2 GB). The task manager can be opened in the Windows 11 Host PC to view the installed memory (RAM):
+The default memory used by the Windows XP Guest is 512 MB (0.5 GB). If the Windows 11 Host PC has ≥16 GB RAM, this can be upped to 4096 MB (4 GB) for increased performance of the VM. Note if the Windows 11 Host PC has ≤8 GB of RAM, setting the RAM to 4096 MB (4 GB) may throttle the Host PC leading to decreased performance and 2048 MB (2 GB) may be more approprate:
 
-<img src='./images/img_007.png' alt='img_007' width='600'/>
+<img src="https://github.com/user-attachments/assets/dac7f86b-765b-44af-9131-180fffe636a8" width="600"/>
 
-<img src='./images/img_008.png' alt='img_008' width='600'/>
 
-The default number of processors cores used by the Windows XP Guest is 1. This can be upped to 2 if the Windows 11 Host has a processor with ≥ 16 cores. If the Windows 11 Host PC has ≤16 cores, setting this to a higher value may throttle the Host PC leading to an overall decreased performance:
+The default number of processors cores used by the Windows XP Guest is 1. This can be upped to 2 if the Windows 11 Host has a processor with ≥ 16 cores. If the Windows 11 Host PC has ≤16 cores, setting this to a higher value may throttle the Host PC leading to an decreased performance:
 
-<img src='./images/img_009.png' alt='img_009' width='600'/>
+<img src="https://github.com/user-attachments/assets/c6c02251-1d81-440d-8623-2486c4ac3895" width="600"/>
 
-<img src='./images/img_010.png' alt='img_010' width='600'/>
+Under CD/DVD select browse:
 
-The CD/DVD should be configured to load the Dell Windows XP Reinstallation ISO or Windows XP Volume License Installation iSO:
+<img src="https://github.com/user-attachments/assets/491ba68f-8b39-4fb6-977d-786c0df26cd9" width="600"/>
 
-<img src='./images/img_011.png' alt='img_011' width='600'/>
+Load the Dell Windows XP Reinstallation ISO or Windows XP Volume License Installation iSO:
 
-Windows XP has reached end of life and should be deemed unsafe to use online. The virtual network adaptor is connected by default and can optionally be disabled:
+<img src="https://github.com/user-attachments/assets/40a31853-42a2-44d6-973a-9a17e58fb822" width="600"/>
 
-<img src='./images/img_012.png' alt='img_012' width='600'/>
+Ensure connected at power on is enabled:
+
+<img src="https://github.com/user-attachments/assets/66d71780-14f2-448f-905a-e8037ee3636a" width="600"/>
+
+Uncheck Connect at Power On for Network Adaptor:
+
+<img src="https://github.com/user-attachments/assets/abe59d92-ffc8-4a9e-8b3e-262e60b089c0" width="600"/>
 
 The default USB Controller for Windows XP is USB 2.0 and Windows XP does not have any drivers for USB 3.0:
 
