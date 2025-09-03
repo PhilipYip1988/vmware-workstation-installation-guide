@@ -337,35 +337,27 @@ Select the following options:
 
 <img src="https://github.com/user-attachments/assets/e6fe201f-7fe1-4c11-b93d-de81f7e1aef7" width="600"/>
 
-Updates will install and the VM will reboot multiple ties:
+Updates will install and the VM will reboot multiple times:
 
 <img src="https://github.com/user-attachments/assets/06350ff9-7d6a-4395-8fa6-87c3d2b9d92a" width="600"/>
 
+When finished, the following will display no missing updates found. Nothing to do!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/user-attachments/assets/ab7a80f7-51e3-48c0-99ed-2ef791315635" width="600"/>
 
 ## Installing VMware Tools
 
 Select Player → Removable Devices → CD/DVD → Settings:
 
-<img src='./images/img_040.png' alt='img_040' width='600'/>
+<img src="https://github.com/user-attachments/assets/b69097ab-b61a-4819-b0f2-613a5f357167" width="600"/>
 
-Load the `VMware-tools-windows-10.0.12-4448496.iso`:
+Select browse:
 
-<img src='./images/img_041.png' alt='img_041' width='600'/>
+<img src="https://github.com/user-attachments/assets/1d7254f8-bcb5-4f60-9d00-d03a1048ed7c" width="600"/>
+
+Select the `winPreVista.iso` and select open:
+
+<img src="https://github.com/user-attachments/assets/6c9dce4d-ec46-44c3-9bb2-73b503f80675" width="600"/>
 
 Windows XP has autoplay enabled by default and the VMware Tools installation should begin. If it does not go to Computer in the Windows XP Guest and start the setup from the CD/DVD:
 
