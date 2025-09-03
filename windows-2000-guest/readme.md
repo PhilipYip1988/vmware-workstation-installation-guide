@@ -628,3 +628,36 @@ Select Serial Port and Finish:
 
 <img src="https://github.com/user-attachments/assets/3b4c2dc4-84e5-4f27-91df-773f3a9bb67b" width="600"/>
 
+Select Connect at Power On. Autodetect is useful for a single port, but for multipe ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
+
+<img src="https://github.com/user-attachments/assets/98fc0369-8b8a-4299-b7d6-3eed19bf55dc" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/47ce415a-ec42-4ab7-a7ab-eb2b37c83fa9" width="600"/>
+
+Launch the VM:
+
+<img src="https://github.com/user-attachments/assets/c37f2fdb-e39b-46e1-83ac-59fdbabc3d14" width="600"/>
+
+Right click My Computer and select Properties:
+
+<img src="https://github.com/user-attachments/assets/30514a5d-70f4-4bf0-bc5c-245734a565d8" width="600"/>
+
+Select the hardware tab and then device manager:
+
+<img src="https://github.com/user-attachments/assets/fc66c338-8512-4b06-b982-2a7165b15acd" width="600"/>
+
+Expand ports, note the Windows 11 COM3 is passed through to the Windows 2000 VM as COM1:
+
+<img src="https://github.com/user-attachments/assets/072cbe90-58c4-4f9b-8cbe-a8c90480afde" width="600"/>
+
+Right click the communication port and select properties:
+
+<img src="https://github.com/user-attachments/assets/e85d671c-7b30-45c1-9016-fa6b55da28da" width="600"/>
+
+Select Advanced:
+
+<img src="https://github.com/user-attachments/assets/af4fa0e1-acdc-481f-a1d6-be3e1799c5ab" width="600"/>
+
+To chang
