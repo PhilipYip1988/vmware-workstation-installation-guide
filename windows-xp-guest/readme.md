@@ -497,21 +497,89 @@ The webcam software can be used in Windows XP to control the Logitech Pro 9000 w
 
 ## Serial Ports
 
-It is also possible to pass a Serial Port from the Windows 11 Host or Ubuntu 24.10 Host to the Windows XP Guest. Select Player → Manage → Virtual Machine Settings:
+Close the Windows XP VM. Attach a USB to Serial Port to the Window 11 Host PC:
 
-<img src='./images/img_064.png' alt='img_064' width='600'/>
+<img src="https://github.com/user-attachments/assets/4c5f545f-e66c-4ece-b524-10454a2397b4" width="600"/>
 
-Under hardware select Add...
+On the Windows 11 Host PC, right click the Start Button and select Device Manager:
 
-<img src='./images/img_065.png' alt='img_065' width='600'/>
+<img src="https://github.com/user-attachments/assets/dc02277e-d8ff-4fa1-b071-993df8f0cd7b" width="600"/>
 
-Then select Serial Port:
+Expand ports (COM & LPT). In this example, the USB Serial COM Port is COM3:
 
-<img src='./images/img_066.png' alt='img_066' width='600'/>
+<img src="https://github.com/user-attachments/assets/da226f02-457e-417d-9294-d018f54fc562" width="600"/>
 
-This needs to be done when the Windows XP Guest is powered off. In this example, the Windows 11 Host doesn't have a Serial Port, so I'm not going to add a Serial Port.
+Right click it and select properties:
 
-Note the Serial Port number should be configured in the Device Manager in the Windows 11 Host, then added to the Windows XP Guest, then the Serial Port number should be configured in the Windows XP Guest. It is recommended to do this one at a time, to avoid confusion between Serial Ports.
+<img src="https://github.com/user-attachments/assets/0f1768d9-c1bf-4324-8bc6-946640ba5531" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects:
+
+<img src="https://github.com/user-attachments/assets/283e424d-9fea-448d-ab0a-874db7c018c1" width="600"/>
+
+In this case it will be left at port 3:
+
+<img src="https://github.com/user-attachments/assets/bf7258a0-b073-4451-ac3c-45542580d38f" width="600"/>
+
+Open VMware Player and select Edit Virtual Machine Settings:
+
+<img src="https://github.com/user-attachments/assets/80609833-c175-4396-bd7b-7003685ac7c5" width="600"/>
+
+Select Add...:
+
+<img src="https://github.com/user-attachments/assets/677cc262-6c3b-41e7-a247-4e1749362127" width="600"/>
+
+Select Serial Port and Finish:
+
+<img src="https://github.com/user-attachments/assets/0cb110f4-96ac-4409-ade9-026ecd0b6899" width="600"/>
+
+Select Connect at Power On. Autodetect is useful for a single port, but for multipe ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
+
+<img src="https://github.com/user-attachments/assets/a0698610-4b78-4499-974d-316f111df752" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/bdd5685f-bd62-4fd4-bb3d-1d2edfa9c9ad" width="600"/>
+
+Launch the VM:
+
+<img src="https://github.com/user-attachments/assets/1ee29d32-f767-4bc2-90e4-c953b6cb71c3" width="600"/>
+
+Go to Start and right click computer and select properties:
+
+<img src="https://github.com/user-attachments/assets/bf49569e-2548-446e-948f-98665af57b25" width="600"/>
+
+Go to the hardware tab and select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/67eb8f7d-bee5-46a7-8a27-b5934f61902e" width="600"/>
+
+Expand ports, note the Windows 11 COM3 is passed through to the Windows 2000 VM as COM1:
+
+<img src="https://github.com/user-attachments/assets/a34c1ef9-1fab-4d4c-8185-05a29ddc7c93" width="600"/>
+
+Right click the communication port and select properties:
+
+<img src="https://github.com/user-attachments/assets/37ca2bb1-b3f1-4504-bba9-a1998c2e29a9" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host)
+
+<img src="https://github.com/user-attachments/assets/2ab58a0f-3ee4-43ed-9e2f-b4d2bb4c011a" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/9277b6a5-ff1a-44ec-bd96-8f07b91ae87e" width="600"/>
+
+Select Advanced:
+
+<img src="https://github.com/user-attachments/assets/0e7f1613-ba76-4261-a1cc-b6278a9f0dbc" width="600"/>
+
+Update the COM Port Number to be consistent with the Windows 11 Host. In this case COM3. Select OK:
+
+<img src="https://github.com/user-attachments/assets/21ae0b09-164f-42dd-8481-8107e6c0d3f1" width="600"/>
+
+The Serial Port COM3 is now ready for use in the Windows XP VM:
+
+<img src="https://github.com/user-attachments/assets/876e14b7-348c-4de3-a611-bb43bd71650e" width="600"/>
+
+If the port number has not updated, select Action → Scan for hardware changes.
 
 The Windows XP Guest is now setup:
 
