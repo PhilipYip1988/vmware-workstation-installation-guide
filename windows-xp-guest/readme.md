@@ -441,6 +441,111 @@ And the file created on the Windows XP Guest in this shared folder can be access
 
 <img src='./images/img_062.png' alt='img_062' width='600'/>
 
+## Installing Python
+
+Python will be used as an example of installing a program on Windows XP. [python-3.4.4.msi](https://www.python.org/downloads/release/python-344/) is the latest version of Python to work on Windows XP. The installer can be downloaded on the Windows 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/eab7e96a-f075-4f1f-aab1-21ced600f865" width="600"/>
+
+And dragged and dropped over to the VM:
+
+<img src="https://github.com/user-attachments/assets/5b1a54a6-6c5e-4110-a901-758c521b83bd" width="600"/>
+
+Launch the setup:
+
+<img src="https://github.com/user-attachments/assets/38db7318-97aa-4b01-83d4-99de325e923a" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/b0397e70-6c8a-479b-b0b4-6252c1ba6c49" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/e8d09ae6-4844-4c27-a4ca-9c1599335378" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/3bffc199-e63b-4bc0-ba2a-cba34e035565" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/c925f84d-4ec1-4124-bf06-16dc4693cdcc" width="600"/>
+
+Open the command prompt:
+
+<img src="https://github.com/user-attachments/assets/efc6bbf0-dc7d-49f9-b0d9-71510f4d0385" width="600"/>
+
+Change directory to the python directory and launch Python using:
+
+```
+cd C:\python34
+python
+print('Hello World!')
+```
+
+<img src="https://github.com/user-attachments/assets/f7b98d98-0152-44f1-96b0-790fcbc74e50" width="600"/>
+
+Type in:
+
+```
+exit()
+cd .\Scripts
+```
+
+<img src="https://github.com/user-attachments/assets/c450a609-4509-4a5f-86c5-12bec92f4a4c" width="600"/>
+
+This gives access to pip:
+
+```
+pip
+```
+
+<img src="https://github.com/user-attachments/assets/539e0c30-4f00-49ab-b55d-96ce3512bd24" width="600"/>
+
+Use of pip requires internet access, which is risky on a legacy operating system like Windows XP. Select Player → Removable Devices → Network Adapter → Connect:
+
+<img src="https://github.com/user-attachments/assets/d5ff9356-59ec-4526-81ff-9dc32692886a" width="600"/>
+
+The network icon will display to the bottom right:
+
+<img src="https://github.com/user-attachments/assets/f98272db-b343-42ee-b22f-ffc564aa8d82" width="600"/>
+
+Now pip can be used to install pyserial:
+
+```
+pip install pyserial
+```
+
+<img src="https://github.com/user-attachments/assets/d51d429a-8cc2-4536-a78e-352d45315720" width="600"/>
+
+Now that the requested library pyserial is installed, the network adaptor can be disconnected. Select Player → Removable Devices → Network Adapter → Disconnect:
+
+<img src="https://github.com/user-attachments/assets/d7eebede-c83e-4ff2-81e2-d8a45edfeb2e" width="600"/>
+
+Now pyserial can be imported using:
+
+```
+cd ..
+python
+import serial
+```
+
+<img src="https://github.com/user-attachments/assets/62b42571-f226-401a-8b22-e3b66d1f3ad3" width="600"/>
+
+The version of pyserial installed needs to be removed an older version compatible with Windows XP needs to be installed (once again requires internet connectivity):
+
+```
+cd .\Scripts
+pip uninstall pyserial
+pip install pyserial==3.0.1
+
+cd ..
+python
+import serial
+```
+
+<img src="https://github.com/user-attachments/assets/ad8e45e5-4a91-44c9-84f8-2cbbe3d47931" width="600"/>
+
 ## USB Devices
 
 A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows XP Guest. In this example a Logitech Pro 9000 webcam will be used. The Logitech Pro 9000 is a USB 2.0 camera which had HD 720p (1280×720 pixels) and 30 fps which is effectively at the limit of USB 2.0. The Windows XP driver and software can be downloaded on the Windows 11 Host:
@@ -564,8 +669,6 @@ Right click the communication port and select properties:
 The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host)
 
 <img src="https://github.com/user-attachments/assets/2ab58a0f-3ee4-43ed-9e2f-b4d2bb4c011a" width="600"/>
-
-<img src="https://github.com/user-attachments/assets/9277b6a5-ff1a-44ec-bd96-8f07b91ae87e" width="600"/>
 
 Select Advanced:
 
