@@ -57,7 +57,7 @@ Dell Systems came with a Windows XP Reinstallation CD/DVD which can be converted
 
 ### WSUS Offline Update
 
-The last version of WSUS Offline Update to support Windows 2000 was 9.2.5. The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 2000 downloads from their download servers:
+The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows XP downloads from their download servers:
 
 * [WSUS Offline Update Windows XP (Windows XP 32 Bit=wxp-enu)](https://archive.org/details/wsusoffline-eol-windows)
 
