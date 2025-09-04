@@ -443,11 +443,57 @@ And the file created on the Windows XP Guest in this shared folder can be access
 
 ## USB Devices
 
-A USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows XP Guest:
+A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows XP Guest. In this example a Logitech Pro 9000 webcam will be used. The Logitech Pro 9000 is a USB 2.0 camera which had HD 720p (1280×720 pixels) and 30 fps which is effectively at the limit of USB 2.0. The Windows XP driver and software can be downloaded on the Windows 11 Host:
 
-<img src='./images/img_063.png' alt='img_063' width='600'/>
+<img src="https://github.com/user-attachments/assets/f3bbf58c-2e35-4999-9ef7-6b10927f333a" width="600"/>
 
-The Device Drivers for the USB Device and software can be installed in the Windows XP Guest.
+And dragged and dropped to the VM:
+
+<img src="https://github.com/user-attachments/assets/10d1d1c2-531f-41ba-ac88-17cd5072c860" width="600"/>
+
+The installer can be run on the Windows XP VM:
+
+<img src="https://github.com/user-attachments/assets/7ed0b744-fac8-4292-a0ab-e56d2ca25383" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/fb1408ea-0b83-4b62-96b8-396777e1b0b5" width="600"/>
+
+When prompted to connect the webcam, pass through the USB device from the Windows 11 Host to the VM using Player → Removable Devices → Logitech USB Device → Connect:
+
+<img src="https://github.com/user-attachments/assets/5bc3fa2a-89e4-4cc2-bc3b-688ba6f6802f" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/c719f71f-e1cf-4aab-badf-f1d9ea19ea03" width="600"/>
+
+The found new hardware wizard will show:
+
+<img src="https://github.com/user-attachments/assets/07be6ba7-9878-4cdc-b1b4-65729eef7ae9" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/16d84a8c-ab72-4404-abb4-783f88dc7f29" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/ffd7bf69-414b-4a0f-a1be-71c58948d441" width="600"/>
+
+The image from the webcam displays, select next:
+
+<img src="https://github.com/user-attachments/assets/e44bb276-95d3-445a-8705-492b4c7c9724" width="600"/>
+
+Select check out my webcam:
+
+<img src="https://github.com/user-attachments/assets/b216a6b0-873c-43cd-b1c6-d9b02229ae87" width="600"/>
+
+Select quick capture:
+
+<img src="https://github.com/user-attachments/assets/bc826dfd-0d07-4a21-b07b-8b95978502af" width="600"/>
+
+The webcam software can be used in Windows XP to control the Logitech Pro 9000 which has been passed through from the Windows 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/e505d12c-1072-4912-b75f-710b8e0a5848" width="600"/>
 
 ## Serial Ports
 
