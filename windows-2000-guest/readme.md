@@ -436,7 +436,7 @@ Select next:
 
 Select next again:
 
-<img src="https://github.com/user-attachments/assets/ce390724-0253-436e-bb12-2d4b9574a6c2" wodth="600"/>
+<img src="https://github.com/user-attachments/assets/ce390724-0253-436e-bb12-2d4b9574a6c2" width="600"/>
 
 Select finish:
 
