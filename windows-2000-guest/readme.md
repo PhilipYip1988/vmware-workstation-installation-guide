@@ -532,7 +532,7 @@ To complete the printer driver installation the Windows 2000 VM needs to be rest
 
 The p-touch editor can now be installed:
 
-<img src="https://github.com/user-attachments/assets/5141a7c1-5976-46f6-b588-78f534f3bbf8" wodth="600"/>
+<img src="https://github.com/user-attachments/assets/5141a7c1-5976-46f6-b588-78f534f3bbf8" width="600"/>
 
 Select yes:
 
