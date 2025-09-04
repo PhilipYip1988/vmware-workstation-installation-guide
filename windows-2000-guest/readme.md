@@ -612,7 +612,7 @@ In this case it will be left at port 3:
 
 <img src="https://github.com/user-attachments/assets/04cd83bf-c91f-4ca1-84ae-f93b09257e10" width="600"/>
 
-Opn VMware Player and select Edit Virtul Machine Settings:
+Open VMware Player and select Edit Virtual Machine Settings:
 
 <img src="https://github.com/user-attachments/assets/865199af-f476-4d3a-b821-41d5568a7058" width="600"/>
 
