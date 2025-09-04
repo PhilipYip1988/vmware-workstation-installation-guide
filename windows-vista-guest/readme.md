@@ -42,40 +42,13 @@ Dell Systems came with a Windows Vista Reinstallation DVD which can be converted
 
 This works on a Windows 11 Host to convert a Windows Vista folder to a ISO. Windows Vista is otherwise unsupported by NTLite.
 
-## Windows Vista Standalone Updates
-
-WSUS Offline update may hang, the following updates should be installed manually before using WSUS Offline Update:
-
-<details>
-  <summary>Windows Vista Standalone Updates Microsoft Update Catalog</summary>
-
-* [KB948465](https://catalog.update.microsoft.com/Search.aspx?q=KB948465)
-* [KB3205638](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3205638)
-* [KB4012583](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4012583)
-* [KB4015195](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015195)
-* [KB4015380](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015380)
-
-</details>
-
 ## WSUS Offline Update
 
-The last version of WSUS Offline Update to support Windows Vista was 11.0.6:
+The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows Vista downloads from their download servers:
 
-* [VMware Tools 11.0.6](https://archive.org/details/vmware-tools-windows-11.0.6-15940789)
+* [WSUS Offline Update for Windows Vista](https://archive.org/details/wsusoffline-eol-windows)
 
-
-* ~~[WSUS Offline Update](https://download.wsusoffline.net/)~~
-
-This no longer works as Microsoft removed the downloads WSUS Offline updates uses from their servers.
-
-<details>
-  <summary>Archive.org</summary>
-
-The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windows Vista downloads from their download servers:
-
-* [WSUS Offline Update Windows Vista (Windows Vista 32 Bit=w60 and Windows Vista 64 Bit=w60-x64)](https://archive.org/details/wsusoffline-eol-windows)
-
-I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
+Select w60-x64 for Windows Vista 64 Bit or w60 for Windows Vista 32 Bit respectively.
 
 The following updates should be installed manually before using the WSUS Offline Update ISO as Windows Vista has a bug and enters an infinite loop when checking for updates. This issue is addressed if the following 5 updates are manually installed:
 
@@ -87,13 +60,11 @@ The following updates should be installed manually before using the WSUS Offline
 
 Copy the following 5 updates to a folder and convert the folder to an ISO using [ImgBurn](https://www.imgburn.com/). Mount this ISO and install these updates immediately after installing Windows Vista. Then mount the WSUS Offline Update ISO and use it to patch Windows Vista fully until end of life. 
 
-</details>
+### Download VMware Tools ISO
 
-## Download VMware Tools ISO
+The Windows Vista drivers for the Windows Vista Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
 
-The Windows Vista drivers for the Windows Vista Guest are contained in the VMware Tools Installation ISO. VMware tools for legacy versions of Windows needs to be downloaded from VMware separately:
-
-* [VMware Tools Version 11.0.6](https://packages.vmware.com/tools/releases/11.0.6/windows/)
+* [VMware Tools Version 11.0.6](https://archive.org/details/vmware-tools-windows-11.0.6-15940789)
 
 Windows Vista setup is very similar to Windows 7 setup confer with:
 
