@@ -59,7 +59,10 @@ WSUS Offline update may hang, the following updates should be installed manually
 
 ## WSUS Offline Update
 
-The last version of WSUS Offline Update to support Windows Vista was 10.9.2:
+The last version of WSUS Offline Update to support Windows Vista was 11.0.6:
+
+* [VMware Tools 11.0.6](https://archive.org/details/vmware-tools-windows-11.0.6-15940789)
+
 
 * ~~[WSUS Offline Update](https://download.wsusoffline.net/)~~
 
