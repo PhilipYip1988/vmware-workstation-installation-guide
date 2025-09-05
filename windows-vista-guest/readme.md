@@ -24,22 +24,21 @@ The first setting allows the CPU to optimise the VM performance, the VM may be v
 
 ## Installation Media
 
-The Website Archive.org hosts multi-lingual Dell Windows Vista Reinstallation ISOs. These are likely ripped by the uploader from physical DVDs as Dell did not provide download:
+The Website Archive.org hosts multi-lingual Dell Windows Vista Reinstallation ISOs. These are likely ripped by the uploader from physical DVDs as Dell did not provide download. The ISO Checksums can be used to ensure a complete download:
+
+|ISO|SHA256 ISO Checksum|
+|---|---|
+|[Dell Vista Business SP1 (x64)](https://archive.org/details/Reinstallation_DVD_Windows_Vista_Business_64Bit_SP1_H207H_Dell_2008)|AE468896767B27F9F53441AC09865872AE546449AC1F406BA9C1DF409DE85F7F|
+|[Dell Vista Business SP1 (x86)](https://archive.org/details/windows-vista-business-sp-1-dell-oem-32bit)|B0898DA188B90C40C47A231B8A8A1A8EC761EFD5C6C4F39A3B01BD8AAA743DB0|
+
+Other editions (untested):
 
 * [Dell Windows Vista Business 64 Bit SP1](https://archive.org/details/Reinstallation_DVD_Windows_Vista_Business_64Bit_SP1_H207H_Dell_2008)
 * [Dell Windows Vista Home Premium 64 Bit SP1](https://archive.org/details/vistasp1homepremiumn069h)
 
-* [Dell Windows Vista Business 32 Bit SP1](https://archive.org/details/windows-vista-business-sp-1-dell-oem-32bit)
 * [Dell Windows Vista Home Basic 32 Bit SP1](https://archive.org/details/WindowsVistaHomeBasicwithServicePack1x86DellOEM)
 * [Dell Windows Vista Home Premium 32 Bit SP1](https://archive.org/details/Dell_OEM_Windows_Vista_Home_Premium_32Bit_Reinstall_DVD_2007_Eng)
 * [Dell Windows Vista Ultimate 32 Bit SP1](https://archive.org/details/vista-sp-1-ultimate)
-
-The ISO Checksums can be used to ensure a complete download:
-
-|ISO|SHA256 ISO Checksum|
-|---|---|
-|Business (x64)|AE468896767B27F9F53441AC09865872AE546449AC1F406BA9C1DF409DE85F7F|
-|Business (x86)|b0898da188b90c40c47a231b8a8a1a8ec761efd5c6c4f39a3b01bd8aaa743db0|
 
 To check the SHA256, in the downloads folder, right click the ISO file and select copy as path. Then open up the Windows Terminal and type in:
 
