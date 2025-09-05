@@ -65,6 +65,7 @@ This works on a Windows 11 Host to convert a Windows Vista folder to a ISO. Wind
 The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows Vista downloads from their download servers:
 
 * [WSUS Offline Update for Windows Vista](https://archive.org/details/wsusoffline-eol-windows)
+* [WSUS Offline Update for Windows Vista](https://archive.org/details/windowsvistaupdates24)
 
 Select w60-x64 for Windows Vista 64 Bit or w60 for Windows Vista 32 Bit respectively.
 
@@ -467,6 +468,65 @@ Restart the VM and relaunch the Update Installer:
 Restart when prompted:
 
 <img src="https://github.com/user-attachments/assets/a0884c7e-5f6b-4875-8378-680daa14826b" width="6--"/>
+
+## Installing VMware Tools
+
+Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src="https://github.com/user-attachments/assets/193e2b35-a22a-4e96-92c9-fffa43d9bed6" width="600"/>
+
+Select browse:
+
+<img src="https://github.com/user-attachments/assets/36d04f0f-530b-4184-b60b-6dc5c1bb8387" width="600"/>
+
+Select the `VMware-tools-windows-11.0.6-15940789.iso` and select open:
+
+<img src="https://github.com/user-attachments/assets/b9cf0c9f-fd99-40b7-bec6-c0e2290df0a2" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/e72db2f6-ca52-46fb-a4b2-6be0a2c767ce" width="600"/>
+
+Open the DVD drive:
+
+<img src="https://github.com/user-attachments/assets/710abcb1-ba1b-47f8-9b28-a934346a2b4d" width="600"/>
+
+Accept the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/55210eb1-3af7-4b71-9f9f-73eee3eba58b" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/d1a07c6d-9352-4f63-9458-487878d1176d" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/3c2bf105-d1e5-4403-9c28-eb7fd06a6365" width="600"/>
+
+Select install:
+
+<img src="https://github.com/user-attachments/assets/b326b546-62f0-4a93-bfbd-a383b9e286dc" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/7c70fb0e-80f1-4b73-8c8e-57870cd85b2e" width="600"/>
+
+Select yes to restart the VM:
+
+<img src="https://github.com/user-attachments/assets/edf804fe-4a68-46fa-9cf2-5b022f4e6552" width="600"/>
+
+# Enabling Aero
+
+The Windows Experience Index Assessment does not work as the Virtual Display Adaptor will not flash during the assessment and the assessment therefore hangs. Aero can be enabled using the following registry edit
+
+Go to HKCU\Software\Microsoft\Windows\DWM
+
+Add a DWORD Composition = 1
+
+Add a DWORD CompositionPolicy = 2
+
+Restart Desktop Window Manager (net stop uxsms → net start uxsms).
+
 
 
 
