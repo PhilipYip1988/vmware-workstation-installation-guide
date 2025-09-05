@@ -38,8 +38,16 @@ The ISO Checksums can be used to ensure a complete download:
 
 |ISO|SHA256 ISO Checksum|
 |---|---|
-|Business (x64)|ae468896767b27f9f53441ac09865872ae546449ac1f406ba9c1df409de85f7f|
+|Business (x64)|AE468896767B27F9F53441AC09865872AE546449AC1F406BA9C1DF409DE85F7F|
 |Business (x86)|b0898da188b90c40c47a231b8a8a1a8ec761efd5c6c4f39a3b01bd8aaa743db0|
+
+To check the SHA256, in the downloads folder, right click the ISO file and select copy as path. Then open up the Windows Terminal and type in:
+
+```
+Get-FileHash "C:\Users\Philip\Downloads\Reinstallation DVD Windows Vista Business 64Bit SP1 (H207H)(Dell)(2008).ISO"
+```
+
+<img src="https://github.com/user-attachments/assets/c4178ecd-cb15-457e-8732-35c4a8923ea3" width="600"/>
 
 ### Creating a Installation ISO from a DVD
 
@@ -59,8 +67,8 @@ Select `wou-w60-x64 [2023-v1].iso` for Windows Vista 64 Bit or `wou-w60-x86 [202
 
 |ISO|SHA256 ISO Checksum|
 |---|---|
-|wou-w60-x64 [2023-v1].iso (x64)||
-|wou-w60-x64 [2023-v1].iso (x86)||
+|wou-w60-x64 [2023-v1].iso (x64)|-|
+|wou-w60-x64 [2023-v1].iso (x86)|-|
 
 ### Download VMware Tools ISO
 
@@ -551,7 +559,13 @@ Restart when prompted:
 
 <img src="https://github.com/user-attachments/assets/a0884c7e-5f6b-4875-8378-680daa14826b" width="6--"/>
 
+A large number of updates should install. On my Windows Vista VM, I encountered a bluescreen and had to select last known configuration:
 
+<img src="https://github.com/user-attachments/assets/1e16b3e6-d3bc-4587-99e5-f2811bc2bd9e" width="600"/>
+
+However the large number of updates were installed:
+
+<img src="https://github.com/user-attachments/assets/ab662c55-244e-48a3-832b-748e927621d0" width="600"/>
 
 # Enabling Aero
 
