@@ -4,6 +4,24 @@
 
 * [YouTube](https://www.youtube.com/watch?v=oysZWd6vPhA)
 
+## Notes
+
+VMware Workstation Player 17.6.4 has Windows Vista as an option for a Virtual Machine. However Windows Vista is regarded as a legacy Operating System and isn't tested by Broadcom. Moreover the VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows Vista.
+
+VMware Tools 11.0.6 is the last version of VMware Tools to support Windows Vista and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
+
+On modern hardware, with a 11th-14th Generation Processor, the following entries should be added to the VMX file:
+
+```
+monitor.virtual_exec = "hardware"
+monitor.virtual_mmu = "software"
+mks.enableVulkanRenderer = "FALSE"
+cpuid.0.eax = "0000000X"
+cpuid.1.ecx = "00000001"
+```
+
+The first setting allows the CPU to optimise the VM performance, the VM may be very slow without this setting. The second setting prevents use of a memory management unit that Windows Vista doesn't understand and can lead to a Blue Screen of Death (BSOD). The third setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows Vista and often leads to black screens. The last two settings prevent Windows Vista from seeing unsupported CPU features which Windows XP doesn't understand and can lead to a Blue Screen of Death (BSOD).
+
 ## Installation Media
 
 The biggest difficulty to setting up a Windows Vista Virtual Machine is obtaining the installation as Microsoft nor its OEMs provided official download links to an Installation ISO. Windows Vista Setup Files were available from Microsoft and the ISO needed to manually be created from them but these download links have long been removed:
@@ -52,7 +70,7 @@ Select w60-x64 for Windows Vista 64 Bit or w60 for Windows Vista 32 Bit respecti
 
 The following updates should be installed manually before using the WSUS Offline Update ISO as Windows Vista has a bug and enters an infinite loop when checking for updates. This issue is addressed if the following 5 updates are manually installed:
 
-* [KB948465](https://catalog.update.microsoft.com/Search.aspx?q=KB948465)
+* [KB948465](https://catalog.update.microsoft.com/Search.aspx?q=KB948465)*
 * [KB3205638](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3205638)
 * [KB4012583](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4012583)
 * [KB4015195](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015195)
@@ -272,18 +290,75 @@ Select Start:
 
 <img src="https://github.com/user-attachments/assets/4f0eb7d2-a384-4572-ba91-f8951c821dc4" width="600"/>
 
+You will be taken to the Windows Vista Desktop:
 
+<img src="https://github.com/user-attachments/assets/e6134b14-1194-4195-909a-f781bfce43c1" width="600"/>
 
+## Backing up the VM
 
+Shut down the Windows Vista VM and then create a copy of the VM folder. Should you encounter problems with your VM after installing software, you can delete the original folder and rename the copied folder to the original folders name. Essentially this will give you a VM to roll back to:
 
+<img src="https://github.com/user-attachments/assets/0e1b6187-febd-485e-9e5f-ffc737707880" width="600"/>
 
+## Preparing Updates ISO
 
+Download the 5 updates:
 
+<img src="https://github.com/user-attachments/assets/97a31887-7361-4560-a318-3da4f46ef019" width="600"/>
 
+Create a folder called updates:
 
+<img src="https://github.com/user-attachments/assets/c8244f35-de9a-4bfb-8d67-cadac9291953" width="600"/>
 
+Move the 5 updates to the folder updates:
 
+<img src="https://github.com/user-attachments/assets/aa241232-2195-4575-bdfc-03bfb991cb85" width="600"/>
 
+<img src="https://github.com/user-attachments/assets/c48e4fe9-7a09-485b-af47-b5d28fe5cf16" width="600"/>
+
+Open ImgBurn and select Create Image File from Files/Folders:
+
+<img src="https://github.com/user-attachments/assets/2afc555c-af7e-45cf-8dd1-16b9f47651ef" width="600"/>
+
+Select open folder:
+
+<img src="https://github.com/user-attachments/assets/3e840e79-b78e-409f-9de8-f4f15259ce42" width="600"/>
+
+Select the Updates folder:
+
+<img src="https://github.com/user-attachments/assets/b5785163-fdf6-4271-871e-0be1e16fd056" width="600"/>
+
+Select, select folder:
+
+<img src="https://github.com/user-attachments/assets/9c7dfdae-71a0-4e14-bf42-90c620ea632a" width="600"/>
+
+Select the folder for the destination:
+
+<img src="https://github.com/user-attachments/assets/d54429d7-5e25-491b-9e4b-0e90d547e3d5" width="600"/>
+
+In this case, the destination will be `updates.iso` in the downloads folder. Select save:
+
+<img src="https://github.com/user-attachments/assets/53838b46-512b-4120-9386-d7546a204cce" width="600"/>
+
+Select the files/fodler to image icon:
+
+<img src="https://github.com/user-attachments/assets/8960bb92-21db-4ac7-97b6-1cb293b462c9" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/254d36df-f40b-4637-a60c-6ccd531c7acc" width="300"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/d72d1d02-e0fb-46db-96d9-77f654c0c059" width="300"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/e3905cbc-f2e5-4e6d-a72f-017a9446f4c2" width="200"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/636f508c-22a1-4d65-b0dc-6c8a5f89b436" width="200"/>
 
 
 
