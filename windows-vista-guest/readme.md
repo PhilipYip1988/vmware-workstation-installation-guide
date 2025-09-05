@@ -24,14 +24,7 @@ The first setting allows the CPU to optimise the VM performance, the VM may be v
 
 ## Installation Media
 
-The biggest difficulty to setting up a Windows Vista Virtual Machine is obtaining the installation as Microsoft nor its OEMs provided official download links to an Installation ISO. Windows Vista Setup Files were available from Microsoft and the ISO needed to manually be created from them but these download links have long been removed:
-
-* [WinWorld OS](https://winworldpc.com/library/operating-systems) 
-
-<details>
-  <summary>Archive.org</summary>
-
-The Website Archive.org hosts each Unofficial Dell Windows Vista Reinstallation ISO which are multi-lingual:
+The Website Archive.org hosts multi-lingual Dell Windows Vista Reinstallation ISOs. These are likely ripped by the uploader from physical DVDs as Dell did not provide download:
 
 * [Dell Windows Vista Business 64 Bit SP1](https://archive.org/details/Reinstallation_DVD_Windows_Vista_Business_64Bit_SP1_H207H_Dell_2008)
 * [Dell Windows Vista Home Premium 64 Bit SP1](https://archive.org/details/vistasp1homepremiumn069h)
@@ -41,16 +34,12 @@ The Website Archive.org hosts each Unofficial Dell Windows Vista Reinstallation 
 * [Dell Windows Vista Home Premium 32 Bit SP1](https://archive.org/details/Dell_OEM_Windows_Vista_Home_Premium_32Bit_Reinstall_DVD_2007_Eng)
 * [Dell Windows Vista Ultimate 32 Bit SP1](https://archive.org/details/vista-sp-1-ultimate)
 
-I have tested installation of the the following ISOs in a Virtual Machine but as this is an unofficial source and should be used with caution. 
-
-The ISO Checksums can be used to ensure a complete download but these do not match official Dell or Microsoft records as they would have been created from a CD/DVD by an end user:
+The ISO Checksums can be used to ensure a complete download:
 
 |ISO|SHA256 ISO Checksum|
 |---|---|
 |Business (x64)|ae468896767b27f9f53441ac09865872ae546449ac1f406ba9c1df409de85f7f|
 |Business (x86)|b0898da188b90c40c47a231b8a8a1a8ec761efd5c6c4f39a3b01bd8aaa743db0|
-
-</details>
 
 ### Creating a Installation ISO from a DVD
 
