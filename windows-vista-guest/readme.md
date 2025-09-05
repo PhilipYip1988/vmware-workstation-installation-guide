@@ -300,7 +300,7 @@ Shut down the Windows Vista VM and then create a copy of the VM folder. Should y
 
 <img src="https://github.com/user-attachments/assets/0e1b6187-febd-485e-9e5f-ffc737707880" width="600"/>
 
-## Preparing Updates ISO
+## Preparing SP2 Updates ISO
 
 Download the 5 updates:
 
