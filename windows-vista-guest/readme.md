@@ -40,7 +40,12 @@ Other editions (untested):
 * [Dell Windows Vista Home Premium 32 Bit SP1](https://archive.org/details/Dell_OEM_Windows_Vista_Home_Premium_32Bit_Reinstall_DVD_2007_Eng)
 * [Dell Windows Vista Ultimate 32 Bit SP1](https://archive.org/details/vista-sp-1-ultimate)
 
-To check the SHA256, in the downloads folder, right click the ISO file and select copy as path. Then open up the Windows Terminal and type in:
+To check the SHA256, in the downloads folder, right click the ISO file and select copy as path:
+
+<img src="https://github.com/user-attachments/assets/26c843c2-d75c-4481-aa20-1f17b670d5e8" width="600"/>
+
+Then open up the Windows Terminal and type in:
+
 
 ```
 Get-FileHash "C:\Users\Philip\Downloads\Reinstallation DVD Windows Vista Business 64Bit SP1 (H207H)(Dell)(2008).ISO"
