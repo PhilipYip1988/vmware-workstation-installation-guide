@@ -57,7 +57,7 @@ The Website Archive.org hosts the ISO created from WSUS Offline Update before Mi
 
 Select `wou-w60-x64 [2023-v1].iso` for Windows Vista 64 Bit or `wou-w60-x86 [2023-v1].iso`for Windows Vista 32 Bit respectively.
 
-|ISO|sha256 ISO Checksum|
+|ISO|SHA256 ISO Checksum|
 |---|---|
 |wou-w60-x64 [2023-v1].iso (x64)||
 |wou-w60-x64 [2023-v1].iso (x86)||
@@ -68,7 +68,7 @@ The Windows Vista drivers for the Windows Vista Guest are contained in the VMwar
 
 * [VMware Tools Version 11.0.6](https://archive.org/details/vmware-tools-windows-11.0.6-15940789)
 
-|ISO|SHA25 ISO Checksum|
+|ISO|SHA256 ISO Checksum|
 |---|---|
 |VMware-tools-windows-11.0.6-15940789.iso|8F1CC3181055891B98672F715E0CA7BBE4018960EAE945D7A4B9F640C44C3D79|
 
