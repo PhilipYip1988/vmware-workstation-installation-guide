@@ -163,7 +163,121 @@ The command above will change the time the Windows Vista Guest Virtual BIOS disp
 
 ## Modern Generation Processors (11-14th Generation)
 
-Certain legacy settings may need to be configured to run older guest operating systems such as Windows Vista.
+Certain legacy settings may need to be configured to run older guest operating systems such as Windows Vista:
+
+<img src="https://github.com/user-attachments/assets/4c2dc230-fb75-4476-b56d-b3b28d6a6fdb" width="600"/>
+
+Legacy CPU settings:
+
+```
+cpuid.0.eax = "0000000X"
+cpuid.1.ecx = "00000001"
+```
+
+These settings help emulate older CPU instructions that XP expects.
+
+Legacy monitor / virtualization settings
+
+```
+mks.enableVulkanRenderer = "FALSE"
+```
+
+This disables the Vulkan renderer, forcing VMware to use a more compatible DirectX/software renderer.
+
+Legacy monitor / virtualization settings:
+
+```
+monitor.virtual_exec = "hardware"
+monitor.virtual_mmu = "software"
+```
+
+These settings ensure proper CPU and MMU handling for legacy guests.
+
+### OEM SLP
+
+OEM SLP is not applied by default:
+
+<details>
+  <summary>Modded ROMs</summary>
+
+The my digital life forums has a post about a modded Virtual BIOS which includes a Dell SLIC 2.1 compatible with Dell Windows Vista Business OEM SLP. These ROMs are not supported by Microsoft or Dell (but then neither is Windows Vista). You will need to log into their forums to view the files:
+
+* [My Digital Life: SLIC 1.0, 2.1 Mod](https://forums.mydigitallife.net/threads/vmware-workstation-esxi-bios-efi-slic-mod.64693/#post-1132133)
+
+Extract the downloaded file and navigate to the `17.6.0 Modded ROMs` folder. Rename `WORKSTATION_17.6.0_DELL2.7_SLIC_BIOS.440_(497).ROM` `WORKSTATION_17.6.0_DELL2.7_SLIC_BIOS.440_(497).ROM` to `modded_BIOS.440.ROM` and copy the modded ROM to the directory of the Windows Vista Guest. Update the Virtual Machine Configuration file to:
+
+
+For Windows Vista extract the downloaded file and navigate to the 17.6.0 Modded ROMs folder. Rename  to modded_BIOS.440.ROM and copy the modded ROM to the directory of the Windows Vista Guest. Update the Virtual Machine Configuration file to:
+
+
+```
+bios440.filename = "modded_BIOS.440.ROM"
+```
+
+Note if the corresponding ROM is not found in the directory the above line of code will prevent the Windows Vista Guest from booting.
+
+</details>
+
+## Installing the Windows Vista Guest OS
+
+Select the Windows Vista Guest and select Play:
+
+<img src="https://github.com/user-attachments/assets/e3a8f769-bd23-4e20-b92d-225319100726" width="600"/>
+
+The Windows Vista VM will boot from the Dell Windows Vista Business Reinstallation ISO:
+
+<img src="https://github.com/user-attachments/assets/cf959629-5d75-465a-a7da-293d4424f505" width="600"/>
+
+Select your language:
+
+<img src="https://github.com/user-attachments/assets/37a7ad10-efdf-4df1-83a0-e634be8397d3" width="600"/>
+
+And keyboard layout and select next:
+
+<img src="https://github.com/user-attachments/assets/5f1ff368-98a6-4393-a770-ea52c4b6f159" width="600"/>
+
+Select Install Now:
+
+<img src="https://github.com/user-attachments/assets/0f9b2573-6919-4377-a73d-8c98b0aa2ae3" width="600"/>
+
+Accept the license agreement and select next:
+
+<img src="https://github.com/user-attachments/assets/ea6506fb-0aab-4749-a1e6-ecfba705da77" width="600"/>
+
+Select Custom (Advanced):
+
+<img src="https://github.com/user-attachments/assets/dbe7e26b-944f-437c-87ec-bcc5a091b35a" width="600"/>
+
+Select Disk 0 (Unallocated Space) and select next:
+
+<img src="https://github.com/user-attachments/assets/d8c585e8-03df-41a4-b967-0c926f7330c8" width="600"/>
+
+Input your user name and select next:
+
+<img src="https://github.com/user-attachments/assets/d40aebf3-8146-48ad-831b-846a9747dc6b" width="600"/>
+
+Input the computer name and select next:
+
+<img src="https://github.com/user-attachments/assets/fbacee92-40ad-4626-add6-f79dc576a9e2" width="600"/>
+
+Select Ask me later:
+
+<img src="https://github.com/user-attachments/assets/4f7f097d-49c2-4f3a-9f50-f65b2ee6e083" width="600"/>
+
+Select your timezone and then select next:
+
+<img src="https://github.com/user-attachments/assets/fd6f8a3b-5f1c-4510-8b66-b1049f877d9c" width="600"/>
+
+Select Start:
+
+<img src="https://github.com/user-attachments/assets/4f0eb7d2-a384-4572-ba91-f8951c821dc4" width="600"/>
+
+
+
+
+
+
+
 
 
 
