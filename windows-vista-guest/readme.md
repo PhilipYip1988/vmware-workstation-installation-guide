@@ -292,7 +292,9 @@ Select Start:
 
 You will be taken to the Windows Vista Desktop:
 
-<img src="https://github.com/user-attachments/assets/e6134b14-1194-4195-909a-f781bfce43c1" width="600"/>
+<img src="https://github.com/user-attachments/assets/9f79f6d2-ae17-48d0-bb56-9f53d6819df8" width="600"/>
+
+Uncheck run at startup and close the welcome centre.
 
 ## Backing up the VM
 
@@ -340,7 +342,7 @@ In this case, the destination will be `updates.iso` in the downloads folder. Sel
 
 <img src="https://github.com/user-attachments/assets/53838b46-512b-4120-9386-d7546a204cce" width="600"/>
 
-Select the files/fodler to image icon:
+Select the files/folder to image icon:
 
 <img src="https://github.com/user-attachments/assets/8960bb92-21db-4ac7-97b6-1cb293b462c9" width="600"/>
 
@@ -359,6 +361,50 @@ Select ok:
 Select ok:
 
 <img src="https://github.com/user-attachments/assets/636f508c-22a1-4d65-b0dc-6c8a5f89b436" width="200"/>
+
+## Install Updates
+
+Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src="https://github.com/user-attachments/assets/891f250f-73d4-4ffa-babe-bd1acfb8ab3f" width="600"/>
+
+Select browse:
+
+<img src="https://github.com/user-attachments/assets/15a560f3-ce93-4ec6-9287-7cd8e70ba6cf" width="600"/>
+
+Select the updates ISO:
+
+<img src="https://github.com/user-attachments/assets/3bd46c00-7096-43a8-b814-c99050f194ff" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/ff23f29c-299f-4ca8-a084-6ce2b2fe1916" width="600"/>
+
+Select the DVD drive:
+
+<img src="https://github.com/user-attachments/assets/770f50bc-d1c1-4577-9d0a-25e5aa2a73b6" width="600"/>
+
+Select KB948465 which is Windows Vsita Service Pack 2 and launch it to install:
+
+<img src="https://github.com/user-attachments/assets/89b67f97-e835-45e1-b008-2b686e157065" width="600"/>
+
+The User Account Control Prompt will display, select Continue:
+
+<img src="https://github.com/user-attachments/assets/0b59051a-0b36-44c9-b7e8-c90b91926a17" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/d14fe3aa-f168-42c7-bf76-e7f709e6a04c" width="600"/>
+
+Accept the license agreement and select next:
+
+<img src="https://github.com/user-attachments/assets/42b77cd1-a64b-45af-a2c0-63df22852a87" width="600"/>
+
+Select install:
+
+<img src="https://github.com/user-attachments/assets/632cc95c-c83d-4eb1-9d07-4df1c19f4358" width="600"/>
+
+The Windows Vista VM will restart 3 times while installing Service Pack 2.
 
 
 
