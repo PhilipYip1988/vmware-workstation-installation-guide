@@ -175,7 +175,7 @@ bios.bootDelay = "20000"
 
 The command above will change the time the Windows Vista Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
 
-## Modern Generation Processors (11-14th Generation)
+### Modern Generation Processors (11-14th Generation)
 
 Certain legacy settings may need to be configured to run older guest operating systems such as Windows Vista:
 
