@@ -362,7 +362,7 @@ Select ok:
 
 <img src="https://github.com/user-attachments/assets/636f508c-22a1-4d65-b0dc-6c8a5f89b436" width="200"/>
 
-## Install Updates
+## Installing Updates
 
 Select Player → Removable Devices → CD/DVD → Settings:
 
@@ -406,7 +406,80 @@ Select install:
 
 The Windows Vista VM will restart 3 times while installing Service Pack 2. Service Pack 2 will now be installed:
 
-<img src="https://github.com/user-attachments/assets/f1eb3fc2-6aed-476c-8c6a-0a9fc238401a" wodth="600"/>
+<img src="https://github.com/user-attachments/assets/f1eb3fc2-6aed-476c-8c6a-0a9fc238401a" width="600"/>
+
+Repeat for KB3205638:
+
+<img src="https://github.com/user-attachments/assets/ea804f4c-782c-432b-b703-5ad9c1fe554d" width="600"/>
+
+KB4012583:
+
+<img src="https://github.com/user-attachments/assets/86e25239-02e3-44e2-a1c8-b42a9bbcac91" width="600"/>
+
+KB4015195:
+
+<img src="https://github.com/user-attachments/assets/427fedc4-ad58-4f25-81bd-44d51bb73ada" width="600"/>
+
+KB4015380:
+
+<img src="https://github.com/user-attachments/assets/8aa8b613-038c-4732-a0f9-c4212cfc71a1" width="600"/>
+
+Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src="https://github.com/user-attachments/assets/aab89c2f-f4ad-4bbd-bf27-0c2fccad3ab1" width="600"/>
+
+Select browse:
+
+<img src="https://github.com/user-attachments/assets/f5c6af98-cb45-4900-9c67-a47ac9155fe1" width="600"/>
+
+Select `wsusoffline-w60-x64.iso` and then select open:
+
+<img src="https://github.com/user-attachments/assets/18af8bd7-3ec3-4fa7-80f8-5f6117bd2ea3" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/66f8e56f-b6bb-4493-aed5-106dd2ff54e9" width="600"/>
+
+Right click the ISO file and select explore:
+
+<img src="https://github.com/user-attachments/assets/5c5dd82d-64ef-40b2-8da2-1dd09efcc067" width="600"/>
+
+Launch Update Installer:
+
+<img src="https://github.com/user-attachments/assets/6e29ef74-ab1c-4b11-b9c5-7e9336fef5eb" width="600"/>
+
+Select Allow:
+
+<img src="https://github.com/user-attachments/assets/b535c869-9bfa-4271-82a5-11220c27fcee" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/4d5e6ecd-244a-420a-ae20-25bc1e401812" width="600"/>
+
+Check Update C++ Runtime Libraries, Install .NET Framework 3.5, Install PowerShell 2.0 and Update Remote Desktop Client:
+
+<img src="https://github.com/user-attachments/assets/7b6dc20d-7c9c-440c-893e-9f1f52eabdd4" width="600"/>
+
+Restart the VM and relaunch the Update Installer:
+
+<img src="https://github.com/user-attachments/assets/011cccf9-c640-4ac7-9581-a5bbbfed78de" width="600"/>
+
+Restart when prompted:
+
+<img src="https://github.com/user-attachments/assets/a0884c7e-5f6b-4875-8378-680daa14826b" width="6--"/>
+
+
+
+
+* [KB2506014](https://www.catalog.update.microsoft.com/Search.aspx?q=kb2506014)
+
+KB2506014 KB3210129 KB3210136
+
+
+
+
+
+
 
 
 Windows Vista setup is very similar to Windows 7 setup confer with:
