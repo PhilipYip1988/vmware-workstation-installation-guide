@@ -40,63 +40,13 @@ To the right hand side select Dell, then select Dell OptiPlex 7040, Windows 7 Pr
 
 <img src='./images/img_002.png' alt='img_002' width='600'/>
 
-## Download Windows 7 Standalone Security Patches
-
-The Windows 7 Professional Index and the Dell Windows 7 Reinstallation ISO was updated in 2016. It is recommended to download the following standalone updates from the Microsoft Update catalog patching the Windows 7 installation to the final Security Rollup in January 2020:
-
-<details>
-  <summary>Windows 7 Standalone Updates Microsoft Update Catalog</summary>
-
-**Select the "Windows 7 64 Bit" Package for Windows 7 64 Bit or and "Windows 7" package for Windows 7 32 Bit.**
-
-<img src='./images/img_003.png' alt='img_003' width='600'/>
-
-Convenience Rollup:
-
-* [Service Stack KB3020369](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3020369)
-* [Convenience Rollup KB3125574](https://www.catalog.update.microsoft.com/Search.aspx?q=3125574)
-
-Note that a restart is required after installing these updates:
-
-Service Stack Updates for January 2020 Rollup:
-
-* [KB4474419](https://www.catalog.update.microsoft.com/Search.aspx?q=4474419)
-* [KB4490628](https://www.catalog.update.microsoft.com/Search.aspx?q=4490628)
-* [KB4536952](https://www.catalog.update.microsoft.com/Search.aspx?q=4536952)
-
-Security Rollup:
-
-**Windows 7 Reached End of Life in January 2020 so this is the final Security Rollup.**
-
-* [Security Rollup KB4534310](https://www.catalog.update.microsoft.com/Search.aspx?q=2020-01%20Security%20Monthly%20Quality%20Rollup)
-
-A restart is required after installing these updates. 
-
-Microsoft .Net Framework: 
-
-* [Microsoft .NET 4.7.2 Framework (Offline Installer)](https://support.microsoft.com/en-gb/topic/microsoft-net-framework-4-7-2-offline-installer-for-windows-05a72734-2127-a15d-50cf-daf56d5faec2)
-* [Microsoft .NET 4.8.0 Framework (Offline Installer)](https://support.microsoft.com/en-gb/topic/microsoft-net-framework-4-8-offline-installer-for-windows-9d23f658-3b97-68ab-d013-aa3c3e7495e0)
-
-</details>
-
 ## WSUS Offline Update
 
-The last version of WSUS Offline Update to support Windows 7 was 11.9:
+The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 7 downloads from their download servers:
 
-* ~~[WSUS Offline Update](https://download.wsusoffline.net/)~~
+* [WSUS Offline Update for Windows 7](https://archive.org/details/windows7updates24)
 
-This no longer works as Microsoft removed the downloads WSUS Offline updates uses from their servers.
-
-<details>
-  <summary>Archive.org</summary>
-
-The Website Archive.org appears to host the ISO created from WSUS Offline Update before Microsoft removed Windows 7 downloads from their download servers:
-
-* [WSUS Offline Update Windows 7 (Windows 7 32 Bit=w61 and Windows 7 64 Bit=w61-x64)](https://archive.org/details/wsusoffline-eol-windows)
-
-I have tested installation of the ISO in a Virtual Machine but as this is an unofficial source and should be used with caution. 
-
-</details>
+Select `wou-w61-x64 [2023-v1].iso` for Windows 7 64 Bit or `wou-w61-x86 [2023-v1].iso` for Windows Vista 7 Bit respectively.
 
 ## Download VMware Tools ISO
 
