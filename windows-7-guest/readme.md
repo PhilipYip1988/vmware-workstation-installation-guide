@@ -28,7 +28,7 @@ The first setting allows the CPU to optimise the VM performance, the VM may be v
 
 ## Download Dell Windows 7 Reinstallation ISO
 
-To download the Dell Windows 7 Professional Reinstallation ISO Media Refresh 2016. Use the Windows ISO Download Tool:
+To download the Dell Windows 7 Professional Reinstallation ISO Media Refresh 2016 (`GDXKK_X8V66A00_W7SP1PRO64_ROW.iso`). Use the Windows ISO Download Tool which downloads the ISO from Dell's servers:
 
 * [Windows ISO Download Tool](https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool)
 
@@ -40,13 +40,27 @@ To the right hand side select Dell, then select Dell OptiPlex 7040, Windows 7 Pr
 
 <img src='./images/img_002.png' alt='img_002' width='600'/>
 
+Alternatively the Website Archive.org hosts the ISO file:
+
+* [GDXKK_X8V66A00_W7SP1PRO64_ROW.iso](http://archive.org/details/dell-windows-7-sp1-x64-isos-2016)
+
+|Edition|Architecture|ISO|SHA256|
+|---|---|---|---|
+|Professional|x64|GDXKK_X8V66A00_W7SP1PRO64_ROW.iso|5ccd8f03c950ac590f01125e17090df3d75e71b3b7bf14fc64b8493bbcb4a4fc|
+|Professional|x86|MT5KY_N6N9GA00_W7SP1PRO32_ROW(DL).iso|b33b6b5a5c98ad33729741b2f2fe4c74bc7a8677f7c13d0c4966fd9ae5ed2c14|
+
 ## WSUS Offline Update
 
 The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 7 downloads from their download servers:
 
 * [WSUS Offline Update for Windows 7](https://archive.org/details/windows7updates24)
 
-Select `wou-w61-x64 [2023-v1].iso` for Windows 7 64 Bit or `wou-w61-x86 [2023-v1].iso` for Windows Vista 7 Bit respectively.
+Select `wou-w61-x64 [2023-v1].iso` for Windows 7 64 Bit or `wou-w61-x86 [2023-v1].iso` for Windows 7 Bit respectively.
+
+|ISO|SHA256|
+|---|---|
+|||
+
 
 ## Download VMware Tools ISO
 
