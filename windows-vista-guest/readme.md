@@ -386,7 +386,7 @@ Select yes to restart the VM:
 
 <img src="https://github.com/user-attachments/assets/edf804fe-4a68-46fa-9cf2-5b022f4e6552" width="600"/>
 
-# Enabling Aero
+## Enabling Aero
 
 The Windows Experience Index Assessment does not work as the Virtual Display Adaptor will not flash during the assessment and the assessment therefore hangs. Aero can be enabled using the following registry edit
 
