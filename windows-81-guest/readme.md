@@ -24,7 +24,7 @@ The Website Archive.org hosts the ISO created by Microsoft before Microsoft remo
 
 |Language|Name|SHA256|Architecture|Editions|
 |---|---|---|---|---|
-|English (UK)|Win8.1_EnglishInternational_x64|de3d15afbda350f77c27aad76844477e396e947302d7402c09a16f3fa7254c68|64|Home&Pro|
+|English (UK)|[Win8.1_EnglishInternational_x64](https://archive.org/details/win8.1x32x64)|DE3D15AFBDA350F77C27AAD76844477E396E947302D7402C09A16F3FA7254C68|Home&Pro|
 |English (UK)|Win8.1_EnglishInternational_x32|02881d84a046b06a68df7714afffc207|32|Home&Pro|
 |English (UK)|Win8.1_SingleLang_EnglishInternational_x64|ed99429503578655cb1592973f44b327|64|HomeSL|
 |English (UK)|Win8.1_SingleLang_EnglishInternational_x32|670b01959d1dae192fff633eec0d5b60|32|HomeSL|
