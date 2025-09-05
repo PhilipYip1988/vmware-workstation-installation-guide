@@ -45,7 +45,7 @@ I have tested installation of the the following ISOs in a Virtual Machine but as
 
 The ISO Checksums can be used to ensure a complete download but these do not match official Dell or Microsoft records as they would have been created from a CD/DVD by an end user:
 
-|ISO|sha256 ISO Checksum|
+|ISO|SHA256 ISO Checksum|
 |---|---|
 |Business (x64)|ae468896767b27f9f53441ac09865872ae546449ac1f406ba9c1df409de85f7f|
 |Business (x86)|b0898da188b90c40c47a231b8a8a1a8ec761efd5c6c4f39a3b01bd8aaa743db0|
@@ -64,26 +64,24 @@ This works on a Windows 11 Host to convert a Windows Vista folder to a ISO. Wind
 
 The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows Vista downloads from their download servers:
 
-* [WSUS Offline Update for Windows Vista](https://archive.org/details/wsusoffline-eol-windows)
 * [WSUS Offline Update for Windows Vista](https://archive.org/details/windowsvistaupdates24)
 
-Select w60-x64 for Windows Vista 64 Bit or w60 for Windows Vista 32 Bit respectively.
+Select `wou-w60-x64 [2023-v1].iso` for Windows Vista 64 Bit or `wou-w60-x86 [2023-v1].iso`for Windows Vista 32 Bit respectively.
 
-The following updates should be installed manually before using the WSUS Offline Update ISO as Windows Vista has a bug and enters an infinite loop when checking for updates. This issue is addressed if the following 5 updates are manually installed:
-
-* [KB948465](https://catalog.update.microsoft.com/Search.aspx?q=KB948465)*
-* [KB3205638](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3205638)
-* [KB4012583](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4012583)
-* [KB4015195](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015195)
-* [KB4015380](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4015380)
-
-Copy the following 5 updates to a folder and convert the folder to an ISO using [ImgBurn](https://www.imgburn.com/). Mount this ISO and install these updates immediately after installing Windows Vista. Then mount the WSUS Offline Update ISO and use it to patch Windows Vista fully until end of life. 
+|ISO|sha256 ISO Checksum|
+|---|---|
+|wou-w60-x64 [2023-v1].iso (x64)||
+|wou-w60-x64 [2023-v1].iso (x86)||
 
 ### Download VMware Tools ISO
 
 The Windows Vista drivers for the Windows Vista Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
 
 * [VMware Tools Version 11.0.6](https://archive.org/details/vmware-tools-windows-11.0.6-15940789)
+
+|ISO|SHA25 ISO Checksum|
+|---|---|
+|VMware-tools-windows-11.0.6-15940789.iso|8F1CC3181055891B98672F715E0CA7BBE4018960EAE945D7A4B9F640C44C3D79|
 
 ## Configuring Virtual Hardware for a Windows Vista Guest
 
@@ -303,6 +301,101 @@ Shut down the Windows Vista VM and then create a copy of the VM folder. Should y
 
 <img src="https://github.com/user-attachments/assets/0e1b6187-febd-485e-9e5f-ffc737707880" width="600"/>
 
+## Installing Windows Updates
+
+Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src="https://github.com/user-attachments/assets/0526c4c9-5730-4359-b226-edc0d09dedbc" width="600"/>
+
+Select browse:
+
+<img src="https://github.com/user-attachments/assets/5de80434-bd93-4fa2-8fa6-665cfcf7fcdd" width="600"/>
+
+Select `wou-w60-x64 [2023-v1].iso` or `wou-w60-x86 [2023-v1].iso` and select open:
+
+<img src="https://github.com/user-attachments/assets/98949438-3cbe-4f4a-b53f-e0e85d4ed13c" width="600"/>
+
+Select the DVD drive:
+
+<img src="https://github.com/user-attachments/assets/fed5c2a6-f022-4752-ba9c-3afe12083bf2" width="600"/>
+
+Select allow:
+
+<img src="https://github.com/user-attachments/assets/3b64e684-ea53-4d5d-9d59-124c9d4cd95e" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/dc1ff938-6fb4-4222-8e37-065fb230f15b" width="600"/>
+
+Select Start:
+
+<img src="https://github.com/user-attachments/assets/edd81857-0173-420d-851a-37f3b7026175" width="600"/>
+
+Windows Service Pack 2, Internet Explorer 9, Microsoft C++ Runtime Libraries and Microsoft .Net Frameworks for Windows Vista will install. The VM will automatically restart.
+
+## Installing VMware Tools
+
+Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src="https://github.com/user-attachments/assets/193e2b35-a22a-4e96-92c9-fffa43d9bed6" width="600"/>
+
+Select browse:
+
+<img src="https://github.com/user-attachments/assets/36d04f0f-530b-4184-b60b-6dc5c1bb8387" width="600"/>
+
+Select the `VMware-tools-windows-11.0.6-15940789.iso` and select open:
+
+<img src="https://github.com/user-attachments/assets/b9cf0c9f-fd99-40b7-bec6-c0e2290df0a2" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/e72db2f6-ca52-46fb-a4b2-6be0a2c767ce" width="600"/>
+
+Open the DVD drive:
+
+<img src="https://github.com/user-attachments/assets/710abcb1-ba1b-47f8-9b28-a934346a2b4d" width="600"/>
+
+Accept the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/55210eb1-3af7-4b71-9f9f-73eee3eba58b" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/d1a07c6d-9352-4f63-9458-487878d1176d" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/3c2bf105-d1e5-4403-9c28-eb7fd06a6365" width="600"/>
+
+Select install:
+
+<img src="https://github.com/user-attachments/assets/b326b546-62f0-4a93-bfbd-a383b9e286dc" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/7c70fb0e-80f1-4b73-8c8e-57870cd85b2e" width="600"/>
+
+Select yes to restart the VM:
+
+<img src="https://github.com/user-attachments/assets/edf804fe-4a68-46fa-9cf2-5b022f4e6552" width="600"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Preparing SP2 Updates ISO
 
 Download the 5 updates:
@@ -469,51 +562,7 @@ Restart when prompted:
 
 <img src="https://github.com/user-attachments/assets/a0884c7e-5f6b-4875-8378-680daa14826b" width="6--"/>
 
-## Installing VMware Tools
 
-Select Player → Removable Devices → CD/DVD → Settings:
-
-<img src="https://github.com/user-attachments/assets/193e2b35-a22a-4e96-92c9-fffa43d9bed6" width="600"/>
-
-Select browse:
-
-<img src="https://github.com/user-attachments/assets/36d04f0f-530b-4184-b60b-6dc5c1bb8387" width="600"/>
-
-Select the `VMware-tools-windows-11.0.6-15940789.iso` and select open:
-
-<img src="https://github.com/user-attachments/assets/b9cf0c9f-fd99-40b7-bec6-c0e2290df0a2" width="600"/>
-
-Select ok:
-
-<img src="https://github.com/user-attachments/assets/e72db2f6-ca52-46fb-a4b2-6be0a2c767ce" width="600"/>
-
-Open the DVD drive:
-
-<img src="https://github.com/user-attachments/assets/710abcb1-ba1b-47f8-9b28-a934346a2b4d" width="600"/>
-
-Accept the User Account Control Prompt:
-
-<img src="https://github.com/user-attachments/assets/55210eb1-3af7-4b71-9f9f-73eee3eba58b" width="600"/>
-
-Select next:
-
-<img src="https://github.com/user-attachments/assets/d1a07c6d-9352-4f63-9458-487878d1176d" width="600"/>
-
-Select next:
-
-<img src="https://github.com/user-attachments/assets/3c2bf105-d1e5-4403-9c28-eb7fd06a6365" width="600"/>
-
-Select install:
-
-<img src="https://github.com/user-attachments/assets/b326b546-62f0-4a93-bfbd-a383b9e286dc" width="600"/>
-
-Select Finish:
-
-<img src="https://github.com/user-attachments/assets/7c70fb0e-80f1-4b73-8c8e-57870cd85b2e" width="600"/>
-
-Select yes to restart the VM:
-
-<img src="https://github.com/user-attachments/assets/edf804fe-4a68-46fa-9cf2-5b022f4e6552" width="600"/>
 
 # Enabling Aero
 
@@ -527,21 +576,3 @@ Add a DWORD CompositionPolicy = 2
 
 Restart Desktop Window Manager (net stop uxsms → net start uxsms).
 
-
-
-
-
-* [KB2506014](https://www.catalog.update.microsoft.com/Search.aspx?q=kb2506014)
-
-KB2506014 KB3210129 KB3210136
-
-
-
-
-
-
-
-
-Windows Vista setup is very similar to Windows 7 setup confer with:
-
-* [VMware Installation Guide](../windows-7-guest/readme.md)
