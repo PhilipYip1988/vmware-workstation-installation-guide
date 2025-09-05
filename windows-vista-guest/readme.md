@@ -404,8 +404,9 @@ Select install:
 
 <img src="https://github.com/user-attachments/assets/632cc95c-c83d-4eb1-9d07-4df1c19f4358" width="600"/>
 
-The Windows Vista VM will restart 3 times while installing Service Pack 2.
+The Windows Vista VM will restart 3 times while installing Service Pack 2. Service Pack 2 will now be installed:
 
+<img src="https://github.com/user-attachments/assets/f1eb3fc2-6aed-476c-8c6a-0a9fc238401a" wodth="600"/>
 
 
 Windows Vista setup is very similar to Windows 7 setup confer with:
