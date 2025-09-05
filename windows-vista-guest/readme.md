@@ -218,11 +218,9 @@ The my digital life forums has a post about a modded Virtual BIOS which includes
 
 * [My Digital Life: SLIC 1.0, 2.1 Mod](https://forums.mydigitallife.net/threads/vmware-workstation-esxi-bios-efi-slic-mod.64693/#post-1132133)
 
-Extract the downloaded file and navigate to the `17.6.0 Modded ROMs` folder. Rename `WORKSTATION_17.6.0_DELL2.7_SLIC_BIOS.440_(497).ROM` `WORKSTATION_17.6.0_DELL2.7_SLIC_BIOS.440_(497).ROM` to `modded_BIOS.440.ROM` and copy the modded ROM to the directory of the Windows Vista Guest. Update the Virtual Machine Configuration file to:
+Extract the downloaded file and navigate to the `17.6.0 Modded ROMs` folder. Rename `WORKSTATION_17.6.0_DELL2.7_SLIC_BIOS.440_(497).ROM` `WORKSTATION_17.6.0_DELL2.7_SLIC_BIOS.440_(497).ROM` to `modded_BIOS.440.ROM` and copy the modded ROM to the directory of the Windows Vista Guest. 
 
-
-For Windows Vista extract the downloaded file and navigate to the 17.6.0 Modded ROMs folder. Rename  to modded_BIOS.440.ROM and copy the modded ROM to the directory of the Windows Vista Guest. Update the Virtual Machine Configuration file to:
-
+Update the Virtual Machine Configuration file to include the line:
 
 ```
 bios440.filename = "modded_BIOS.440.ROM"
@@ -328,7 +326,15 @@ Select Start:
 
 <img src="https://github.com/user-attachments/assets/edd81857-0173-420d-851a-37f3b7026175" width="600"/>
 
-Windows Service Pack 2, Internet Explorer 9, Microsoft C++ Runtime Libraries and Microsoft .Net Frameworks for Windows Vista will install. The VM will automatically restart.
+Windows Service Pack 2, Internet Explorer 9, Microsoft C++ Runtime Libraries and Microsoft .Net Frameworks for Windows Vista will install. The VM will automatically restart multiple times.
+
+On my Windows Vista VM, I encountered a bluescreen and had to select last known configuration:
+
+<img src="https://github.com/user-attachments/assets/1e16b3e6-d3bc-4587-99e5-f2811bc2bd9e" width="600"/>
+
+However the large number of updates were installed:
+
+<img src="https://github.com/user-attachments/assets/ab662c55-244e-48a3-832b-748e927621d0" width="600"/>
 
 ## Installing VMware Tools
 
@@ -375,197 +381,6 @@ Select Finish:
 Select yes to restart the VM:
 
 <img src="https://github.com/user-attachments/assets/edf804fe-4a68-46fa-9cf2-5b022f4e6552" width="600"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Preparing SP2 Updates ISO
-
-Download the 5 updates:
-
-<img src="https://github.com/user-attachments/assets/97a31887-7361-4560-a318-3da4f46ef019" width="600"/>
-
-Create a folder called updates:
-
-<img src="https://github.com/user-attachments/assets/c8244f35-de9a-4bfb-8d67-cadac9291953" width="600"/>
-
-Move the 5 updates to the folder updates:
-
-<img src="https://github.com/user-attachments/assets/aa241232-2195-4575-bdfc-03bfb991cb85" width="600"/>
-
-<img src="https://github.com/user-attachments/assets/c48e4fe9-7a09-485b-af47-b5d28fe5cf16" width="600"/>
-
-Open ImgBurn and select Create Image File from Files/Folders:
-
-<img src="https://github.com/user-attachments/assets/2afc555c-af7e-45cf-8dd1-16b9f47651ef" width="600"/>
-
-Select open folder:
-
-<img src="https://github.com/user-attachments/assets/3e840e79-b78e-409f-9de8-f4f15259ce42" width="600"/>
-
-Select the Updates folder:
-
-<img src="https://github.com/user-attachments/assets/b5785163-fdf6-4271-871e-0be1e16fd056" width="600"/>
-
-Select, select folder:
-
-<img src="https://github.com/user-attachments/assets/9c7dfdae-71a0-4e14-bf42-90c620ea632a" width="600"/>
-
-Select the folder for the destination:
-
-<img src="https://github.com/user-attachments/assets/d54429d7-5e25-491b-9e4b-0e90d547e3d5" width="600"/>
-
-In this case, the destination will be `updates.iso` in the downloads folder. Select save:
-
-<img src="https://github.com/user-attachments/assets/53838b46-512b-4120-9386-d7546a204cce" width="600"/>
-
-Select the files/folder to image icon:
-
-<img src="https://github.com/user-attachments/assets/8960bb92-21db-4ac7-97b6-1cb293b462c9" width="600"/>
-
-Select yes:
-
-<img src="https://github.com/user-attachments/assets/254d36df-f40b-4637-a60c-6ccd531c7acc" width="300"/>
-
-Select yes:
-
-<img src="https://github.com/user-attachments/assets/d72d1d02-e0fb-46db-96d9-77f654c0c059" width="300"/>
-
-Select ok:
-
-<img src="https://github.com/user-attachments/assets/e3905cbc-f2e5-4e6d-a72f-017a9446f4c2" width="200"/>
-
-Select ok:
-
-<img src="https://github.com/user-attachments/assets/636f508c-22a1-4d65-b0dc-6c8a5f89b436" width="200"/>
-
-## Installing Updates
-
-Select Player → Removable Devices → CD/DVD → Settings:
-
-<img src="https://github.com/user-attachments/assets/891f250f-73d4-4ffa-babe-bd1acfb8ab3f" width="600"/>
-
-Select browse:
-
-<img src="https://github.com/user-attachments/assets/15a560f3-ce93-4ec6-9287-7cd8e70ba6cf" width="600"/>
-
-Select the updates ISO:
-
-<img src="https://github.com/user-attachments/assets/3bd46c00-7096-43a8-b814-c99050f194ff" width="600"/>
-
-Select OK:
-
-<img src="https://github.com/user-attachments/assets/ff23f29c-299f-4ca8-a084-6ce2b2fe1916" width="600"/>
-
-Select the DVD drive:
-
-<img src="https://github.com/user-attachments/assets/770f50bc-d1c1-4577-9d0a-25e5aa2a73b6" width="600"/>
-
-Select KB948465 which is Windows Vsita Service Pack 2 and launch it to install:
-
-<img src="https://github.com/user-attachments/assets/89b67f97-e835-45e1-b008-2b686e157065" width="600"/>
-
-The User Account Control Prompt will display, select Continue:
-
-<img src="https://github.com/user-attachments/assets/0b59051a-0b36-44c9-b7e8-c90b91926a17" width="600"/>
-
-Select next:
-
-<img src="https://github.com/user-attachments/assets/d14fe3aa-f168-42c7-bf76-e7f709e6a04c" width="600"/>
-
-Accept the license agreement and select next:
-
-<img src="https://github.com/user-attachments/assets/42b77cd1-a64b-45af-a2c0-63df22852a87" width="600"/>
-
-Select install:
-
-<img src="https://github.com/user-attachments/assets/632cc95c-c83d-4eb1-9d07-4df1c19f4358" width="600"/>
-
-The Windows Vista VM will restart 3 times while installing Service Pack 2. Service Pack 2 will now be installed:
-
-<img src="https://github.com/user-attachments/assets/f1eb3fc2-6aed-476c-8c6a-0a9fc238401a" width="600"/>
-
-Repeat for KB3205638:
-
-<img src="https://github.com/user-attachments/assets/ea804f4c-782c-432b-b703-5ad9c1fe554d" width="600"/>
-
-KB4012583:
-
-<img src="https://github.com/user-attachments/assets/86e25239-02e3-44e2-a1c8-b42a9bbcac91" width="600"/>
-
-KB4015195:
-
-<img src="https://github.com/user-attachments/assets/427fedc4-ad58-4f25-81bd-44d51bb73ada" width="600"/>
-
-KB4015380:
-
-<img src="https://github.com/user-attachments/assets/8aa8b613-038c-4732-a0f9-c4212cfc71a1" width="600"/>
-
-Select Player → Removable Devices → CD/DVD → Settings:
-
-<img src="https://github.com/user-attachments/assets/aab89c2f-f4ad-4bbd-bf27-0c2fccad3ab1" width="600"/>
-
-Select browse:
-
-<img src="https://github.com/user-attachments/assets/f5c6af98-cb45-4900-9c67-a47ac9155fe1" width="600"/>
-
-Select `wsusoffline-w60-x64.iso` and then select open:
-
-<img src="https://github.com/user-attachments/assets/18af8bd7-3ec3-4fa7-80f8-5f6117bd2ea3" width="600"/>
-
-Select ok:
-
-<img src="https://github.com/user-attachments/assets/66f8e56f-b6bb-4493-aed5-106dd2ff54e9" width="600"/>
-
-Right click the ISO file and select explore:
-
-<img src="https://github.com/user-attachments/assets/5c5dd82d-64ef-40b2-8da2-1dd09efcc067" width="600"/>
-
-Launch Update Installer:
-
-<img src="https://github.com/user-attachments/assets/6e29ef74-ab1c-4b11-b9c5-7e9336fef5eb" width="600"/>
-
-Select Allow:
-
-<img src="https://github.com/user-attachments/assets/b535c869-9bfa-4271-82a5-11220c27fcee" width="600"/>
-
-Select OK:
-
-<img src="https://github.com/user-attachments/assets/4d5e6ecd-244a-420a-ae20-25bc1e401812" width="600"/>
-
-Check Update C++ Runtime Libraries, Install .NET Framework 3.5, Install PowerShell 2.0 and Update Remote Desktop Client:
-
-<img src="https://github.com/user-attachments/assets/7b6dc20d-7c9c-440c-893e-9f1f52eabdd4" width="600"/>
-
-Restart the VM and relaunch the Update Installer:
-
-<img src="https://github.com/user-attachments/assets/011cccf9-c640-4ac7-9581-a5bbbfed78de" width="600"/>
-
-Restart when prompted:
-
-<img src="https://github.com/user-attachments/assets/a0884c7e-5f6b-4875-8378-680daa14826b" width="6--"/>
-
-A large number of updates should install. On my Windows Vista VM, I encountered a bluescreen and had to select last known configuration:
-
-<img src="https://github.com/user-attachments/assets/1e16b3e6-d3bc-4587-99e5-f2811bc2bd9e" width="600"/>
-
-However the large number of updates were installed:
-
-<img src="https://github.com/user-attachments/assets/ab662c55-244e-48a3-832b-748e927621d0" width="600"/>
 
 # Enabling Aero
 
