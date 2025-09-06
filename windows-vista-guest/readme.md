@@ -174,7 +174,6 @@ bios.bootDelay = "20000"
 
 <img src="https://github.com/user-attachments/assets/9c2dcc39-eeda-468c-b34f-326dcb72c469" width="600"/>
 
-
 The command above will change the time the Windows Vista Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
 
 ### Modern Generation Processors (11-14th Generation)
@@ -328,15 +327,25 @@ Select Start:
 
 <img src="https://github.com/user-attachments/assets/edd81857-0173-420d-851a-37f3b7026175" width="600"/>
 
-Windows Service Pack 2, Internet Explorer 9, Microsoft C++ Runtime Libraries and Microsoft .Net Frameworks for Windows Vista will install. The VM will automatically restart multiple times.
+WSUS Offline Update will install a very large number of updates unattended, and reboot the VM after installing updates. This will take a few hours and should not be interrupted. If it is interrupted, the VM may blue screens, you may need to close the VM, then delete the VM folder. Then you can rename the copy of the unpatched Windows Vista back to the original (and create another copy) and retry.
 
-On my Windows Vista VM, I encountered a bluescreen and had to select last known configuration:
+After installation, the updates installed can be seen by going to Control Panel:
 
-<img src="https://github.com/user-attachments/assets/1e16b3e6-d3bc-4587-99e5-f2811bc2bd9e" width="600"/>
+<img src="https://github.com/user-attachments/assets/0ebf8ed9-a8ce-448c-9a09-eb8892ca3d68" width="600"/>
 
-However the large number of updates were installed:
+Programs:
 
-<img src="https://github.com/user-attachments/assets/ab662c55-244e-48a3-832b-748e927621d0" width="600"/>
+<img src="https://github.com/user-attachments/assets/edbe61aa-227e-49ac-a076-f7e3d09f7c31" width="600"/>
+
+Here the .NET Framework,Camera Codec Pack, C++ Resdistributables installed will be listed. The updates installed can be seen by selecting view installed updates:
+
+<img src="https://github.com/user-attachments/assets/9fc5ca04-1666-4074-b5bc-0707ccfd3025" width="600"/>
+
+The updates installed are listed:
+
+<img src="https://github.com/user-attachments/assets/e8bd739b-0f73-42fc-a59b-947f7cd13f5d" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/88249bb3-d423-4ca8-976a-f3ab94aa971e" width="600"/>
 
 ## Installing VMware Tools
 
@@ -386,13 +395,100 @@ Select yes to restart the VM:
 
 ## Enabling Aero
 
-The Windows Experience Index Assessment does not work as the Virtual Display Adaptor will not flash during the assessment and the assessment therefore hangs. Aero can be enabled using the following registry edit
+**Enabling Windows Aero on the Windows Vista VM is not recommended as the performance is reduced.**
 
-Go to HKCU\Software\Microsoft\Windows\DWM
+Select Computer and then select Properties:
 
-Add a DWORD Composition = 1
+<img src="https://github.com/user-attachments/assets/0aca88f8-c722-4c5d-a0b6-bacfe1d42c2a" width="600"/>
 
-Add a DWORD CompositionPolicy = 2
+The Windows Experience Index (WEI) Assessment in this VMware Vista virtual machine reports a score of 1.0 because Windows Vista is using the VMware SVGA driver based on the Windows XP Display Driver Model (XPDM). This driver does not implement all features of the Windows Display Driver Model (WDDM) 1.0 introduced in Vista, so the WEI graphics assessment cannot run. VMware provides a WDDM 1.1 driver for Windows 7 and later that fully supports GPU-accelerated Aero and WEI, but this driver is incompatible with Windows Vista. Since Vista is less commonly virtualized and is generally considered an intermediate release between Windows XP and Windows 7, VMware did not create a dedicated WDDM driver for Vista.
 
-Restart Desktop Window Manager (net stop uxsms → net start uxsms).
+<img src="https://github.com/user-attachments/assets/1c9b6009-ce45-4af8-8c26-ff967b095699" width="600"/>
+
+If the Windows Assessment Tool is used, it will hang:
+
+<details open>
+<summary>Windows System Assessment Tool - NOT RECOMMENDED</summary>
+
+When efresh now is selected:
+
+<img src="https://github.com/user-attachments/assets/ab867898-cf02-4e21-a489-ae7edf4e19db" width="600"/>
+
+And continue is selected:
+
+<img src="https://github.com/user-attachments/assets/6ff245ed-b1a4-4d02-9d83-d3761ac372fb" width="600"/>
+
+The Windows Assessment Tool will hang here because it cannot access the graphics driver fully to flash the screen:
+
+<img src="https://github.com/user-attachments/assets/972eb9c6-6392-426c-8759-e47061624179" width="600"/>
+
+Press `Ctrl`, `⇧` + `Esc` to bring up the Task Manager. Right click Performance Information and Tools and select End Task:
+
+<img src="https://github.com/user-attachments/assets/0b54f2e8-c3c4-4256-bc71-273c71664da3" width="600"/>
+
+Select End Now:
+
+<img src="https://github.com/user-attachments/assets/333b537f-a519-4e14-ac7f-7b559539d5c3" width="600"/>
+
+</details>
+
+Windows Aero can be enabled using the registry editor but the performance is noticably slower than the basic display mode. Press `⊞` + `r` and type in:
+
+```
+regedit
+```
+
+<img src="https://github.com/user-attachments/assets/fc2fab31-6c10-4871-8ad3-5bde5c409e31" width="600"/>
+
+Accept the User Account Control:
+
+<img src="https://github.com/user-attachments/assets/da507a88-bdb4-4e95-a055-3421f1dd93a5" width="600"/>
+
+Navigate to:
+
+```
+HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM
+```
+
+<img src="https://github.com/user-attachments/assets/10730789-c59d-4e86-80ef-5a0231720d9d" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/e66efa9b-5aba-40d5-83b2-10cf6a54156b" width="600"/>
+
+In this folder are two DWORD values `Composition` and `CompositionPolicy` which are set to `1` and `0` respectively. Double click `CompositionPolicy` and update the value to `1` (Aero Lite) or `2` (Aero) and select OK:
+
+<img src="https://github.com/user-attachments/assets/cf88a147-4d38-47ce-8a63-bb1656ed6624" width="600"/>
+
+Close the registry editor. Go to Start and search for cmd and right click cmd and select run as administrator:
+
+<img src="https://github.com/user-attachments/assets/669a5a1a-7b8e-4405-96b6-653076348273" width="600"/>
+
+Accept the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/4afba59e-aff3-4292-b04a-f7a136e29b54" width="600"/>
+
+Stop the Desktop Windows Manager by inputting:
+
+```
+net stop uxsms
+```
+
+<img src="https://github.com/user-attachments/assets/183bf783-572f-4a8f-809a-a9612b065812" width="600"/>
+
+Start the Desktop Windows Manager by inputting:
+
+```
+net start uxsms
+```
+
+<img src="https://github.com/user-attachments/assets/e0c35a10-d165-486e-a09d-683fb8e77471" width="600"/>
+
+## Disable Security Centre Icon
+
+The Window Security Centre Notification will display in the notifcation tray. This can be disabled by selecting it and selecting Change the way Security Centre Alerts Me:
+
+<img src="https://github.com/user-attachments/assets/5ca43a32-7453-4fa0-bd59-104af4ef4326" width="600"/>
+
+Then selecting Yes, Notify Me and Display the Icon:
+
+<img src="https://github.com/user-attachments/assets/4600e88b-90aa-444f-bec0-965b65ea710b" width="600"/>
 
