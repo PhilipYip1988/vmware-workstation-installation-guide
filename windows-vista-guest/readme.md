@@ -327,7 +327,7 @@ Select Start:
 
 <img src="https://github.com/user-attachments/assets/edd81857-0173-420d-851a-37f3b7026175" width="600"/>
 
-WSUS Offline Update will install a very large number of updates unattended, and reboot the VM after installing updates. This will take a few hours and should not be interrupted. If it is interrupted, the VM may blue screens, you may need to close the VM, then delete the VM folder. Then you can rename the copy of the unpatched Windows Vista back to the original (and create another copy) and retry.
+WSUS Offline Update will install a very large number of updates unattended, and reboot the VM after installing updates. This will take a few hours and should not be interrupted. If it is interrupted, the VM may blue screen and you may need to close the VM, then delete the VM folder. Then you can rename the copy of the unpatched Windows Vista back to the original (and create another copy) and retry.
 
 After installation, the updates installed can be seen by going to Control Panel:
 
