@@ -604,11 +604,11 @@ The webcam software can be used in Windows XP to control the Logitech Pro 9000 w
 
 Close the Windows XP VM. Attach a USB to Serial Port to the Window 11 Host PC:
 
-<img src="https://github.com/user-attachments/assets/4c5f545f-e66c-4ece-b524-10454a2397b4" width="600"/>
+<img src="https://github.com/user-attachments/assets/dc02277e-d8ff-4fa1-b071-993df8f0cd7b" width="600"/>
 
 On the Windows 11 Host PC, right click the Start Button and select Device Manager:
 
-<img src="https://github.com/user-attachments/assets/dc02277e-d8ff-4fa1-b071-993df8f0cd7b" width="600"/>
+<img src="https://github.com/user-attachments/assets/4c5f545f-e66c-4ece-b524-10454a2397b4" width="600"/>
 
 Expand ports (COM & LPT). In this example, the USB Serial COM Port is COM3:
 
