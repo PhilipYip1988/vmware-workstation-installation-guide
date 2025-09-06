@@ -329,7 +329,7 @@ Select Home Network, or use the Virtual Machine Settings to disconnect the Virtu
 
 ## Backing up the VM
 
-Shut down the Windows Vista VM and then create a copy of the VM folder. Should you encounter problems with your VM after installing software, you can delete the original folder and rename the copied folder to the original folders name. Essentially this will give you a VM to roll back to:
+Shut down the Windows 7 VM and then create a copy of the VM folder. Should you encounter problems with your VM after installing software, you can delete the original folder and rename the copied folder to the original folders name. Essentially this will give you a VM to roll back to:
 
 <img src="https://github.com/user-attachments/assets/b3af2149-7e37-4fa1-b7e2-22406fc4586c" width="600"/>
 
@@ -372,6 +372,26 @@ The WSUS Offline Udpate will begin installing Microsoft Frameworks and Updates:
 <img src="https://github.com/user-attachments/assets/9fc86e5f-c325-426a-9c48-dbaa4607868f" width="600"/>
 
 WSUS Offline Update will install a very large number of updates unattended, and reboot the VM after installing updates. This will take a few hours and should not be interrupted. If it is interrupted, the VM may blue screen and you may need to close the VM, then delete the VM folder. Then you can rename the copy of the unpatched Windows 7 back to the original (and create another copy) and retry.
+
+<img src="https://github.com/user-attachments/assets/f611d976-39ab-40dc-b691-6a4c17e7f639" width="600"/>
+
+After installing updates the VM will shut down. Relaunch the VM and go to Computer:
+
+<img src="https://github.com/user-attachments/assets/947777fe-89a5-4671-948d-3f581fbbfa70" width="600" />
+
+Select Uninstall of Change a Program:
+
+<img src="https://github.com/user-attachments/assets/84a49943-1ac0-44d7-9f73-e44a048c5c29" width="600"/>
+
+The Microsoft Frameworks are installed, select View Installed Updates:
+
+<img src="https://github.com/user-attachments/assets/89fd3205-840b-46b8-b5e4-7f49e8d6fdec" width="600"/>
+
+Al the updates required for Windows 7 are installed:
+
+<img src="https://github.com/user-attachments/assets/a6304b00-cd5d-4dfa-bd3f-c19f1ea3cf58" width="600"/>
+
+It is recommended to back up this VM again now.
 
 ## Installing VMware Tools
 
