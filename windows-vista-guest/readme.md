@@ -568,13 +568,39 @@ And can be imported into a Python program:
 
 <img src="https://github.com/user-attachments/assets/1b7631fd-fb08-421b-aa76-556aef2f38e1" width="600"/>
 
+## USB Passthrough
 
+## Serial Passthrough
 
+```python
+import time
+import serial
 
+# Replace 'COM3' with your serial port
+port = 'COM3'
+baudrate = 9600
 
+# Open the serial port
+ser = serial.Serial(port, baudrate, timeout=1)
 
+time.sleep(2)  # give the port some time to initialize
 
+# Test data
+test_data = b'Hello Serial\n'
 
+# Write data
+ser.write(test_data)
+print(f"Sent: {test_data}")
 
+# Read back data
+received = ser.read(len(test_data))
+print(f'Received: {received}')
 
+# Check if the loopback worked
+if received == test_data:
+    print('✅ Serial loopback test passed!')
+else:
+    print('❌ Serial loopback test failed!')
 
+ser.close()
+```
