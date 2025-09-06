@@ -566,7 +566,7 @@ pip install pyserial==3.0.1
 
 And can be imported into a Python program:
 
-<img src="https://github.com/user-attachments/assets/403a28c2-38d3-404d-b1e4-8b60dbbe3347" width="600"/>
+<img src="https://github.com/user-attachments/assets/1b7631fd-fb08-421b-aa76-556aef2f38e1" width="600"/>
 
 
 
