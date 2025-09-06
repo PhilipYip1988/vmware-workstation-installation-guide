@@ -4,7 +4,7 @@
 
 ### Windows 8.1 ISO Checksums
 
-The Website Archive.org hosts the ISO created from Microsoft before Microsoft removed Windows 8.1 downloads from their download servers. The ISO Checksums are from the ISOs I downloaded from Microsoft's servers before the downloads got removed and the ones on Archive.org should match these:
+The Website Archive.org hosts the ISO created from Microsoft before Microsoft removed Windows 8.1 downloads from their download servers. The ISO Checksums are from the ISOs I downloaded from Microsoft's servers before the downloads got removed. I've not checked all the downloads on Archive.org but they should match these:
 
 |Language|Name|SHA256|Architecture|Editions|
 |---|---|---|---|---|
