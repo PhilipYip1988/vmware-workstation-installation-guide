@@ -435,7 +435,7 @@ Select OK:
 
 Go to Computer:
 
-<img src="https://github.com/user-attachments/assets/e4fe0069-7107-429c-8403-795679ca3691" wdth="600"/>
+<img src="https://github.com/user-attachments/assets/e4fe0069-7107-429c-8403-795679ca3691" width="600"/>
 
 The shared folder can now be seen:
 
