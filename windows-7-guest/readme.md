@@ -46,8 +46,20 @@ Alternatively the Website Archive.org hosts the ISO file:
 
 |Edition|Architecture|ISO|SHA256|
 |---|---|---|---|
-|Professional|x64|[GDXKK_X8V66A00_W7SP1PRO64_ROW.iso](https://archive.org/details/dell-windows)|5ccd8f03c950ac590f01125e17090df3d75e71b3b7bf14fc64b8493bbcb4a4fc|
-|Professional|x86|[MT5KY_N6N9GA00_W7SP1PRO32_ROW(DL).iso](https://archive.org/details/dell-windows)|b33b6b5a5c98ad33729741b2f2fe4c74bc7a8677f7c13d0c4966fd9ae5ed2c14|
+|Professional|x64|[GDXKK_X8V66A00_W7SP1PRO64_ROW.iso](https://archive.org/details/dell-windows)|5CCD8F03C950AC590F01125E17090DF3D75E71B3B7BF14FC64B8493BBCB4A4FC|
+|Professional|x86|[MT5KY_N6N9GA00_W7SP1PRO32_ROW(DL).iso](https://archive.org/details/dell-windows)|B33B6B5A5C98AD33729741B2F2FE4C74BC7A8677F7C13D0C4966FD9AE5ED2C14|
+
+To check the SHA256, right click the ISO file and select copy as path:
+
+<img src="https://github.com/user-attachments/assets/352a0bad-1698-4819-81e1-604fb73b0fb9" width="600"/>
+
+Open up the Windows Terminal and use the command:
+
+```powershell
+Get-FileHash "C:\Users\Philip\Downloads\GDXKK_X8V66A00_W7SP1PRO64_ROW.iso"
+```
+
+<img src="https://github.com/user-attachments/assets/b31ebe0e-2bfa-44c7-af7c-0abfb359f2c9" width="600"/>
 
 ### WSUS Offline Update
 
@@ -55,14 +67,16 @@ The Website Archive.org hosts the ISO created from WSUS Offline Update before Mi
 
 |ISO|SHA256|
 |---|---|
-|[wou-w61-x64 \[2023-v1\].iso](https://archive.org/details/windows7updates24)|unavailable|
-|[wou-w61-x86 \[2023-v1\].iso](https://archive.org/details/windows7updates24)|unavailable|
+|[wou-w61-x64 \[2023-v1\].iso](https://archive.org/details/windows7updates24)|Unavailable|
+|[wou-w61-x86 \[2023-v1\].iso](https://archive.org/details/windows7updates24)|Unavailable|
 
 ### VMware Tools ISO
 
 The Windows 7 drivers for the Windows 7 Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
 
-* [VMware Tools Version 11.0.6](https://archive.org/details/vmware-tools-windows-11.0.6-15940789)
+|ISO|SHA256|
+|---|---|
+|[VMware Tools Version 11.0.6](https://archive.org/details/vmware-tools-windows-11.0.6-15940789)|8F1CC3181055891B98672F715E0CA7BBE4018960EAE945D7A4B9F640C44C3D79 |
 
 <img src='./images/img_004.png' alt='img_004' width='600'/>
 
