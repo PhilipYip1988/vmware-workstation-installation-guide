@@ -59,8 +59,8 @@ Select `wou-w61-x64 [2023-v1].iso` for Windows 7 64 Bit or `wou-w61-x86 [2023-v1
 
 |ISO|SHA256|
 |---|---|
-|||
-
+|wou-w61-x64 [2023-v1].iso|unavailable|
+|wou-w61-x86 [2023-v1].iso|unavailable|
 
 ## Download VMware Tools ISO
 
