@@ -492,3 +492,8 @@ Then selecting Don't, Notify Me and Don't Display the Icon:
 
 <img src="https://github.com/user-attachments/assets/c199c14d-3459-4594-a193-640c3a81fa68" width="600"/>
 
+## Installing Python
+
+Python will be used as an example of installing a program on Windows Vista. [python-3.4.4.msi](https://www.python.org/downloads/release/python-344/) is the latest version of Python to work on Windows Vista. The installer can be downloaded on the Windows 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/eab7e96a-f075-4f1f-aab1-21ced600f865" width="600"/>
