@@ -4,22 +4,22 @@
 
 ### Windows 8.1 ISO Checksums
 
-The Website Archive.org hosts the ISO created from Microsoft before Microsoft removed Windows 8.1 downloads from their download servers:
+The Website Archive.org hosts the ISO created from Microsoft before Microsoft removed Windows 8.1 downloads from their download servers. The ISO Checksums are from the ISOs I downloaded from Microsoft's servers before the downloads got removed and the ones on Archive.org should match these:
 
 |Language|Name|SHA256|Architecture|Editions|
 |---|---|---|---|---|
 |English (UK)|[Win8.1_EnglishInternational_x64](https://archive.org/details/win8.1x32x64)|DE3D15AFBDA350F77C27AAD76844477E396E947302D7402C09A16F3FA7254C68|64|Home<br>Pro|
-|English (UK)|[Win8.1_EnglishInternational_x32](https://archive.org/details/win8.1x32x64)|02881d84a046b06a68df7714afffc207|32|Home<br>Pro|
-|English (UK)|[Win8.1_SingleLang_EnglishInternational_x64](https://archive.org/details/win8.1x32x64)|ed99429503578655cb1592973f44b327|64|HomeSL|
-|English (UK)|[Win8.1_SingleLang_EnglishInternational_x32](https://archive.org/details/win8.1x32x64)|670b01959d1dae192fff633eec0d5b60|32|HomeSL|
-|English (UK)|Win8.1_Pro_N_EnglishInternational_x64|3ef1a2f05b353790ac6e942d791ce623|64|HomeN<br>ProN|
-|English (UK)|Win8.1_Pro_N_EnglishInternational_x32|a0683b3e7025cc3fcd4ca0b9d52d306c|32|HomeN<br>ProN|
-|English (US)|[Win8.1_English_x64](https://archive.org/details/win-8.1-english-x-64\_20240121)|e0d4594e56c0545d379340e0db9519a5|64|Home<br>Pro|
-|English (US)|Win8.1_English_x32|46ce6553a0e0abc264b77c1fc59dfb29|32|Home<br>Pro|
-|English (US)|[Win8.1_SingleLang_English_x64](https://archive.org/details/win-8.1-single-lang-english-x-64\_202301)|83f6483d1c9f24ee28e0e758edbd9d01|64|HomeSL|
-|English (US)|[Win8.1_SingleLang_English_x32](https://archive.org/details/win-8.1-single-lang-english-x-32\_202301)|731f98eebd1073e4fe31354b76c097d7|32|HomeSL|
-|English (US)|Win8.1_Pro_N_English_x64|233e312a97f03b35010b6dbbac9e6044|64|HomeN<br>ProN|
-|English (US)|Win8.1_Pro_N_English_x32|19396aa74f220546f49bd7d912ae9613|32|HomeN<br>ProN|
+|English (UK)|[Win8.1_EnglishInternational_x32](https://archive.org/details/win8.1x32x64)|777D22B51326697A8227741D4565AD5A52376BD295862C0DD96BA53E47514137|32|Home<br>Pro|
+|English (UK)|[Win8.1_SingleLang_EnglishInternational_x64](https://archive.org/details/win8.1x32x64)|FCE8ECD85C4443521A2658421F6AD371255971632D7AD6CF935233D61B91588F|64|HomeSL|
+|English (UK)|[Win8.1_SingleLang_EnglishInternational_x32](https://archive.org/details/win8.1x32x64)|2ECA572129838E29C60103B2800C3EA094478D272EC72D9AB1369788246655D0|32|HomeSL|
+|English (UK)|Win8.1_Pro_N_EnglishInternational_x64|6676DC2301A8C5DFB046C33EB4D34DE29BA1E8193CB3259116247D35D56587B7|64|HomeN<br>ProN|
+|English (UK)|Win8.1_Pro_N_EnglishInternational_x32|3EAB61937D6337FAA01925F0398279F9151D6C87EED58719156BAADCDA809902|32|HomeN<br>ProN|
+|English (US)|[Win8.1_English_x64](https://archive.org/details/win-8.1-english-x-64\_20240121)|D8333CF427EB3318FF6AB755EB1DD9D433F0E2AE43745312C1CD23E83CA1CE51|64|Home<br>Pro|
+|English (US)|Win8.1_English_x32|A569191631A41A260CD180B0D6B926CD2064235F0AC0E3E4CCC387F440E0827A|32|Home<br>Pro|
+|English (US)|[Win8.1_SingleLang_English_x64](https://archive.org/details/win-8.1-single-lang-english-x-64\_202301)|28BB2FCF46DB2B8C31A0ADA8E405D71170EE3CBE5772FDD2DA64B6500BE93097|64|HomeSL|
+|English (US)|[Win8.1_SingleLang_English_x32](https://archive.org/details/win-8.1-single-lang-english-x-32\_202301)|29B4AF02988EB768F2D01EC6991CAD84AD87B4453C0C7365160D36E95CC1C1CF |32|HomeSL|
+|English (US)|Win8.1_Pro_N_English_x64|BCFAAFA3A370BEA1C3A9991784D1D2534B42F09AAE55AE7CAA59FBB0168324A1|64|HomeN<br>ProN|
+|English (US)|Win8.1_Pro_N_English_x32|C4A4BA7FBC1928AF7A4C462CE40FFB481697EA37BD3C85C627600FE79B3EC902|32|HomeN<br>ProN|
 
 ### Generic Product Keys
 
