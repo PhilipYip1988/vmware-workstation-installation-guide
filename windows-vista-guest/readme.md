@@ -494,59 +494,39 @@ Then selecting Don't, Notify Me and Don't Display the Icon:
 
 ## Installing Python
 
-Python will be used as an example of installing a program on Windows Vista. [python-3.4.4.msi](https://www.python.org/downloads/release/python-344/) is the latest version of Python to work on Windows Vista. The installer can be downloaded on the Windows 11 Host PC:
+Python will be used as an example of installing a program on Windows Vista. [python-3.7.0-amd64.exe](https://www.python.org/downloads/release/python-344](https://www.python.org/downloads/release/python-370/#files) is the latest version of Python to work on Windows Vista. The installer can be downloaded on the Windows 11 Host PC:
 
-<img src="https://github.com/user-attachments/assets/eab7e96a-f075-4f1f-aab1-21ced600f865" width="600"/>
+<img src="https://github.com/user-attachments/assets/5514decd-033c-472e-8b33-fe3d7ff1ab57" width="600"/>
 
 And dragged and dropped over to the VM:
 
-<img src="https://github.com/user-attachments/assets/6e9aecfb-1711-4578-990d-a155907eaeed" width="600"/>
+<img src="https://github.com/user-attachments/assets/16a167a5-6ebd-4178-baea-019d560392e5" width="600"/>
 
 Launch the setup:
 
-<img src="https://github.com/user-attachments/assets/e154e18a-3ca1-4fc9-9db6-95d9c99eaf38" width="600"/>
+<img src="https://github.com/user-attachments/assets/ee2e3a23-c988-4c4e-bd7d-ebf7b78e9198" width="600"/>
 
-Select next:
+Select add to path and then select install now:
 
-<img src="https://github.com/user-attachments/assets/80a1aa16-38a0-43f0-a0d5-01204f6a3a92" width="600"/>
+<img src="https://github.com/user-attachments/assets/20574682-b39e-4a87-b62c-fdb414df2d07" width="600"/>
 
-Select next:
+Select close:
 
-<img src="https://github.com/user-attachments/assets/b5ef3327-801e-48ad-8605-58d7680e5a3c" width="600"/>
-
-Select next:
-
-<img src="https://github.com/user-attachments/assets/cacd28dd-3627-42fe-bde7-6318d7b67ced" width="600"/>
-
-Accept the User Account Control:
-
-<img src="https://github.com/user-attachments/assets/e937cb86-a7dc-4815-91d3-ba1461b3da99" width="600"/>
-
-Select Finish:
-
-<img src="https://github.com/user-attachments/assets/a9cbdf26-b392-4893-830c-23a44f3efc4a" width="600"/>
+<img src="https://github.com/user-attachments/assets/962e8789-22d1-42a1-ab23-9cd1a5d26a25" width="600"/>
 
 Open the Command Prompt:
 
 <img src="https://github.com/user-attachments/assets/f7237b7d-5038-4244-9e5a-5a591fa19e32" width="600"/>
 
-To change directory to the Python folder use:
+To launch Python input:
 
 ```powershell
-cd C:\python34
-```
-
-<img src="https://github.com/user-attachments/assets/1b7789bf-a5c4-413e-84ce-062657f528d8" width="600"/>
-
-To use the `python.exe` input:
-
-```poershell
 python
 ```
 
 Notice the change to the Python prompt `>>>`:
 
-<img src="https://github.com/user-attachments/assets/ae5a81ec-b14b-4546-82fc-b021258e438e" width="600"/>
+<img src="https://github.com/user-attachments/assets/f8656803-9ed8-4f64-adac-3abc6f6a534c" width="600"/>
 
 Python code can now be used:
 
@@ -554,33 +534,27 @@ Python code can now be used:
 print('Hello World!')
 ```
 
-To exit the `python.exe` input the function:
+<img src="https://github.com/user-attachments/assets/a442aaae-c6a8-4f0b-96a3-c28b65dc54af" width="600"/>
+
+To exit python input the function:
 
 ```python
 exit()
 ```
 
-<img src="https://github.com/user-attachments/assets/35d71700-12ef-4335-a149-13af7eb3b43b" width="600"/>
+<img src="https://github.com/user-attachments/assets/21783ba4-8d15-4854-a2a9-c2ecba769a2d" width="600"/>
 
-Notice the return to the CMD prompt. The Python package manager pip (an acronym for Python Install Package) is in the Scripts subfolder, to move to this use:
-
-```powershell
-CD .\Scripts
-```
-
-Where a single `.` means with reference to the current working directory.
-
-<img src="https://github.com/user-attachments/assets/caf116c9-00f4-4252-a36e-09dfaa725736" width="600"/>
+Notice the return to the CMD prompt. 
 
 To use the package manager requires Internet Connectivity. Select Player → File → Network Adaptor → Connect:
 
-<img src="https://github.com/user-attachments/assets/53fe2eb7-5f9d-4f32-936d-b2b1f7758710" width="600"/>
+<img src="https://github.com/user-attachments/assets/a1ba09e2-8446-4fee-88ad-c1442af323d5" width="600"/>
 
 Recall however that Windows Vista is past end of life and is not safe to use online for general web use.
 
 The globe icon will appear to the bottom right corner:
 
-<img src="https://github.com/user-attachments/assets/af4665e6-d6cb-45ef-9621-a90760d05534" width="600"/>
+<img src="https://github.com/user-attachments/assets/9edfc037-a41c-4939-8245-c2cf055b7150" width="600"/>
 
 The Python package can be installed using:
 
@@ -588,9 +562,19 @@ The Python package can be installed using:
 pip install pyserial==3.0.1
 ```
 
-This did not work in my case:
+<img src="https://github.com/user-attachments/assets/b54222f2-79ef-436a-8246-ab728974555c" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/7270ae28-7194-4cd3-882a-ea371df70443" width="600"/>
+And can be imported into a Python program:
+
+<img src="https://github.com/user-attachments/assets/403a28c2-38d3-404d-b1e4-8b60dbbe3347" width="600"/>
+
+
+
+
+
+
+
+
 
 
 
