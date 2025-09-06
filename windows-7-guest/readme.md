@@ -94,51 +94,49 @@ Select File → New Virtual Machine:
 
 <img src='./images/img_005.png' alt='img_005' width='600'/>
 
-The installer disc image file (iso) option uses Easy Install:
+Select I will Isntall the Operating System Later:
 
-<img src='./images/img_006.png' alt='img_006' width='600'/>
+<img src="https://github.com/user-attachments/assets/9b3f5b1b-99bb-4a39-a75c-a8d06275529d" width="600"/>
 
-Easy install ignores the content in the `sources/$OEM$` folder and the `sources/ei.cfg` file, essentially converting the OEM ISO to retail and prompts for a Retail Product Key:
-
-<img src='./images/img_007.png' alt='img_007' width='600'/>
-
-It is recommended to instead use "I Will Install this Operating System Later":
-
-<img src='./images/img_008.png' alt='img_008' width='600'/>
+**Note do not select Isntaller Disc Image File (ISO) in this screen because VMware will use the asy install which will override the `sources/$OEM$` folder and the `sources/ei.cfg` file, essentially converting the OEM ISO to retail and prompt for a Retail Product Key.**
 
 Select Microsoft Windows and Windows 7 x64 or Windows 7 x86 and select Next:
 
 <img src='./images/img_009.png' alt='img_009' width='600'/>
 
-The VM Name and Location will be shown. Note when used on a Windows 11 Host which is signed in with a Microsoft Account and integrated with OneDrive, the default location will be on OneDrive. The VM can be quite large and the location can be changed to local Documents by removing the OneDrive folder:
+Use the default Virtual Machine Name and Location (if Documents is integrated with OneDrive, you may want to move this to a local only location) and select next:
 
-<img src='./images/img_010.png' alt='img_010' width='600'/>
+<img src="https://github.com/user-attachments/assets/8fc9ba02-e49f-436a-bc78-64499762367e" width="600"/>
 
 Note the name and location as these will be used later.
 
-The default maximum size of the Windows 7 Guest is 60 GB which is a bit too restrictive. I recommend increasing this to 120 GB. Note the files on the Windows 11 Host won't be 120 GB but can be up to 120 GB if the Windows 7 Guests Virtual Drive is fully occupied with files:
+The default maximum size of the Windows 7 Guest is 40 GB which is too small, I recommend increasing this to 256 GB. Note the files on the Windows 11 Host won't be 256 GB but can be up to 256 GB if the Windows Vista Guests Virtual Drive is fully occupied with files:
 
-<img src='./images/img_011.png' alt='img_011' width='600'/>
+<img src="https://github.com/user-attachments/assets/2f002035-a952-4bcc-8ba3-195a087b468c" width="600"/>
 
 Select customise hardware...
 
-<img src='./images/img_012.png' alt='img_012' width='600'/>
+<img src="https://github.com/user-attachments/assets/baad016d-9d3d-4507-bee1-b5bfe85f72bc" width="600"/>
 
-The default memory used by the Windows 7 Guest is 2048 MB (2 GB). If the Windows 11 Host PC has ≥32 GB RAM, this can be upped to 4096 MB (4 GB) for increased performance in the Windows 7 Guest. If the Windows 11 Host PC has ≤16 GB of RAM, setting this to 4096 MB (4 GB) may throttle the Host PC leading to an overall decreased performance. The task manager can be opened in the Windows 11 Host PC to view the installed memory (RAM):
+The default memory used by the Windows 7 Guest is 2048 MB (2.0 GB). If the Windows 11 Host PC has ≥16 GB RAM, this can be upped to 4096 MB (4 GB) for increased performance of the VM. Note if the Windows 11 Host PC has ≤8 GB of RAM, setting the RAM to 4096 MB (4 GB) may throttle the Host PC leading to decreased performance and 2048 MB (2 GB) may be more approprate:
 
-<img src='./images/img_013.png' alt='img_013' width='600'/>
-
-<img src='./images/img_014.png' alt='img_014' width='600'/>
+<img src="https://github.com/user-attachments/assets/b60d5599-2f5c-41f4-a35c-d0a220b1d13a" width="600"/>
 
 The default number of processors cores used by the Windows 7 Guest is 1. This can be upped to 2 or 4 if the Windows 11 Host has a processor with ≥ 16 cores. If the Windows 11 Host PC has ≤16 cores, setting this to a higher value may throttle the Host PC leading to an overall decreased performance:
 
-<img src='./images/img_015.png' alt='img_015' width='600'/>
+<img src="https://github.com/user-attachments/assets/264d69b4-1cc6-4338-9578-21fefad91d01" width="600"/>
 
-<img src='./images/img_016.png' alt='img_016' width='600'/>
+Under CD/DVD select browse:
 
-The CD/DVD should be configured to load the Dell Windows 7 Reinstallation ISO:
+<img src="https://github.com/user-attachments/assets/dccb48ec-4ac6-4f64-832e-3d759d20d74c" width="600"/>
 
-<img src='./images/img_017.png' alt='img_017' width='600'/>
+Load the Dell Windows 7 Professional Media Refresh 2016 Reinstallation x64 (64 Bit) or x86 (32 Bit) ISO:
+
+<img src="https://github.com/user-attachments/assets/c91ff09b-12f6-4032-b1c3-b3f6be2356c4" width="600"/>
+
+Ensure connected at power on is enabled:
+
+<img src="https://github.com/user-attachments/assets/a48eb1ec-85dd-4c4a-82cf-58b42624482d" width="600"/>
 
 Windows 7 has reached end of life and should be deemed unsafe to use online. The virtual network adaptor is connected by default and can optionally be disabled:
 
@@ -168,21 +166,21 @@ Select Close and Finish:
 
 Navigate to the directory on the Windows 11 Host that the Windows 7 Guest is installed: 
 
-<img src='./images/img_024.png' alt='img_024' width='600'/>
+<img src="https://github.com/user-attachments/assets/33f615b5-08b3-48cf-a11b-5e51e3baecd7" width="600"/>
 
 Look for the `Windows 7 x64.vmx` file:
 
-<img src='./images/img_025.png' alt='img_025' width='600'/>
+<img src="https://github.com/user-attachments/assets/b8ca905f-ea8c-4966-83a8-f9791465e2b4" width="600"/>
 
 Open in Notepad or Notepad++ (recommended):
 
-<img src='./images/img_026.png' alt='img_026' width='600'/>
+<img src="https://github.com/user-attachments/assets/cfa16b5c-56c8-4355-80bb-6e92d2fb383a" width="600"/>
 
-<img src='./images/img_027.png' alt='img_027' width='600'/>
+<img src="https://github.com/user-attachments/assets/613e55e4-278c-4377-b624-afe947a23f64" width="600"/>
 
 Press `Ctrl+f` to begin a search for an option for example `bios.bootDelay`:
 
-<img src='./images/img_028.png' alt='img_028' width='600'/>
+<img src="https://github.com/user-attachments/assets/752bef46-4a2c-4730-9870-910dccaa632a" width="600"/>
 
 If the line exists it can be modified to a new value. In this case it doesn't exist so can be appended to the end:
 
@@ -190,13 +188,15 @@ If the line exists it can be modified to a new value. In this case it doesn't ex
 bios.bootDelay = "20000"
 ```
 
-<img src='./images/img_029.png' alt='img_029' width='600'/>
+<img src="https://github.com/user-attachments/assets/2b4f24c6-6ca6-45b9-9239-4f5714797372" width="600"/>
 
 The command above will change the time the Windows 7 Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
 
 ### Modern Generation Processors (11-14th Generation)
 
 Certain legacy settings may need to be configured to run older guest operating systems such as Windows 7:
+
+<img src="https://github.com/user-attachments/assets/337869a0-b646-4462-912d-7111bb8f2b0f" width="600"/>
 
 Legacy CPU settings:
 
@@ -264,9 +264,7 @@ Note if the corresponding ROM is not found in the directory the above line of co
 
 Select the Windows 7 Virtual Machine and select Play:
 
-<img src='./images/img_030.png' alt='img_030' width='600'/>
-
-Select Never Remind Me at the prompt to install VMware Tools.
+<img src="https://github.com/user-attachments/assets/963e7326-4604-4e52-b482-0ec2baae00e6" width="600"/>
 
 Loading files will display:
 
@@ -278,27 +276,27 @@ Starting Windows will display:
 
 The Dell Windows 7 Reinstallation .iso is multi-lingual, select your language:
 
-<img src='./images/img_033.png' alt='img_033' width='600'/>
+<img src="https://github.com/user-attachments/assets/7f22615d-7900-47ea-baec-cfc1a2df912b" width="600"/>
 
 Select your Time and Currency Format and select Next:
 
-<img src='./images/img_034.png' alt='img_034' width='600'/>
+<img src="https://github.com/user-attachments/assets/049b27ec-b172-42fc-8ae0-c0c6eba4c663" width="600"/>
 
 Select Install Now:
 
-<img src='./images/img_035.png' alt='img_035' width='600'/>
+<img src="https://github.com/user-attachments/assets/c20e2205-ba12-4c2e-89d0-6aeffd112095" width="600"/>
 
 Accept the License Agreement and select Next:
 
-<img src='./images/img_036.png' alt='img_036' width='600'/>
+<img src="https://github.com/user-attachments/assets/f913a2c6-a359-4969-8248-9bced948a22c" width="600"/>
 
 Select Custom Advanced:
 
-<img src='./images/img_037.png' alt='img_037' width='600'/>
+<img src="https://github.com/user-attachments/assets/048d18e1-3190-41ca-b5f3-355a5c459b14" width="600"/>
 
 Select Disc 0: Unallocated Space and select Next:
 
-<img src='./images/img_038.png' alt='img_038' width='600'/>
+<img src="https://github.com/user-attachments/assets/eb458453-0b7a-4eff-98f1-0962bd450155" wdth="600"/>
 
 Input your User Name and PC Name:
 
@@ -315,6 +313,18 @@ Select Next:
 Select Home Network, or use the Virtual Machine Settings to disconnect the Virtual Network Adaptor:
 
 <img src='./images/img_042.png' alt='img_042' width='600'/>
+
+## Installing Windows Updates
+
+
+
+
+
+
+
+
+
+
 
 ## Installing VMware Tools
 
