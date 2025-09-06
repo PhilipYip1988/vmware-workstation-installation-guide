@@ -51,16 +51,12 @@ Alternatively the Website Archive.org hosts the ISO file:
 
 ### WSUS Offline Update
 
-The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 7 downloads from their download servers:
-
-* [WSUS Offline Update for Windows 7](https://archive.org/details/windows7updates24)
-
-Select `wou-w61-x64 [2023-v1].iso` for Windows 7 64 Bit or `wou-w61-x86 [2023-v1].iso` for Windows 7 Bit respectively.
+The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 7 downloads from their download servers. Select `wou-w61-x64 [2023-v1].iso` for Windows 7 64 Bit or `wou-w61-x86 [2023-v1].iso` for Windows 7 Bit respectively.
 
 |ISO|SHA256|
 |---|---|
-|wou-w61-x64 [2023-v1].iso|unavailable|
-|wou-w61-x86 [2023-v1].iso|unavailable|
+|[wou-w61-x64 \[2023-v1\].iso](https://archive.org/details/windows7updates24)|unavailable|
+|[wou-w61-x86 \[2023-v1\].iso](https://archive.org/details/windows7updates24)|unavailable|
 
 ### VMware Tools ISO
 
