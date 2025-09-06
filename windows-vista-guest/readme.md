@@ -393,6 +393,76 @@ Select yes to restart the VM:
 
 <img src="https://github.com/user-attachments/assets/edf804fe-4a68-46fa-9cf2-5b022f4e6552" width="600"/>
 
+## Shared Folders
+
+Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmshared`:
+
+<img src="https://github.com/user-attachments/assets/73a1d76d-6db3-4aeb-8dc1-6850604173a3" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/3fe9be9b-3851-4af6-93ba-316067548c2c" width="600"/>
+
+Select Player → Manage → Virtual Machine Settings:
+
+<img src="https://github.com/user-attachments/assets/e0ae0dc6-4abe-4980-a1df-7fe93f4abfec" width="600"/>
+
+Select Options → Shared Folders and change the setting to Always Enabled and check Map Network Drive in Windows Guests. Then select Add:
+
+<img src="https://github.com/user-attachments/assets/2bc92bfd-f86f-414e-94a3-2870b1ee3ae1" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/c9dcd968-88d7-4c2a-bd53-4e6efb65e8a9" width="600"/>
+
+Select browse:
+
+<img src="https://github.com/user-attachments/assets/96872659-518f-4f8d-adde-0db8f30c043e" width="600"/>
+
+Select the `vmshared` folder and then ok:
+
+<img src="https://github.com/user-attachments/assets/60b078bf-c98b-4873-819b-526ea53bd3ca" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/821fd449-a165-4d8f-beb7-23607eb47dc0" width="600"/>
+
+Select Enable this Share and Finish:
+
+<img src="https://github.com/user-attachments/assets/a3aae7ac-4bf1-4e62-8e63-6e42be2c7b21" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/cd7194b7-02eb-414a-bd91-3e1df57904cb" width="600"/>
+
+Go to Computer:
+
+<img src="https://github.com/user-attachments/assets/e4fe0069-7107-429c-8403-795679ca3691" wdth="600"/>
+
+The shared folder can now be seen:
+
+<img src="https://github.com/user-attachments/assets/a7f0ab54-1e73-45fc-9eda-c266a81113ee" width="600"/>
+
+Select `vmshared`:
+
+<img src="https://github.com/user-attachments/assets/904b4cdc-ab5d-4d51-bd43-9d25cccc7b49" width="600"/>
+
+This is empty just now:
+
+<img src="https://github.com/user-attachments/assets/659c2b93-b8a8-49de-b3f2-2241f7161f56" width="600"/>
+
+[python-3.7.0-amd64.exe](https://www.python.org/downloads/release/python-344](https://www.python.org/downloads/release/python-370/#files) is the latest version of Python to work on Windows Vista. The installer can be downloaded on the Windows 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/5514decd-033c-472e-8b33-fe3d7ff1ab57" width="600"/>
+
+And placed in `vmshared`:
+
+<img src="https://github.com/user-attachments/assets/13731b7c-0057-498d-8697-1681546d9e46" width="600"/>
+
+If the hared fodler is refreshed in the Windows Vista guest, by right clicking empty spae and selecting refresh, the Python installer will be seen:
+
+<img src="https://github.com/user-attachments/assets/1e3b407a-b8a8-4113-858d-1a45aafca88d" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/f7432b62-d13e-4416-816e-0f89213cb638" width="600"/>
+
 ## Enabling Aero
 
 **Enabling Windows Aero on the Windows Vista VM is not recommended as the performance is reduced.**
@@ -498,7 +568,7 @@ Python will be used as an example of installing a program on Windows Vista. [pyt
 
 <img src="https://github.com/user-attachments/assets/5514decd-033c-472e-8b33-fe3d7ff1ab57" width="600"/>
 
-And dragged and dropped over to the VM:
+When using a Windows 11 Host, the file can be dragged and dropped over to the VM. On a Linux host, the most commonly used Desktop Environment GNOME (and less common Desktop Environments) are not supported and shared folders have to be configured:
 
 <img src="https://github.com/user-attachments/assets/16a167a5-6ebd-4178-baea-019d560392e5" width="600"/>
 
@@ -569,6 +639,82 @@ And can be imported into a Python program:
 <img src="https://github.com/user-attachments/assets/1b7631fd-fb08-421b-aa76-556aef2f38e1" width="600"/>
 
 ## USB Passthrough
+
+A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows Vista Guest. In this example a Logitech Pro 9000 webcam will be used. The Logitech Pro 9000 is a USB 2.0 camera which had HD 720p (1280×720 pixels) and 30 fps which is effectively at the limit of USB 2.0. The Windows XP driver and software can be downloaded on the Windows 11 Host:
+
+<img src="https://github.com/user-attachments/assets/4c18a4c9-04b7-4eff-94ad-4adab6ba11e5" width="600"/>
+
+The installer can be copied to `vmshared` or directly dragged and dropped from the Widnows 11 Host to the Windows Vista Guest:
+
+<img src="https://github.com/user-attachments/assets/f4384b88-251a-405b-9edb-44fe3488001c" width="600"/>
+
+Select Computer:
+
+<img src="https://github.com/user-attachments/assets/cccb6594-ada3-4ff2-8c1e-ceb3d20cc737" width="600"/>
+
+Shared Folders:
+
+<img src="https://github.com/user-attachments/assets/dc247dff-9e8a-4d1e-8037-844a80eeb86d" width="600"/>
+
+And the `vmshared` folder:
+
+<img src="https://github.com/user-attachments/assets/204b5844-9295-415c-9877-f8c1164671ea" width="600"/>
+
+Launch the installer:
+
+<img src="https://github.com/user-attachments/assets/77f2146d-2461-4343-a29c-cc39c5991351" width="600"/>
+
+Select Run:
+
+<img src="https://github.com/user-attachments/assets/1c5d3c4f-6aaa-44e2-b1dd-47ad61564979" width="600"/>
+
+Accept the Usr Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/0dc4f662-7542-4fe1-852d-a9ff4aec3ceb" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/e3c49dc0-0694-42ae-93cf-fbf62e4e25b5" width="600"/>
+
+Attach the USB Device, in this case the Logitech Pro 9000 to the USB Port. VMware will show the New USB Device Detectd Dialog which will allow you to connect the USB either to the Host or the VM:
+
+<img src="https://github.com/user-attachments/assets/7fda5d2c-75c8-4956-817d-9e757e66ecfb" width="600"/>
+
+When prompted to connect the webcam, pass through the USB device from the Windows 11 Host to the VM using Player → Removable Devices → Logitech USB Device → Connect:
+
+<img src="https://github.com/user-attachments/assets/2a9f095f-72d9-4a4e-965f-efe2ea7bfe25" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/cc7b7b63-4ffa-4770-8cbd-67aa2698ecfc" width="600"/>
+
+The found new hardware wizard will show:
+
+<img src="https://github.com/user-attachments/assets/021bfed5-dc01-4b39-a140-0655af293735" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/ded58771-fa20-482c-a93f-2319f4730e9c" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/e19008d8-5c75-491b-8f13-97f0062001a2" width="600"/>
+
+The image from the webcam displays, select next:
+
+<img src="https://github.com/user-attachments/assets/4435890b-d203-4156-907e-85ceafdedfeb" width="600"/>
+
+Select check out my webcam:
+
+<img src="https://github.com/user-attachments/assets/c16bac7e-6081-4c7b-9fb4-7b894c877ef5" width="600"/>
+
+Select Quick Capture:
+
+<img src="https://github.com/user-attachments/assets/ce050db6-6a4f-413a-a706-076b67762e58" width="600"/>
+
+The webcam software can be used in the Windows Vista Guest to control the Logitech Pro 9000 which has been passed through from the Windows 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/086054fc-b098-4f7a-a17b-6e6bde50eff3" width="600"/>
 
 ## Serial Passthrough
 
