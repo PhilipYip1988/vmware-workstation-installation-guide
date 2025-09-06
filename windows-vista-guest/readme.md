@@ -497,3 +497,100 @@ Then selecting Don't, Notify Me and Don't Display the Icon:
 Python will be used as an example of installing a program on Windows Vista. [python-3.4.4.msi](https://www.python.org/downloads/release/python-344/) is the latest version of Python to work on Windows Vista. The installer can be downloaded on the Windows 11 Host PC:
 
 <img src="https://github.com/user-attachments/assets/eab7e96a-f075-4f1f-aab1-21ced600f865" width="600"/>
+
+And dragged and dropped over to the VM:
+
+<img src="https://github.com/user-attachments/assets/6e9aecfb-1711-4578-990d-a155907eaeed" width="600"/>
+
+Launch the setup:
+
+<img src="https://github.com/user-attachments/assets/e154e18a-3ca1-4fc9-9db6-95d9c99eaf38" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/80a1aa16-38a0-43f0-a0d5-01204f6a3a92" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/b5ef3327-801e-48ad-8605-58d7680e5a3c" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/cacd28dd-3627-42fe-bde7-6318d7b67ced" width="600"/>
+
+Accept the User Account Control:
+
+<img src="https://github.com/user-attachments/assets/e937cb86-a7dc-4815-91d3-ba1461b3da99" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/a9cbdf26-b392-4893-830c-23a44f3efc4a" width="600"/>
+
+Open the Command Prompt:
+
+<img src="https://github.com/user-attachments/assets/f7237b7d-5038-4244-9e5a-5a591fa19e32" width="600"/>
+
+To change directory to the Python folder use:
+
+```powershell
+cd C:\python34
+```
+
+<img src="https://github.com/user-attachments/assets/1b7789bf-a5c4-413e-84ce-062657f528d8" width="600"/>
+
+To use the `python.exe` input:
+
+```poershell
+python
+```
+
+Notice the change to the Python prompt `>>>`:
+
+<img src="https://github.com/user-attachments/assets/ae5a81ec-b14b-4546-82fc-b021258e438e" width="600"/>
+
+Python code can now be used:
+
+```python
+print('Hello World!')
+```
+
+To exit the `python.exe` input the function:
+
+```python
+exit()
+```
+
+<img src="https://github.com/user-attachments/assets/35d71700-12ef-4335-a149-13af7eb3b43b" width="600"/>
+
+Notice the return to the CMD prompt. The Python package manager pip (an acronym for Python Install Package) is in the Scripts subfolder, to move to this use:
+
+```powershell
+CD .\Scripts
+```
+
+Where a single `.` means with reference to the current working directory.
+
+<img src="https://github.com/user-attachments/assets/caf116c9-00f4-4252-a36e-09dfaa725736" width="600"/>
+
+To use the package manager requires Internet Connectivity. Select Player → File → Network Adaptor → Connect:
+
+<img src="https://github.com/user-attachments/assets/53fe2eb7-5f9d-4f32-936d-b2b1f7758710" width="600"/>
+
+Recall however that Windows Vista is past end of life and is not safe to use online for general web use.
+
+The globe icon will appear to the bottom right corner:
+
+<img src="https://github.com/user-attachments/assets/af4665e6-d6cb-45ef-9621-a90760d05534" width="600"/>
+
+The Python package can be installed using:
+
+```powershell
+pip install pyserial==3.0.1
+```
+
+This did not work in my case:
+
+<img src="https://github.com/user-attachments/assets/7270ae28-7194-4cd3-882a-ea371df70443" width="600"/>
+
+
+
