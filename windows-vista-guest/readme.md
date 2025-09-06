@@ -488,7 +488,7 @@ The Window Security Centre Notification will display in the notifcation tray. Th
 
 <img src="https://github.com/user-attachments/assets/5ca43a32-7453-4fa0-bd59-104af4ef4326" width="600"/>
 
-Then selecting Yes, Notify Me and Display the Icon:
+Then selecting Don't, Notify Me and Don't Display the Icon:
 
-<img src="https://github.com/user-attachments/assets/4600e88b-90aa-444f-bec0-965b65ea710b" width="600"/>
+<img src="https://github.com/user-attachments/assets/c199c14d-3459-4594-a193-640c3a81fa68" width="600"/>
 
