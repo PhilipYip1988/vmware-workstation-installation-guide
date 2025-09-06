@@ -716,7 +716,7 @@ The webcam software can be used in the Windows Vista Guest to control the Logite
 
 <img src="https://github.com/user-attachments/assets/086054fc-b098-4f7a-a17b-6e6bde50eff3" width="600"/>
 
-## Serial Passthrough
+## Serial Port Passthrough
 
 Close the Windows Vista VM. Attach a USB to Serial Port to the Window 11 Host PC:
 
@@ -788,7 +788,7 @@ Right click the communication port and select properties:
 
 The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
 
-<img src="https://github.com/user-attachments/assets/1f54b213-3e96-4066-ac1e-830601eca734" wdth="600"/>
+<img src="https://github.com/user-attachments/assets/1f54b213-3e96-4066-ac1e-830601eca734" width="600"/>
 
 Select Advanced:
 
@@ -906,6 +906,14 @@ With pins 2 and 3 connected, the following shows:
 <img src="https://github.com/user-attachments/assets/b8fe5ab6-7f7d-4cca-a028-c36327d66672" width="600"/>
 
 The code works as expected and interfaces with the Serial Port which is passed through to the Windows Vista VM from the Windows 11 Host PC.
+
+## Parallel Port Passthrough
+
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows Vista, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+
+## PCI/PCIe Card Passthrough
+
+VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
 
 Return to [VMware Installation Guide](../readme.md).
 
