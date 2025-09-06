@@ -2,9 +2,9 @@
 
 ## Downloads
 
-### Windows 8.1 ISO Checksums
+### Windows 8.1 ISO
 
-The Website Archive.org hosts the ISO created from Microsoft before Microsoft removed Windows 8.1 downloads from their download servers. The ISO Checksums are from the ISOs I downloaded from Microsoft's servers before the downloads got removed. I've not checked all the downloads on Archive.org but they should match these:
+The Website Archive.org hosts the ISO created from Microsoft before Microsoft removed Windows 8.1 downloads from their download servers. The ISO Checksums should match the ISOs I downloaded from Microsoft's servers before the downloads got removed:
 
 |Language|Name|SHA256|Architecture|Editions|
 |---|---|---|---|---|
@@ -36,7 +36,7 @@ Windows 8.1 can be installed on the Windows 8.1 VM using a generic product key. 
 
 ### WSUS Offline Update
 
-
+# [WSUS Offline Update Pack Windows 8.1 (w63-x64)](https://github.com/LizenzFass78851/wsusofflineupdatepacks)
 
 
 
