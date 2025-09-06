@@ -28,7 +28,7 @@ The first setting allows the CPU to optimise the VM performance, the VM may be v
 
 ## Installation Media
 
-## Dell Windows 7 Reinstallation ISO
+### Dell Windows 7 Reinstallation ISO
 
 To download the Dell Windows 7 Professional Reinstallation ISO Media Refresh 2016 (`GDXKK_X8V66A00_W7SP1PRO64_ROW.iso`). Use the Windows ISO Download Tool which downloads the ISO from Dell's servers:
 
@@ -49,7 +49,7 @@ Alternatively the Website Archive.org hosts the ISO file:
 |Professional|x64|[GDXKK_X8V66A00_W7SP1PRO64_ROW.iso](http://archive.org/details/dell-windows-7-sp1-x64-isos-2016](https://archive.org/details/dell-windows)|5ccd8f03c950ac590f01125e17090df3d75e71b3b7bf14fc64b8493bbcb4a4fc|
 |Professional|x86|[MT5KY_N6N9GA00_W7SP1PRO32_ROW(DL).iso](https://archive.org/details/dell-windows)|b33b6b5a5c98ad33729741b2f2fe4c74bc7a8677f7c13d0c4966fd9ae5ed2c14|
 
-## WSUS Offline Update
+### WSUS Offline Update
 
 The Website Archive.org hosts the ISO created from WSUS Offline Update before Microsoft removed Windows 7 downloads from their download servers:
 
@@ -62,68 +62,13 @@ Select `wou-w61-x64 [2023-v1].iso` for Windows 7 64 Bit or `wou-w61-x86 [2023-v1
 |wou-w61-x64 [2023-v1].iso|unavailable|
 |wou-w61-x86 [2023-v1].iso|unavailable|
 
-## Download VMware Tools ISO
+### VMware Tools ISO
 
 The Windows 7 drivers for the Windows 7 Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
 
 * [VMware Tools Version 11.0.6](https://archive.org/details/vmware-tools-windows-11.0.6-15940789)
 
 <img src='./images/img_004.png' alt='img_004' width='600'/>
-
-## Product Activation
-
-OEM SLP activation is not carried out by default when using a Windows 7 Virtual Machine as the Virtual Machine lacks the SLIC 2.1 in the Virtual BIOS by default. This will result in a 30 Day Trial.
-
-On Dell Devices (and Devices manufactured by other major OEMs such as Lenovo and HP) with Windows 10 Pro OEM Licenses such as the OptiPlex 7040, the Host Device has a System License Internal Code 2.1 which is used for OEM Downgrade Rights. This can be passed through to the Windows 7 Guest by modifying the Windows 7 Guests Virtual Machines Configuration File and will result in a Virtual Machine that is activated offline using Dell OEM System Locked Preinstallation (SLP).
-
-<details>
-  <summary>30 Day Trial...</summary>
-
-In the vast majority of cases, the Windows 7 Guest will be installed using a Dell OEM SLP key which automatically activates on a Dell PC with a SLIC Version of 2.1. This is not present in the Virtual Machine so Windows 7 will not be activated. Windows 7 will therefore be installed using a 30 Grace Period License (where when Windows 7 was a supported product would give you enough time to buy a license from a retail outlet):
-
-* 1-3 days:
-
-Windows 7 operates normally without any restrictions.
-
-* 4-7 days:
-
-Windows starts showing periodic reminders to activate.
-
-* 28-29 days:
-
-Windows starts showing more prominent reminders to activate.
-
-* 30+ days
-
-Windows enters Reduced Functionality Mode (RFM) where the desktop background turns black and cannot be changed.
-Persistent reminders to activate Windows 7 appear. The system remains functional but with constant reminders.
-
-The 30 day grace period can be rearmed by going to start and inputting cmd, right clicking cmd and selecting run as an administrator:
-
-```powershell
-slmgr /rearm
-```
-
-Microsoft allow rearming up to four times. The rearm count could be reset by opening the registry editor and navigating to:
-
-```
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
-```
-
-and then changing the `SkipRearm` value from `0` to `1` and then rebooting.
-
-</details>
-
-<details>
-  <summary>Retail Licenses</summary>
-
-The Retail License for Windows 7 is the correct license for a Virtual Machine however:
-
-Online product activation for Windows 7 using a Retail Product key cannot be carried out because Microsoft have decommissioned the Product Activation servers and Windows 7 Retail Product Keys can therefore no longer be used to activate Windows 7 or Windows 11.
-
-Phone product activation to an automated line for Windows 7 using a Retail Product key may still work. You are unlikely to be passed through to a Microsoft employee if the automated process does not work because the product has passed end of life and is no longer supported. You may have issues transferring your Windows 7 Retail License from one Virtual Machine to another.
-
-</details>
 
 ## Windows 11 Host or Ubuntu 24.10 Host System Requirements
 
@@ -239,9 +184,9 @@ bios.bootDelay = "20000"
 
 The command above will change the time the Windows 7 Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation.
 
-### 12th-14 Generation Processors
+### Modern Generation Processors (11-14th Generation)
 
-On a 12th–14th Generation Intel processor, certain legacy settings may need to be configured to run older guest operating systems such as Windows XP.
+Certain legacy settings may need to be configured to run older guest operating systems such as Windows 7:
 
 Legacy CPU settings:
 
@@ -271,6 +216,8 @@ These settings ensure proper CPU and MMU handling for legacy guests.
 
 ### OEM SLP
 
+OEM SLP is not applied by default:
+
 <details>
   <summary>SLIC 2.1 Passthrough</summary>
 
@@ -283,6 +230,8 @@ SMBIOS.reflecthost = "TRUE"
 ```
 
 Note if the Windows 11 Host PC doesn't have a SLIC 2.1, the above lines of code will prevent the Windows 7 Guest from booting and should be removed.
+
+</details>
 
 <details>
   <summary>Modded ROMs</summary>
@@ -298,17 +247,6 @@ efi20-64.filename = "modded_EFI20-64.ROM"
 ```
 
 Note if the corresponding ROM is not found in the directory the above line of code will prevent the Windows 7 Guest from booting.
-
-For Windows Vista extract the downloaded file and navigate to the `17.6.0 Modded ROMs` folder. Rename `WORKSTATION_17.6.0_DELL2.7_SLIC_BIOS.440_(497).ROM` to `modded_BIOS.440.ROM` and copy the modded ROM to the directory of the Windows Vista Guest. Update the Virtual Machine Configuration file to:
-
-```
-bios440.filename = "modded_BIOS.440.ROM"
-```
-
-Note if the corresponding ROM is not found in the directory the above line of code will prevent the Windows Vista Guest from booting.
-
-
-</details>
 
 </details>
 
@@ -478,32 +416,359 @@ Can be accessed by the Windows 11 Host or Ubuntu 24.10 Host:
 
 <img src='./images/img_068.png' alt='img_068' width='600'/>
 
-## USB Devices
+## Installing Python
 
-A USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows 7 Guest:
+Python will be used as an example of installing a program on Windows Vista. [python-3.7.0-amd64.exe](https://www.python.org/downloads/release/python-344](https://www.python.org/downloads/release/python-370/#files) is the latest version of Python to work on Windows Vista. The installer can be downloaded on the Windows 11 Host PC:
 
-<img src='./images/img_069.png' alt='img_069' width='600'/>
+<img src="https://github.com/user-attachments/assets/5514decd-033c-472e-8b33-fe3d7ff1ab57" width="600"/>
 
-The Device Drivers for the USB Device and software can be installed in the Windows 7 Guest.
+When using a Windows 11 Host, the file can be dragged and dropped over to the VM. On a Linux host, the most commonly used Desktop Environment GNOME (and less common Desktop Environments) are not supported and shared folders have to be configured:
 
-## Serial Ports
+<img src="https://github.com/user-attachments/assets/16a167a5-6ebd-4178-baea-019d560392e5" width="600"/>
 
-It is also possible to pass a Serial Port from the Windows 11 Host or Ubuntu 24.10 Host to the Windows 7 Guest. Select Player → Manage → Virtual Machine Settings:
+Launch the setup:
 
-<img src='./images/img_070.png' alt='img_070' width='600'/>
+<img src="https://github.com/user-attachments/assets/ee2e3a23-c988-4c4e-bd7d-ebf7b78e9198" width="600"/>
 
-Under hardware select Add...:
+Select add to path and then select install now:
 
-<img src='./images/img_071.png' alt='img_071' width='600'/>
+<img src="https://github.com/user-attachments/assets/20574682-b39e-4a87-b62c-fdb414df2d07" width="600"/>
 
-Then select Serial Port:
+Select close:
 
-<img src='./images/img_072.png' alt='img_072' width='600'/>
+<img src="https://github.com/user-attachments/assets/962e8789-22d1-42a1-ab23-9cd1a5d26a25" width="600"/>
 
-This needs to be done when the Windows 7 Guest is powered off. In this example, the Windows 11 Host doesn't have a Serial Port, so I'm not going to add a Serial Port.
+Open the Command Prompt:
 
-Note the Serial Port number should be configured in the Device Manager in the Windows 11 Host, then added to the Windows 7 Guest, then the Serial Port number should be configured in the Windows 7 Guest. It is recommended to do this one at a time, to avoid confusion between Serial Ports.
+<img src="https://github.com/user-attachments/assets/f7237b7d-5038-4244-9e5a-5a591fa19e32" width="600"/>
 
-The Windows 7 Guest is now setup.
+To launch Python input:
+
+```powershell
+python
+```
+
+Notice the change to the Python prompt `>>>`:
+
+<img src="https://github.com/user-attachments/assets/f8656803-9ed8-4f64-adac-3abc6f6a534c" width="600"/>
+
+Python code can now be used:
+
+```python
+print('Hello World!')
+```
+
+<img src="https://github.com/user-attachments/assets/a442aaae-c6a8-4f0b-96a3-c28b65dc54af" width="600"/>
+
+To exit python input the function:
+
+```python
+exit()
+```
+
+<img src="https://github.com/user-attachments/assets/21783ba4-8d15-4854-a2a9-c2ecba769a2d" width="600"/>
+
+Notice the return to the CMD prompt. 
+
+To use the package manager requires Internet Connectivity. Select Player → File → Network Adaptor → Connect:
+
+<img src="https://github.com/user-attachments/assets/a1ba09e2-8446-4fee-88ad-c1442af323d5" width="600"/>
+
+Recall however that Windows Vista is past end of life and is not safe to use online for general web use.
+
+The globe icon will appear to the bottom right corner:
+
+<img src="https://github.com/user-attachments/assets/9edfc037-a41c-4939-8245-c2cf055b7150" width="600"/>
+
+The Python package can be installed using:
+
+```powershell
+pip install pyserial==3.0.1
+```
+
+<img src="https://github.com/user-attachments/assets/b54222f2-79ef-436a-8246-ab728974555c" width="600"/>
+
+And can be imported into a Python program:
+
+<img src="https://github.com/user-attachments/assets/1b7631fd-fb08-421b-aa76-556aef2f38e1" width="600"/>
+
+## USB Passthrough
+
+A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows Vista Guest. In this example a Logitech Pro 9000 webcam will be used. The Logitech Pro 9000 is a USB 2.0 camera which had HD 720p (1280×720 pixels) and 30 fps which is effectively at the limit of USB 2.0. The Windows XP driver and software can be downloaded on the Windows 11 Host:
+
+<img src="https://github.com/user-attachments/assets/4c18a4c9-04b7-4eff-94ad-4adab6ba11e5" width="600"/>
+
+The installer can be copied to `vmshared` or directly dragged and dropped from the Widnows 11 Host to the Windows Vista Guest:
+
+<img src="https://github.com/user-attachments/assets/f4384b88-251a-405b-9edb-44fe3488001c" width="600"/>
+
+Select Computer:
+
+<img src="https://github.com/user-attachments/assets/cccb6594-ada3-4ff2-8c1e-ceb3d20cc737" width="600"/>
+
+Shared Folders:
+
+<img src="https://github.com/user-attachments/assets/dc247dff-9e8a-4d1e-8037-844a80eeb86d" width="600"/>
+
+And the `vmshared` folder:
+
+<img src="https://github.com/user-attachments/assets/204b5844-9295-415c-9877-f8c1164671ea" width="600"/>
+
+Launch the installer:
+
+<img src="https://github.com/user-attachments/assets/77f2146d-2461-4343-a29c-cc39c5991351" width="600"/>
+
+Select Run:
+
+<img src="https://github.com/user-attachments/assets/1c5d3c4f-6aaa-44e2-b1dd-47ad61564979" width="600"/>
+
+Accept the Usr Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/0dc4f662-7542-4fe1-852d-a9ff4aec3ceb" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/e3c49dc0-0694-42ae-93cf-fbf62e4e25b5" width="600"/>
+
+Attach the USB Device, in this case the Logitech Pro 9000 to the USB Port. VMware will show the New USB Device Detectd Dialog which will allow you to connect the USB either to the Host or the VM:
+
+<img src="https://github.com/user-attachments/assets/7fda5d2c-75c8-4956-817d-9e757e66ecfb" width="600"/>
+
+When prompted to connect the webcam, pass through the USB device from the Windows 11 Host to the VM using Player → Removable Devices → Logitech USB Device → Connect:
+
+<img src="https://github.com/user-attachments/assets/2a9f095f-72d9-4a4e-965f-efe2ea7bfe25" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/cc7b7b63-4ffa-4770-8cbd-67aa2698ecfc" width="600"/>
+
+The found new hardware wizard will show:
+
+<img src="https://github.com/user-attachments/assets/021bfed5-dc01-4b39-a140-0655af293735" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/ded58771-fa20-482c-a93f-2319f4730e9c" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/e19008d8-5c75-491b-8f13-97f0062001a2" width="600"/>
+
+The image from the webcam displays, select next:
+
+<img src="https://github.com/user-attachments/assets/4435890b-d203-4156-907e-85ceafdedfeb" width="600"/>
+
+Select check out my webcam:
+
+<img src="https://github.com/user-attachments/assets/c16bac7e-6081-4c7b-9fb4-7b894c877ef5" width="600"/>
+
+Select Quick Capture:
+
+<img src="https://github.com/user-attachments/assets/ce050db6-6a4f-413a-a706-076b67762e58" width="600"/>
+
+The webcam software can be used in the Windows Vista Guest to control the Logitech Pro 9000 which has been passed through from the Windows 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/086054fc-b098-4f7a-a17b-6e6bde50eff3" width="600"/>
+
+## Serial Port Passthrough
+
+Close the Windows Vista VM. Attach a USB to Serial Port to the Window 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/dc02277e-d8ff-4fa1-b071-993df8f0cd7b" width="600"/>
+
+On the Windows 11 Host PC, right click the Start Button and select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/4c5f545f-e66c-4ece-b524-10454a2397b4" width="600"/>
+
+Expand ports (COM & LPT). In this example, the USB Serial COM Port is COM3:
+
+<img src="https://github.com/user-attachments/assets/da226f02-457e-417d-9294-d018f54fc562" width="600"/>
+
+Right click it and select properties:
+
+<img src="https://github.com/user-attachments/assets/0f1768d9-c1bf-4324-8bc6-946640ba5531" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects:
+
+<img src="https://github.com/user-attachments/assets/283e424d-9fea-448d-ab0a-874db7c018c1" width="600"/>
+
+In this case it will be left at port 3:
+
+<img src="https://github.com/user-attachments/assets/bf7258a0-b073-4451-ac3c-45542580d38f" width="600"/>
+
+Open VMware Player and select Edit Virtual Machine Settings:
+
+<img src="https://github.com/user-attachments/assets/43253763-ae7c-484e-a2f3-57be52a9e178" width="600"/>
+
+Select Add...:
+
+<img src="https://github.com/user-attachments/assets/6c0f92f2-7484-425a-b83d-7153c4ae9095" width="600"/>
+
+Select Serial Port and Finish:
+
+<img src="https://github.com/user-attachments/assets/93fc8640-0137-4e91-b473-e2acecd3416d" width="600"/>
+
+Select Connect at Power On. Autodetect is useful for a single port, but for multipe ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
+
+<img src="https://github.com/user-attachments/assets/733582a8-1935-4b7a-996c-e4a05d54c556" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/3e9e87b7-a969-4e22-bb14-ccfa3eda9b6c" width="600"/>
+
+Launch the VM:
+
+<img src="https://github.com/user-attachments/assets/04a359b2-003a-495e-8153-d768fadf41d8" width="600"/>
+
+Right click computer and select properties:
+
+<img src="https://github.com/user-attachments/assets/f17aaf59-a2f9-4530-bd33-0eadfc7f7762" width="600"/>
+
+Select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/5c1ca82c-9225-4956-983d-a6385f00d384" width="600"/>
+
+Select Continue:
+
+<img src="https://github.com/user-attachments/assets/e6b5cc9b-3173-4557-92de-70048a82c237" width="600"/>
+
+Expand ports, note the Windows 11 COM3 is passed through to the Windows 2000 VM as COM1:
+
+<img src="https://github.com/user-attachments/assets/536792bc-3c84-44d3-82ec-415f042c1cb2" width="600"/>
+
+Right click the communication port and select properties:
+
+<img src="https://github.com/user-attachments/assets/e436a1f5-8a59-4a83-a33a-95ebd414cbe6" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
+
+<img src="https://github.com/user-attachments/assets/1f54b213-3e96-4066-ac1e-830601eca734" width="600"/>
+
+Select Advanced:
+
+<img src="https://github.com/user-attachments/assets/ee0d1939-586d-46b1-a46c-9644f70f414b" width="600"/>
+
+Update the COM Port Number to be consistent with the Windows 11 Host. In this case COM3. Select OK:
+
+<img src="https://github.com/user-attachments/assets/b7ac9e19-febb-49ef-b26a-2b67d5411d4d" width="600"/>
+
+The Serial Port COM3 now displays correctly in the device manager but is not available for use in other programs until the Windows Vista VM is restarted:
+
+<img src="https://github.com/user-attachments/assets/2d72397b-fe58-49c4-9924-9c417e97407a" width="600"/>
+
+I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
+
+<img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
+
+|Pin Number|Name|
+|---|---|
+|1|Data Carrier Detect (CDC)|
+|2|Received Data (RXD)|
+|3|Transmit Data (TXD)|
+|4|Data Terminal Ready (DTR)|
+|5|Ground (GND)|
+|6|Data Set Ready (DSR)|
+|7|Request to Send (RTS)|
+|8|Clear To Send (CTS)|
+|9|Ring Indicator (RI)|
+
+A Python script will be used which essentially transmits the data using pin 3 and then reads it back using pin 2. A Serial port can only read low `0` and high `1` signals, so any data sent via the Serial Port has to be in the form of a byte. In the basic American Standard for Information Interchange (ASCII), each ASCII character is an 8 bit binary sequence:
+
+| Char | Decimal | Hex  | Binary    |
+|------|---------|------|-----------|
+| H    | 72      | 0x48 | 01001000  |
+| e    | 101     | 0x65 | 01100101  |
+| l    | 108     | 0x6C | 01101100  |
+| l    | 108     | 0x6C | 01101100  |
+| o    | 111     | 0x6F | 01101111  |
+| (space) | 32   | 0x20 | 00100000  |
+| S    | 83      | 0x53 | 01010011  |
+| e    | 101     | 0x65 | 01100101  |
+| r    | 114     | 0x72 | 01110010  |
+| i    | 105     | 0x69 | 01101001  |
+| a    | 97      | 0x61 | 01100001  |
+| l    | 108     | 0x6C | 01101100  |
+| \n   | 10      | 0x0A | 00001010  |
+
+Open notepad:
+
+<img src="https://github.com/user-attachments/assets/c5978ef9-c00a-46d4-8322-006a7249fd93" width="600"/>
+
+Paste in the following code:
+
+```python
+import time
+import serial
+
+# Replace 'COM3' with your serial port
+port = 'COM3'
+baudrate = 9600
+
+# Open the serial port
+ser = serial.Serial(port, baudrate, timeout=1)
+
+time.sleep(2)  # give the port some time to initialize
+
+# Test data
+test_data = b'Hello Serial\n'
+
+# Write data
+ser.write(test_data)
+print(f"Sent: {test_data}")
+
+# Read back data
+received = ser.read(len(test_data))
+print(f'Received: {received}')
+
+# Check if the loopback worked
+if received == test_data:
+    print('✅ Serial loopback test passed!')
+else:
+    print('❌ Serial loopback test failed!')
+
+ser.close()
+```
+
+<img src="https://github.com/user-attachments/assets/91967ab2-9838-4b65-aeca-0eb3b1cd6074" width="600"/>
+
+Select file → save as:
+
+<img src="https://github.com/user-attachments/assets/1db3cc28-ed92-4a3e-a603-5ec3bd2d9708" width="600"/>
+
+Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
+
+<img src="https://github.com/user-attachments/assets/ff4f227a-575e-442b-a4c8-1ce119678ffc" width="600"/>
+
+The script file is in Documents, copy the path:
+
+<img src="https://github.com/user-attachments/assets/1caa01ad-85aa-44c1-8299-30981fde4598" width="600"/>
+
+Launch the script file in the command prompt:
+
+<img src="https://github.com/user-attachments/assets/62052024-7877-4c4f-811f-c1a79e7aaecb" width="600"/>
+
+With no pins connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/f7c02ce1-58fd-4717-b667-1d080d61c5a9" width="600"/>
+
+With pins 2 and 3 connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/b8fe5ab6-7f7d-4cca-a028-c36327d66672" width="600"/>
+
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows Vista VM from the Windows 11 Host PC.
+
+## Parallel Port Passthrough
+
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows Vista, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+
+## PCI/PCIe Card Passthrough
+
+VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
 
 Return to [VMware Installation Guide](../readme.md).
+
+Python is just used as an example of a legacy program to run in a Windows Vista VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
