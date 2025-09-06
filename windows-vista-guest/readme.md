@@ -100,7 +100,7 @@ Use the default Virtual Machine Name and Location (if Documents is integrated wi
 
 <img src="https://github.com/user-attachments/assets/3ab6bcce-a878-4662-b904-ff0c742196db" width="600"/>
 
-The default maximum size of the Windows XP Guest is 40 GB which is too small, I recommend increasing this to 256 GB. Note the files on the Windows 11 Host won't be 256 GB but can be up to 256 GB if the Windows Vista Guests Virtual Drive is fully occupied with files:
+The default maximum size of the Windows Vista Guest is 40 GB which is too small, I recommend increasing this to 256 GB. Note the files on the Windows 11 Host won't be 256 GB but can be up to 256 GB if the Windows Vista Guests Virtual Drive is fully occupied with files:
 
 <img src="https://github.com/user-attachments/assets/d088ebd2-7976-4bda-b995-8a51adee2ecb" width="600"/>
 
@@ -189,7 +189,7 @@ cpuid.0.eax = "0000000X"
 cpuid.1.ecx = "00000001"
 ```
 
-These settings help emulate older CPU instructions that XP expects.
+These settings help emulate older CPU instructions that Windows Vista expects.
 
 Legacy monitor / virtualization settings
 
