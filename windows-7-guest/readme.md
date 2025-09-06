@@ -22,6 +22,7 @@ monitor.virtual_mmu = "software"
 mks.enableVulkanRenderer = "FALSE"
 cpuid.0.eax = "0000000X"
 cpuid.1.ecx = "00000001"
+firmware = "efi"
 ```
 
 The first setting allows the CPU to optimise the VM performance, the VM may be very slow without this setting. The second setting prevents use of a memory management unit that Windows 7 doesn't understand and can lead to a Blue Screen of Death (BSOD). The third setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows 7 and often leads to black screens. The last two settings prevent Windows 7 from seeing unsupported CPU features which Windows 7 doesn't understand and can lead to a Blue Screen of Death (BSOD).
@@ -222,6 +223,12 @@ monitor.virtual_exec = "hardware"
 monitor.virtual_mmu = "software"
 ```
 
+The firmware should be EFI for Windows 7 64 Bit:
+
+```
+firmware = "efi"
+```
+
 These settings ensure proper CPU and MMU handling for legacy guests.
 
 ### OEM SLP
@@ -250,10 +257,16 @@ The my digital life forums has a post about a modded Virtual BIOS which includes
 
 * [My Digital Life: SLIC 2.1 Mod](https://forums.mydigitallife.net/threads/vmware-workstation-esxi-bios-efi-slic-mod.64693/#post-1132133)
 
-Extract the downloaded file and navigate to the `17.6.0 Modded ROMs` folder. Rename `WORKSTATION_17.6.0_DELL2.7_SLIC_EFI20-64.ROM` to `EFI20-64.ROM` and copy the modded ROM to the directory of the Windows 7 Guest. Update the Virtual Machine Configuration file to:
+Extract the downloaded file and navigate to the `17.6.0 Modded ROMs` folder. Rename `WORKSTATION_17.6.0_DELL2.7_SLIC_EFI20-64.ROM` to `EFI20-64.ROM` and copy the modded ROM to the directory of the Windows 7 64 Bit Guest (with UEFI). Update the Virtual Machine Configuration file to:
 
 ```
 efi20-64.filename = "modded_EFI20-64.ROM"
+```
+
+Extract the downloaded file and navigate to the `17.6.0 Modded ROMs` folder. Rename `WORKSTATION_17.6.0_DELL2.7_SLIC_BIOS.440_(497).ROM` `WORKSTATION_17.6.0_DELL2.7_SLIC_BIOS.440_(497).ROM` to `modded_BIOS.440.ROM` and copy the modded ROM to the directory of the Windows 7 32 Bit Guest or Windows 7 64 Bit Guest (without UEFI). 
+
+```
+bios440.filename = "modded_BIOS.440.ROM"
 ```
 
 Note if the corresponding ROM is not found in the directory the above line of code will prevent the Windows 7 Guest from booting.
@@ -302,7 +315,7 @@ Input your User Name and PC Name:
 
 <img src='./images/img_039.png' alt='img_039' width='600'/>
 
-Select Next:
+Leave the password blank. A blank password is required to update Windows 7 unattended. Select Next:
 
 <img src='./images/img_040.png' alt='img_040' width='600'/>
 
@@ -314,17 +327,51 @@ Select Home Network, or use the Virtual Machine Settings to disconnect the Virtu
 
 <img src='./images/img_042.png' alt='img_042' width='600'/>
 
+## Backing up the VM
+
+Shut down the Windows Vista VM and then create a copy of the VM folder. Should you encounter problems with your VM after installing software, you can delete the original folder and rename the copied folder to the original folders name. Essentially this will give you a VM to roll back to:
+
+<img src="https://github.com/user-attachments/assets/b3af2149-7e37-4fa1-b7e2-22406fc4586c" width="600"/>
+
 ## Installing Windows Updates
 
+Select Player → Removable Devices → CD/DVD → Settings:
 
+<img src="https://github.com/user-attachments/assets/11475c45-f02e-4a57-b553-39e0d4fd839e" width="600"/>
 
+Select browse:
 
+<img src="https://github.com/user-attachments/assets/d3823f67-032f-480f-8e62-06602d8d9941" width="600"/>
 
+Select `wou-w61-x64 [2023-v1].iso` or `wou-w61-x86 [2023-v1].iso` and select open:
 
+<img src="https://github.com/user-attachments/assets/7de2ea4a-a101-4d18-af4c-11373d580935" width="600"/>
 
+Select OK:
 
+<img src="https://github.com/user-attachments/assets/c827282b-9512-429e-83c3-c0df979a0edd" width="600"/>
 
+Select WSUS Offline Udpate:
 
+<img src="https://github.com/user-attachments/assets/3154f248-3c31-46c7-9a6e-a86b4ac054b9" width="600"/>
+
+Accept the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/c743be1b-0815-4a58-a607-6fd328823f59" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/dd83cfce-a5a3-4373-91e6-b03082c99dcd" width="600"/>
+
+Select Fully Automated Process (Reboot, Recall and Shut Down) and select Start:
+
+<img src="https://github.com/user-attachments/assets/0e0703d9-ec5c-4c28-90de-eb424a009806" width="600"/>
+
+The WSUS Offline Udpate will begin installing Microsoft Frameworks and Updates:
+
+<img src="https://github.com/user-attachments/assets/9fc86e5f-c325-426a-9c48-dbaa4607868f" width="600"/>
+
+WSUS Offline Update will install a very large number of updates unattended, and reboot the VM after installing updates. This will take a few hours and should not be interrupted. If it is interrupted, the VM may blue screen and you may need to close the VM, then delete the VM folder. Then you can rename the copy of the unpatched Windows 7 back to the original (and create another copy) and retry.
 
 ## Installing VMware Tools
 
