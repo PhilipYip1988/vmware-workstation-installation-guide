@@ -718,6 +718,130 @@ The webcam software can be used in the Windows Vista Guest to control the Logite
 
 ## Serial Passthrough
 
+Close the Windows Vista VM. Attach a USB to Serial Port to the Window 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/dc02277e-d8ff-4fa1-b071-993df8f0cd7b" width="600"/>
+
+On the Windows 11 Host PC, right click the Start Button and select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/4c5f545f-e66c-4ece-b524-10454a2397b4" width="600"/>
+
+Expand ports (COM & LPT). In this example, the USB Serial COM Port is COM3:
+
+<img src="https://github.com/user-attachments/assets/da226f02-457e-417d-9294-d018f54fc562" width="600"/>
+
+Right click it and select properties:
+
+<img src="https://github.com/user-attachments/assets/0f1768d9-c1bf-4324-8bc6-946640ba5531" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects:
+
+<img src="https://github.com/user-attachments/assets/283e424d-9fea-448d-ab0a-874db7c018c1" width="600"/>
+
+In this case it will be left at port 3:
+
+<img src="https://github.com/user-attachments/assets/bf7258a0-b073-4451-ac3c-45542580d38f" width="600"/>
+
+Open VMware Player and select Edit Virtual Machine Settings:
+
+<img src="https://github.com/user-attachments/assets/43253763-ae7c-484e-a2f3-57be52a9e178" width="600"/>
+
+Select Add...:
+
+<img src="https://github.com/user-attachments/assets/6c0f92f2-7484-425a-b83d-7153c4ae9095" width="600"/>
+
+Select Serial Port and Finish:
+
+<img src="https://github.com/user-attachments/assets/93fc8640-0137-4e91-b473-e2acecd3416d" width="600"/>
+
+Select Connect at Power On. Autodetect is useful for a single port, but for multipe ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
+
+<img src="https://github.com/user-attachments/assets/733582a8-1935-4b7a-996c-e4a05d54c556" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/3e9e87b7-a969-4e22-bb14-ccfa3eda9b6c" width="600"/>
+
+Launch the VM:
+
+<img src="https://github.com/user-attachments/assets/04a359b2-003a-495e-8153-d768fadf41d8" width="600"/>
+
+Right click computer and select properties:
+
+<img src="https://github.com/user-attachments/assets/f17aaf59-a2f9-4530-bd33-0eadfc7f7762" width="600"/>
+
+Select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/5c1ca82c-9225-4956-983d-a6385f00d384" width="600"/>
+
+Select Continue:
+
+<img src="https://github.com/user-attachments/assets/e6b5cc9b-3173-4557-92de-70048a82c237" width="600"/>
+
+Expand ports, note the Windows 11 COM3 is passed through to the Windows 2000 VM as COM1:
+
+<img src="https://github.com/user-attachments/assets/536792bc-3c84-44d3-82ec-415f042c1cb2" width="600"/>
+
+Right click the communication port and select properties:
+
+<img src="https://github.com/user-attachments/assets/e436a1f5-8a59-4a83-a33a-95ebd414cbe6" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
+
+<img src="https://github.com/user-attachments/assets/1f54b213-3e96-4066-ac1e-830601eca734" wdth="600"/>
+
+Select Advanced:
+
+<img src="https://github.com/user-attachments/assets/ee0d1939-586d-46b1-a46c-9644f70f414b" width="600"/>
+
+Update the COM Port Number to be consistent with the Windows 11 Host. In this case COM3. Select OK:
+
+<img src="https://github.com/user-attachments/assets/b7ac9e19-febb-49ef-b26a-2b67d5411d4d" width="600"/>
+
+The Serial Port COM3 now displays correctly in the device manager but is not available for use in other programs until the Windows Vista VM is restarted:
+
+<img src="https://github.com/user-attachments/assets/2d72397b-fe58-49c4-9924-9c417e97407a" width="600"/>
+
+I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
+
+<img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
+
+|Pin Number|Name|
+|---|---|
+|1|Data Carrier Detect (CDC)|
+|2|Received Data (RXD)|
+|3|Transmit Data (TXD)|
+|4|Data Terminal Ready (DTR)|
+|5|Ground (GND)|
+|6|Data Set Ready (DSR)|
+|7|Request to Send (RTS)|
+|8|Clear To Send (CTS)|
+|9|Ring Indicator (RI)|
+
+A Python script will be used which essentially transmits the data using pin 3 and then reads it back using pin 2. A Serial port can only read low `0` and high `1` signals, so any data sent via the Serial Port has to be in the form of a byte. In the basic American Standard for Information Interchange (ASCII), each ASCII character is an 8 bit binary sequence:
+
+| Char | Decimal | Hex  | Binary    |
+|------|---------|------|-----------|
+| H    | 72      | 0x48 | 01001000  |
+| e    | 101     | 0x65 | 01100101  |
+| l    | 108     | 0x6C | 01101100  |
+| l    | 108     | 0x6C | 01101100  |
+| o    | 111     | 0x6F | 01101111  |
+| (space) | 32   | 0x20 | 00100000  |
+| S    | 83      | 0x53 | 01010011  |
+| e    | 101     | 0x65 | 01100101  |
+| r    | 114     | 0x72 | 01110010  |
+| i    | 105     | 0x69 | 01101001  |
+| a    | 97      | 0x61 | 01100001  |
+| l    | 108     | 0x6C | 01101100  |
+| \n   | 10      | 0x0A | 00001010  |
+
+Open notepad:
+
+<img src="https://github.com/user-attachments/assets/c5978ef9-c00a-46d4-8322-006a7249fd93" width="600"/>
+
+Paste in the following code:
+
 ```python
 import time
 import serial
@@ -750,3 +874,39 @@ else:
 
 ser.close()
 ```
+
+<img src="https://github.com/user-attachments/assets/91967ab2-9838-4b65-aeca-0eb3b1cd6074" width="600"/>
+
+Select file → save as:
+
+<img src="https://github.com/user-attachments/assets/1db3cc28-ed92-4a3e-a603-5ec3bd2d9708" width="600"/>
+
+Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
+
+<img src="https://github.com/user-attachments/assets/ff4f227a-575e-442b-a4c8-1ce119678ffc" width="600"/>
+
+The script file is in Documents, copy the path:
+
+<img src="https://github.com/user-attachments/assets/1caa01ad-85aa-44c1-8299-30981fde4598" width="600"/>
+
+Launch the script file in the command prompt:
+
+<img src="https://github.com/user-attachments/assets/62052024-7877-4c4f-811f-c1a79e7aaecb" width="600"/>
+
+With no pins connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/f7c02ce1-58fd-4717-b667-1d080d61c5a9" width="600"/>
+
+With pins 2 and 3 connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/b8fe5ab6-7f7d-4cca-a028-c36327d66672" width="600"/>
+
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows Vista VM from the Windows 11 Host PC.
+
+Return to [VMware Installation Guide](../readme.md).
+
+Python is just used as an example of a legacy program to run in a Windows Vista VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
