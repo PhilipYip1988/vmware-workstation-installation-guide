@@ -687,7 +687,7 @@ The webcam software can be used in the Windows 7 Guest to control the Logitech P
 
 ## Serial Port Passthrough
 
-Close the Windows Vista VM. Attach a USB to Serial Port to the Window 11 Host PC:
+Close the Windows 7 VM. Attach a USB to Serial Port to the Window 11 Host PC:
 
 <img src="https://github.com/user-attachments/assets/dc02277e-d8ff-4fa1-b071-993df8f0cd7b" width="600"/>
 
@@ -920,4 +920,4 @@ Increasing to 8 Cores and 8 GB of RAM did not improve the Windows Experience Ind
 
 Return to [VMware Installation Guide](../readme.md).
 
-Python is just used as an example of a legacy program to run in a Windows Vista VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
+Python is just used as an example of a legacy program to run in a Windows 7 VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
