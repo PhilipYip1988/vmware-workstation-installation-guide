@@ -319,7 +319,7 @@ And all Windows 8.1 Updates are Installed:
 
 <img src="https://github.com/user-attachments/assets/c7d42ed0-6837-4dc4-b462-28f22b4a7501" width="600"/>
 
-## Enabling Microsoft .Net 3.5
+## Enabling Microsoft .Net 3.5 Framework
 
 Select Turn Windows Features On or Off:
 
