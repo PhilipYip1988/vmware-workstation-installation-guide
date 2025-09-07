@@ -1,3 +1,5 @@
+<img width="1026" height="825" alt="image" src="https://github.com/user-attachments/assets/bd4ac87f-65ad-4420-85bf-e440cf2efa00" />
+<img width="1026" height="825" alt="image" src="https://github.com/user-attachments/assets/cda25bfb-e720-488a-ba6c-d6c3cbd9d643" />
 # Windows Vista
 
 ## YouTube Video
@@ -734,7 +736,7 @@ Right click it and select properties:
 
 <img src="https://github.com/user-attachments/assets/0f1768d9-c1bf-4324-8bc6-946640ba5531" width="600"/>
 
-The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects:
+Select the Port Settings tab. The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects:
 
 <img src="https://github.com/user-attachments/assets/283e424d-9fea-448d-ab0a-874db7c018c1" width="600"/>
 
