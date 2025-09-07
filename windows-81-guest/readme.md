@@ -299,6 +299,30 @@ WSUS Offline Update will patch Windows 8.1:
 
 <img src="https://github.com/user-attachments/assets/4d09e903-47c5-441c-9ea9-84373b7eebc4" width="600"/>
 
+## Shared Folders
+
+Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmshared`:
+
+<img src="https://github.com/user-attachments/assets/2c6992d8-2956-4ed3-82c3-40d31a9652c1" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/00f073e9-a589-4bdb-b114-22f1c5e69986" width="600"/>
+
+Select Player → Manage → Virtual Machine Settings:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Activation Popup
 
 Microsoft have closed down Windows 8.1 Activation Servers, so Windows 8.1 cannot be activated. A watermark displays to the bottom right and some personalisation settings cannot be used. There is a periodic popup prompting for Product Activation. This popup can be removed by pressing `⊞` and `r` and typing in:
