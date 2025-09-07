@@ -93,7 +93,14 @@ It is found in the `iso` folder:
 
 <img src="https://github.com/user-attachments/assets/c7d23c1c-78a6-4146-ac11-0f7cd72c77f6" width="600"/>
 
+<img src="https://github.com/user-attachments/assets/19a2c964-1044-40c6-a2e3-d530c9eef01c" width="600" />
+
+
 ## Windows 8.1 Guest Virtual Machine Configuration File
+
+
+
+
 
 ### Modern Generation Processors (11-14th Generation)
 
@@ -105,8 +112,6 @@ Select the Windows 8.1 Virtual Machine and select Play:
 
 
 ## Installing Windows 8.1 Updates
-
-<img src="https://github.com/user-attachments/assets/19a2c964-1044-40c6-a2e3-d530c9eef01c" width="600" />
 
 <img src="https://github.com/user-attachments/assets/b87027a4-0114-4742-834f-ba05f61978ee" width="600"/>
 
