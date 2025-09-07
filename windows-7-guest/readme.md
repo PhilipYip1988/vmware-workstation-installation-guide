@@ -443,71 +443,80 @@ Select Yes:
 
 <img src='./images/img_053.png' alt='img_053' width='600'/>
 
-The Windows 7 Guest will restart and the window in the Windows 11 Host can now be resized, resizing the Windows 7 Guest:
-
-<img src='./images/img_054.png' alt='img_054' width='600'/>
-
-To the left the Device Manager will display:
-
-<img src='./images/img_056.png' alt='img_056' width='600'/>
-
-The drivers should be installed:
-
-<img src='./images/img_057.png' alt='img_057' width='600'/>
-
-On a Windows 11 Host, drag and drop to the Windows 7 Guest is bi-directional. On a Ubuntu Host, drag and drop from the Ubuntu Host to the Windows 7 Guest works but does not work from the Windows 7 Guest to Ubuntu Host (Shared Folders can be configured for that). The Standalone Updates can be copied to Downloads:
-
-<img src='./images/img_058.png' alt='img_058' width='600'/>
-
-Note install the updates in the order listed above and not by the KB numbers, as some updates require other updates as perquisites. When the last update is installed and the Windows 7 Guest has restarted you will be informed that Windows 7 has Reached End of Life:
-
-<img src='./images/img_059.png' alt='img_059' width='600'/>
-
 ## Shared Folders
 
 Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmshared`:
 
-<img src='./images/img_060.png' alt='img_060' width='600'/>
+<img src="https://github.com/user-attachments/assets/2c6992d8-2956-4ed3-82c3-40d31a9652c1" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/00f073e9-a589-4bdb-b114-22f1c5e69986" width="600"/>
 
 Select Player → Manage → Virtual Machine Settings:
 
-<img src='./images/img_061.png' alt='img_061' width='600'/>
+<img src="https://github.com/user-attachments/assets/597b51d9-9b5a-465f-abf7-a97613899d28" width="600"/>
 
-Select Options → Shared Folders and change the setting to Always Enabled and check Map Network Drive:
+Select Options → Shared Folders and change the setting to Always Enabled and check Map Network Drive in Windows Guests. Then select Add:
 
-<img src='./images/img_062.png' alt='img_062' width='600'/>
+<img src="https://github.com/user-attachments/assets/dd44fdf8-20fb-4a5c-9285-d68dcb9ef532" width="600"/>
 
-Select Add, select the folder vmshared on the Windows 11 Host PC or Ubuntu 24.10 Host PC and then next:
+Select next:
 
-<img src='./images/img_063.png' alt='img_063' width='600'/>
+<img src="https://github.com/user-attachments/assets/d14fac4b-150c-4c8c-a4c0-ac7ce002947c" width="600"/>
 
-Select Enable this Share and Finish:
+Select browse:
 
-<img src='./images/img_064.png' alt='img_064' width='600'/>
+<img src="https://github.com/user-attachments/assets/cb5ee26c-a8a1-4610-8488-f3292e22c4a0" width="600"/>
 
-Close the Virtual Machine Settings:
+Select the `vmshared` folder and select OK:
 
-<img src='./images/img_065.png' alt='img_065' width='600'/>
+<img src="https://github.com/user-attachments/assets/d52c89f1-0cc4-4e7f-b52a-660ef3af9ee4" width="600"/>
 
-The shared folder is now mapped as a network drive in the Windows 7 Guest:
+Select next:
 
-<img src='./images/img_066.png' alt='img_066' width='600'/>
+<img src="https://github.com/user-attachments/assets/eb4cd9da-7465-4b6c-8ba2-cb2ff09ce534" width="600"/>
 
-And the file created on the Windows 7 Guest in this shared folder:
+Select Finish:
 
-<img src='./images/img_067.png' alt='img_067' width='600'/>
+<img src="https://github.com/user-attachments/assets/4b249dbc-a92d-4281-92e4-4fcc85c1084c" width="600"/>
 
-Can be accessed by the Windows 11 Host or Ubuntu 24.10 Host:
+Select OK:
 
-<img src='./images/img_068.png' alt='img_068' width='600'/>
+<img src="https://github.com/user-attachments/assets/63d4b01e-8738-437c-8b83-b52cfeea32a6" width="600"/>
+
+Select Computer:
+
+<img src="https://github.com/user-attachments/assets/77f90bcc-9f91-4d5f-8074-ed4444bd6824" width="600"/>
+
+Select Shared Folders:
+
+<img src="https://github.com/user-attachments/assets/5b2900d6-11a3-4f9d-85ad-3f5bb1371076" width="600"/>
+
+Select `vmshared`:
+
+<img src="https://github.com/user-attachments/assets/ac2e50b6-b314-4a7d-909b-3eff1d6ef9b4" width="600"/>
+
+This is empty just now:
+
+<img src="https://github.com/user-attachments/assets/9c0ecf86-4cab-4af4-bd7e-6cb63a464ce7" width="600"/>
+
 
 ## Installing Python
 
-Python will be used as an example of installing a program on Windows Vista. [python-3.7.0-amd64.exe](https://www.python.org/downloads/release/python-344](https://www.python.org/downloads/release/python-370/#files) is the latest version of Python to work on Windows Vista. The installer can be downloaded on the Windows 11 Host PC:
+Python will be used as an example of installing a program on Windows 7. [python-3.8.10-amd64.exe](https://www.python.org/downloads/release/python-3810/) is the latest version of Python to work on Windows 7. The installer can be downloaded on the Windows 11 Host PC:
 
-<img src="https://github.com/user-attachments/assets/5514decd-033c-472e-8b33-fe3d7ff1ab57" width="600"/>
+<img src="https://github.com/user-attachments/assets/53b12abd-f0dd-4462-9a56-b25ca63bc681" width="600"/>
 
 When using a Windows 11 Host, the file can be dragged and dropped over to the VM. On a Linux host, the most commonly used Desktop Environment GNOME (and less common Desktop Environments) are not supported and shared folders have to be configured:
+
+
+
+
+
+
+
+
+
+
 
 <img src="https://github.com/user-attachments/assets/16a167a5-6ebd-4178-baea-019d560392e5" width="600"/>
 
