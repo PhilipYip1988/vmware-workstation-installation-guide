@@ -449,7 +449,7 @@ This is empty just now:
 
 <img src="https://github.com/user-attachments/assets/659c2b93-b8a8-49de-b3f2-2241f7161f56" width="600"/>
 
-[python-3.7.0-amd64.exe](https://www.python.org/downloads/release/python-344](https://www.python.org/downloads/release/python-370/#files) is the latest version of Python to work on Windows Vista. The installer can be downloaded on the Windows 11 Host PC:
+[python-3.7.0-amd64.exe](https://www.python.org/downloads/release/python-370/#files) is the latest version of Python to work on Windows Vista. The installer can be downloaded on the Windows 11 Host PC:
 
 <img src="https://github.com/user-attachments/assets/5514decd-033c-472e-8b33-fe3d7ff1ab57" width="600"/>
 
