@@ -299,8 +299,33 @@ WSUS Offline Update will patch Windows 8.1:
 
 <img src="https://github.com/user-attachments/assets/5814213a-5870-4033-a300-e52826a39dd6" width="600"/>
 
+## Activation Popup
 
-## Other Notes
+Microsoft have closed down Windows 8.1 Activation Servers, so Windows 8.1 cannot be activated. A watermark displays to the bottom right and some personalisation settings cannot be used. There is a periodic popup prompting for Product Activation. This popup can be removed by pressing `⊞` and `r` and typing in:
+
+```
+regedit
+```
+
+Then navigating to the folder:
+
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\Activation
+```
+
+Creating a new DWORD (32-Bit) value called: 
+
+```
+Manual
+```
+
+And setting to a value of:
+
+```
+1
+```
+
+
 
 
 Task Scheduler Library > Microsoft > Windows > Windows Activation Technologies
