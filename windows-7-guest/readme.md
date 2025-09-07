@@ -713,11 +713,11 @@ In this case it will be left at port 3:
 
 Open VMware Player and select Edit Virtual Machine Settings:
 
-<img src="https://github.com/user-attachments/assets/43253763-ae7c-484e-a2f3-57be52a9e178" width="600"/>
+<img src="https://github.com/user-attachments/assets/65d4b18e-6c82-40f4-85b9-0676eedfd221" width="600"/>
 
 Select Add...:
 
-<img src="https://github.com/user-attachments/assets/6c0f92f2-7484-425a-b83d-7153c4ae9095" width="600"/>
+<img src="https://github.com/user-attachments/assets/bf1ac436-02f8-47ba-bca7-462dfa0c33dc" width="600"/>
 
 Select Serial Port and Finish:
 
@@ -725,51 +725,51 @@ Select Serial Port and Finish:
 
 Select Connect at Power On. Autodetect is useful for a single port, but for multipe ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
 
-<img src="https://github.com/user-attachments/assets/733582a8-1935-4b7a-996c-e4a05d54c556" width="600"/>
+<img src="https://github.com/user-attachments/assets/69cf41ec-5397-4b5a-9417-b4fc4e7702b6" width="600"/>
 
 Select ok:
 
-<img src="https://github.com/user-attachments/assets/3e9e87b7-a969-4e22-bb14-ccfa3eda9b6c" width="600"/>
+<img src="https://github.com/user-attachments/assets/9bc22807-1e3c-4b1e-82b4-047db05c258b" width="600"/>
 
 Launch the VM:
 
-<img src="https://github.com/user-attachments/assets/04a359b2-003a-495e-8153-d768fadf41d8" width="600"/>
+<img src="https://github.com/user-attachments/assets/c6c144fe-93da-4e98-ad54-0e9e3ccceaa2" width="600"/>
 
 Right click computer and select properties:
 
-<img src="https://github.com/user-attachments/assets/f17aaf59-a2f9-4530-bd33-0eadfc7f7762" width="600"/>
+<img src="https://github.com/user-attachments/assets/e871700c-aa65-4944-9d1e-221321691e2e" width="600"/>
 
 Select Device Manager:
 
-<img src="https://github.com/user-attachments/assets/5c1ca82c-9225-4956-983d-a6385f00d384" width="600"/>
+<img src="https://github.com/user-attachments/assets/7e8446f0-d73e-4282-9da5-a158b5040eec" width="600"/>
 
-Select Continue:
+Expand ports, note the Windows 11 COM3 is passed through to the Windows 7 VM as COM1:
 
-<img src="https://github.com/user-attachments/assets/e6b5cc9b-3173-4557-92de-70048a82c237" width="600"/>
+<img src="https://github.com/user-attachments/assets/6dd566a4-7bdd-4b27-b3b8-58e5231f4dd7" width="600"/>
 
-Expand ports, note the Windows 11 COM3 is passed through to the Windows 2000 VM as COM1:
+Right click the communication port and select Properties:
 
-<img src="https://github.com/user-attachments/assets/536792bc-3c84-44d3-82ec-415f042c1cb2" width="600"/>
+<img src="https://github.com/user-attachments/assets/5de27e23-78f5-4d97-9866-4a93d9021a6c" width="600"/>
 
-Right click the communication port and select properties:
+Select the Port Settings tab. The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
 
-<img src="https://github.com/user-attachments/assets/e436a1f5-8a59-4a83-a33a-95ebd414cbe6" width="600"/>
-
-The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
-
-<img src="https://github.com/user-attachments/assets/1f54b213-3e96-4066-ac1e-830601eca734" width="600"/>
+<img src="https://github.com/user-attachments/assets/a488a4e0-8d2f-4cfa-9988-d8ec83ae4ba4" width="600"/>
 
 Select Advanced:
 
-<img src="https://github.com/user-attachments/assets/ee0d1939-586d-46b1-a46c-9644f70f414b" width="600"/>
+<img src="https://github.com/user-attachments/assets/77c17a55-44e5-4b31-9322-6a20bcb8a761" width="600"/>
 
 Update the COM Port Number to be consistent with the Windows 11 Host. In this case COM3. Select OK:
 
-<img src="https://github.com/user-attachments/assets/b7ac9e19-febb-49ef-b26a-2b67d5411d4d" width="600"/>
+<img src="https://github.com/user-attachments/assets/b0551c41-8b20-4d63-b3a6-8fc3a9c25c55" width="600"/>
 
-The Serial Port COM3 now displays correctly in the device manager but is not available for use in other programs until the Windows Vista VM is restarted:
+The Serial Port still displays as COM1, select refresh:
 
-<img src="https://github.com/user-attachments/assets/2d72397b-fe58-49c4-9924-9c417e97407a" width="600"/>
+<img src="https://github.com/user-attachments/assets/0edcce13-e44f-40bd-bd7e-0001af746f38" width="600"/>
+
+After refreshing COM3 now displays correctly in the device manager but is not available for use in other programs until the Windows 7 VM is restarted:
+
+<img src="https://github.com/user-attachments/assets/bfe843d1-a66d-41fe-b692-955453966cf6" width="600"/>
 
 I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
 
@@ -807,7 +807,7 @@ A Python script will be used which essentially transmits the data using pin 3 an
 
 Open notepad:
 
-<img src="https://github.com/user-attachments/assets/c5978ef9-c00a-46d4-8322-006a7249fd93" width="600"/>
+<img src="https://github.com/user-attachments/assets/d800811c-9068-468a-b1b5-da97b692229f" width="600"/>
 
 Paste in the following code:
 
@@ -844,41 +844,51 @@ else:
 ser.close()
 ```
 
-<img src="https://github.com/user-attachments/assets/91967ab2-9838-4b65-aeca-0eb3b1cd6074" width="600"/>
+<img src="https://github.com/user-attachments/assets/84b7bc60-3ee2-4511-91be-1ab3a25189bc" width="600"/>
 
 Select file → save as:
 
-<img src="https://github.com/user-attachments/assets/1db3cc28-ed92-4a3e-a603-5ec3bd2d9708" width="600"/>
+<img src="https://github.com/user-attachments/assets/a46c18ac-440a-4c4a-9c2e-2bd57b35edc5" width="600"/>
 
 Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
 
-<img src="https://github.com/user-attachments/assets/ff4f227a-575e-442b-a4c8-1ce119678ffc" width="600"/>
+<img src="https://github.com/user-attachments/assets/e5703aa9-b01e-475e-a2d7-b46c4db453f0" width="600"/>
 
-The script file is in Documents, copy the path:
+The script file is in Documents, which is a Library of folders. Right click the script file and select Open File Location:
 
-<img src="https://github.com/user-attachments/assets/1caa01ad-85aa-44c1-8299-30981fde4598" width="600"/>
+<img src="https://github.com/user-attachments/assets/3fe2a56f-606d-4c56-babf-650b92c8d282" width="600"/>
+
+Copy the file location in the address bar:
+
+<img src="https://github.com/user-attachments/assets/f62db0ba-bddf-45c1-a4c8-d195dd2b41b3" width="600"/>
 
 Launch the script file in the command prompt:
 
-<img src="https://github.com/user-attachments/assets/62052024-7877-4c4f-811f-c1a79e7aaecb" width="600"/>
+```powershell
+python C:\Users\Philip\Documents\script.py
+```
 
-With no pins connected, the following shows:
+Because the Windows 7 VM has not been restarted, Pyserial cannot find the port at COM3:
+
+<img src="https://github.com/user-attachments/assets/23e1690e-e04c-43a0-a20f-68523a6d6025" width="600"/>
+
+After a restart with no pins connected, the following shows:
 
 <img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/f7c02ce1-58fd-4717-b667-1d080d61c5a9" width="600"/>
+<img src="https://github.com/user-attachments/assets/a838b09c-7db6-4340-911d-00921fc1c06e" width="600"/>
 
 With pins 2 and 3 connected, the following shows:
 
 <img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/b8fe5ab6-7f7d-4cca-a028-c36327d66672" width="600"/>
+<img src="https://github.com/user-attachments/assets/a2ac4c7d-3312-4a20-8e2b-50e352544648" width="600"/>
 
-The code works as expected and interfaces with the Serial Port which is passed through to the Windows Vista VM from the Windows 11 Host PC.
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows 7 VM from the Windows 11 Host PC.
 
 ## Parallel Port Passthrough
 
-VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows Vista, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 7, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
 
 ## PCI/PCIe Card Passthrough
 
