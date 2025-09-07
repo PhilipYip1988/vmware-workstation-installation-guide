@@ -495,22 +495,63 @@ And can be imported into a Python program:
 
 <img src="https://github.com/user-attachments/assets/0264cd37-baeb-415b-b235-6d9a6253bc76" width="600"/>
 
+## USB Passthrough
 
+A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows 8.1 Guest. In this example a Brother QL-570 label printer will be used. The Windows 8.1 driver and software can be downloaded on the Windows 11 Host:
 
+<img src="https://github.com/user-attachments/assets/da43f4fd-6998-4744-94ce-ad5ecaca3fb2" width="600"/>
 
+The printer driver and p-touch editor will be downloaded:
 
+<img src="https://github.com/user-attachments/assets/a2720f5a-0239-4f04-9282-04d2b350208d" width="600"/>
 
+And copied to the folder `vmshared`:
 
+<img src="https://github.com/user-attachments/assets/90e4cc4c-f7d4-4098-af59-a412bea97cdb" width="600"/>
 
+This can be accessed in the Windows 8.1 Guest:
 
+<img src="https://github.com/user-attachments/assets/eefe5520-4229-4421-a1a3-601cdb6ee6e3" width="600"/>
 
+<img src="https://github.com/user-attachments/assets/76af4a98-3c32-4cde-a831-d36a2574e2a4" width="600"/>
 
+If the files do not show, right click empty space in the folder and select refresh:
 
+<img src="https://github.com/user-attachments/assets/9e768f96-7079-4249-b5ca-cbb87d830291" width="600"/>
 
+The printer driver can be installed by launching the application:
 
+<img src="https://github.com/user-attachments/assets/e5f09f44-4009-4999-ab98-88f93b953b72" width="600"/>
 
+And extracting it:
 
+<img src="https://github.com/user-attachments/assets/ceec1e71-1f20-4891-b3e8-4b92f463a080" width="600"/>
 
+<img src="https://github.com/user-attachments/assets/a40436d3-a1df-4635-a414-88b3fcbe8f42" width="600"/>
+
+Then launching the setup from the extracted folder in vmshared:
+
+<img src="https://github.com/user-attachments/assets/ce1d42ae-b6d6-4332-90bd-0d5d637f76f8" width="600"/>
+
+Accepting the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/a4adc1ba-1f8f-4b29-a8f4-c3b8f340df69" width="600"/>
+
+And then selecting Start:
+
+<img src="https://github.com/user-attachments/assets/03126062-bd6a-4d7b-84d4-2598a550720b" width="600"/>
+
+The printer driver will now ask for the printer to be connected to the PC. Select Player → Removable Devices → Brother WL-570 → Connect:
+
+<img src="https://github.com/user-attachments/assets/c68176ad-5445-4319-98cc-574d3388b33d" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/e13b0699-8ef5-41df-903f-6b5f3fbfc604" width="200"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/3cdd3b3c-ef22-46fe-9384-96f458ef75cc" width="600"/>
 
 
 
