@@ -457,7 +457,7 @@ And placed in `vmshared`:
 
 <img src="https://github.com/user-attachments/assets/13731b7c-0057-498d-8697-1681546d9e46" width="600"/>
 
-If the hared fodler is refreshed in the Windows Vista guest, by right clicking empty spae and selecting refresh, the Python installer will be seen:
+If the shared folder is refreshed in the Windows Vista guest, by right clicking empty spae and selecting refresh, the Python installer will be seen:
 
 <img src="https://github.com/user-attachments/assets/1e3b407a-b8a8-4113-858d-1a45aafca88d" width="600"/>
 
