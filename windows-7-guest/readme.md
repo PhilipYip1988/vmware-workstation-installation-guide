@@ -894,6 +894,24 @@ VMware can theoretically passthrough a physical parallel port. However, USB-to-p
 
 VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
 
+## Windows Aero
+
+The Windows 7 Basic Theme is currently used. To switch to Windows Aero Theme, used on more capable Windows 7 Devices. Right click Computer and select Properties:
+
+<img src="https://github.com/user-attachments/assets/456c1bcb-b6c2-4a09-a9c4-a7cb51cc00f6" width="600"/>
+
+Select the Windows Experience Index Rating:
+
+<img src="https://github.com/user-attachments/assets/84b714ce-7e69-4d72-8557-d821dbe889ad" width="600"/>
+
+Select Refresh Now:
+
+<img src="https://github.com/user-attachments/assets/534f4060-2e25-4023-9241-129e04d6c7d2" width="600"/>
+
+The Windows Exerience Index is refreshed and Aero is enabled:
+
+<img src="https://github.com/user-attachments/assets/84d06940-5517-45fa-a203-2e52471a0280" width="600"/>
+
 Return to [VMware Installation Guide](../readme.md).
 
 Python is just used as an example of a legacy program to run in a Windows Vista VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
