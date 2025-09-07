@@ -163,18 +163,77 @@ Under Display, the default options can be selected. Select Close:
 
 ## Windows 8.1 Guest Virtual Machine Configuration File
 
+Navigate to the directory on the Windows 11 Host that the Windows 8.1 Guest is installed:
 
+<img src="https://github.com/user-attachments/assets/01e35eb3-fdc0-4c94-b17e-093e97496126" width="600"/>
 
+Look for the `Windows 8.x x64.vmx` file:
 
+<img src="https://github.com/user-attachments/assets/17794339-a533-49aa-bb37-1ba2ccc219ba" width="600"/>
+
+Open in Notepad or Notepad++ (recommended):
+
+<img src="https://github.com/user-attachments/assets/36176a99-9763-410a-9d58-9a99b0425163" width="600"/>
+
+Press `Ctrl+f` to begin a search for an option for example `bios.bootDelay`:
+
+<img src="https://github.com/user-attachments/assets/0e0cae81-c6fd-4de2-a99d-3388bbc2f418" width="600"/>
+
+If the line exists it can be modified to a new value. In this case it doesn't exist so can be appended to the end:
+
+```
+bios.bootDelay = "20000"
+```
+
+<img src="https://github.com/user-attachments/assets/4829a77b-78a8-4f3b-8240-bc8d5100e5dc" width="600"/>
 
 ### Modern Generation Processors (11-14th Generation)
 
 Certain legacy settings may need to be configured to run older guest operating systems such as Windows 8.1:
 
+<img src="https://github.com/user-attachments/assets/16300bec-90fc-4d71-9883-fa6028f8b29c" width="600"/>
+
+Legacy monitor / virtualization settings
+
+```
+mks.enableVulkanRenderer = "FALSE"
+```
+
+Legacy monitor / virtualization settings:
+
+```
+monitor.virtual_exec = "hardware"
+```
+
 ## Installing the Windows 8.1 Guest OS
 
 Select the Windows 8.1 Virtual Machine and select Play:
 
+<img src="https://github.com/user-attachments/assets/769a90b3-c90a-4158-8919-0c01cb320522" width="600"/>
+
+The Windows Install will be fully automated and automatically restart:
+
+<img src="https://github.com/user-attachments/assets/33480cc5-7efd-409b-b1d9-9fafe2c645da" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/61446d6b-5fc3-4351-823e-4ed3b4c58036" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/d527fd5f-a170-4b5c-8aa1-d1a621653cb4" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/0bbaf350-ec57-427c-8ff7-59fb0e61f748" width="600"/>
+
+VMware Tools will also automatically install:
+
+<img src="https://github.com/user-attachments/assets/547da43a-bd94-40ec-898c-9c0e43fccc82" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/07051e47-3a08-4f41-8480-4c6ee005b749" width="600"/>
+
+At the end of the install, select OK:
+
+<img src="https://github.com/user-attachments/assets/abc9291a-9e16-40fa-84c2-937733eef66f" width="600"/>
+
+Then click on your User Name to log back in:
+
+<img src="https://github.com/user-attachments/assets/50d0860b-d590-41cd-9d13-5f1c5d7f4446" width="600"/>
 
 ## Installing Windows 8.1 Updates
 
