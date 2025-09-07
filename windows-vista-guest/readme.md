@@ -20,7 +20,7 @@ cpuid.0.eax = "0000000X"
 cpuid.1.ecx = "00000001"
 ```
 
-The first setting allows the CPU to optimise the VM performance, the VM may be very slow without this setting. The second setting prevents use of a memory management unit that Windows Vista doesn't understand and can lead to a Blue Screen of Death (BSOD). The third setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows Vista and often leads to black screens. The last two settings prevent Windows Vista from seeing unsupported CPU features which Windows XP doesn't understand and can lead to a Blue Screen of Death (BSOD).
+The first setting allows the CPU to optimise the VM performance, the VM may be very slow without this setting. The second setting prevents use of a memory management unit that Windows Vista doesn't understand and can lead to a Blue Screen of Death (BSOD). The third setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows Vista and often leads to black screens. The last two settings prevent Windows Vista from seeing unsupported CPU features which Windows Vista doesn't understand and can lead to a Blue Screen of Death (BSOD).
 
 ## Installation Media
 
@@ -640,7 +640,7 @@ And can be imported into a Python program:
 
 ## USB Passthrough
 
-A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows Vista Guest. In this example a Logitech Pro 9000 webcam will be used. The Logitech Pro 9000 is a USB 2.0 camera which had HD 720p (1280×720 pixels) and 30 fps which is effectively at the limit of USB 2.0. The Windows XP driver and software can be downloaded on the Windows 11 Host:
+A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows Vista Guest. In this example a Logitech Pro 9000 webcam will be used. The Logitech Pro 9000 is a USB 2.0 camera which had HD 720p (1280×720 pixels) and 30 fps which is effectively at the limit of USB 2.0. The Windows Vista driver and software can be downloaded on the Windows 11 Host:
 
 <img src="https://github.com/user-attachments/assets/4c18a4c9-04b7-4eff-94ad-4adab6ba11e5" width="600"/>
 
@@ -778,7 +778,7 @@ Select Continue:
 
 <img src="https://github.com/user-attachments/assets/e6b5cc9b-3173-4557-92de-70048a82c237" width="600"/>
 
-Expand ports, note the Windows 11 COM3 is passed through to the Windows 2000 VM as COM1:
+Expand ports, note the Windows 11 COM3 is passed through to the Windows Vista VM as COM1:
 
 <img src="https://github.com/user-attachments/assets/536792bc-3c84-44d3-82ec-415f042c1cb2" width="600"/>
 
