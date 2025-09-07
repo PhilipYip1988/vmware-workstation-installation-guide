@@ -673,14 +673,17 @@ Select OK:
 
 <img src="https://github.com/user-attachments/assets/e717b0ae-442c-4e10-8f55-d227e03a23ef" width="600"/>
 
+Select Play Virtual Machine:
 
+<img src="https://github.com/user-attachments/assets/b8c3845b-d6ae-4f7c-9562-dd2383f15bff" width="600"/>
 
+Select Quick Capture:
 
+<img src="https://github.com/user-attachments/assets/c252fb0b-6a09-432b-8876-de7ee697b4b3" width="600"/>
 
+The webcam software can be used in the Windows 7 Guest to control the Logitech Pro 9000 which has been passed through from the Windows 11 Host PC:
 
-
-
-
+<img src="https://github.com/user-attachments/assets/50a4d57f-d50a-4a5d-8f6a-d1363f3dbd39" width="600"/>
 
 ## Serial Port Passthrough
 
