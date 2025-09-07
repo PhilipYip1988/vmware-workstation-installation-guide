@@ -1,0 +1,8 @@
+# Windows 10 Version 1709
+
+|ISO Name|SHA256|Language|Architecture|Editions|
+|---|---|---|---|---|
+|Win10_1709_EnglishInternational_x64.iso|DC3DA4A045BC9CA8B4DA43EA922E68DCDAEF7CAA73C4677F965A10A2C945C251|English (UK)|64 Bit|Windows 10 Home<br>Windows 10 Home SL<br>Windows 10 Pro<br>Windows 10 Home N<br>Windows 10 Pro N|
+|Win10_1709_EnglishInternational_x32.iso|F06BE27DB798DD79D6FCBF881FEE0F1156B0E540C8101EB94F76E65EC50CEC60|English (UK)|64 Bit|Windows 10 Home<br>Windows 10 Home SL<br>Windows 10 Pro<br>Windows 10 Home N<br>Windows 10 Pro N|
+|Win10_Edu_1709_EnglishInternational_x64.iso|DC3DA4A045BC9CA8B4DA43EA922E68DCDAEF7CAA73C4677F965A10A2C945C251|English (UK)|64 Bit|Windows 10 Education<br>Windows 10 Education N|
+|Win10_Edu_1709_EnglishInternational_x32.iso|F06BE27DB798DD79D6FCBF881FEE0F1156B0E540C8101EB94F76E65EC50CEC60|English (UK)|64 Bit|Windows 10 Education<br>Windows 10 Education N|
