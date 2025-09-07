@@ -319,24 +319,53 @@ And all Windows 8.1 Updates are Installed:
 
 <img src="https://github.com/user-attachments/assets/c7d42ed0-6837-4dc4-b462-28f22b4a7501" width="600"/>
 
-
-
-
 ## Enabling Microsoft .Net 3.5
 
+Select Turn Windows Features On or Off:
 
+<img src="https://github.com/user-attachments/assets/6e1958d1-8ed2-47a8-871b-998ef8069b5e" width="600"/>
 
+Microsoft .Net 3.5 was considered legacy in Windows 8.1 and wasn't enabled by default.
 
+<img src="https://github.com/user-attachments/assets/2f7dc7cc-4fc9-401d-88ca-8f844e5454ec" width="600"/>
 
+It is better to install this feature from the Windows 8.1 ISO. Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src="https://github.com/user-attachments/assets/d2755b71-241a-4a6b-96c0-f20c719e6a58" width="600"/>
+
+Use the dropdown list to select the previously used Windows 8.1 ISO:
+
+<img src="https://github.com/user-attachments/assets/f9d75ff7-1800-4dd6-9fd5-8ef4327fe635" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/303bde16-b92f-4c29-a702-ec0df9ee8007" width="600"/>
+
+Right click he Start Button and select Command Prompt (Admin):
+
+<img src="https://github.com/user-attachments/assets/efe52270-a7c3-4954-a085-7215be441800" width="600"/>
+
+Accept the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/50d109a3-6518-42ee-8740-7ebafa73f530" width="600"/>
+
+Input the command:
+
+```powershell
+DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /LimitAccess /Source:D:\sources\sxs
+```
+
+<img src="https://github.com/user-attachments/assets/184be2db-bdbf-42a4-baf4-a0ebbe359011" width="600"/>
+
+The .NET Framework 3.5 will now be enabled:
+
+<img src="https://github.com/user-attachments/assets/b1819dae-3c05-46db-b638-e6f162b6d154" width="600"/>
+
+Use te WSUS Offline Update again to apply .NET Framework 3.5 Updates.
 
 ## Backing up the VM
 
 Shut down the Windows 8.1 VM and then create a copy of the VM folder. Should you encounter problems with your VM after installing software, you can delete the original folder and rename the copied folder to the original folders name. Essentially this will give you a VM to roll back to:
 
-
-
-
-
+<img src="https://github.com/user-attachments/assets/42f7e69c-c4f7-442e-a0c8-f78c87a31aa1" width="600"/>
 
 ## Shared Folders
 
@@ -360,23 +389,35 @@ Select next:
 
 Select browse:
 
+<img src="https://github.com/user-attachments/assets/b98799dc-eba2-4d58-bced-9503772a83c1" width="600"/>
 
 Select the `vmshared` folder and select OK:
 
+<img src="https://github.com/user-attachments/assets/f48f9285-1573-4bd0-8b70-bfa3fdb8d9ab" width="600"/>
 
 Select next:
 
+<img src="https://github.com/user-attachments/assets/e69723de-493c-466b-9c0a-b75544cc1515" width="600"/>
+
 Select Finish:
+
+<img src="https://github.com/user-attachments/assets/09568bed-f686-4227-bb1a-49fa7ee6bc8c" width="600"/>
 
 Select OK:
 
-Select File Explorer:
+<img src="https://github.com/user-attachments/assets/ebe94dfa-e317-41be-9c63-963973acd09f" width="600"/>
 
-Select Shared Folders:
+Select File Explorer. this PC and Shared Folders:
+
+<img src="https://github.com/user-attachments/assets/5fc1db5b-e2d5-4e7a-bea2-2dcfc11de82c" width="600"/>
 
 Select `vmshared`:
 
-This is empty just now:
+<img src="https://github.com/user-attachments/assets/70ba3a64-7a8f-4eb6-8df2-232fb6c3e77c" width="600"/>
+
+A file added to this folder on the Windows 11 Host can be seen in the Windows 8.1 Guest VM:
+
+<img src="https://github.com/user-attachments/assets/5b74d84e-6843-4887-abe3-a2f4f7535da6" width="600"/>
 
 ## 
 
