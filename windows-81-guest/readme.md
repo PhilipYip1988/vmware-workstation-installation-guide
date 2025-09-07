@@ -419,7 +419,98 @@ A file added to this folder on the Windows 11 Host can be seen in the Windows 8.
 
 <img src="https://github.com/user-attachments/assets/5b74d84e-6843-4887-abe3-a2f4f7535da6" width="600"/>
 
-## 
+## Installing Python
+
+Python will be used as an example of installing a program on Windows 8.1. [python-3.8.10-amd64.exe](https://www.python.org/downloads/release/python-3810/) is the latest version of Python to work on Windows 8.1. The installer can be downloaded on the Windows 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/53b12abd-f0dd-4462-9a56-b25ca63bc681" width="600"/>
+
+When using a Windows 11 Host, the file can be dragged and dropped over to the VM. On a Linux host, the most commonly used Desktop Environment GNOME (and less common Desktop Environments) are not supported and shared folders have to be configured:
+
+<img src="https://github.com/user-attachments/assets/0fc50be4-310e-4296-b9fd-50d124f5628c" width="600"/>
+
+Launch the setup:
+
+<img src="https://github.com/user-attachments/assets/a3c17c79-e0da-4b5d-88ac-1567f20042fa" width="600"/>
+
+Select add to path and then select install now:
+
+<img src="https://github.com/user-attachments/assets/9f79076e-c234-452a-af19-97fa2a339c83" width="600"/>
+
+Accept the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/dd861b4f-4c5f-48ed-9265-a5a2fcf81a3c" width="600"/>
+
+Select Close:
+
+<img src="https://github.com/user-attachments/assets/43c6c5a6-e58c-4363-a73a-6c95dc885274" width="600"/>
+
+Right click the start button and select Command Prompt:
+
+<img src="https://github.com/user-attachments/assets/b85fc72d-3d2b-4ebe-9d82-89a37cd9a8d0" width="600"/>
+
+To launch Python input:
+
+```powershell
+python
+```
+
+Notice the change to the Python prompt `>>>`:
+
+<img src="https://github.com/user-attachments/assets/153a618e-0394-4955-971b-a229d7f8697f" width="600"/>
+
+Python code can now be used:
+
+```python
+print('Hello World!')
+```
+
+<img src="https://github.com/user-attachments/assets/ff82ffa3-7323-4b12-a645-180796832f94" width="600"/>
+
+To exit python input the function:
+
+```python
+exit()
+```
+
+<img src="https://github.com/user-attachments/assets/ce5a84eb-7364-4e12-be88-0703eddbcec3" width="600"/>
+
+Notice the return to the CMD prompt. 
+
+To use the package manager requires Internet Connectivity. Select Player → File → Network Adaptor → Connect:
+
+<img src="https://github.com/user-attachments/assets/2da94029-f839-41a0-adc6-591c792e3f2c" width="600"/>
+
+Recall however that Windows 8.1 is past end of life and is not safe to use online for general web use.
+
+The Python package can be installed using:
+
+```powershell
+pip install pyserial==3.5
+```
+
+<img src="https://github.com/user-attachments/assets/8b7e558d-57ec-4218-a0ba-e67701767b27" width="600"/>
+
+And can be imported into a Python program:
+
+<img src="https://github.com/user-attachments/assets/0264cd37-baeb-415b-b235-6d9a6253bc76" width="600"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
