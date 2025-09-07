@@ -309,7 +309,7 @@ Select Custom Advanced:
 
 Select Disc 0: Unallocated Space and select Next:
 
-<img src="https://github.com/user-attachments/assets/eb458453-0b7a-4eff-98f1-0962bd450155" wdth="600"/>
+<img src="https://github.com/user-attachments/assets/eb458453-0b7a-4eff-98f1-0962bd450155" width="600"/>
 
 Input your User Name and PC Name:
 
