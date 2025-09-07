@@ -912,6 +912,12 @@ The Windows Exerience Index is refreshed and Aero is enabled:
 
 <img src="https://github.com/user-attachments/assets/84d06940-5517-45fa-a203-2e52471a0280" width="600"/>
 
+Powering off the Windows 7 VM and changing the VM Settings to have 4 Virtual Cores opposed to 2 Virtual Cores increases the Windows Experience Index in my case from 7.6 to 7.8:
+
+<img width="1026" height="825" alt="image" src="https://github.com/user-attachments/assets/a975c966-25c6-4711-8c66-099ae52ab307" />
+
+Increasing to 8 Cores and 8 GB of RAM did not improve the Windows Experience Index further.
+
 Return to [VMware Installation Guide](../readme.md).
 
 Python is just used as an example of a legacy program to run in a Windows Vista VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
