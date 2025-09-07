@@ -297,7 +297,7 @@ Select Start:
 
 WSUS Offline Update will patch Windows 8.1:
 
-<img src="https://github.com/user-attachments/assets/5814213a-5870-4033-a300-e52826a39dd6" width="600"/>
+<img src="https://github.com/user-attachments/assets/4d09e903-47c5-441c-9ea9-84373b7eebc4" width="600"/>
 
 ## Activation Popup
 
