@@ -914,7 +914,7 @@ The Windows Exerience Index is refreshed and Aero is enabled:
 
 Powering off the Windows 7 VM and changing the VM Settings to have 4 Virtual Cores opposed to 2 Virtual Cores increases the Windows Experience Index in my case from 7.6 to 7.8:
 
-<img width="1026" height="825" alt="image" src="https://github.com/user-attachments/assets/a975c966-25c6-4711-8c66-099ae52ab307" />
+<img src="https://github.com/user-attachments/assets/a975c966-25c6-4711-8c66-099ae52ab307" width="600"/>
 
 Increasing to 8 Cores and 8 GB of RAM did not improve the Windows Experience Index further.
 
