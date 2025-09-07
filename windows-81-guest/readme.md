@@ -101,35 +101,18 @@ Certain legacy settings may need to be configured to run older guest operating s
 
 ## Installing the Windows 8.1 Guest OS
 
-Select the Windows 7 Virtual Machine and select Play:
+Select the Windows 8.1 Virtual Machine and select Play:
+
+
+## Installing Windows 8.1 Updates
+
+<img src="https://github.com/user-attachments/assets/19a2c964-1044-40c6-a2e3-d530c9eef01c" width="600" />
 
 <img src="https://github.com/user-attachments/assets/b87027a4-0114-4742-834f-ba05f61978ee" width="600"/>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="736" height="605" alt="image" src="https://github.com/user-attachments/assets/19a2c964-1044-40c6-a2e3-d530c9eef01c" />
 
 
 
