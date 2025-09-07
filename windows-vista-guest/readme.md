@@ -397,7 +397,7 @@ Select yes to restart the VM:
 
 Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmshared`:
 
-<img src="https://github.com/user-attachments/assets/73a1d76d-6db3-4aeb-8dc1-6850604173a3" width="600"/>
+<img src="https://github.com/user-attachments/assets/b7cfa9f9-da44-4b0e-9d4f-a084b8aa932b" width="600"/>
 
 <img src="https://github.com/user-attachments/assets/3fe9be9b-3851-4af6-93ba-316067548c2c" width="600"/>
 
