@@ -1,5 +1,3 @@
-<img width="1026" height="825" alt="image" src="https://github.com/user-attachments/assets/bd4ac87f-65ad-4420-85bf-e440cf2efa00" />
-<img width="1026" height="825" alt="image" src="https://github.com/user-attachments/assets/cda25bfb-e720-488a-ba6c-d6c3cbd9d643" />
 # Windows Vista
 
 ## YouTube Video
@@ -465,95 +463,6 @@ If the shared folder is refreshed in the Windows Vista guest, by right clicking 
 
 <img src="https://github.com/user-attachments/assets/f7432b62-d13e-4416-816e-0f89213cb638" width="600"/>
 
-## Enabling Aero
-
-**Enabling Windows Aero on the Windows Vista VM is not recommended as the performance is reduced.**
-
-Select Computer and then select Properties:
-
-<img src="https://github.com/user-attachments/assets/0aca88f8-c722-4c5d-a0b6-bacfe1d42c2a" width="600"/>
-
-The Windows Experience Index (WEI) Assessment in this VMware Vista virtual machine reports a score of 1.0 because Windows Vista is using the VMware SVGA driver based on the Windows XP Display Driver Model (XPDM). This driver does not implement all features of the Windows Display Driver Model (WDDM) 1.0 introduced in Vista, so the WEI graphics assessment cannot run. VMware provides a WDDM 1.1 driver for Windows 7 and later that fully supports GPU-accelerated Aero and WEI, but this driver is incompatible with Windows Vista. Since Vista is less commonly virtualized and is generally considered an intermediate release between Windows XP and Windows 7, VMware did not create a dedicated WDDM driver for Vista.
-
-<img src="https://github.com/user-attachments/assets/1c9b6009-ce45-4af8-8c26-ff967b095699" width="600"/>
-
-If the Windows Assessment Tool is used, it will hang:
-
-<details open>
-<summary>Windows System Assessment Tool - NOT RECOMMENDED</summary>
-
-When efresh now is selected:
-
-<img src="https://github.com/user-attachments/assets/ab867898-cf02-4e21-a489-ae7edf4e19db" width="600"/>
-
-And continue is selected:
-
-<img src="https://github.com/user-attachments/assets/6ff245ed-b1a4-4d02-9d83-d3761ac372fb" width="600"/>
-
-The Windows Assessment Tool will hang here because it cannot access the graphics driver fully to flash the screen:
-
-<img src="https://github.com/user-attachments/assets/972eb9c6-6392-426c-8759-e47061624179" width="600"/>
-
-Press `Ctrl`, `⇧` + `Esc` to bring up the Task Manager. Right click Performance Information and Tools and select End Task:
-
-<img src="https://github.com/user-attachments/assets/0b54f2e8-c3c4-4256-bc71-273c71664da3" width="600"/>
-
-Select End Now:
-
-<img src="https://github.com/user-attachments/assets/333b537f-a519-4e14-ac7f-7b559539d5c3" width="600"/>
-
-</details>
-
-Windows Aero can be enabled using the registry editor but the performance is noticably slower than the basic display mode. Press `⊞` + `r` and type in:
-
-```
-regedit
-```
-
-<img src="https://github.com/user-attachments/assets/fc2fab31-6c10-4871-8ad3-5bde5c409e31" width="600"/>
-
-Accept the User Account Control:
-
-<img src="https://github.com/user-attachments/assets/da507a88-bdb4-4e95-a055-3421f1dd93a5" width="600"/>
-
-Navigate to:
-
-```
-HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM
-```
-
-<img src="https://github.com/user-attachments/assets/10730789-c59d-4e86-80ef-5a0231720d9d" width="600"/>
-
-<img src="https://github.com/user-attachments/assets/e66efa9b-5aba-40d5-83b2-10cf6a54156b" width="600"/>
-
-In this folder are two DWORD values `Composition` and `CompositionPolicy` which are set to `1` and `0` respectively. Double click `CompositionPolicy` and update the value to `1` (Aero Lite) or `2` (Aero) and select OK:
-
-<img src="https://github.com/user-attachments/assets/cf88a147-4d38-47ce-8a63-bb1656ed6624" width="600"/>
-
-Close the registry editor. Go to Start and search for cmd and right click cmd and select run as administrator:
-
-<img src="https://github.com/user-attachments/assets/669a5a1a-7b8e-4405-96b6-653076348273" width="600"/>
-
-Accept the User Account Control Prompt:
-
-<img src="https://github.com/user-attachments/assets/4afba59e-aff3-4292-b04a-f7a136e29b54" width="600"/>
-
-Stop the Desktop Windows Manager by inputting:
-
-```
-net stop uxsms
-```
-
-<img src="https://github.com/user-attachments/assets/183bf783-572f-4a8f-809a-a9612b065812" width="600"/>
-
-Start the Desktop Windows Manager by inputting:
-
-```
-net start uxsms
-```
-
-<img src="https://github.com/user-attachments/assets/e0c35a10-d165-486e-a09d-683fb8e77471" width="600"/>
-
 ## Disable Security Centre Icon
 
 The Window Security Centre Notification will display in the notifcation tray. This can be disabled by selecting it and selecting Change the way Security Centre Alerts Me:
@@ -916,6 +825,95 @@ VMware can theoretically passthrough a physical parallel port. However, USB-to-p
 ## PCI/PCIe Card Passthrough
 
 VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
+
+## Enabling Aero
+
+**Enabling Windows Aero on the Windows Vista VM is not recommended as the performance is reduced.**
+
+Select Computer and then select Properties:
+
+<img src="https://github.com/user-attachments/assets/0aca88f8-c722-4c5d-a0b6-bacfe1d42c2a" width="600"/>
+
+The Windows Experience Index (WEI) Assessment in this VMware Vista virtual machine reports a score of 1.0 because Windows Vista is using the VMware SVGA driver based on the Windows XP Display Driver Model (XPDM). This driver does not implement all features of the Windows Display Driver Model (WDDM) 1.0 introduced in Vista, so the WEI graphics assessment cannot run. VMware provides a WDDM 1.1 driver for Windows 7 and later that fully supports GPU-accelerated Aero and WEI, but this driver is incompatible with Windows Vista. Since Vista is less commonly virtualized and is generally considered an intermediate release between Windows XP and Windows 7, VMware did not create a dedicated WDDM driver for Vista.
+
+<img src="https://github.com/user-attachments/assets/1c9b6009-ce45-4af8-8c26-ff967b095699" width="600"/>
+
+If the Windows Assessment Tool is used, it will hang:
+
+<details open>
+<summary>Windows System Assessment Tool - NOT RECOMMENDED</summary>
+
+When refresh now is selected:
+
+<img src="https://github.com/user-attachments/assets/ab867898-cf02-4e21-a489-ae7edf4e19db" width="600"/>
+
+And continue is selected:
+
+<img src="https://github.com/user-attachments/assets/6ff245ed-b1a4-4d02-9d83-d3761ac372fb" width="600"/>
+
+The Windows Assessment Tool will hang here because it cannot access the graphics driver fully to flash the screen:
+
+<img src="https://github.com/user-attachments/assets/972eb9c6-6392-426c-8759-e47061624179" width="600"/>
+
+Press `Ctrl`, `⇧` + `Esc` to bring up the Task Manager. Right click Performance Information and Tools and select End Task:
+
+<img src="https://github.com/user-attachments/assets/0b54f2e8-c3c4-4256-bc71-273c71664da3" width="600"/>
+
+Select End Now:
+
+<img src="https://github.com/user-attachments/assets/333b537f-a519-4e14-ac7f-7b559539d5c3" width="600"/>
+
+</details>
+
+Windows Aero can be enabled using the registry editor but the performance is noticably slower than the basic display mode. Press `⊞` + `r` and type in:
+
+```
+regedit
+```
+
+<img src="https://github.com/user-attachments/assets/fc2fab31-6c10-4871-8ad3-5bde5c409e31" width="600"/>
+
+Accept the User Account Control:
+
+<img src="https://github.com/user-attachments/assets/da507a88-bdb4-4e95-a055-3421f1dd93a5" width="600"/>
+
+Navigate to:
+
+```
+HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM
+```
+
+<img src="https://github.com/user-attachments/assets/10730789-c59d-4e86-80ef-5a0231720d9d" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/e66efa9b-5aba-40d5-83b2-10cf6a54156b" width="600"/>
+
+In this folder are two DWORD values `Composition` and `CompositionPolicy` which are set to `1` and `0` respectively. Double click `CompositionPolicy` and update the value to `1` (Aero Lite) or `2` (Aero) and select OK:
+
+<img src="https://github.com/user-attachments/assets/cf88a147-4d38-47ce-8a63-bb1656ed6624" width="600"/>
+
+Close the registry editor. Go to Start and search for cmd and right click cmd and select run as administrator:
+
+<img src="https://github.com/user-attachments/assets/669a5a1a-7b8e-4405-96b6-653076348273" width="600"/>
+
+Accept the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/4afba59e-aff3-4292-b04a-f7a136e29b54" width="600"/>
+
+Stop the Desktop Windows Manager by inputting:
+
+```
+net stop uxsms
+```
+
+<img src="https://github.com/user-attachments/assets/183bf783-572f-4a8f-809a-a9612b065812" width="600"/>
+
+Start the Desktop Windows Manager by inputting:
+
+```
+net start uxsms
+```
+
+<img src="https://github.com/user-attachments/assets/e0c35a10-d165-486e-a09d-683fb8e77471" width="600"/>
 
 Return to [VMware Installation Guide](../readme.md).
 
