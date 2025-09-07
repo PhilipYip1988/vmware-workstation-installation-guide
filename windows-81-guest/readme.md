@@ -9,7 +9,7 @@ monitor.virtual_exec = "hardware"
 mks.enableVulkanRenderer = "FALSE"
 ```
 
-The sfirst setting prevents use of a memory management unit that Windows 8.1 doesn't understand and can lead to a Blue Screen of Death (BSOD). The second setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows 8.1 and often leads to black screens. 
+The first setting prevents use of a memory management unit that Windows 8.1 doesn't understand and can lead to a Blue Screen of Death (BSOD). The second setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows 8.1 and often leads to black screens. 
 
 ## Downloads
 
@@ -299,6 +299,45 @@ WSUS Offline Update will patch Windows 8.1:
 
 <img src="https://github.com/user-attachments/assets/4d09e903-47c5-441c-9ea9-84373b7eebc4" width="600"/>
 
+To see the updates isntalled, right click the Start Button and select Control Panel:
+
+<img src="https://github.com/user-attachments/assets/6998e71a-8d9b-414b-b1d9-67cbd4e45331" width="600"/>
+
+Select Programs:
+
+<img src="https://github.com/user-attachments/assets/4b227210-f342-4585-b890-4e2a35853814" width="600"/>
+
+Select Programs and Features:
+
+<img src="https://github.com/user-attachments/assets/c914fdc1-0de6-4dbc-910c-b4396ae855a1" width="600"/>
+
+Select View Installed Updates:
+
+<img src="https://github.com/user-attachments/assets/f459041c-1c99-401e-afd4-4e603187b311" width="600"/>
+
+And all Windows 8.1 Updates are Installed:
+
+<img src="https://github.com/user-attachments/assets/c7d42ed0-6837-4dc4-b462-28f22b4a7501" width="600"/>
+
+
+
+
+## Enabling Microsoft .Net 3.5
+
+
+
+
+
+
+## Backing up the VM
+
+Shut down the Windows 8.1 VM and then create a copy of the VM folder. Should you encounter problems with your VM after installing software, you can delete the original folder and rename the copied folder to the original folders name. Essentially this will give you a VM to roll back to:
+
+
+
+
+
+
 ## Shared Folders
 
 Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmshared`:
@@ -309,11 +348,37 @@ Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmsha
 
 Select Player → Manage → Virtual Machine Settings:
 
+<img src="https://github.com/user-attachments/assets/474b50f5-b5c6-4dd4-bf48-3a5602518cca" width="600"/>
+
+Select Options → Shared Folders and change the setting to Always Enabled and check Map Network Drive in Windows Guests. Then select Add:
+
+<img src="https://github.com/user-attachments/assets/cf897dbd-5bde-4dbb-9c2b-0d467149592d" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/57bdb469-9831-4649-aca7-72f049a2d4ce" width="600"/>
+
+Select browse:
 
 
+Select the `vmshared` folder and select OK:
 
 
+Select next:
 
+Select Finish:
+
+Select OK:
+
+Select File Explorer:
+
+Select Shared Folders:
+
+Select `vmshared`:
+
+This is empty just now:
+
+## 
 
 
 
