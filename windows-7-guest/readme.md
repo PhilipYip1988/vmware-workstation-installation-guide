@@ -10,7 +10,7 @@ Setting up a Windows 7 Guest using VMware Workstation Player.
 
 VMware Workstation Player 17.6.4 has Windows 7 as an option for a Virtual Machine. However Windows 7 is regarded as a legacy Operating System and isn't tested by Broadcom. Moreover the VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows 7 and the following errors will display if they are attempted to be installed in the Windows 7 VM:
 
-<img width="802" height="711" alt="Screenshot 2025-09-01 043806" src="https://github.com/user-attachments/assets/cf5f06b6-8ff1-4404-b869-264c1f16af25" width='600'/>
+<img src="https://github.com/user-attachments/assets/cf5f06b6-8ff1-4404-b869-264c1f16af25" width='600'/>
 
 VMware Tools 11.0.6 is the last version of VMware Tools to support Windows 7 and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
 
