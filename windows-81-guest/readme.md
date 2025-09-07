@@ -1,4 +1,9 @@
+# Notes
 
+```
+monitor.virtual_exec = "hardware"
+mks.enableVulkanRenderer = "FALSE"
+```
 
 ## Downloads
 
@@ -36,7 +41,97 @@ Windows 8.1 can be installed on the Windows 8.1 VM using a generic product key. 
 
 ### WSUS Offline Update
 
-# [WSUS Offline Update Pack Windows 8.1 (w63-x64)](https://github.com/LizenzFass78851/wsusofflineupdatepacks)
+The WSUS Offline Update still supports Windows 8.1:
+
+* [WSUS Offline Update](https://download.wsusoffline.net/)
+
+Download the most recent version:
+
+<img src="https://github.com/user-attachments/assets/98096a2d-c2e6-4a3c-930c-2d2cc8d0214d" width="600"/>
+
+Right click WSUS Offline 120:
+
+<img src="https://github.com/user-attachments/assets/f05fcea4-bef6-4d41-9cdb-0487d7133133" width="600"/>
+
+Select Extract All...:
+
+<img src="https://github.com/user-attachments/assets/5221527c-cd34-454a-ab4f-1c3cbc428440" width="600"/>
+
+Select Extract:
+
+<img src="https://github.com/user-attachments/assets/d63b6d13-bce1-4f0b-a273-b25de25392e0" width="600"/>
+
+Go to the `wsusoffline` folder:
+
+<img src="https://github.com/user-attachments/assets/bb3aa358-5dfb-4cc7-828f-259ec73f9261" width="600"/>
+
+Run `UpdateGenerator.exe`:
+
+<img src="https://github.com/user-attachments/assets/7238080e-2def-4125-8438-a54245bf9489" width="600"/>
+
+Uncheck all Windows 10 Versions:
+
+<img src="https://github.com/user-attachments/assets/6a74f132-a4dc-4813-9b65-fa304e60d8a9" width="600"/>
+
+Select Windows 8.1 x64 (64 Bit) or Windows 8.1 x86 (32 Bit). Under options select verify downloaded updates and include C++ Runtime Libraries and .NET Frrameworks. Under ISO image(s) select per selected produt and language/ Select Start:
+
+<img src="https://github.com/user-attachments/assets/de0b3b61-a706-40b2-a212-4f693e429e76" width="600"/>
+
+The updates will download:
+
+<img src="https://github.com/user-attachments/assets/d10d7bd2-b3d1-4e7c-b6ff-59f4028905da" width="600"/>
+
+And the ISO will be created:
+
+<img src="https://github.com/user-attachments/assets/dfebf033-7f03-4e43-afca-4dbb0a494b0c" width="600"/>
+
+It is found in the `iso` folder:
+
+<img src="https://github.com/user-attachments/assets/acd2da1e-a11a-4394-b684-f593d6117c19" width="600"/>
+
+## Configuring Virtual Hardware for a Windows 8.1 Guest
+
+<img src="https://github.com/user-attachments/assets/c7d23c1c-78a6-4146-ac11-0f7cd72c77f6" width="600"/>
+
+## Windows 8.1 Guest Virtual Machine Configuration File
+
+### Modern Generation Processors (11-14th Generation)
+
+Certain legacy settings may need to be configured to run older guest operating systems such as Windows 8.1:
+
+## Installing the Windows 8.1 Guest OS
+
+Select the Windows 7 Virtual Machine and select Play:
+
+<img src="https://github.com/user-attachments/assets/b87027a4-0114-4742-834f-ba05f61978ee" width="600"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="736" height="605" alt="image" src="https://github.com/user-attachments/assets/19a2c964-1044-40c6-a2e3-d530c9eef01c" />
+
+
 
 
 
