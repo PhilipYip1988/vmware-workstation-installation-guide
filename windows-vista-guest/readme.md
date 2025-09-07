@@ -668,7 +668,7 @@ Select Run:
 
 <img src="https://github.com/user-attachments/assets/1c5d3c4f-6aaa-44e2-b1dd-47ad61564979" width="600"/>
 
-Accept the Usr Account Control Prompt:
+Accept the User Account Control Prompt:
 
 <img src="https://github.com/user-attachments/assets/0dc4f662-7542-4fe1-852d-a9ff4aec3ceb" width="600"/>
 
