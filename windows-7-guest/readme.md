@@ -508,33 +508,27 @@ Python will be used as an example of installing a program on Windows 7. [python-
 
 When using a Windows 11 Host, the file can be dragged and dropped over to the VM. On a Linux host, the most commonly used Desktop Environment GNOME (and less common Desktop Environments) are not supported and shared folders have to be configured:
 
-
-
-
-
-
-
-
-
-
-
-<img src="https://github.com/user-attachments/assets/16a167a5-6ebd-4178-baea-019d560392e5" width="600"/>
+<img src="https://github.com/user-attachments/assets/17b57ab0-0ce2-4ed9-928c-c96f04e3d3f2" width="600"/>
 
 Launch the setup:
 
-<img src="https://github.com/user-attachments/assets/ee2e3a23-c988-4c4e-bd7d-ebf7b78e9198" width="600"/>
+<img src="https://github.com/user-attachments/assets/1dc52846-f321-43fb-a4d8-6f807a5561b6" width="600"/>
 
 Select add to path and then select install now:
 
-<img src="https://github.com/user-attachments/assets/20574682-b39e-4a87-b62c-fdb414df2d07" width="600"/>
+<img src="https://github.com/user-attachments/assets/96666f6f-4d57-4a4b-9b3e-8e3e09f35e0b" width="600"/>
 
-Select close:
+Accept the User Account Control Prompt:
 
-<img src="https://github.com/user-attachments/assets/962e8789-22d1-42a1-ab23-9cd1a5d26a25" width="600"/>
+<img src="https://github.com/user-attachments/assets/4f9083e0-8cda-483b-bcf3-efc5479854ee" width="600"/>
+
+Select Close:
+
+<img src="https://github.com/user-attachments/assets/eda83226-d680-44da-9ab9-083c847208e2" width="600"/>
 
 Open the Command Prompt:
 
-<img src="https://github.com/user-attachments/assets/f7237b7d-5038-4244-9e5a-5a591fa19e32" width="600"/>
+<img src="https://github.com/user-attachments/assets/fe14b967-3977-4c6e-9f2d-5a7630cdcebb" width="600"/>
 
 To launch Python input:
 
@@ -544,7 +538,7 @@ python
 
 Notice the change to the Python prompt `>>>`:
 
-<img src="https://github.com/user-attachments/assets/f8656803-9ed8-4f64-adac-3abc6f6a534c" width="600"/>
+<img src="https://github.com/user-attachments/assets/23ae902a-41bf-45c6-8be0-77988f8f4882" width="600"/>
 
 Python code can now be used:
 
@@ -552,7 +546,7 @@ Python code can now be used:
 print('Hello World!')
 ```
 
-<img src="https://github.com/user-attachments/assets/a442aaae-c6a8-4f0b-96a3-c28b65dc54af" width="600"/>
+<img src="https://github.com/user-attachments/assets/57eef803-e6ab-4eb9-be91-8aff13b08cf5" width="600"/>
 
 To exit python input the function:
 
@@ -560,31 +554,33 @@ To exit python input the function:
 exit()
 ```
 
-<img src="https://github.com/user-attachments/assets/21783ba4-8d15-4854-a2a9-c2ecba769a2d" width="600"/>
+<img src="https://github.com/user-attachments/assets/155f7a9c-50d9-459e-9924-2687fa5934be" width="600"/>
 
 Notice the return to the CMD prompt. 
 
 To use the package manager requires Internet Connectivity. Select Player → File → Network Adaptor → Connect:
 
-<img src="https://github.com/user-attachments/assets/a1ba09e2-8446-4fee-88ad-c1442af323d5" width="600"/>
+<img src="https://github.com/user-attachments/assets/49c2014c-6e37-4564-897f-55d937b0e64d" width="600"/>
 
-Recall however that Windows Vista is past end of life and is not safe to use online for general web use.
+Recall however that Windows 7 is past end of life and is not safe to use online for general web use.
 
-The globe icon will appear to the bottom right corner:
+Select Home Network or Work Network:
 
-<img src="https://github.com/user-attachments/assets/9edfc037-a41c-4939-8245-c2cf055b7150" width="600"/>
+<img src="https://github.com/user-attachments/assets/32652067-ccd7-442d-a816-b7b9f6ba60da" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/1d8c5273-d8d8-41d9-a4fd-774795b2d539" width="600"/>
 
 The Python package can be installed using:
 
 ```powershell
-pip install pyserial==3.0.1
+pip install pyserial==3.5
 ```
 
-<img src="https://github.com/user-attachments/assets/b54222f2-79ef-436a-8246-ab728974555c" width="600"/>
+<img src="https://github.com/user-attachments/assets/3bc9dfc5-796c-46f2-84d5-00e97df33aff" width="600"/>
 
 And can be imported into a Python program:
 
-<img src="https://github.com/user-attachments/assets/1b7631fd-fb08-421b-aa76-556aef2f38e1" width="600"/>
+<img src="https://github.com/user-attachments/assets/6e674756-696b-4e83-aa54-dc911454a2b8" width="600"/>
 
 ## USB Passthrough
 
@@ -592,31 +588,33 @@ A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.
 
 <img src="https://github.com/user-attachments/assets/4c18a4c9-04b7-4eff-94ad-4adab6ba11e5" width="600"/>
 
-The installer can be copied to `vmshared` or directly dragged and dropped from the Widnows 11 Host to the Windows Vista Guest:
+The installer can be copied to `vmshared` or directly dragged and dropped from the Windows 11 Host to the Windows 7 Guest:
 
-<img src="https://github.com/user-attachments/assets/f4384b88-251a-405b-9edb-44fe3488001c" width="600"/>
+<img src="https://github.com/user-attachments/assets/f81de79f-908e-49f1-809a-6f85e0cf7479" width="600"/>
 
 Select Computer:
 
-<img src="https://github.com/user-attachments/assets/cccb6594-ada3-4ff2-8c1e-ceb3d20cc737" width="600"/>
+<img src="https://github.com/user-attachments/assets/910245b0-a70c-40a8-b60a-e89cf385d6d1" width="600"/>
 
 Shared Folders:
 
-<img src="https://github.com/user-attachments/assets/dc247dff-9e8a-4d1e-8037-844a80eeb86d" width="600"/>
+<img src="https://github.com/user-attachments/assets/1743161a-8a8a-42cc-8843-b184689ce513" width="600"/>
 
 And the `vmshared` folder:
 
-<img src="https://github.com/user-attachments/assets/204b5844-9295-415c-9877-f8c1164671ea" width="600"/>
+<img src="https://github.com/user-attachments/assets/90df7f28-d50d-4d33-8f3e-06c4d0c5dcb3" width="600"/>
+
+If the application does not show, the shared folder may need to be refreshed, right click the folder and select refresh:
+
+<img src="https://github.com/user-attachments/assets/f79a61c0-0aeb-42b4-94f5-95613beb4c7e" width="600"/>
 
 Launch the installer:
 
-<img src="https://github.com/user-attachments/assets/77f2146d-2461-4343-a29c-cc39c5991351" width="600"/>
+<img src="https://github.com/user-attachments/assets/3611dd3b-d971-41f1-b291-d9fc4d203d4b" width="600"/>
 
-Select Run:
 
-<img src="https://github.com/user-attachments/assets/1c5d3c4f-6aaa-44e2-b1dd-47ad61564979" width="600"/>
 
-Accept the Usr Account Control Prompt:
+Accept the User Account Control Prompt:
 
 <img src="https://github.com/user-attachments/assets/0dc4f662-7542-4fe1-852d-a9ff4aec3ceb" width="600"/>
 
