@@ -111,7 +111,7 @@ Use the default Virtual Machine Name and Location (if Documents is integrated wi
 
 Note the name and location as these will be used later.
 
-The default maximum size of the Windows 7 Guest is 40 GB which is too small, I recommend increasing this to 256 GB. Note the files on the Windows 11 Host won't be 256 GB but can be up to 256 GB if the Windows Vista Guests Virtual Drive is fully occupied with files:
+The default maximum size of the Windows 7 Guest is 40 GB which is too small, I recommend increasing this to 256 GB. Note the files on the Windows 11 Host won't be 256 GB but can be up to 256 GB if the Windows 7 Guests Virtual Drive is fully occupied with files:
 
 <img src="https://github.com/user-attachments/assets/2f002035-a952-4bcc-8ba3-195a087b468c" width="600"/>
 
@@ -583,7 +583,7 @@ And can be imported into a Python program:
 
 ## USB Passthrough
 
-A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows Vista Guest. In this example a Logitech Pro 9000 webcam will be used. The Logitech Pro 9000 is a USB 2.0 camera which had HD 720p (1280×720 pixels) and 30 fps which is effectively at the limit of USB 2.0. The Windows XP driver and software can be downloaded on the Windows 11 Host:
+A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows 7 Guest. In this example a Logitech Pro 9000 webcam will be used. The Logitech Pro 9000 is a USB 2.0 camera which had HD 720p (1280×720 pixels) and 30 fps which is effectively at the limit of USB 2.0. The Windows XP driver and software can be downloaded on the Windows 11 Host:
 
 <img src="https://github.com/user-attachments/assets/4c18a4c9-04b7-4eff-94ad-4adab6ba11e5" width="600"/>
 
@@ -655,7 +655,7 @@ Select Quick Capture:
 
 <img src="https://github.com/user-attachments/assets/57f3ec3b-8480-49bb-a5a6-c5b36d980172" width="600"/>
 
-The webcam software can be used in the Windows Vista Guest to control the Logitech Pro 9000 which has been passed through from the Windows 11 Host PC:
+The webcam software can be used in the Windows 7 Guest to control the Logitech Pro 9000 which has been passed through from the Windows 11 Host PC:
 
 <img src="https://github.com/user-attachments/assets/578e5164-7242-4f9c-b243-4de53df123cc" width="600"/>
 
