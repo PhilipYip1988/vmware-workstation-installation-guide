@@ -351,7 +351,7 @@ Select OK:
 
 <img src="https://github.com/user-attachments/assets/c827282b-9512-429e-83c3-c0df979a0edd" width="600"/>
 
-Select WSUS Offline Udpate:
+Select WSUS Offline Update:
 
 <img src="https://github.com/user-attachments/assets/3154f248-3c31-46c7-9a6e-a86b4ac054b9" width="600"/>
 
