@@ -391,29 +391,33 @@ Al the updates required for Windows 7 are installed:
 
 <img src="https://github.com/user-attachments/assets/a6304b00-cd5d-4dfa-bd3f-c19f1ea3cf58" width="600"/>
 
-It is recommended to back up this VM again now.
+It is recommended to back up the VM by creating another copy of the folder.
 
 ## Installing VMware Tools
 
 Select Player → Removable Devices → CD/DVD → Settings:
 
-<img src='./images/img_043.png' alt='img_043' width='600'/>
+<img src="https://github.com/user-attachments/assets/8002c7b0-8396-4b82-b152-98be887bd63e" width="600"/>
+
+Select browse:
+
+<img src="https://github.com/user-attachments/assets/eb7ff352-6cdb-45e8-beab-1c343de52868" width="600"/>
 
 Load the `VMware-tools-windows-11.0.6-15940789.iso`:
 
-<img src='./images/img_044.png' alt='img_044' width='600'/>
+<img src="https://github.com/user-attachments/assets/49f1374e-521f-4e61-a996-352ca6677e9b" width="600"/>
 
-Open up Windows Explorer and navigate to the optical drive:
+Select OK:
 
-<img src='./images/img_045.png' alt='img_045' width='600'/>
+<img src="https://github.com/user-attachments/assets/25019f6f-37dc-4446-9c3a-4f0651916dca" width="600"/>
 
-Select setup64 on Windows 7 64 Bit or setup on Windows 7 32 Bit:
+On Windows 7 64 Bit select Run `setup64.exe`, on Windows 7 32 Bit select Run `setup.exe`:
 
-<img src='./images/img_046.png' alt='img_046' width='600'/>
+<img src="https://github.com/user-attachments/assets/8a589ff5-5862-4169-a8e8-107e5c3983c3" width="600"/>
 
 Accept the User Account Control Prompt:
 
-<img src='./images/img_047.png' alt='img_047' width='600'/>
+<img src="https://github.com/user-attachments/assets/3688a960-ed0d-4d80-9160-bc262ad30251" width="600"/>
 
 Select Next:
 
@@ -442,12 +446,6 @@ Select Yes:
 The Windows 7 Guest will restart and the window in the Windows 11 Host can now be resized, resizing the Windows 7 Guest:
 
 <img src='./images/img_054.png' alt='img_054' width='600'/>
-
-If Computer is right clicked and properties selected:
-
-<img src='./images/img_055.png' alt='img_055' width='600'/>
-
-To the bottom, the Activation status will display. This Windows 7 Guest is not activated because the VM does not have a SLIC 2.1. The Windows 7 Guest is activated when a SLIC 2.1 is passed through from the Windows 11 Host or Ubutun 24.10 Host.
 
 To the left the Device Manager will display:
 
