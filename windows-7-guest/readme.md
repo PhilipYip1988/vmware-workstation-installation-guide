@@ -91,11 +91,11 @@ Your Windows 11 Host PC or Ubuntu Host PC should satisfy the minimum system the 
 
 ## Configuring Virtual Hardware for a Windows 7 Guest
 
-Select File → New Virtual Machine:
+Select Player → File → New Virtual Machine:
 
 <img src='./images/img_005.png' alt='img_005' width='600'/>
 
-Select I will Isntall the Operating System Later:
+Select I will Install the Operating System Later:
 
 <img src="https://github.com/user-attachments/assets/9b3f5b1b-99bb-4a39-a75c-a8d06275529d" width="600"/>
 
