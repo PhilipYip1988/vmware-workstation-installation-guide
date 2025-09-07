@@ -26,19 +26,6 @@ The Website Archive.org hosts the ISO created from Microsoft before Microsoft re
 |English (US)|Win8.1_Pro_N_English_x64|BCFAAFA3A370BEA1C3A9991784D1D2534B42F09AAE55AE7CAA59FBB0168324A1|64|HomeN<br>ProN|
 |English (US)|Win8.1_Pro_N_English_x32|C4A4BA7FBC1928AF7A4C462CE40FFB481697EA37BD3C85C627600FE79B3EC902|32|HomeN<br>ProN|
 
-### Generic Product Keys
-
-Windows 8.1 can be installed on the Windows 8.1 VM using a generic product key. This gives a 30 day trial, after the 30 day trials, the Windows Desktop will be watermakred saying activate Windows.
-
-|Edition|Generic Product Key|
-|---|---|
-|Windows 8.1 Home|334NH-RXG76-64THK-C7CKG-D3VPT|
-|Windows 8.1 Home Single Language|Y9NXP-XT8MV-PT9TG-97CT3-9D6TC|
-|Windows 8.1 Pro|XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB|
-|Windows 8.1 Home N|6NPQ8-PK64X-W4WMM-MF84V-RGB89|
-|Windows 8.1 Professional N|JRBBN-4Q997-H4RM2-H3B7W-Q68KC|
-|Windows 8.1 Professional with Media Center|GBFNG-2X3TC-8R27F-RMKYB-JK7QT|
-
 ### WSUS Offline Update
 
 The WSUS Offline Update still supports Windows 8.1:
@@ -85,16 +72,94 @@ And the ISO will be created:
 
 <img src="https://github.com/user-attachments/assets/dfebf033-7f03-4e43-afca-4dbb0a494b0c" width="600"/>
 
+Select Yes to view the log file:
+
+<img src="https://github.com/user-attachments/assets/2c1b6195-a72b-4155-aae2-21ae4a4e4900" width="200"/>
+
 It is found in the `iso` folder:
 
 <img src="https://github.com/user-attachments/assets/acd2da1e-a11a-4394-b684-f593d6117c19" width="600"/>
 
-## Configuring Virtual Hardware for a Windows 8.1 Guest
-
 <img src="https://github.com/user-attachments/assets/c7d23c1c-78a6-4146-ac11-0f7cd72c77f6" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/19a2c964-1044-40c6-a2e3-d530c9eef01c" width="600" />
+## Windows 11 Host or Ubuntu 24.10 Host System Requirements
 
+Your Windows 11 Host PC or Ubuntu Host PC should satisfy the minimum system the system requirements of Windows 11 and have additional overhead to run a Virtual Machine in addition to these requirements. It is recommended to have a Host PC with at least:
+
+* i5 or i7 11th Generation Intel Processor or Newer
+* 16 GB RAM
+* 1 TB SSD
+
+## Configuring Virtual Hardware for a Windows 8.1 Guest
+
+Select Player → File → New Virtual Machine:
+
+<img src="https://github.com/user-attachments/assets/19a2c964-1044-40c6-a2e3-d530c9eef01c" width="600"/>
+
+Select Installer Disc Image File ISO and Browse:
+
+<img src="https://github.com/user-attachments/assets/f65d85d3-d39b-4e41-93d6-e2feac91ee32" width="600"/>
+
+Select the Windows 8.1 ISO and then Open:
+
+<img src="https://github.com/user-attachments/assets/bdc96f2a-250e-4ad0-8ace-a211cfa6ece3" width="600"/>
+
+Under version of Windows to Install, select Windows 8.1 Home or Windows 8.1 Pro from the drop down list and supply the corresponding generic product key:
+
+|Edition|Generic Product Key|
+|---|---|
+|Windows 8.1 Home|334NH-RXG76-64THK-C7CKG-D3VPT|
+|Windows 8.1 Home Single Language|Y9NXP-XT8MV-PT9TG-97CT3-9D6TC|
+|Windows 8.1 Pro|XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB|
+|Windows 8.1 Home N|6NPQ8-PK64X-W4WMM-MF84V-RGB89|
+|Windows 8.1 Professional N|JRBBN-4Q997-H4RM2-H3B7W-Q68KC|
+|Windows 8.1 Professional with Media Center|GBFNG-2X3TC-8R27F-RMKYB-JK7QT|
+
+Input your User Name and select next:
+
+<img src="https://github.com/user-attachments/assets/5daa03bc-e98e-4ed7-995f-9297aebae6cf" width="600"/>
+
+The generic product keys allow product installation but not product activation. They give a 30 day trial, after the 30 day trials, the Windows Desktop and Windows Settings will be watermakred saying activate Windows and some customisation settings will be greyed out.
+
+Use the default Virtual Machine Name and Location (if Documents is integrated with OneDrive, you may want to move this to a local only location) and select next:
+
+<img src="https://github.com/user-attachments/assets/cc35b89a-3531-4230-bc4a-994edc0652ea" width="600"/>
+
+Note the name and location as these will be used later. The default maximum size of the Windows 8.1 Guest is 60 GB which is too small, I recommend increasing this to 256 GB. Note the files on the Windows 11 Host won't be 256 GB but can be up to 256 GB if the Windows 8.1 Guests Virtual Drive is fully occupied with files:
+
+<img src="https://github.com/user-attachments/assets/f4ab9821-08e7-4ce8-9e68-9617f07cbf98" width="600"/>
+
+Select customise hardware:
+
+<img src="https://github.com/user-attachments/assets/a48697c0-9e44-427b-b2cc-4e7a0d811180" width="600"/>
+
+Increase the RAM to 4096 MB:
+
+<img src="https://github.com/user-attachments/assets/566ef98b-181a-494d-b945-5f791e9c0f45" width="600"/>
+
+Increase the number of processors to 4:
+
+<img src="https://github.com/user-attachments/assets/eead2c2b-6c9c-4520-8bd1-74f93100a2d7" width="600"/>
+
+Windows 8.1 has reached end of life and should be deemed unsafe to use online. The virtual network adaptor is connected by default and can optionally be disabled:
+
+<img src="https://github.com/user-attachments/assets/04645bf6-c37f-47a0-8ac4-fff1045e5774" width="600"/>
+
+Under USB Compatabiliy, USB 3.1 should be selected:
+
+<img src="https://github.com/user-attachments/assets/c60b957a-4ccf-4722-b36a-53125a6a6c30" width="600"/>
+
+Under Sound Card, use the default options:
+
+<img src="https://github.com/user-attachments/assets/71b22aeb-37e1-43c1-87a6-e6d31dab6cfe" width="600"/>
+
+Under Display, the default options can be selected. Select Close:
+
+<img src="https://github.com/user-attachments/assets/dada321e-4eb4-455b-b1ca-e2cd0a98e9f7" />
+
+**Unheck Power On this Virtual Machine After Creation (aws we want to make some changes to the Virtual machine's configuration file before launching it).** Select Finish:
+
+<img width="428" height="430" alt="image" src="https://github.com/user-attachments/assets/4f1da4fa-c845-465a-89ef-856aeee93e0a" />
 
 ## Windows 8.1 Guest Virtual Machine Configuration File
 
@@ -113,21 +178,66 @@ Select the Windows 8.1 Virtual Machine and select Play:
 
 ## Installing Windows 8.1 Updates
 
+Select Player → Removable Devices → CD/DVD → Settings:
+
 <img src="https://github.com/user-attachments/assets/b87027a4-0114-4742-834f-ba05f61978ee" width="600"/>
 
+Ensure Connected and Connect at Power On are checked and select Browse:
+
+<img src="https://github.com/user-attachments/assets/a796861d-8370-47bb-824b-97688643d948" width="600"/>
+
+Select the `wsusoffline120` folder:
+
+<img src="https://github.com/user-attachments/assets/3a8c31ac-4864-4c5a-ad7f-3efb04f058b6" width="600"/>
+
+Select the `wsusoffline` folder:
+
+<img src="https://github.com/user-attachments/assets/9b117432-4645-4094-87f2-93947171cf11" width="600"/>
+
+Select the `iso` folder:
+
+<img src="https://github.com/user-attachments/assets/1c4450bf-ca5f-43e6-af7e-762c99cc15dd" width="600"/>
+
+Select the `wsusoffline-w63-x64.iso` (Windows 8.1 64 Bit) or `wsusoffline-w63-x86.iso` (Windows 8.1 32 Bit) and select Open:  
+
+<img src="https://github.com/user-attachments/assets/c1a289be-60be-4bfb-ab30-8f694957c0e2" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/b0d096d7-444d-4ed7-8c44-888f6f2831f1" width="600"/>
+
+Select the DVD Drive:
+
+<img src="https://github.com/user-attachments/assets/17e321b7-f678-4bd4-9753-792c492d7735" width="600"/>
+
+Select Run WSUS Offline Update:
+
+<img src="https://github.com/user-attachments/assets/0fd6300f-51da-4799-aa2c-9fcec4d4fe24" width="600"/>
+
+Accept the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/6663561f-e108-4815-8c0d-29d10716fe55" width="600"/>
+
+Under Installation check Update C++ Runtime Libraries, Install .NET Framework 3.5 and 4.8, Update Root Certificates and Install Management Framework 5.1. Under Control check Verify Installation Packages, Automatic Reboot and Recall and Shut Down on Completion:
+
+<img src="https://github.com/user-attachments/assets/cb0f7a05-aafd-4824-b648-f3f2d7ab9e02" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/e24a7253-5447-4336-a7ad-771bbda1e08f" width="600"/>
+
+Select Start:
+
+<img src="https://github.com/user-attachments/assets/cfb2acef-5340-42a7-bf01-ce926a790e78" width="600"/>
+
+WSUS Offline Update will patch Windows 8.1:
+
+<img src="https://github.com/user-attachments/assets/5814213a-5870-4033-a300-e52826a39dd6" width="600"/>
 
 
 
 
-
-
-
-
-
-
-
-
-
+## Other Notes
 
 
 Task Scheduler Library > Microsoft > Windows > Windows Activation Technologies
