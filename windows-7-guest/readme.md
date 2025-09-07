@@ -661,9 +661,23 @@ The webcam software can be used in the Windows Vista Guest to control the Logite
 
 Again the video from the webcam should display but doesn't in this case. This may be because the USB 3.1 passthrough is used.
 
-Select Player → Manage → Virtual Machine Settings:
+Power down the Windows 7 VM and select Edit Machine Settings:
 
-<img src="https://github.com/user-attachments/assets/004bb6cc-9644-42b6-8641-ee562ead2592" width="600"/>
+<img src="https://github.com/user-attachments/assets/9a2a185c-dc81-45d1-8b88-c148230738d2" width="600"/>
+
+Select USB Controllerand change the USB compatibility from USB 3.1 to USB 2.0:
+
+<img src="https://github.com/user-attachments/assets/334f8d0e-77e5-4efd-9074-a537f817c392" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/e717b0ae-442c-4e10-8f55-d227e03a23ef" width="600"/>
+
+
+
+
+
+
 
 
 
