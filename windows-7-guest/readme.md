@@ -499,7 +499,6 @@ This is empty just now:
 
 <img src="https://github.com/user-attachments/assets/9c0ecf86-4cab-4af4-bd7e-6cb63a464ce7" width="600"/>
 
-
 ## Installing Python
 
 Python will be used as an example of installing a program on Windows 7. [python-3.8.10-amd64.exe](https://www.python.org/downloads/release/python-3810/) is the latest version of Python to work on Windows 7. The installer can be downloaded on the Windows 11 Host PC:
@@ -612,55 +611,62 @@ Launch the installer:
 
 <img src="https://github.com/user-attachments/assets/3611dd3b-d971-41f1-b291-d9fc4d203d4b" width="600"/>
 
-
-
 Accept the User Account Control Prompt:
 
-<img src="https://github.com/user-attachments/assets/0dc4f662-7542-4fe1-852d-a9ff4aec3ceb" width="600"/>
+<img src="https://github.com/user-attachments/assets/1db5b764-bb9b-41fb-b541-3a08a8892288" width="600"/>
 
 Select next:
 
-<img src="https://github.com/user-attachments/assets/e3c49dc0-0694-42ae-93cf-fbf62e4e25b5" width="600"/>
+<img src="https://github.com/user-attachments/assets/f9e241d1-d00b-4006-aa71-da0ce3c9c4a6" width="600"/>
 
 Attach the USB Device, in this case the Logitech Pro 9000 to the USB Port. VMware will show the New USB Device Detectd Dialog which will allow you to connect the USB either to the Host or the VM:
 
-<img src="https://github.com/user-attachments/assets/7fda5d2c-75c8-4956-817d-9e757e66ecfb" width="600"/>
+<img src="https://github.com/user-attachments/assets/ffd6c573-98d0-4be2-b7bd-5cd1e4f39d01" width="600"/>
 
 When prompted to connect the webcam, pass through the USB device from the Windows 11 Host to the VM using Player → Removable Devices → Logitech USB Device → Connect:
 
-<img src="https://github.com/user-attachments/assets/2a9f095f-72d9-4a4e-965f-efe2ea7bfe25" width="600"/>
+<img src="https://github.com/user-attachments/assets/15e11094-0f9e-42ad-9817-afd254332055" width="600"/>
 
 Select OK:
 
-<img src="https://github.com/user-attachments/assets/cc7b7b63-4ffa-4770-8cbd-67aa2698ecfc" width="600"/>
+<img src="https://github.com/user-attachments/assets/fe2c34a2-f7fc-4bbc-95ae-750c54c365bc" width="600"/>
 
 The found new hardware wizard will show:
 
-<img src="https://github.com/user-attachments/assets/021bfed5-dc01-4b39-a140-0655af293735" width="600"/>
+<img src="https://github.com/user-attachments/assets/d0a622ec-b251-4886-80a6-280692debc0f" width="600"/>
 
 Select next:
 
-<img src="https://github.com/user-attachments/assets/ded58771-fa20-482c-a93f-2319f4730e9c" width="600"/>
+<img src="https://github.com/user-attachments/assets/0720abaa-2445-4ed2-a99b-43f438484b07" width="600"/>
 
 Select next:
 
-<img src="https://github.com/user-attachments/assets/e19008d8-5c75-491b-8f13-97f0062001a2" width="600"/>
+<img src="https://github.com/user-attachments/assets/f8f5e50e-776d-4dee-83a9-ad646e137b96" width="600"/>
 
-The image from the webcam displays, select next:
+The video from the webcam should display, although it doesn't in this case select next:
 
-<img src="https://github.com/user-attachments/assets/4435890b-d203-4156-907e-85ceafdedfeb" width="600"/>
+<img src="https://github.com/user-attachments/assets/86006e33-25d3-49cc-b6ea-ec78e3ff1ff9" width="600"/>
 
 Select check out my webcam:
 
-<img src="https://github.com/user-attachments/assets/c16bac7e-6081-4c7b-9fb4-7b894c877ef5" width="600"/>
+<img src="https://github.com/user-attachments/assets/d3ba0e1c-fb63-4a4d-a6c6-1d1a445c1ff3" width="600"/>
 
 Select Quick Capture:
 
-<img src="https://github.com/user-attachments/assets/ce050db6-6a4f-413a-a706-076b67762e58" width="600"/>
+<img src="https://github.com/user-attachments/assets/57f3ec3b-8480-49bb-a5a6-c5b36d980172" width="600"/>
 
 The webcam software can be used in the Windows Vista Guest to control the Logitech Pro 9000 which has been passed through from the Windows 11 Host PC:
 
-<img src="https://github.com/user-attachments/assets/086054fc-b098-4f7a-a17b-6e6bde50eff3" width="600"/>
+<img src="https://github.com/user-attachments/assets/578e5164-7242-4f9c-b243-4de53df123cc" width="600"/>
+
+Again the video from the webcam should display but doesn't in this case. This may be because the USB 3.1 passthrough is used.
+
+Select Player → Manage → Virtual Machine Settings:
+
+<img src="https://github.com/user-attachments/assets/004bb6cc-9644-42b6-8641-ee562ead2592" width="600"/>
+
+
+
 
 ## Serial Port Passthrough
 
