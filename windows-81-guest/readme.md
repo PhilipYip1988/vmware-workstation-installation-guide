@@ -1,9 +1,15 @@
-# Notes
+# Windows 8.1 Guest
+
+## Notes
+
+On modern hardware, with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
 
 ```
 monitor.virtual_exec = "hardware"
 mks.enableVulkanRenderer = "FALSE"
 ```
+
+The sfirst setting prevents use of a memory management unit that Windows 8.1 doesn't understand and can lead to a Blue Screen of Death (BSOD). The second setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows 8.1 and often leads to black screens. 
 
 ## Downloads
 
@@ -292,8 +298,6 @@ Select Start:
 WSUS Offline Update will patch Windows 8.1:
 
 <img src="https://github.com/user-attachments/assets/5814213a-5870-4033-a300-e52826a39dd6" width="600"/>
-
-
 
 
 ## Other Notes
