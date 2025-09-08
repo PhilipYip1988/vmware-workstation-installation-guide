@@ -1,5 +1,7 @@
 # Windows Vista
 
+Step-by-step guides for VMware Workstation 17.6.4, focused on running Windows Vista in a virtual environments. Learn to enable shared folders, USB passthrough and serial port passthrough to control legacy scientific instruments and laboratory hardware, making older software and devices compatible with modern systems. Ideal for university researchers, lab technicians, and IT staff supporting legacy lab equipment. Windows Vista reached its official end of life in January 2017, meaning Microsoft no longer provides security updates, bug fixes, or technical support for this operating system. Activation servers have also been retired, so installations can only proceed with generic OEM SLP keys. Note: Windows Vista marked a significant change from Windows XP, particularly in hardware requirements and system compatibility. These changes introduced instability, poor driver support, and frequent compatibility issues with specialized scientific hardware and software when Windows Vista was first realised. Although these issues were mainly addressed, Windows Vista was generally regarded as unstable and rarely adopted in laboratory or industrial environments, with most users choosing to remain on Windows XP or move directly to Windows 7. Windows Vista is generally regarded as an intermediate Operating System between Windows XP and Windows 7 and rarely used for virtualisation. As a consequence VMware does not have a full WDDM 1.0 driver for Windows Vista.
+
 ## YouTube Video
 
 * [YouTube](https://www.youtube.com/watch?v=oysZWd6vPhA)
