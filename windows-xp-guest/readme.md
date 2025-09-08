@@ -1,6 +1,6 @@
 # Windows XP
 
-Setting up a Windows XP Guest using VMware Workstation Player.
+Step-by-step guides for VMware Workstation 17.6.4, focused on running Windows XP in a virtual environments. Learn to enable shared folders, USB passthrough and serial port passthrough to control legacy scientific instruments and laboratory hardware, making older software and devices compatible with modern systems. Windows XP has widespread legacy use as many scientific instruments from the late 1990s to late 2000s shipped with Windows XP drivers only. Ideal for university researchers, lab technicians, and IT staff supporting legacy lab equipment. Windows XP reached its official end of life in April 2014, meaning Microsoft no longer provides security updates, bug fixes, or technical support for this operating system. Activation servers have also been retired, so installations can only proceed with generic OEM SLP keys. 
 
 ## YouTube Video
 
