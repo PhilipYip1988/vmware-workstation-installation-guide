@@ -32,8 +32,22 @@ Microsoft used to host all the ISOs as direct download links however as Windows 
 
 ## WSUS Offline Update
 
-To patch the Windows 10 Build use:
+WSUS Offline Update Community 12.6H6:
+
+The WSUS Offline Update is a utility that can be used to download all the updates for a Windows Build and create an ISO which can be used for offline update. The Original Developer maintained the project until April 2020, just after Windows 7 Reached End of Life. After April 2020 it was forked into a community version.
+
+<img src="https://github.com/user-attachments/assets/b9519a7c-4fa5-4de8-8475-d524f4f412b7" width="600"/>
+
+* [WSUS Offline Update Community](https://gitlab.com/wsusoffline/wsusoffline/-/releases)
+
+WSUS Offline Update 11.9:
+
+<img src="https://github.com/user-attachments/assets/14fd73bc-c36b-46b3-b525-ac69e8b8f8e2" width="600"/>
 
 * [WSUS Offline Update](https://download.wsusoffline.net/)
+
+
+
+
 
 
