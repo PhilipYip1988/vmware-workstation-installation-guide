@@ -2,6 +2,8 @@
 
 ## Notes
 
+Step-by-step guides for VMware Workstation 17.6.4, focused on running Windows 8.1 in a virtual environments. Learn to enable shared folders, USB passthrough and serial port passthrough to control legacy scientific instruments and laboratory hardware, making older software and devices compatible with modern systems. Ideal for university researchers, lab technicians, and IT staff supporting legacy lab equipment. Windows 8.1 reached its official end of life in January 2023, meaning Microsoft no longer provides security updates, bug fixes, or technical support for this operating system. Activation servers have also been retired, so installations can only proceed with generic keys in an unactivated state, leaving a permanent watermark and limited customization options.
+
 On modern hardware, with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
 
 ```
