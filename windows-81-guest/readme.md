@@ -808,9 +808,9 @@ VMware can theoretically passthrough a physical parallel port. However, USB-to-p
 
 VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
 
-## Activation Popup
+## Activation
 
-Microsoft have closed down Windows 8.1 Activation Servers, so Windows 8.1 cannot be activated. A watermark displays to the bottom right and some personalisation settings cannot be used. 
+Microsoft have closed down Windows 8.1 Activation Servers, so Windows 8.1 cannot be activated. A watermark displays to the bottom right and some personalisation settings cannot be used. Otherwise the Windows 8.1 VM is fully usable:
 
 Return to [VMware Installation Guide](../readme.md).
 
