@@ -33,7 +33,7 @@ Microsoft used to host all the ISOs as direct download links however as Windows 
 
 * [GitHub: Windows 10 Media Creation Tool.bat](https://github.com/AveYo/MediaCreationTool.bat)
 
-<img src="https://github.com/user-attachments/assets/c1cdedfa-5868-44f8-9a32-b3e89a0e1947" width="600"/>
+<img src="https://github.com/user-attachments/assets/c1cdedfa-5868-44f8-9a32-b3e89a0e1947" width="300"/>
 
 ## WSUS Offline Update
 
