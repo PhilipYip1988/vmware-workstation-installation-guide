@@ -37,9 +37,9 @@ Microsoft used to host all the ISOs as direct download links however as Windows 
 
 ## WSUS Offline Update
 
-WSUS Offline Update Community 12.6H6:
-
 The WSUS Offline Update is a utility that can be used to download all the updates for a Windows Build and create an ISO which can be used for offline update. The Original Developer maintained the WSUS Offline Update project until April 2020, just after Windows 7 Reached End of Life. After April 2020 it was forked into a community version. The community version is better for Windows 10 Builds released post-2020 and the Long Term Support Build/Channel (LTSB/LTSC) Builds 1507/1607/1809/21H2.
+
+WSUS Offline Update Community 12.6H6:
 
 <img src="https://github.com/user-attachments/assets/b9519a7c-4fa5-4de8-8475-d524f4f412b7" width="600"/>
 
