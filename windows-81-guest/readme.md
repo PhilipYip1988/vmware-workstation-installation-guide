@@ -553,13 +553,256 @@ Select OK:
 
 <img src="https://github.com/user-attachments/assets/3cdd3b3c-ef22-46fe-9384-96f458ef75cc" width="600"/>
 
+The Windows 8.1 VM will restart, now the ptouch editor software can be installed. Launch the setup:
 
+<img src="https://github.com/user-attachments/assets/30d682d9-007a-46a0-9d0d-8cb123af22e2" width="600"/>
 
+Accept the User Account Control Prompt:
 
+<img src="https://github.com/user-attachments/assets/e4b6e02b-2313-45a4-8ef5-a363b84f06d0" width="600"/>
 
+Accept the license agreement:
 
+<img src="https://github.com/user-attachments/assets/e3e4ae3e-fb4d-46f8-8a2f-69be02ba9b5b" width="600"/>
 
+Select install:
 
+<img src="https://github.com/user-attachments/assets/b95767e3-1c5b-4d3e-a06b-7b12498a881e" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/fb0a03c8-b5da-40b0-a32d-ece4586d264b" width="600"/>
+
+Launch the ptouch editor software:
+
+<img src="https://github.com/user-attachments/assets/4cdfc9ca-4dce-4587-b1a5-f45bee585d24" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/2553d51e-78a7-4d27-8b16-a2bffc61507b" width="600"/>
+
+Type in a label and select print:
+
+<img src="https://github.com/user-attachments/assets/257f61d4-07cc-41bf-ba82-bdb6d1dd632b" width="600"/>
+
+Select print:
+
+<img src="https://github.com/user-attachments/assets/0e29dc3d-08b8-4403-99c6-9f0cabca2348" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/1d993525-2399-4d19-903d-e7af10a2d642" width="600"/>
+
+The label is printed using the QL-570 label printer attached to a USB port on the Windows 11 Host PC that is passed through to the ptouch editor softare on the Windows 8.1 VM Guest:
+
+<img src="https://github.com/user-attachments/assets/8340a673-b5e6-4a1e-b640-b9718ff441bb" width="600"/>
+
+## Serial Port Passthrough
+
+Close the Windows 7 VM. Attach a USB to Serial Port to the Window 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/dc02277e-d8ff-4fa1-b071-993df8f0cd7b" width="600"/>
+
+On the Windows 11 Host PC, right click the Start Button and select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/4c5f545f-e66c-4ece-b524-10454a2397b4" width="600"/>
+
+Expand ports (COM & LPT). In this example, the USB Serial COM Port is COM3:
+
+<img src="https://github.com/user-attachments/assets/da226f02-457e-417d-9294-d018f54fc562" width="600"/>
+
+Right click it and select properties:
+
+<img src="https://github.com/user-attachments/assets/0f1768d9-c1bf-4324-8bc6-946640ba5531" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects:
+
+<img src="https://github.com/user-attachments/assets/283e424d-9fea-448d-ab0a-874db7c018c1" width="600"/>
+
+In this case it will be left at port 3:
+
+<img src="https://github.com/user-attachments/assets/bf7258a0-b073-4451-ac3c-45542580d38f" width="600"/>
+
+Open VMware Player and select Edit Virtual Machine Settings:
+
+<img src="https://github.com/user-attachments/assets/65d4b18e-6c82-40f4-85b9-0676eedfd221" width="600"/>
+
+Select Add...:
+
+<img src="https://github.com/user-attachments/assets/bf1ac436-02f8-47ba-bca7-462dfa0c33dc" width="600"/>
+
+Select Serial Port and Finish:
+
+<img src="https://github.com/user-attachments/assets/93fc8640-0137-4e91-b473-e2acecd3416d" width="600"/>
+
+Select Connect at Power On. Autodetect is useful for a single port, but for multipe ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
+
+<img src="https://github.com/user-attachments/assets/69cf41ec-5397-4b5a-9417-b4fc4e7702b6" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/9bc22807-1e3c-4b1e-82b4-047db05c258b" width="600"/>
+
+Launch the VM:
+
+<img src="https://github.com/user-attachments/assets/c6c144fe-93da-4e98-ad54-0e9e3ccceaa2" width="600"/>
+
+Right click computer and select properties:
+
+<img src="https://github.com/user-attachments/assets/e871700c-aa65-4944-9d1e-221321691e2e" width="600"/>
+
+Select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/7e8446f0-d73e-4282-9da5-a158b5040eec" width="600"/>
+
+Expand ports, note the Windows 11 COM3 is passed through to the Windows 7 VM as COM1:
+
+<img src="https://github.com/user-attachments/assets/6dd566a4-7bdd-4b27-b3b8-58e5231f4dd7" width="600"/>
+
+Right click the communication port and select Properties:
+
+<img src="https://github.com/user-attachments/assets/5de27e23-78f5-4d97-9866-4a93d9021a6c" width="600"/>
+
+Select the Port Settings tab. The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
+
+<img src="https://github.com/user-attachments/assets/a488a4e0-8d2f-4cfa-9988-d8ec83ae4ba4" width="600"/>
+
+Select Advanced:
+
+<img src="https://github.com/user-attachments/assets/77c17a55-44e5-4b31-9322-6a20bcb8a761" width="600"/>
+
+Update the COM Port Number to be consistent with the Windows 11 Host. In this case COM3. Select OK:
+
+<img src="https://github.com/user-attachments/assets/b0551c41-8b20-4d63-b3a6-8fc3a9c25c55" width="600"/>
+
+The Serial Port still displays as COM1, select refresh:
+
+<img src="https://github.com/user-attachments/assets/0edcce13-e44f-40bd-bd7e-0001af746f38" width="600"/>
+
+After refreshing COM3 now displays correctly in the device manager but is not available for use in other programs until the Windows 7 VM is restarted:
+
+<img src="https://github.com/user-attachments/assets/bfe843d1-a66d-41fe-b692-955453966cf6" width="600"/>
+
+I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
+
+<img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
+
+|Pin Number|Name|
+|---|---|
+|1|Data Carrier Detect (CDC)|
+|2|Received Data (RXD)|
+|3|Transmit Data (TXD)|
+|4|Data Terminal Ready (DTR)|
+|5|Ground (GND)|
+|6|Data Set Ready (DSR)|
+|7|Request to Send (RTS)|
+|8|Clear To Send (CTS)|
+|9|Ring Indicator (RI)|
+
+A Python script will be used which essentially transmits the data using pin 3 and then reads it back using pin 2. A Serial port can only read low `0` and high `1` signals, so any data sent via the Serial Port has to be in the form of a byte. In the basic American Standard for Information Interchange (ASCII), each ASCII character is an 8 bit binary sequence:
+
+| Char | Decimal | Hex  | Binary    |
+|------|---------|------|-----------|
+| H    | 72      | 0x48 | 01001000  |
+| e    | 101     | 0x65 | 01100101  |
+| l    | 108     | 0x6C | 01101100  |
+| l    | 108     | 0x6C | 01101100  |
+| o    | 111     | 0x6F | 01101111  |
+| (space) | 32   | 0x20 | 00100000  |
+| S    | 83      | 0x53 | 01010011  |
+| e    | 101     | 0x65 | 01100101  |
+| r    | 114     | 0x72 | 01110010  |
+| i    | 105     | 0x69 | 01101001  |
+| a    | 97      | 0x61 | 01100001  |
+| l    | 108     | 0x6C | 01101100  |
+| \n   | 10      | 0x0A | 00001010  |
+
+Open notepad:
+
+<img src="https://github.com/user-attachments/assets/d800811c-9068-468a-b1b5-da97b692229f" width="600"/>
+
+Paste in the following code:
+
+```python
+import time
+import serial
+
+# Replace 'COM3' with your serial port
+port = 'COM3'
+baudrate = 9600
+
+# Open the serial port
+ser = serial.Serial(port, baudrate, timeout=1)
+
+time.sleep(2)  # give the port some time to initialize
+
+# Test data
+test_data = b'Hello Serial\n'
+
+# Write data
+ser.write(test_data)
+print(f"Sent: {test_data}")
+
+# Read back data
+received = ser.read(len(test_data))
+print(f'Received: {received}')
+
+# Check if the loopback worked
+if received == test_data:
+    print('✅ Serial loopback test passed!')
+else:
+    print('❌ Serial loopback test failed!')
+
+ser.close()
+```
+
+<img src="https://github.com/user-attachments/assets/84b7bc60-3ee2-4511-91be-1ab3a25189bc" width="600"/>
+
+Select file → save as:
+
+<img src="https://github.com/user-attachments/assets/a46c18ac-440a-4c4a-9c2e-2bd57b35edc5" width="600"/>
+
+Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
+
+<img src="https://github.com/user-attachments/assets/e5703aa9-b01e-475e-a2d7-b46c4db453f0" width="600"/>
+
+The script file is in Documents, which is a Library of folders. Right click the script file and select Open File Location:
+
+<img src="https://github.com/user-attachments/assets/3fe2a56f-606d-4c56-babf-650b92c8d282" width="600"/>
+
+Copy the file location in the address bar:
+
+<img src="https://github.com/user-attachments/assets/f62db0ba-bddf-45c1-a4c8-d195dd2b41b3" width="600"/>
+
+Launch the script file in the command prompt:
+
+```powershell
+python C:\Users\Philip\Documents\script.py
+```
+
+Because the Windows 7 VM has not been restarted, Pyserial cannot find the port at COM3:
+
+<img src="https://github.com/user-attachments/assets/23e1690e-e04c-43a0-a20f-68523a6d6025" width="600"/>
+
+After a restart with no pins connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/a838b09c-7db6-4340-911d-00921fc1c06e" width="600"/>
+
+With pins 2 and 3 connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/a2ac4c7d-3312-4a20-8e2b-50e352544648" width="600"/>
+
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows 7 VM from the Windows 11 Host PC.
+
+## Parallel Port Passthrough
+
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 7, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+
+## PCI/PCIe Card Passthrough
+
+VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
 
 ## Activation Popup
 
@@ -600,3 +843,6 @@ Either disable the triggers or change them to run once a month instead of daily/
 
 Apply and close.
 
+Return to [VMware Installation Guide](../readme.md).
+
+Python is just used as an example of a legacy program to run in a Windows 7 VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
