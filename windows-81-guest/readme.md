@@ -597,7 +597,7 @@ The label is printed using the QL-570 label printer attached to a USB port on th
 
 ## Serial Port Passthrough
 
-Close the Windows 7 VM. Attach a USB to Serial Port to the Window 11 Host PC:
+Close the Windows 8.1 VM. Attach a USB to Serial Port to the Window 11 Host PC:
 
 <img src="https://github.com/user-attachments/assets/dc02277e-d8ff-4fa1-b071-993df8f0cd7b" width="600"/>
 
@@ -623,27 +623,27 @@ In this case it will be left at port 3:
 
 Open VMware Player and select Edit Virtual Machine Settings:
 
-<img src="https://github.com/user-attachments/assets/65d4b18e-6c82-40f4-85b9-0676eedfd221" width="600"/>
+<img src="https://github.com/user-attachments/assets/05fb8c57-6ba6-49c9-8a57-002133ad60ad" width="600"/>
 
 Select Add...:
 
-<img src="https://github.com/user-attachments/assets/bf1ac436-02f8-47ba-bca7-462dfa0c33dc" width="600"/>
+<img src="https://github.com/user-attachments/assets/9077ecd0-5ee2-48eb-bfd4-b5e067fe35fa" width="600"/>
 
 Select Serial Port and Finish:
 
-<img src="https://github.com/user-attachments/assets/93fc8640-0137-4e91-b473-e2acecd3416d" width="600"/>
+<img src="https://github.com/user-attachments/assets/53f4a23b-226a-4761-b2a5-475c3c5e183f" width="600"/>
 
 Select Connect at Power On. Autodetect is useful for a single port, but for multipe ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
 
-<img src="https://github.com/user-attachments/assets/69cf41ec-5397-4b5a-9417-b4fc4e7702b6" width="600"/>
+<img src="https://github.com/user-attachments/assets/0a293fbd-f37f-4576-a3eb-4e21a1ed2f6b" width="600"/>
 
 Select ok:
 
-<img src="https://github.com/user-attachments/assets/9bc22807-1e3c-4b1e-82b4-047db05c258b" width="600"/>
+<img src="https://github.com/user-attachments/assets/dae7d96c-d19b-4d1c-a08a-919754333180" width="600"/>
 
-Launch the VM:
+Launch the Windows 8.1 VM:
 
-<img src="https://github.com/user-attachments/assets/c6c144fe-93da-4e98-ad54-0e9e3ccceaa2" width="600"/>
+<img src="https://github.com/user-attachments/assets/20402eac-ab05-406a-9b44-db8e041eeed3" width="600"/>
 
 Right click computer and select properties:
 
@@ -651,37 +651,33 @@ Right click computer and select properties:
 
 Select Device Manager:
 
-<img src="https://github.com/user-attachments/assets/7e8446f0-d73e-4282-9da5-a158b5040eec" width="600"/>
+<img src="https://github.com/user-attachments/assets/b8f53273-9c07-4804-a624-c42cfe43e1b5" width="600"/>
 
-Expand ports, note the Windows 11 COM3 is passed through to the Windows 7 VM as COM1:
+Expand ports, note the Windows 11 COM3 is passed through to the Windows 8.1 VM as COM1:
 
-<img src="https://github.com/user-attachments/assets/6dd566a4-7bdd-4b27-b3b8-58e5231f4dd7" width="600"/>
+<img src="https://github.com/user-attachments/assets/5b906def-7e6d-4c8b-a608-7b368725ca45" width="600"/>
 
 Right click the communication port and select Properties:
 
-<img src="https://github.com/user-attachments/assets/5de27e23-78f5-4d97-9866-4a93d9021a6c" width="600"/>
+<img src="https://github.com/user-attachments/assets/b56b66cb-f619-48a8-9f2b-db0e03e53e23" width="600"/>
 
 Select the Port Settings tab. The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
 
-<img src="https://github.com/user-attachments/assets/a488a4e0-8d2f-4cfa-9988-d8ec83ae4ba4" width="600"/>
+<img src="https://github.com/user-attachments/assets/701147c6-d674-4a08-b767-30b4fff2a0d3" width="600"/>
 
 Select Advanced:
 
-<img src="https://github.com/user-attachments/assets/77c17a55-44e5-4b31-9322-6a20bcb8a761" width="600"/>
+<img src="https://github.com/user-attachments/assets/16c62122-fc51-4fca-ab82-a85ed1920968" width="600"/>
 
 Update the COM Port Number to be consistent with the Windows 11 Host. In this case COM3. Select OK:
 
-<img src="https://github.com/user-attachments/assets/b0551c41-8b20-4d63-b3a6-8fc3a9c25c55" width="600"/>
+<img src="https://github.com/user-attachments/assets/53733154-7fda-40a8-8e93-5b5aa9aa7dac" width="600"/>
 
-The Serial Port still displays as COM1, select refresh:
+The Serial Port should now display as COM3. If the Serial Port still displays as COM1, select refresh:
 
-<img src="https://github.com/user-attachments/assets/0edcce13-e44f-40bd-bd7e-0001af746f38" width="600"/>
+<img src="https://github.com/user-attachments/assets/2d16b91f-d27b-42ae-90b9-b875171e9b56" width="600"/>
 
-After refreshing COM3 now displays correctly in the device manager but is not available for use in other programs until the Windows 7 VM is restarted:
-
-<img src="https://github.com/user-attachments/assets/bfe843d1-a66d-41fe-b692-955453966cf6" width="600"/>
-
-I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
+Although the Serial now displays as COM3 in the evice Manager, it oftens isn't accessible using that port number until the Windows 8.1 VM is restarted. I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
 
 <img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
 
@@ -717,7 +713,7 @@ A Python script will be used which essentially transmits the data using pin 3 an
 
 Open notepad:
 
-<img src="https://github.com/user-attachments/assets/d800811c-9068-468a-b1b5-da97b692229f" width="600"/>
+<img src="https://github.com/user-attachments/assets/8e7d410e-2a42-4c83-9f45-01515a4bd97f" width="600"/>
 
 Paste in the following code:
 
@@ -754,23 +750,31 @@ else:
 ser.close()
 ```
 
-<img src="https://github.com/user-attachments/assets/84b7bc60-3ee2-4511-91be-1ab3a25189bc" width="600"/>
+<img src="https://github.com/user-attachments/assets/55bec621-bf10-4e27-b433-6eb5964d02fc" width="600"/>
 
 Select file → save as:
 
-<img src="https://github.com/user-attachments/assets/a46c18ac-440a-4c4a-9c2e-2bd57b35edc5" width="600"/>
+<img src="https://github.com/user-attachments/assets/d7a2cb77-ec45-43c0-8454-dc80f6dc6e45" width="600"script.py/>
 
 Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
 
-<img src="https://github.com/user-attachments/assets/e5703aa9-b01e-475e-a2d7-b46c4db453f0" width="600"/>
+<img src="https://github.com/user-attachments/assets/345ff5fd-f64d-466b-8d19-78159b780947" width="600"/>
 
-The script file is in Documents, which is a Library of folders. Right click the script file and select Open File Location:
+The script file is in Documents, which is a Library of folders:
 
-<img src="https://github.com/user-attachments/assets/3fe2a56f-606d-4c56-babf-650b92c8d282" width="600"/>
+<img src="https://github.com/user-attachments/assets/e3c03d7d-15b8-4286-adee-45c4f943a032" width="600"/>
 
-Copy the file location in the address bar:
+Right click the script file and select Properties:
 
-<img src="https://github.com/user-attachments/assets/f62db0ba-bddf-45c1-a4c8-d195dd2b41b3" width="600"/>
+<img src="https://github.com/user-attachments/assets/98d9b011-f579-420c-b0ae-0b4cc93a585b" width="600"/>
+
+This will give the folder path:
+
+<img src="https://github.com/user-attachments/assets/3eba065c-06bc-46c0-ab15-8584638169ea" width="600"/>
+
+Right click the start button and select command prompt:
+
+<img src="https://github.com/user-attachments/assets/3cee5376-49a7-4daa-a81c-74fe8ac042c2" width="600"/>
 
 Launch the script file in the command prompt:
 
@@ -778,27 +782,27 @@ Launch the script file in the command prompt:
 python C:\Users\Philip\Documents\script.py
 ```
 
-Because the Windows 7 VM has not been restarted, Pyserial cannot find the port at COM3:
+Because the Windows 8.1 VM has not been restarted, Pyserial cannot find the port at COM3:
 
-<img src="https://github.com/user-attachments/assets/23e1690e-e04c-43a0-a20f-68523a6d6025" width="600"/>
+<img src="https://github.com/user-attachments/assets/a60e68af-837a-4d1a-bcea-5edc74aa9187" width="600"/>
 
 After a restart with no pins connected, the following shows:
 
 <img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/a838b09c-7db6-4340-911d-00921fc1c06e" width="600"/>
+<img src="https://github.com/user-attachments/assets/a0b70f5a-30cf-4a8e-a239-5dacfce62a5f" width="600"/>
 
 With pins 2 and 3 connected, the following shows:
 
 <img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/a2ac4c7d-3312-4a20-8e2b-50e352544648" width="600"/>
+<img src="https://github.com/user-attachments/assets/27e9ed86-4ee4-440f-9677-c7377ca25f4a" width="600"/>
 
-The code works as expected and interfaces with the Serial Port which is passed through to the Windows 7 VM from the Windows 11 Host PC.
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows 8.1 VM from the Windows 11 Host PC.
 
 ## Parallel Port Passthrough
 
-VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 7, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 8.1, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
 
 ## PCI/PCIe Card Passthrough
 
@@ -806,42 +810,7 @@ VMware does not support direct passthrough of PCI or PCIe cards to a guest virtu
 
 ## Activation Popup
 
-Microsoft have closed down Windows 8.1 Activation Servers, so Windows 8.1 cannot be activated. A watermark displays to the bottom right and some personalisation settings cannot be used. There is a periodic popup prompting for Product Activation. This popup can be removed by pressing `⊞` and `r` and typing in:
-
-```
-regedit
-```
-
-Then navigating to the folder:
-
-```
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\Activation
-```
-
-Creating a new DWORD (32-Bit) value called: 
-
-```
-Manual
-```
-
-And setting to a value of:
-
-```
-1
-```
-
-
-
-
-Task Scheduler Library > Microsoft > Windows > Windows Activation Technologies
-
-You’ll see tasks like ValidationTask or Notification.
-
-Right-click → Properties → Triggers tab.
-
-Either disable the triggers or change them to run once a month instead of daily/hourly.
-
-Apply and close.
+Microsoft have closed down Windows 8.1 Activation Servers, so Windows 8.1 cannot be activated. A watermark displays to the bottom right and some personalisation settings cannot be used. 
 
 Return to [VMware Installation Guide](../readme.md).
 
