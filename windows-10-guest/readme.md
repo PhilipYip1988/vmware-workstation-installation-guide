@@ -120,6 +120,54 @@ WSUS Offline Update 12.0:
 
 * [WSUS Offline Update](https://download.wsusoffline.net/)
 
+Sine Windows 1709 is use, the original WSUS Offline Udpate will be used:
+
+<img src="https://github.com/user-attachments/assets/62ba7f62-d75a-4bb0-8503-f07e9f7c99a8" width="600"/>
+
+Select Extract All...:
+
+<img src="https://github.com/user-attachments/assets/fcd5bd52-0d9a-47b2-81d2-44e240519ecc" width="600"/>
+
+Select Extract:
+
+<img src="https://github.com/user-attachments/assets/3ebdba3f-627f-4ac3-9964-9ca8e9c64b7d" width="600"/>
+
+Select the `wsusoffline` folder:
+
+<img src="https://github.com/user-attachments/assets/c6feff61-af90-46ab-b68c-36f0426346f4" width="600"/>
+
+Select `UpdateGenerator.exe`:
+
+<img src="https://github.com/user-attachments/assets/8be1faee-8abe-49a2-b26f-43968ff20745" width="600"/>
+
+Select Windows, uncheck all the builds, except the one of interest, in this case 1709 (Windows 10 x64). Under options select Verify Downloaded Updates and Include C++ Runtime Libraries and .NET Frameworks. Select Create ISO Images per Selected Product and Language and select Start:
+
+<img src="https://github.com/user-attachments/assets/e790c329-6986-40b3-8dac-ed6d3147a8f9" width="600"/>
+
+WSUS Offline Update will download a series of updates:
+
+<img src="https://github.com/user-attachments/assets/d911243f-10e1-4d25-9f92-912dfc811088" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/d1c1cac7-cc8f-44af-ab2b-1f34ecf5c4d8" width="600"/>
+
+The ISO wll be created:
+
+<img rc="https://github.com/user-attachments/assets/3a9e6bc4-c57d-4f65-bd62-eb425f2c871e" width="600"/>
+
+Select yes to view the log file:
+
+<img src="https://github.com/user-attachments/assets/999c05b5-08b2-4871-afa5-163b168a4096" width="200"/>
+
+The log file will display in notepad:
+
+<img src="https://github.com/user-attachments/assets/5216230f-be59-4fd9-8d73-444e77bbdc8e" width="600"/>
+
+The Update ISO will be found in the iso folder:
+
+<img src="https://github.com/user-attachments/assets/c680386d-f39e-4473-a4c9-4f688b002aad" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/4692b217-62cd-4f52-aeee-8bf45c6b3172" width="600"/>
+
 
 
 
