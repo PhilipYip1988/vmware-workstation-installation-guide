@@ -96,7 +96,7 @@ Select ISO file and next:
 
 <img src="https://github.com/user-attachments/assets/951915ba-ae9b-4546-8263-b2ee750ea7ed" width="600"/>
 
-Select the Downloads fodler and save the ISO:
+Select the Downloads folder and save the ISO:
 
 <img src="https://github.com/user-attachments/assets/6ec06c7d-0ff4-4045-a038-b6e79c4257f8" width="600"/>
 
@@ -120,9 +120,13 @@ WSUS Offline Update 12.0:
 
 * [WSUS Offline Update](https://download.wsusoffline.net/)
 
-Sine Windows 1709 is use, the original WSUS Offline Udpate will be used:
+Since Windows 1709 is use, the original WSUS Offline Udpate will be used:
 
 <img src="https://github.com/user-attachments/assets/62ba7f62-d75a-4bb0-8503-f07e9f7c99a8" width="600"/>
+
+For a newer or LTSB/C build the WSUS Offline Update Community Edition would need to be used:
+
+<img src="https://github.com/user-attachments/assets/9ad61993-609d-48c3-8d5b-6e1ace88e6e9" width="600"/>
 
 Select Extract All...:
 
