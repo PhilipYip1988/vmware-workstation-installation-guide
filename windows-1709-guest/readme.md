@@ -283,7 +283,150 @@ monitor.virtual_exec = "hardware"
 ```
 
 ## Installing the Windows 10 Version 1709 Guest OS
-Select the Windows 8.1 Virtual Machine and select Play:
+
+Select the Windows 10 Version 1709 Virtual Machine and select Play:
+
+<img src="https://github.com/user-attachments/assets/870cdecc-ddba-4278-9d21-d431a0d19c75" width="600"/>
+
+Use the mouse to click into the VM and press any key such as `k`:
+
+<img src="https://github.com/user-attachments/assets/474d360e-67dd-4f08-931e-f03d34a4bc6f" width="600"/>
+
+Select your language and select next:
+
+<img src="https://github.com/user-attachments/assets/10758473-437f-4e8a-b523-c49f111f9fb2" width="600"/>
+
+Select Install Now:
+
+<img src="https://github.com/user-attachments/assets/b7daf656-07b4-44dc-ac6e-add7bced4288" width="600"/>
+
+Select I don't have a Product Key:
+
+<img src="https://github.com/user-attachments/assets/20d28f73-6790-43a6-9213-c05fc2c36b3a" width="600"/>
+
+Select Windows 10 Pro and select Next:
+
+<img src="https://github.com/user-attachments/assets/cd94f967-bf09-4e27-a5af-1391834c37b3" width="600"/>
+
+Accept the License Agreement and select Next:
+
+<img src="https://github.com/user-attachments/assets/37bf6759-5b87-4d95-93cb-ae8e8283eafc" width="600"/>
+
+Select Custom:
+
+<img src="https://github.com/user-attachments/assets/5434ea54-f1ff-48e3-9dd7-79746fffbfc8" width="600"/>
+
+Select Drive 0 and select Next:
+
+<img src="https://github.com/user-attachments/assets/e5f0f1c7-df69-4d65-b29d-20165571a4de" width="600"/>
+
+Windows 10 Version 1709 will install:
+
+<img src="https://github.com/user-attachments/assets/d766dd85-8ef1-42f3-bd7b-459e14279271" width="600"/>
+
+And restart:
+
+<img src="https://github.com/user-attachments/assets/1575bb85-0f04-414a-8eeb-072cb2db222a" width="600"/>
+
+Select your region:
+
+<img src="https://github.com/user-attachments/assets/858913d6-aabe-4d7e-8d5e-4cf97eedfa6e" width="600"/>
+
+Select your keyboard layout:
+
+<img src="https://github.com/user-attachments/assets/58507d2e-94f3-4f39-9391-16d6028eb9da" width="600"/>
+
+Select skip:
+
+<img src="https://github.com/user-attachments/assets/aa976d55-bbc4-4275-a769-45c035a20293" width="600"/>
+
+Select skip for now:
+
+<img src="https://github.com/user-attachments/assets/178cdc43-861e-4f2a-baa5-bfa6808cea2e" width="600"/>
+
+Input your account name and select next:
+
+<img src="https://github.com/user-attachments/assets/c67603b4-d05e-49e6-b4c1-23c7b4fe2d9b" width="600"/>
+
+Leave the password blank. A blank password is required to update Windows 10 Version 1709 unattended. Select Next:
+
+<img src="https://github.com/user-attachments/assets/58e8b008-d3cf-4940-8912-4218236edf87" width="600"/>
+
+Select no:
+
+<img src="https://github.com/user-attachments/assets/2b190146-6936-4f1c-bd0a-2cc56021512d" width="600"/>
+
+Disable all the settings and set Accept:
+
+<img src="https://github.com/user-attachments/assets/511e742d-df81-479f-8db3-a05f0471ec31" width="600"/>
+
+You will now be taken to the Windows 10 Version 1709 Desktop.
+
+## Installing Windows 10 Version 1709 Update
+
+Microsoft .Net 3.5 was considered legacy in Windows 8.1 and wasn't enabled by default. To install it (optional) right click the Start Button and select Command Prompt (Admin):
+
+<img src="https://github.com/user-attachments/assets/d07c247b-334a-4c2a-aaef-4a612b844f3f" width="600"/>
+
+Accept the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/3c752055-f0d4-46aa-adf1-5d763ba638d5" width="600"/>
+
+Input the command:
+
+```
+DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /LimitAccess /Source:D:\sources\sxs
+```
+
+<img src="https://github.com/user-attachments/assets/891cb739-1a41-42c0-b709-f3e27c6d302d" width="600"/>
+
+Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src="https://github.com/user-attachments/assets/54f3dfe7-7548-4ffb-8c0e-e87d77eea9d7" width="600"/>
+
+Ensure Connected and Connect at Power On are checked and select Browse:
+
+<img src="https://github.com/user-attachments/assets/c50f50f3-a264-4821-97a9-691ab4ec1952" width="600"/>
+
+Navigate to the wsus offline update iso:
+
+<img src="https://github.com/user-attachments/assets/d2fcb9c0-60cf-424b-b176-45806bc40ea6" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/e4d8b15f-8c05-493d-a99e-9b1df8737ff8" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/015c13f9-84bf-41fa-9cb2-cb7b276d29a9" width="600"/>
+
+Select open:
+
+<img src="https://github.com/user-attachments/assets/5bba0f35-312d-4abc-892c-6801ff992831" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/d9437d97-84be-46f2-8e3e-25351d0f3b61" width="600"/>
+
+Navigate to the optical drive:
+
+<img src="https://github.com/user-attachments/assets/49fb7b0c-12a4-42b9-a20b-789878a3f2c2" width="600"/>
+
+Select Run WSUS Offline Update:
+
+<img src="https://github.com/user-attachments/assets/fe9f0ab2-babb-42a7-9555-264830affecd" width="600"/>
+
+Accept the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/19a225c1-e678-4f53-b63a-9710653093e7" width="600"/>
+
+Check Update C++ Runtime Libraries and Install .NET Framewor 3.5+4.8, Update Root Certificates and Verify Installation Packages and then select Start:
+
+<img src="https://github.com/user-attachments/assets/9477bb78-a00c-40dc-a26c-3f2d93503ac5" width="600"/>
+
+
+
+
+
+
+
+
 
 
 
