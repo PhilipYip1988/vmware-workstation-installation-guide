@@ -434,6 +434,8 @@ Restart the Windows 10 Version 1709 VM. Recall the WSUS Offline Update and resta
 
 ## Install VMware Tools
 
+VMware Tools are essentially the system drivers for the Windows 10 Version 1709 VM. When VMware Tools are installed the window enclosing the VM on the Windows 11 Host or Ubuntu 25.10 Host can be resized and the screen resolution of the VM will be updated to accomodate. On a Windows 11 Host, bidirectional drag and drop will also be available. On a Ubuntu 25.10 bidirectional drag and drop is unavailable and shared folders have to be configured to share files between the Ubuntu 25.10 Host and Windows 10 Version 1709 Guest VM.
+
 Select Player → Manage → Install VMware Tools:
 
 <img src="https://github.com/user-attachments/assets/905cb889-0994-43b7-ba13-79eb87b38752" width="600"/>
@@ -469,5 +471,11 @@ Select Finish:
 Select Yes:
 
 <img src="https://github.com/user-attachments/assets/cd11f279-cadb-4737-be5c-ad8cb2d0e242" width="600"/>
+
+## Backing up the VM
+
+Shut down the Windows 10 Version 1709 VM and then create a copy of the VM folder. Should you encounter problems with your VM after installing software, you can delete the original folder and rename the copied folder to the original folders name. Essentially this will give you a VM to roll back to:
+
+<img src="https://github.com/user-attachments/assets/abe5e2dd-2dba-4a40-ad8d-88138ca64e0a" width="600"/>
 
 
