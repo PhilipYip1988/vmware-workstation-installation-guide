@@ -432,7 +432,7 @@ Restart the Windows 10 Version 1709 VM. Recall the WSUS Offline Update and resta
 
 <img src="https://github.com/user-attachments/assets/f87c1eff-5ddc-46fd-9cbe-6c9b4cc622f6" width="600"/>
 
-## Install VMware Tools
+## Installing VMware Tools
 
 VMware Tools are essentially the system drivers for the Windows 10 Version 1709 VM. When VMware Tools are installed the window enclosing the VM on the Windows 11 Host or Ubuntu 25.10 Host can be resized and the screen resolution of the VM will be updated to accomodate. On a Windows 11 Host, bidirectional drag and drop will also be available. On a Ubuntu 25.10 bidirectional drag and drop is unavailable and shared folders have to be configured to share files between the Ubuntu 25.10 Host and Windows 10 Version 1709 Guest VM.
 
@@ -478,4 +478,30 @@ Shut down the Windows 10 Version 1709 VM and then create a copy of the VM folder
 
 <img src="https://github.com/user-attachments/assets/abe5e2dd-2dba-4a40-ad8d-88138ca64e0a" width="600"/>
 
+## Shared Folders
 
+Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmshared`:
+
+-
+
+## Installing Python
+
+Python 3.11
+
+## USB Passthrough
+
+Logitech webcam and Brother pQL-570 printer.
+
+-
+
+## Serial Port Passthrough
+
+-
+
+## Parallel Port Passthrough
+
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 10 Version 1709, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+
+## PCI/PCIe Card Passthrough
+
+VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
