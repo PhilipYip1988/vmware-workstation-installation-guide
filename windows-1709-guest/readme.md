@@ -362,7 +362,7 @@ Disable all the settings and set Accept:
 
 You will now be taken to the Windows 10 Version 1709 Desktop.
 
-## Installing Windows 10 Version 1709 Update
+## Installing Windows 10 Version 1709 Updates
 
 Microsoft .Net 3.5 was considered legacy in Windows 8.1 and wasn't enabled by default. To install it (optional) right click the Start Button and select Command Prompt (Admin):
 
