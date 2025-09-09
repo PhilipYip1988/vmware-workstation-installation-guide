@@ -165,7 +165,7 @@ Under Display, the default options can be selected. Select Close:
 
 <img src="https://github.com/user-attachments/assets/dada321e-4eb4-455b-b1ca-e2cd0a98e9f7" width="600"/>
 
-**Uncheck Power On this Virtual Machine After Creation (aws we want to make some changes to the Virtual machine's configuration file before launching it).** Select Finish:
+**Uncheck Power On this Virtual Machine After Creation (as we want to make some changes to the Virtual machine's configuration file before launching it).** Select Finish:
 
 <img src="https://github.com/user-attachments/assets/4f1da4fa-c845-465a-89ef-856aeee93e0a" width="600"/>
 
