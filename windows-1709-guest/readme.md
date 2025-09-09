@@ -420,23 +420,54 @@ Check Update C++ Runtime Libraries and Install .NET Framewor 3.5+4.8, Update Roo
 
 <img src="https://github.com/user-attachments/assets/9477bb78-a00c-40dc-a26c-3f2d93503ac5" width="600"/>
 
+Updates will be installed:
 
+<img src="https://github.com/user-attachments/assets/a9e7fb53-4d59-4de8-8c88-1164384d9137" width="600"/>
 
+Restart the Windows 10 Version 1709 VM. Recall the WSUS Offline Update and restart when prompted. This should be required 3 times until it says nothing to do!
 
+<img src="https://github.com/user-attachments/assets/75ea73d3-27cc-49b5-bf7c-61658a3a737a" width="600"/>
 
+<img src="https://github.com/user-attachments/assets/53952358-da2d-4c90-9f68-25b98facc8cc" width="600"/>
 
+<img src="https://github.com/user-attachments/assets/f87c1eff-5ddc-46fd-9cbe-6c9b4cc622f6" width="600"/>
 
+## Install VMware Tools
 
+Select Player → Manage → Install VMware Tools:
 
+<img src="https://github.com/user-attachments/assets/905cb889-0994-43b7-ba13-79eb87b38752" width="600"/>
 
+Select the optical drive:
 
+<img src="https://github.com/user-attachments/assets/c426a469-715d-4e95-8bf7-5b90ab8f79f6" width="600"/>
 
+Select run setup:
 
+<img src="https://github.com/user-attachments/assets/217b8df0-51ae-4c04-b17f-f66000a7c7eb" width="600"/>
 
+Accept the User Account Control Prompt:
 
+<img src="https://github.com/user-attachments/assets/ffe61c42-acd1-446b-b236-21079231277d" width="600"/>
 
-VMware easy install will allow isntalaltion of each Windows 10 Build using a local account:
+Select Next:
 
+<img src="https://github.com/user-attachments/assets/39e40ebd-b8d7-48e9-8299-7cecfdc02176" width="600"/>
 
+Select Next:
+
+<img src="https://github.com/user-attachments/assets/bb501e88-717b-44bd-8cf6-d45f5143f5e2" width="600"/>
+
+Select Install:
+
+<img src="https://github.com/user-attachments/assets/bdad48c1-faea-4d86-8ded-9235aaf79ee8" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/16f3dd8b-1030-4af4-9ff7-e7b80aa552c1" width="600"/>
+
+Select Yes:
+
+<img src="https://github.com/user-attachments/assets/cd11f279-cadb-4737-be5c-ad8cb2d0e242" width="600"/>
 
 
