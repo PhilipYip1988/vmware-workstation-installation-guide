@@ -154,9 +154,9 @@ WSUS Offline Update will download a series of updates:
 
 <img src="https://github.com/user-attachments/assets/d1c1cac7-cc8f-44af-ab2b-1f34ecf5c4d8" width="600"/>
 
-The ISO wll be created:
+The ISO will be created:
 
-<img rc="https://github.com/user-attachments/assets/3a9e6bc4-c57d-4f65-bd62-eb425f2c871e" width="600"/>
+<img src="https://github.com/user-attachments/assets/33ca3ace-d065-4d21-9579-1a1aa9b94179" width="600"/>
 
 Select yes to view the log file:
 
@@ -172,7 +172,33 @@ The Update ISO will be found in the iso folder:
 
 <img src="https://github.com/user-attachments/assets/4692b217-62cd-4f52-aeee-8bf45c6b3172" width="600"/>
 
+## Windows 11 Host or Ubuntu 24.10 Host System Requirements
 
+Your Windows 11 Host PC or Ubuntu Host PC should satisfy the minimum system the system requirements of Windows 11 and have additional overhead to run a Virtual Machine in addition to these requirements. It is recommended to have a Host PC with at least:
+
+* i5 or i7 11th Generation Intel Processor or Newer
+* 16 GB RAM
+* 1 TB SSD
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Configuring Virtual Hardware for a Windows 10 Guest
+
+Select Player → File → New Virtual Machine:
+
+
+
+VMware easy install will allow isntalaltion of each Windows 10 Build using a local account:
 
 
 
