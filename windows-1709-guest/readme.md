@@ -266,7 +266,7 @@ bios.bootDelay = "20000"
 
 ### Modern Generation Processors (11-14th Generation)
 
-Certain legacy settings may need to be configured to run older guest operating systems such as Windows 8.1:
+Certain legacy settings may need to be configured to run older guest operating systems such as Windows 10 Version 1709:
 
 <img src="https://github.com/user-attachments/assets/26dfa577-c56f-4575-acfb-58ea7263b89a" width="600"/>
 
@@ -364,7 +364,7 @@ You will now be taken to the Windows 10 Version 1709 Desktop.
 
 ## Installing Windows 10 Version 1709 Updates
 
-Microsoft .Net 3.5 was considered legacy in Windows 8.1 and wasn't enabled by default. To install it (optional) right click the Start Button and select Command Prompt (Admin):
+Microsoft .Net 3.5 was considered legacy in Windows 10 Version 1709 and wasn't enabled by default. To install it (optional) right click the Start Button and select Command Prompt (Admin):
 
 <img src="https://github.com/user-attachments/assets/d07c247b-334a-4c2a-aaef-4a612b844f3f" width="600"/>
 
@@ -751,7 +751,7 @@ The Serial Port should now display as COM3. If the Serial Port still displays as
 
 <img src="https://github.com/user-attachments/assets/f0f36c2e-9076-4c52-84cb-bcb6da563c13" width="600"/>
 
-Although the Serial now displays as COM3 in the Device Manager, it oftens isn't accessible using that port number until the Windows 8.1 VM is restarted. I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
+Although the Serial now displays as COM3 in the Device Manager, it oftens isn't accessible using that port number until the Windows 10 Version 1709 VM is restarted. I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
 
 <img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
 
@@ -862,21 +862,21 @@ Because the Windows 10 Version 1709 VM has not been restarted, Pyserial cannot f
 
 After a restart with no pins connected, the following shows:
 
-<img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
+<img src="https://github.com/user-attachments/assets/12085458-d66b-45af-8147-b72aa9cd0849" width="600"/>
 
 <img src="https://github.com/user-attachments/assets/a0b70f5a-30cf-4a8e-a239-5dacfce62a5f" width="600"/>
 
 With pins 2 and 3 connected, the following shows:
 
-<img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
+<img src="https://github.com/user-attachments/assets/9c223d5b-e656-4a6b-b85c-50074e799913" width="600"/>
 
 <img src="https://github.com/user-attachments/assets/27e9ed86-4ee4-440f-9677-c7377ca25f4a" width="600"/>
 
-The code works as expected and interfaces with the Serial Port which is passed through to the Windows 8.1 VM from the Windows 11 Host PC.
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows 10 Version 1709 VM from the Windows 11 Host PC.
 
 ## Parallel Port Passthrough
 
-VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 8.1, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 10 Version 1709, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
 
 ## PCI/PCIe Card Passthrough
 
