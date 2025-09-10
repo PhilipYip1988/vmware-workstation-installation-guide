@@ -864,13 +864,9 @@ After a restart with no pins connected, the following shows:
 
 <img src="https://github.com/user-attachments/assets/12085458-d66b-45af-8147-b72aa9cd0849" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/a0b70f5a-30cf-4a8e-a239-5dacfce62a5f" width="600"/>
-
 With pins 2 and 3 connected, the following shows:
 
 <img src="https://github.com/user-attachments/assets/9c223d5b-e656-4a6b-b85c-50074e799913" width="600"/>
-
-<img src="https://github.com/user-attachments/assets/27e9ed86-4ee4-440f-9677-c7377ca25f4a" width="600"/>
 
 The code works as expected and interfaces with the Serial Port which is passed through to the Windows 10 Version 1709 VM from the Windows 11 Host PC.
 
