@@ -697,27 +697,27 @@ In this case it will be left at port 3:
 
 Open VMware Player and select Edit Virtual Machine Settings:
 
-<img src="https://github.com/user-attachments/assets/05fb8c57-6ba6-49c9-8a57-002133ad60ad" width="600"/>
+<img src="https://github.com/user-attachments/assets/4f5a1243-2a2d-4ba5-b143-77b8b797886c" width="600"/>
 
 Select Add...:
 
-<img src="https://github.com/user-attachments/assets/9077ecd0-5ee2-48eb-bfd4-b5e067fe35fa" width="600"/>
+<img src="https://github.com/user-attachments/assets/f53c7b5c-9159-4f12-948f-00c81ee6c3f8" width="600"/>
 
 Select Serial Port and Finish:
 
-<img src="https://github.com/user-attachments/assets/53f4a23b-226a-4761-b2a5-475c3c5e183f" width="600"/>
+<img src="https://github.com/user-attachments/assets/c10a531e-b5bf-4736-bdaa-6977dbf37794" width="600"/>
 
-Select Connect at Power On. Autodetect is useful for a single port, but for multipe ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
+Select Connect at Power On. Autodetect is useful for a single port, but for multiple ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
 
-<img src="https://github.com/user-attachments/assets/0a293fbd-f37f-4576-a3eb-4e21a1ed2f6b" width="600"/>
+<img src="https://github.com/user-attachments/assets/53161bc5-0e47-4447-968d-9ac1ba316ec3" width="600"/>
 
 Select ok:
 
-<img src="https://github.com/user-attachments/assets/dae7d96c-d19b-4d1c-a08a-919754333180" width="600"/>
+<img src="https://github.com/user-attachments/assets/cc81bd5b-df29-4e00-aea2-6b7e9b0e85f0" width="600"/>
 
-Launch the Windows 8.1 VM:
+Launch the Windows 10 Version 1709 VM:
 
-<img src="https://github.com/user-attachments/assets/20402eac-ab05-406a-9b44-db8e041eeed3" width="600"/>
+<img src="https://github.com/user-attachments/assets/e0186b75-c41e-4f20-b505-7625a0178b1a" width="600"/>
 
 Right click computer and select properties:
 
@@ -725,33 +725,33 @@ Right click computer and select properties:
 
 Select Device Manager:
 
-<img src="https://github.com/user-attachments/assets/b8f53273-9c07-4804-a624-c42cfe43e1b5" width="600"/>
+<img src="https://github.com/user-attachments/assets/81d52390-7c7a-458e-b19c-33289564035e" width="600"/>
 
-Expand ports, note the Windows 11 COM3 is passed through to the Windows 8.1 VM as COM1:
+Expand ports, note the Windows 11 COM3 is passed through to the Windows 10 Version 1709 VM as COM1:
 
-<img src="https://github.com/user-attachments/assets/5b906def-7e6d-4c8b-a608-7b368725ca45" width="600"/>
+<img src="https://github.com/user-attachments/assets/49b2b2db-381d-4999-84a2-23d49d825a27" width="600"/>
 
 Right click the communication port and select Properties:
 
-<img src="https://github.com/user-attachments/assets/b56b66cb-f619-48a8-9f2b-db0e03e53e23" width="600"/>
+<img src="https://github.com/user-attachments/assets/33155519-dec2-4d17-879d-7aef59f7f193" width="600"/>
 
 Select the Port Settings tab. The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
 
-<img src="https://github.com/user-attachments/assets/701147c6-d674-4a08-b767-30b4fff2a0d3" width="600"/>
+<img src="https://github.com/user-attachments/assets/f88d030f-cd8a-4a0d-88ff-1e74e26edd94" width="600"/>
 
 Select Advanced:
 
-<img src="https://github.com/user-attachments/assets/16c62122-fc51-4fca-ab82-a85ed1920968" width="600"/>
+<img src="https://github.com/user-attachments/assets/796905f8-9762-483f-94fa-464b3025c79c" width="600"/>
 
 Update the COM Port Number to be consistent with the Windows 11 Host. In this case COM3. Select OK:
 
-<img src="https://github.com/user-attachments/assets/53733154-7fda-40a8-8e93-5b5aa9aa7dac" width="600"/>
+<img src="https://github.com/user-attachments/assets/c2c91585-0cd3-454d-adca-500bdc2601ee" width="600"/>
 
 The Serial Port should now display as COM3. If the Serial Port still displays as COM1, select refresh:
 
-<img src="https://github.com/user-attachments/assets/2d16b91f-d27b-42ae-90b9-b875171e9b56" width="600"/>
+<img src="https://github.com/user-attachments/assets/f0f36c2e-9076-4c52-84cb-bcb6da563c13" width="600"/>
 
-Although the Serial now displays as COM3 in the evice Manager, it oftens isn't accessible using that port number until the Windows 8.1 VM is restarted. I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
+Although the Serial now displays as COM3 in the Device Manager, it oftens isn't accessible using that port number until the Windows 8.1 VM is restarted. I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
 
 <img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
 
@@ -787,7 +787,7 @@ A Python script will be used which essentially transmits the data using pin 3 an
 
 Open notepad:
 
-<img src="https://github.com/user-attachments/assets/8e7d410e-2a42-4c83-9f45-01515a4bd97f" width="600"/>
+<img src="https://github.com/user-attachments/assets/c238b34e-e558-4205-acc2-93ce3dff6ef5" width="600"/>
 
 Paste in the following code:
 
@@ -824,41 +824,41 @@ else:
 ser.close()
 ```
 
-<img src="https://github.com/user-attachments/assets/55bec621-bf10-4e27-b433-6eb5964d02fc" width="600"/>
+<img src="https://github.com/user-attachments/assets/5195ff24-1184-48b3-887a-d5bb61be1830" width="600"/>
 
 Select file → save as:
 
-<img src="https://github.com/user-attachments/assets/d7a2cb77-ec45-43c0-8454-dc80f6dc6e45" width="600"script.py/>
+<img src="https://github.com/user-attachments/assets/047081a5-5d8c-4019-9d23-06e0de166ef5" width="600"/>
 
 Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
 
-<img src="https://github.com/user-attachments/assets/345ff5fd-f64d-466b-8d19-78159b780947" width="600"/>
+<img src="https://github.com/user-attachments/assets/488268af-930d-437e-a67d-bedd8ac8eeee" width="600"/>
 
 The script file is in Documents, which is a Library of folders:
 
-<img src="https://github.com/user-attachments/assets/e3c03d7d-15b8-4286-adee-45c4f943a032" width="600"/>
+<img src="https://github.com/user-attachments/assets/739fac88-c46a-41e9-a7bf-69237c76a2d1" width="600"/>
 
 Right click the script file and select Properties:
 
-<img src="https://github.com/user-attachments/assets/98d9b011-f579-420c-b0ae-0b4cc93a585b" width="600"/>
+<img src="https://github.com/user-attachments/assets/35d54820-3122-4108-bfbb-36a6eab7b4bd" width="600"/>
 
 This will give the folder path:
 
-<img src="https://github.com/user-attachments/assets/3eba065c-06bc-46c0-ab15-8584638169ea" width="600"/>
+<img src="https://github.com/user-attachments/assets/b1faca56-9deb-4643-9963-f6198a297c93" width="600"/>
 
-Right click the start button and select command prompt:
+Right click the start button and select Windows Powershell:
 
-<img src="https://github.com/user-attachments/assets/3cee5376-49a7-4daa-a81c-74fe8ac042c2" width="600"/>
+<img src="https://github.com/user-attachments/assets/e8fa9c01-6dd6-4b6f-85af-b663a12c482c" width="600"/>
 
-Launch the script file in the command prompt:
+Launch the script file in the Windows Powershell:
 
 ```powershell
 python C:\Users\Philip\Documents\script.py
 ```
 
-Because the Windows 8.1 VM has not been restarted, Pyserial cannot find the port at COM3:
+Because the Windows 10 Version 1709 VM has not been restarted, Pyserial cannot find the port at COM3:
 
-<img src="https://github.com/user-attachments/assets/a60e68af-837a-4d1a-bcea-5edc74aa9187" width="600"/>
+<img src="https://github.com/user-attachments/assets/90a20cdc-0d81-46af-9bf6-3d9f060f031f" width="600"/>
 
 After a restart with no pins connected, the following shows:
 
