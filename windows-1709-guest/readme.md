@@ -563,7 +563,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 ; ==============================
-; ===== Firewall Rules: Block Windows Update & Activation Servers =====
+; ===== Firewall Rules: Block Windows Update =====
 ; ==============================
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules]
 "Block_WindowsUpdate1"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Windows Update 1|RemoteIP=13.107.4.50"
