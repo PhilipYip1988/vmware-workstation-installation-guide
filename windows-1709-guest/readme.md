@@ -576,11 +576,7 @@ Select Close:
 
 Right click the start button and select Command Prompt:
 
-
-
-
-
-
+<img src="https://github.com/user-attachments/assets/5f34da06-f675-474e-9a31-16dc53b6f3e7" width="600"/>
 
 To launch Python input:
 
@@ -590,9 +586,7 @@ python
 
 Notice the change to the Python prompt ```>>>```:
 
-
-
-
+<img src="https://github.com/user-attachments/assets/97ff7ced-b75a-47ee-9422-cf2e04fe53d6" width="600"/>
 
 Python code can now be used:
 
@@ -600,7 +594,7 @@ Python code can now be used:
 print('Hello World!')
 ```
 
-
+<img src="https://github.com/user-attachments/assets/6b0303b9-be9d-4b19-ace8-df1dda15e6bd" width="600"/>
 
 To exit python input the function:
 
@@ -608,16 +602,16 @@ To exit python input the function:
 exit()
 ```
 
-
-
+<img src="https://github.com/user-attachments/assets/a1a7e98f-254f-47b6-a541-7fb99a189938" width="600"/>
 
 Notice the return to the CMD prompt.
 
 To use the package manager requires Internet Connectivity. Select Player → File → Network Adaptor → Connect:
 
+<img src="https://github.com/user-attachments/assets/af4b09a3-e444-4fb8-8821-c31dfa3f5aac" width="600"/>
 
 
-Recall however that Windows 10 Version 1709 is past end of life and is not safe to use online for general web use.
+Recall however that Windows 10 Version 1709 is past end of life and is not safe to use online for general web use, also be aware that Windows Update may try to force update the build.
 
 The Python package can be installed using:
 
@@ -625,32 +619,269 @@ The Python package can be installed using:
 pip install pyserial==3.5
 ```
 
-
-
-
-
+<img src="https://github.com/user-attachments/assets/d1e40ec1-ee38-4a4b-987d-196aefdbdd7e" width="600"/>
 
 And can be imported into a Python program:
 
-
-
-
-
+<img src="https://github.com/user-attachments/assets/29de3625-c73d-439a-9b90-5624019ec2c4" width="600"/>
 
 ## USB Passthrough
 
-Logitech webcam and Brother pQL-570 printer.
+A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows 10 Version 1709 Guest. To connect the webcam, select Player → Removable Devices → Logitech C922 Webcam → Connect:
 
--
+<img src="https://github.com/user-attachments/assets/c118a120-6d2f-411f-a56e-a80fca8a23e1" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/8fa7e469-b246-4eb4-b835-171019575253" width="600"/>
+
+Right click the Start Button and select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/b4928b31-1543-4f26-b94e-c163e4cb9451" width="600"/>
+
+The driver is preinstalled in Windows 10 Version 1709:
+
+<img src="https://github.com/user-attachments/assets/6d6e326d-ba04-4f30-b40c-a886b5007fd0" width="600"/>
+
+On the Windows 11 Host, the Debut Video Capture software can be downloaded:
+
+<img src="https://github.com/user-attachments/assets/4feeb6d9-4442-4f47-9575-6db4e055593a" width="600"/>
+
+When using a Windows 11 Host, the file can be dragged and dropped over to the VM. On a Linux host, the most commonly used Desktop Environment GNOME (and less common Desktop Environments) are not supported and shared folders have to be configured:
+
+<img src="https://github.com/user-attachments/assets/a196bb97-4efe-44fb-9679-c497204523de" width="600"/>
+
+Launch the setup:
+
+<img src="https://github.com/user-attachments/assets/f8071742-6e97-4ba3-bf07-5fa343b83a46" width="600"/>
+
+Accept the User Account Control:
+
+<img src="https://github.com/user-attachments/assets/ac640280-ddc2-4c71-90cf-34a71c1bf7ae" width="600"/>
+
+Accept the License Agreement and select Next:
+
+<img src="https://github.com/user-attachments/assets/76799171-6a6a-4f57-85cd-cd0662753f55" width="600"/>
+
+Select Skip All:
+
+<img src="https://github.com/user-attachments/assets/7b326ac3-2789-4773-bdf7-98916f411b56" width="600"/>
+
+The  Logitech C922 connected to the USB 3.0 port on Windows 11 Host is passed through to the Windows 10 Version 1709 VM and controlled using Debut Video Captture installed on the Windows 10 Version 1709.
 
 ## Serial Port Passthrough
 
--
+Close the Windows 10 Version 1709 VM. Attach a USB to Serial Port to the Window 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/dc02277e-d8ff-4fa1-b071-993df8f0cd7b" width="600"/>
+
+On the Windows 11 Host PC, right click the Start Button and select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/4c5f545f-e66c-4ece-b524-10454a2397b4" width="600"/>
+
+Expand ports (COM & LPT). In this example, the USB Serial COM Port is COM3:
+
+<img src="https://github.com/user-attachments/assets/da226f02-457e-417d-9294-d018f54fc562" width="600"/>
+
+Right click it and select properties:
+
+<img src="https://github.com/user-attachments/assets/0f1768d9-c1bf-4324-8bc6-946640ba5531" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects:
+
+<img src="https://github.com/user-attachments/assets/283e424d-9fea-448d-ab0a-874db7c018c1" width="600"/>
+
+In this case it will be left at port 3:
+
+<img src="https://github.com/user-attachments/assets/bf7258a0-b073-4451-ac3c-45542580d38f" width="600"/>
+
+Open VMware Player and select Edit Virtual Machine Settings:
+
+<img src="https://github.com/user-attachments/assets/05fb8c57-6ba6-49c9-8a57-002133ad60ad" width="600"/>
+
+Select Add...:
+
+<img src="https://github.com/user-attachments/assets/9077ecd0-5ee2-48eb-bfd4-b5e067fe35fa" width="600"/>
+
+Select Serial Port and Finish:
+
+<img src="https://github.com/user-attachments/assets/53f4a23b-226a-4761-b2a5-475c3c5e183f" width="600"/>
+
+Select Connect at Power On. Autodetect is useful for a single port, but for multipe ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
+
+<img src="https://github.com/user-attachments/assets/0a293fbd-f37f-4576-a3eb-4e21a1ed2f6b" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/dae7d96c-d19b-4d1c-a08a-919754333180" width="600"/>
+
+Launch the Windows 8.1 VM:
+
+<img src="https://github.com/user-attachments/assets/20402eac-ab05-406a-9b44-db8e041eeed3" width="600"/>
+
+Right click computer and select properties:
+
+<img src="https://github.com/user-attachments/assets/e871700c-aa65-4944-9d1e-221321691e2e" width="600"/>
+
+Select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/b8f53273-9c07-4804-a624-c42cfe43e1b5" width="600"/>
+
+Expand ports, note the Windows 11 COM3 is passed through to the Windows 8.1 VM as COM1:
+
+<img src="https://github.com/user-attachments/assets/5b906def-7e6d-4c8b-a608-7b368725ca45" width="600"/>
+
+Right click the communication port and select Properties:
+
+<img src="https://github.com/user-attachments/assets/b56b66cb-f619-48a8-9f2b-db0e03e53e23" width="600"/>
+
+Select the Port Settings tab. The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
+
+<img src="https://github.com/user-attachments/assets/701147c6-d674-4a08-b767-30b4fff2a0d3" width="600"/>
+
+Select Advanced:
+
+<img src="https://github.com/user-attachments/assets/16c62122-fc51-4fca-ab82-a85ed1920968" width="600"/>
+
+Update the COM Port Number to be consistent with the Windows 11 Host. In this case COM3. Select OK:
+
+<img src="https://github.com/user-attachments/assets/53733154-7fda-40a8-8e93-5b5aa9aa7dac" width="600"/>
+
+The Serial Port should now display as COM3. If the Serial Port still displays as COM1, select refresh:
+
+<img src="https://github.com/user-attachments/assets/2d16b91f-d27b-42ae-90b9-b875171e9b56" width="600"/>
+
+Although the Serial now displays as COM3 in the evice Manager, it oftens isn't accessible using that port number until the Windows 8.1 VM is restarted. I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
+
+<img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
+
+|Pin Number|Name|
+|---|---|
+|1|Data Carrier Detect (CDC)|
+|2|Received Data (RXD)|
+|3|Transmit Data (TXD)|
+|4|Data Terminal Ready (DTR)|
+|5|Ground (GND)|
+|6|Data Set Ready (DSR)|
+|7|Request to Send (RTS)|
+|8|Clear To Send (CTS)|
+|9|Ring Indicator (RI)|
+
+A Python script will be used which essentially transmits the data using pin 3 and then reads it back using pin 2. A Serial port can only read low `0` and high `1` signals, so any data sent via the Serial Port has to be in the form of a byte. In the basic American Standard for Information Interchange (ASCII), each ASCII character is an 8 bit binary sequence:
+
+| Char | Decimal | Hex  | Binary    |
+|------|---------|------|-----------|
+| H    | 72      | 0x48 | 01001000  |
+| e    | 101     | 0x65 | 01100101  |
+| l    | 108     | 0x6C | 01101100  |
+| l    | 108     | 0x6C | 01101100  |
+| o    | 111     | 0x6F | 01101111  |
+| (space) | 32   | 0x20 | 00100000  |
+| S    | 83      | 0x53 | 01010011  |
+| e    | 101     | 0x65 | 01100101  |
+| r    | 114     | 0x72 | 01110010  |
+| i    | 105     | 0x69 | 01101001  |
+| a    | 97      | 0x61 | 01100001  |
+| l    | 108     | 0x6C | 01101100  |
+| \n   | 10      | 0x0A | 00001010  |
+
+Open notepad:
+
+<img src="https://github.com/user-attachments/assets/8e7d410e-2a42-4c83-9f45-01515a4bd97f" width="600"/>
+
+Paste in the following code:
+
+```python
+import time
+import serial
+
+# Replace 'COM3' with your serial port
+port = 'COM3'
+baudrate = 9600
+
+# Open the serial port
+ser = serial.Serial(port, baudrate, timeout=1)
+
+time.sleep(2)  # give the port some time to initialize
+
+# Test data
+test_data = b'Hello Serial\n'
+
+# Write data
+ser.write(test_data)
+print(f"Sent: {test_data}")
+
+# Read back data
+received = ser.read(len(test_data))
+print(f'Received: {received}')
+
+# Check if the loopback worked
+if received == test_data:
+    print('✅ Serial loopback test passed!')
+else:
+    print('❌ Serial loopback test failed!')
+
+ser.close()
+```
+
+<img src="https://github.com/user-attachments/assets/55bec621-bf10-4e27-b433-6eb5964d02fc" width="600"/>
+
+Select file → save as:
+
+<img src="https://github.com/user-attachments/assets/d7a2cb77-ec45-43c0-8454-dc80f6dc6e45" width="600"script.py/>
+
+Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
+
+<img src="https://github.com/user-attachments/assets/345ff5fd-f64d-466b-8d19-78159b780947" width="600"/>
+
+The script file is in Documents, which is a Library of folders:
+
+<img src="https://github.com/user-attachments/assets/e3c03d7d-15b8-4286-adee-45c4f943a032" width="600"/>
+
+Right click the script file and select Properties:
+
+<img src="https://github.com/user-attachments/assets/98d9b011-f579-420c-b0ae-0b4cc93a585b" width="600"/>
+
+This will give the folder path:
+
+<img src="https://github.com/user-attachments/assets/3eba065c-06bc-46c0-ab15-8584638169ea" width="600"/>
+
+Right click the start button and select command prompt:
+
+<img src="https://github.com/user-attachments/assets/3cee5376-49a7-4daa-a81c-74fe8ac042c2" width="600"/>
+
+Launch the script file in the command prompt:
+
+```powershell
+python C:\Users\Philip\Documents\script.py
+```
+
+Because the Windows 8.1 VM has not been restarted, Pyserial cannot find the port at COM3:
+
+<img src="https://github.com/user-attachments/assets/a60e68af-837a-4d1a-bcea-5edc74aa9187" width="600"/>
+
+After a restart with no pins connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/a0b70f5a-30cf-4a8e-a239-5dacfce62a5f" width="600"/>
+
+With pins 2 and 3 connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/27e9ed86-4ee4-440f-9677-c7377ca25f4a" width="600"/>
+
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows 8.1 VM from the Windows 11 Host PC.
 
 ## Parallel Port Passthrough
 
-VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 10 Version 1709, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 8.1, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
 
 ## PCI/PCIe Card Passthrough
 
 VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
+
+Return to [VMware Installation Guide](../readme.md).
+
+Python is just used as an example of a legacy program to run in a Windows 7 VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
