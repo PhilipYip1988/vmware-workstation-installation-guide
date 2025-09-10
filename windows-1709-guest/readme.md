@@ -478,6 +478,122 @@ Shut down the Windows 10 Version 1709 VM and then create a copy of the VM folder
 
 <img src="https://github.com/user-attachments/assets/abe5e2dd-2dba-4a40-ad8d-88138ca64e0a" width="600"/>
 
+## Disabling Windows Update
+
+The following registry editor will stop Windows from updating
+
+```dosini
+Windows Registry Editor Version 5.00
+
+; ==============================
+; ===== Disable Windows Update =====
+; ==============================
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoUpdate"=dword:00000001
+"AUOptions"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BITS]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WaaSMedicSvc]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\TaskScheduler]
+"DisableWindowsUpdateTask"=dword:00000001
+
+; ==============================
+; ===== Stop Activation Checks =====
+; ==============================
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\sppsvc]
+"Start"=dword:00000003
+
+; ==============================
+; ===== Disable Cortana =====
+; ==============================
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search]
+"AllowCortana"=dword:00000000
+
+; ==============================
+; ===== Remove All Pinned Start Menu Icons (prevents new pins) =====
+; ==============================
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CloudStore\Store\Cache\DefaultAccount]
+"$$windows.data.startmenupin"=dword:00000000
+
+; ==============================
+; ===== Turn Off Notifications =====
+; ==============================
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer]
+"DisableNotificationCenter"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\CurrentVersion\PushNotifications]
+"NoToastApplicationNotification"=dword:00000001
+"NoTileApplicationNotification"=dword:00000001
+
+; ==============================
+; ===== Taskbar Tweaks =====
+; ==============================
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer]
+"PeopleBand"=dword:00000000        ; Hide People button
+"NoEdgePinned"=dword:00000001      ; Unpin Edge
+"NoStorePinned"=dword:00000001     ; Unpin Microsoft Store
+"TaskbarSearchBoxMode"=dword:00000000 ; Hide search box
+
+; ==============================
+; ===== Disable Connected User Experiences and Telemetry =====
+; ==============================
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
+"Start"=dword:00000004
+
+; ==============================
+; ===== Disable Retail Demo Service =====
+; ==============================
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RetailDemo]
+"Start"=dword:00000004
+
+; ==============================
+; ===== Disable Windows Error Reporting Service =====
+; ==============================
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WerSvc]
+"Start"=dword:00000004
+
+; ==============================
+; ===== Firewall Rules: Block Windows Update & Activation Servers =====
+; ==============================
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules]
+"Block_WindowsUpdate1"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Windows Update 1|RemoteIP=13.107.4.50"
+"Block_WindowsUpdate2"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Windows Update 2|RemoteIP=13.107.5.50"
+"Block_WindowsUpdate3"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Windows Update 3|RemoteIP=13.107.6.50"
+"Block_WindowsUpdate4"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Windows Update 4|RemoteIP=13.107.8.50"
+
+"Block_Activation1"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Activation 1|RemoteIP=activation.sls.microsoft.com"
+"Block_Activation2"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Activation 2|RemoteIP=activation.windows.microsoft.com"
+"Block_Activation3"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Activation 3|RemoteIP=wlnotify.microsoft.com"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Shared Folders
 
 Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmshared`:
