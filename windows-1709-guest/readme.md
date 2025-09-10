@@ -478,102 +478,151 @@ Shut down the Windows 10 Version 1709 VM and then create a copy of the VM folder
 
 <img src="https://github.com/user-attachments/assets/abe5e2dd-2dba-4a40-ad8d-88138ca64e0a" width="600"/>
 
-## Disabling Windows Update
+## Shared Folders
 
-The following registry editor will stop Windows from updating
+Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmshared`:
 
-```dosini
-Windows Registry Editor Version 5.00
+<img src="https://github.com/user-attachments/assets/bec73c61-a7e4-489a-baec-ead5d717d384" width="600"/>
 
-; ==============================
-; ===== Disable Windows Update =====
-; ==============================
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
-"NoAutoUpdate"=dword:00000001
-"AUOptions"=dword:00000000
+Select Player → Manage → Virtual Machine Settings:
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv]
-"Start"=dword:00000004
+<img src="https://github.com/user-attachments/assets/c4f13c68-8617-48d3-99c1-365f87de2854" width="600"/>
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BITS]
-"Start"=dword:00000004
+Select Options → Shared Folders and change the setting to Always Enabled and check Map Network Drive in Windows Guests. Then select Add:
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc]
-"Start"=dword:00000004
+<img src="https://github.com/user-attachments/assets/24cef3fd-bb0f-4d09-9756-3aa320fcad29" width="600"/>
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WaaSMedicSvc]
-"Start"=dword:00000004
+Select next:
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\TaskScheduler]
-"DisableWindowsUpdateTask"=dword:00000001
+<img src="https://github.com/user-attachments/assets/5118cf67-eb00-4f22-a310-36ebe4d62195" width="600"/>
 
-; ==============================
-; ===== Stop Activation Checks =====
-; ==============================
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\sppsvc]
-"Start"=dword:00000003
+Select browse:
 
-; ==============================
-; ===== Disable Cortana =====
-; ==============================
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search]
-"AllowCortana"=dword:00000000
+<img src="https://github.com/user-attachments/assets/2e4917bd-ac26-49be-8c58-9e323fac4e02" width="600"/>
 
-; ==============================
-; ===== Remove All Pinned Start Menu Icons (prevents new pins) =====
-; ==============================
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CloudStore\Store\Cache\DefaultAccount]
-"$$windows.data.startmenupin"=dword:00000000
+Select the `vmshared` folder and select OK:
 
-; ==============================
-; ===== Turn Off Notifications =====
-; ==============================
-[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer]
-"DisableNotificationCenter"=dword:00000001
+<img src="https://github.com/user-attachments/assets/c78a9bed-a195-47c0-88bf-0a01c605b023" width="400"/>
 
-[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\CurrentVersion\PushNotifications]
-"NoToastApplicationNotification"=dword:00000001
-"NoTileApplicationNotification"=dword:00000001
+Select next:
 
-; ==============================
-; ===== Taskbar Tweaks =====
-; ==============================
-[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer]
-"PeopleBand"=dword:00000000        ; Hide People button
-"NoEdgePinned"=dword:00000001      ; Unpin Edge
-"NoStorePinned"=dword:00000001     ; Unpin Microsoft Store
-"TaskbarSearchBoxMode"=dword:00000000 ; Hide search box
+<img src="https://github.com/user-attachments/assets/722290ff-07da-48d3-a000-3e1a54f95ea0" width="600"/>
 
-; ==============================
-; ===== Disable Connected User Experiences and Telemetry =====
-; ==============================
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
-"Start"=dword:00000004
+Select Finish:
 
-; ==============================
-; ===== Disable Retail Demo Service =====
-; ==============================
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RetailDemo]
-"Start"=dword:00000004
+<img src="https://github.com/user-attachments/assets/6aa6fd08-4e52-48b3-9b68-d35a88a4b6d6" width="600"/>
 
-; ==============================
-; ===== Disable Windows Error Reporting Service =====
-; ==============================
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WerSvc]
-"Start"=dword:00000004
+Select OK:
 
-; ==============================
-; ===== Firewall Rules: Block Windows Update =====
-; ==============================
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules]
-"Block_WindowsUpdate1"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Windows Update 1|RemoteIP=13.107.4.50"
-"Block_WindowsUpdate2"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Windows Update 2|RemoteIP=13.107.5.50"
-"Block_WindowsUpdate3"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Windows Update 3|RemoteIP=13.107.6.50"
-"Block_WindowsUpdate4"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Windows Update 4|RemoteIP=13.107.8.50"
+<img src="https://github.com/user-attachments/assets/a690fc76-9bb9-4cb1-a283-7845cc32766a" width="600"/>
 
-"Block_Activation1"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Activation 1|RemoteIP=activation.sls.microsoft.com"
-"Block_Activation2"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Activation 2|RemoteIP=activation.windows.microsoft.com"
-"Block_Activation3"="v2.30|Action=Block|Active=TRUE|Dir=Out|Protocol=6|App=System|Name=Block Activation 3|RemoteIP=wlnotify.microsoft.com"
+Select File Explorer, This PC and Shared Folders:
+
+<img src="https://github.com/user-attachments/assets/0262eb4b-efe1-476b-acff-4bfbe326e3b5" width="600"/>
+
+Select `vmshared`:
+
+<img src="https://github.com/user-attachments/assets/a254b5d9-39f9-4db4-93db-8f1ae4baea3f" width="600"/>
+
+This folder is empty:
+
+<img src="https://github.com/user-attachments/assets/d5e10495-78a4-4289-9c42-96cc865d2cda" width="600"/>
+
+In this example the installer for Logitech C922 webcam can be downloaded:
+
+<img src="https://github.com/user-attachments/assets/ea2c6859-a311-4ed3-8f48-7fbf3fece749" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/93c3a578-4b15-4f42-a91b-91b9c1072169" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/4143bcf0-5140-453f-9619-501f8c165f81" width="600"/>
+
+The installer will be copied to the `vmshared` on the Windows 11 folder:
+
+<img src="https://github.com/user-attachments/assets/b8024d3d-0e14-4114-8849-9c254c92cb12" width="600"/>
+
+The installer might not show right away on the Windows 10 Guest, right click the folder and select refresh:
+
+<img src="https://github.com/user-attachments/assets/b04e50da-4fdc-4f5a-b0c3-bdc8188d1d3c" width="600"/>
+
+The installer now displays:
+
+<img src="https://github.com/user-attachments/assets/3721089d-561f-46e8-b9d3-0fad90709b77" width="600"/>
+
+## Installing Python
+
+Python will be used as an example of installing a program on Windows 10 Version 1709. [Python 3.11.9](https://www.python.org/downloads/release/python-3119/) is the latest version of Python to work on Windows 10 Version 1709. The installer can be downloaded on the Windows 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/2362935b-f938-451e-bdbf-92ef5c60d9ac" width="600"/>
+
+When using a Windows 11 Host, the file can be dragged and dropped over to the VM. On a Linux host, the most commonly used Desktop Environment GNOME (and less common Desktop Environments) are not supported and shared folders have to be configured:
+
+<img src="https://github.com/user-attachments/assets/65bc634c-1858-4c54-80d5-80e324495ade" width="600"/>
+
+Launch the setup:
+
+<img src="https://github.com/user-attachments/assets/33684308-db83-40bf-a545-cac4f739a0bb" width="600"/>
+
+Select add to path and then select install now:
+
+<img src="https://github.com/user-attachments/assets/768e0d9c-afe2-4fbc-a7da-d0a8d68730b9" width="600"/>
+
+Accept the User Account Control Prompt:
+
+<img src="https://github.com/user-attachments/assets/236359ec-12e3-4d01-8919-174f17d4585b" width="600"/>
+
+Select Close:
+
+<img src="https://github.com/user-attachments/assets/81b3120d-f2e8-49e2-a17f-6b1ea5124a54" width="600"/>
+
+Right click the start button and select Command Prompt:
+
+
+
+
+
+
+
+To launch Python input:
+
+```powershell
+python
+```
+
+Notice the change to the Python prompt ```>>>```:
+
+
+
+
+
+Python code can now be used:
+
+```python
+print('Hello World!')
+```
+
+
+
+To exit python input the function:
+
+```python
+exit()
+```
+
+
+
+
+Notice the return to the CMD prompt.
+
+To use the package manager requires Internet Connectivity. Select Player → File → Network Adaptor → Connect:
+
+
+
+Recall however that Windows 10 Version 1709 is past end of life and is not safe to use online for general web use.
+
+The Python package can be installed using:
+
+```python
+pip install pyserial==3.5
 ```
 
 
@@ -581,28 +630,12 @@ Windows Registry Editor Version 5.00
 
 
 
+And can be imported into a Python program:
 
 
 
 
 
-
-
-
-
-
-
-
-
-## Shared Folders
-
-Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmshared`:
-
--
-
-## Installing Python
-
-Python 3.11
 
 ## USB Passthrough
 
