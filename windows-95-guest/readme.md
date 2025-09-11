@@ -363,36 +363,54 @@ Select OK:
 
 <img src="https://github.com/user-attachments/assets/4aa7ff82-72f5-4bd6-b24f-34cd4d4db76a" width="600"/>
 
-
 Input a user name and select ok:
 
+<img src="https://github.com/user-attachments/assets/de4d70b4-8191-4c84-b542-05ef8da8d615" width="600"/>
 
+Press ok:
 
-Press ok and ok:
+<img src="https://github.com/user-attachments/assets/79c606d7-68d2-4ff5-b7db-3711b7661cd5" width="600"/>
 
+Select the time zone and select apply:
 
+<img src="https://github.com/user-attachments/assets/67f34815-0ac8-41ca-bbb9-701f110ea734" width="600"/>
 
-Select the time zone and select apply and then ok:
+Select OK:
 
-
+<img src="https://github.com/user-attachments/assets/cb6f8c8e-672c-4fc3-960a-888a1aa11d6c" width="600"/>
 
 Select cancel:
 
-
-
-Select OK:
-
-
+<img src="https://github.com/user-attachments/assets/11f3aa32-13fc-40fa-b7a9-5d8130b14ac6" width="600"/>
 
 Select OK:
 
+<img src="https://github.com/user-attachments/assets/2d7f8775-4c12-4bb9-b6e2-f947adc4d91f" width="600"/>
 
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/eb214191-1abd-48dc-b84c-badfbd27935f" width="600"/>
 
 Select next:
 
-
+<img src="https://github.com/user-attachments/assets/d64e0bb5-4a53-481b-9a64-6fbef6667642" width="600"/>
 
 Select your language and select next:
+
+<img src="https://github.com/user-attachments/assets/29c94ecb-fe16-4790-8b12-87fbdb1b4c5d" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/3f94572c-f61f-470f-943e-e25c5d0343a9" width="600"/>
+
+## Installing Windows 95 Updates
+
+
+
+
+
+
+
 
 
 
