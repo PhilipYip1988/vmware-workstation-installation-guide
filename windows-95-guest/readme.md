@@ -1,64 +1,83 @@
 
 ## Windows 95 Setup
 
-Select option `1` and press `↵`:
+Select the Windows 95 Guest and select Play. Windows 95 will boot from the floppy disk:
 
+<img src="https://github.com/user-attachments/assets/e34d47a3-099e-43e1-990a-d6728a811014" width="600"/>
 
+Select option `1` Load NEC IDE CDROM driver and press `↵`:
 
-Input:
+<img src="https://github.com/user-attachments/assets/042e9c67-79a5-41cf-b15f-cc0a2928885e" width="600"/>
+
+The DOS prompt will display:
+
+<img src="https://github.com/user-attachments/assets/03b54b34-2053-483f-b940-6d8df5c565b8" width="600"/>
+
+The DOS command `FDISK` creates a partition on the Drive, it can be started by inputting:
 
 ```powershell
 FDISK
 ```
 
+and press `↵`:
 
+<img src="https://github.com/user-attachments/assets/b982e6fc-d647-4d21-99fd-b6c0b85289fe" width="600"/>
 
-Input `Y` and press `↵`:
+Input `Y` to enable large disk support and press `↵`:
 
+<img src="https://github.com/user-attachments/assets/1b60f026-ba87-48be-bbbe-c8124d54f10a" width="600"/>
 
+Select option `1` Create DOS Partition or Logical DOS Drive and press `↵`:
 
-Select option `1` and press `↵`:
+<img src="https://github.com/user-attachments/assets/2c1fb6f2-8269-4019-9d5d-51206445c3d8" width="600"/>
 
+Select option `1` Create Primary DOS Partition and press `↵`:
 
+<img src="https://github.com/user-attachments/assets/47e14e6e-8521-4723-9ae4-70810cd7059a" width="600"/>
 
-Select option `1` and press `↵`:
+To make a partition the maximum available size input `Y` and press `↵`:
 
+<img src="https://github.com/user-attachments/assets/dd573535-2a93-4c9c-85b3-b9ff1c9a66ed" width="600"/>
 
+To exit the DOS program `FDISK` press `Esc`:
 
-Input `Y` and press `↵`:
+<img src="https://github.com/user-attachments/assets/4a018c84-e555-4ff3-846d-349baaaa8625" width="600"/>
 
+A new prompt from the bootable floppy disk will display:
 
-
-Press `Esc`:
-
-
+<img src="https://github.com/user-attachments/assets/658af53e-3424-4d94-8ac0-1c3b323be95d" width="600"/>
 
 Select Player → Send `Ctrl`, `Alt` + `Del`:
 
+<img src="https://github.com/user-attachments/assets/cb21bb37-0ad6-4243-a504-bb5ebb175d1e" width="600"/>
 
+Windows 95 will boot from the floppy disk again. Select option `1` Load NEC IDE CDROM driver and press `↵`:
 
+<img src="https://github.com/user-attachments/assets/ce7fcc2a-85af-4961-abb1-4350ad706d6e" width="600"/>
 
-Select option `1` and press `↵`:
+The DOS prompt will display:
 
+<img src="https://github.com/user-attachments/assets/03b54b34-2053-483f-b940-6d8df5c565b8" width="600"/>
 
-
-Input:
+The DOS command `FORMAT` formats the drive, and the option `/S` copies the commands MSDOS.SYS and COMMAND.COM making the hard drive bootable:
 
 ```powershell
 FORMAT C: /S
 ```
 
+<img src="https://github.com/user-attachments/assets/617cb524-4185-4e5f-bce9-12e0e9111772" width="600"/>
 
+To proceed with the format input `Y` and press `↵`:
 
-Input `Y` and press `↵`:
-
-
-
+<img src="https://github.com/user-attachments/assets/d1e9fa27-5d17-45a0-b86a-482858a82763" width="600"/>
 
 Press `↵`:
 
+<img src="https://github.com/user-attachments/assets/2f31bd0b-1a31-4f58-8fd7-556850c13b73" width="600"/>
 
+A new prompt from the bootable floppy disk will display:
 
+<img src="https://github.com/user-attachments/assets/4835aecd-8a00-4e87-afd3-95b52edb24b0" width="600"/>
 
 To change to the `C:` drive input:
 
@@ -66,23 +85,32 @@ To change to the `C:` drive input:
 C:
 ```
 
+<img src="https://github.com/user-attachments/assets/a9d9b6ad-a2ae-4b38-8572-195a8970e1de" width="600"/>
 
 
 
-To make a directory called `win95` input:
+
+
+
+To make a directory called `win95` use the DOS command `MD`:
 
 ```powershell
 MD win95
 ```
 
+<img src="https://github.com/user-attachments/assets/8cea10d7-2925-4bef-9847-33ed029d8088" width="600"/>
 
 
-To copy the files input from the CD `D:` to the virtual hard drive `C:` inputwin95:
+
+
+
+To copy the files input from the CD `D:` to the virtual hard drive `C:` input:
 
 ```powershell
 COPY D:\WIN95\*.* C:\WIN95
 ```
 
+<img width="722" height="457" alt="image" src="https://github.com/user-attachments/assets/27d7a55b-d11f-439a-8635-a2506740b089" />
 
 
 To begin the setup input:
