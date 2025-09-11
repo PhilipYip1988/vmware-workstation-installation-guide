@@ -79,7 +79,9 @@ A new prompt from the bootable floppy disk will display:
 
 <img src="https://github.com/user-attachments/assets/4835aecd-8a00-4e87-afd3-95b52edb24b0" width="600"/>
 
-To change to the `C:` drive input:
+Currently `A:` is a DOS bootable floppy drive and has drivers to view the CD drive `D:` which contains the Windows 95 Installation Files. Installation is onto the HDD `C:` which becomes the OS Boot Drive. During installation there is a prompt for a restart and an instruction to remove the floppy drive. This boots from the OS boot drive which doesn't have the driver for the CD drive `D:`. Unfortunately by default the setup continues to look for the optical drive and fails to install fails leading to an incomplete/faulty installation.
+
+To rectify this, the setup files should be copied to the `C:` drive from `D:` and the setup should be launched from `C:`. To change to the `C:` drive input:
 
 ```powershell
 C:
@@ -87,12 +89,7 @@ C:
 
 <img src="https://github.com/user-attachments/assets/a9d9b6ad-a2ae-4b38-8572-195a8970e1de" width="600"/>
 
-
-
-
-
-
-To make a directory called `win95` use the DOS command `MD`:
+The DOS command `MD` will make a directory called `win95`:
 
 ```powershell
 MD win95
@@ -100,20 +97,19 @@ MD win95
 
 <img src="https://github.com/user-attachments/assets/8cea10d7-2925-4bef-9847-33ed029d8088" width="600"/>
 
-
-
-
-
-To copy the files input from the CD `D:` to the virtual hard drive `C:` input:
+Since currently we are on `C` this is `C:\win95`. The DOS command `COPY` can be used to copy files from the CD `D:\win95` to destination  `C:\win95`. `*.*` is a wildcard where the first `*` essentially means any file name and the second `*` is the file extension:
 
 ```powershell
-COPY D:\WIN95\*.* C:\WIN95
+COPY D:\win95\*.* C:\win95
 ```
 
-<img width="722" height="457" alt="image" src="https://github.com/user-attachments/assets/27d7a55b-d11f-439a-8635-a2506740b089" />
+<img src="https://github.com/user-attachments/assets/27d7a55b-d11f-439a-8635-a2506740b089" width="600"/>
 
+225 files should be copied:
 
-To begin the setup input:
+<img src="https://github.com/user-attachments/assets/5cfd416d-e148-4328-9748-64d059b0dea5" width="600"/>
+
+The `setup` program can be launched from the CD with the flag `IS` meaning install:
 
 ```powershell
 C:\win95\setup /IS
