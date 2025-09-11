@@ -315,6 +315,15 @@ To the right select Advanced Micro Devices (AMD) and to the left select AMD PCNE
 
 <img src="https://github.com/user-attachments/assets/19601514-37bc-4530-8029-09c008d3b1b4" width="600"/>
 
+Also Add Protocol Microsoft TCP/IP
+
+
+
+
+
+
+
+
 Then select next:
 
 <img src="https://github.com/user-attachments/assets/c5d9779f-43d9-4252-a097-6adee922884a" width="600"/>
@@ -435,8 +444,89 @@ The Device Manager has:
 * PCI System Peripheral
 * Other Devices
 
+Install Chipset Software:
+
+* PCI Bridge
 
 * [Intel Chipset INF Software v 2.80](https://vogonsdrivers.com/getfile.php?fileid=1632&menustate=0)
+
+Install USB Drivers:
+
+
+Service Pack First run:
+
+* Main Updates
+
+Service Pack Second run:
+
+* Adaptec ASPI Drivers
+* Unimodem Drivers
+* Windows Management Instrumentation 1.3
+* MS System Information 4.0 & System Tools
+
+Service Pack Third run:
+
+* winsock
+
+
+VMware Tools
+
+
+DirectX 8.0a → after video driver installed.
+
+TweakUI 1.33 → optional customization.
+
+Command Prompt Here → optional convenience utility.
+
+WinTop 0.95 → optional window/taskbar management.
+
+Windows Media Player → optional, after DirectX.
+
+
+
+Updates first
+
+
+
+
+
+
+```
+Class: Unknown
+  DeviceDesc: Unknown Device
+  Registry Key: HKEY_LOCAL_MACHINE\enum\ROOT\NET\0000
+  Hardware Resource Section
+    Inst1 resources: 
+      Alloc resources: 
+          None
+  Extra Registry information Section
+  Driver Information section
+    Driver: No Information
+```
+
+This is:
+
+```
+HKEY_LOCAL_MACHINE\enum\PCI\VEN_15AD&DEV_0740&SUBSYS_074015AD&REV_10\BUS_00&DEV_07&FUNC_07
+```
+
+which is the VMware VMCI Bus which is used by VMware for folder sharing and dragging and dropping files:
+
+According to Broadcom there is no Windows 98 driver for this device:
+
+> For Windows 98 and Windows 98SE (and Windows 95 in this case), there is no support for the VMCI device in VMware Tools. 
+
+[Broadcom Legacy Article 1023129](https://knowledge.broadcom.com/external/article?legacyId=1023129)
+
+
+
+
+
+
+
+
+
+
 
 
 
