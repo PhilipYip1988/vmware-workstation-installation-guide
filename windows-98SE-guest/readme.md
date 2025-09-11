@@ -290,7 +290,7 @@ In CD/DVD select the Windows 98 SE OEM ISO:
 
 <img src='./images/img_054.png' alt='img_054' width='600'/>
 
-Leave Network Adaptor at the default setting:
+Under Network Adaptor uncheck Connect at Power On. Windows 98 SE has reached end of life and is unsafe to use on the internet:
 
 <img src='./images/img_055.png' alt='img_055' width='600'/>
 
