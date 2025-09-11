@@ -403,6 +403,20 @@ Select OK:
 
 <img src="https://github.com/user-attachments/assets/3f94572c-f61f-470f-943e-e25c5d0343a9" width="600"/>
 
+## Backing up the Windows 95 Guest
+
+Select Start → Shut Down:
+
+<img src="https://github.com/user-attachments/assets/4da41325-fd44-4036-a082-6990a950ccf5" width="600"/>
+
+Select Shut Down and then OK:
+
+<img src="https://github.com/user-attachments/assets/250b676d-adc6-42ba-a1c1-6a399435114d" width="600"/>
+
+On the Windows 11 Host or Ubuntu 24.10 Host, navigate to Documents and the Virtual Machines folder. Copy the Windows 95 folder to back it up:
+
+<img src="https://github.com/user-attachments/assets/eb042994-e9f4-4c26-80d7-62a165eb6b63" width="600"/>
+
 ## Installing Windows 95 Updates
 
 
