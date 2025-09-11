@@ -324,7 +324,7 @@ Open in Notepad or Notepad++ (recommended):
 
 <img src="https://github.com/user-attachments/assets/b9735045-7549-42f3-8333-c4ca3007288f" width='600'/>
 
-The option `bios.ootDelay` for example will change the time the Windows98 SE Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation, returning to the default value.
+The option `bios.bootDelay` for example will change the time the Windows98 SE Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation, returning to the default value.
 
 Press `Ctrl+f` to begin a search for an option for example `bios.bootDelay`:
 
