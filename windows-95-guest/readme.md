@@ -419,8 +419,30 @@ On the Windows 11 Host or Ubuntu 24.10 Host, navigate to Documents and the Virtu
 
 ## Installing Windows 95 Updates
 
+Right click Computer and select Properties:
+
+<img src="https://github.com/user-attachments/assets/6f8d912d-c739-4791-8020-c314151ffed9" width="600"/>
+
+Select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/9e645c5a-8424-4505-befb-51aced3eda9b" width="600"/>
+
+The Device Manager has:
+
+* Standard PCI Graphics Adaptor
+* PCI Bridge
+* PCI Multimedia Devices
+* PCI System Peripheral
+* Other Devices
 
 
+* [Intel Chipset INF Software v 2.80](https://vogonsdrivers.com/getfile.php?fileid=1632&menustate=0)
+
+
+
+
+
+devices in red are taken care by installing the video driver in VMware tools and the creative
 
 
 
