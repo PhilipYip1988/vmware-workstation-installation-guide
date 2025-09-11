@@ -220,7 +220,8 @@ Press `↵`:
 
 A new prompt from the bootable floppy disk will display:
 
-<img src="https://github.com/user-attachments/assets/4835aecd-8a00-4e87-afd3-95b52edb24b0" width="600"/>
+<img src="https://github.com/user-attachments/assets/7e5ca2a4-0d41-4592-b423-b130e6fd8d2a" width="600"/>
+
 
 Currently `A:` is a DOS bootable floppy drive and has drivers to view the CD drive `D:` which contains the Windows 95 Installation Files. Installation is onto the HDD `C:` which becomes the OS Boot Drive. During installation there is a prompt for a restart and an instruction to remove the floppy drive. This boots from the OS boot drive which doesn't have the driver for the CD drive `D:`. Unfortunately by default the setup continues to look for the optical drive and fails to install fails leading to an incomplete/faulty installation.
 
@@ -238,7 +239,7 @@ The DOS command `MD` will make a directory called `win95`:
 MD win95
 ```
 
-<img src="https://github.com/user-attachments/assets/8cea10d7-2925-4bef-9847-33ed029d8088" width="600"/>
+<img src="https://github.com/user-attachments/assets/9710439b-6649-4c24-9aa4-7fe1ebfc1cda" width="600"/>
 
 Since currently we are on `C` this is `C:\win95`. The DOS command `COPY` can be used to copy files from the CD `D:\win95` to destination  `C:\win95`. `*.*` is a wildcard where the first `*` essentially means any file name and the second `*` is the file extension:
 
@@ -246,11 +247,13 @@ Since currently we are on `C` this is `C:\win95`. The DOS command `COPY` can be 
 COPY D:\win95\*.* C:\win95
 ```
 
-<img src="https://github.com/user-attachments/assets/27d7a55b-d11f-439a-8635-a2506740b089" width="600"/>
+<img src="https://github.com/user-attachments/assets/7d65613b-b761-4a7a-abab-4a01655426b7" width="600"/>
+
 
 225 files should be copied:
 
-<img src="https://github.com/user-attachments/assets/5cfd416d-e148-4328-9748-64d059b0dea5" width="600"/>
+<img src="https://github.com/user-attachments/assets/927efb0a-8612-4b8c-b567-d28067697be7" width="600"/>
+
 
 The `setup` program can be launched from the CD with the flag `IS` meaning install:
 
@@ -258,90 +261,107 @@ The `setup` program can be launched from the CD with the flag `IS` meaning insta
 C:\win95\setup /IS
 ```
 
-
-
-
-Press `↵`:
-
-
+<img src="https://github.com/user-attachments/assets/c322dffa-7095-4196-aefc-f41f106c5431" width="600"/>
 
 Select Continue:
 
-
+<img src="https://github.com/user-attachments/assets/7c6d8346-de50-499a-a26d-b4fc3f39e478" width="600"/>
 
 Select Yes:
 
-
-
-Select next:
-
-
+<img src="https://github.com/user-attachments/assets/69345071-1916-465e-b6f3-8e20da67214d" width="600"/>
 
 Select next:
 
+<img src="https://github.com/user-attachments/assets/ee1c31b7-a942-4404-9597-c5409987ef78" width="600"/>
 
+Select next:
 
-Select custom:
+<img src="https://github.com/user-attachments/assets/ffe9b4dc-0f25-422c-82d5-056d772435d1" width="600"/>
 
+Select custom and enxt:
 
+<img src="https://github.com/user-attachments/assets/f2a96bfd-4d2b-42d7-a5b4-1aa038a69c95" width="600"/>
 
 Input the product key and select next:
 
-
+<img src="https://github.com/user-attachments/assets/af04f5af-2699-4983-8488-476dadc5f53d" width="600"/>
 
 Input your username and select next:
 
+<img src="https://github.com/user-attachments/assets/7b1ba322-7172-4b64-8264-732483cbb1b4" width="600"/>
 
+Select Yes and next:
+
+<img src="https://github.com/user-attachments/assets/abdc09a1-3352-4489-a3e6-6d49214bf2fc" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/1d4ab32e-cb9e-45fc-a3a4-6ed3c4efd6ab" width="600"/>
 
 Under components, leave the defaults and select next:
 
-
+<img src="https://github.com/user-attachments/assets/70945477-8478-4ff3-b183-084f7e661678" width="600"/>
 
 Under Network Configuration, select Add:
 
-
+<img src="https://github.com/user-attachments/assets/3cd954d3-7974-447b-abb0-93c8ae0d6358" width="600"/>
 
 Select Adaptor and select Add:
 
-
+<img src="https://github.com/user-attachments/assets/9764dcbd-e3f1-4230-be20-c010552b5822" width="600"/>
 
 To the right select Advanced Micro Devices (AMD) and to the left select AMD PCNET Family Ethernet Adapter (PCI&ISA). Then select OK:
 
-
+<img src="https://github.com/user-attachments/assets/19601514-37bc-4530-8029-09c008d3b1b4" width="600"/>
 
 Then select next:
 
-
+<img src="https://github.com/user-attachments/assets/c5d9779f-43d9-4252-a097-6adee922884a" width="600"/>
 
 Then enter the Computer Name, Workgroup Name and Computer Description and select next:
 
+<img src="https://github.com/user-attachments/assets/f3cdf280-bf2d-4e70-948f-be0eeeeec6f3" width="600"/>
 
+Select the keyboard layout and select change:
+
+<img src="https://github.com/user-attachments/assets/4e30a81c-914a-466b-b21e-11edebc965bd" width="600"/>
+
+Select your keyboard layout and select ok:
+
+<img src="https://github.com/user-attachments/assets/46ba977c-4b5e-45ed-97d4-58c4658fc93d" width="600"/>
 
 Select next:
 
-
+<img src="https://github.com/user-attachments/assets/9b8b8e68-e064-4472-aed6-cb41c2b618a0" width="600"/>
 
 Select No, I do not want a startup disk and select next:
 
-
+<img src="https://github.com/user-attachments/assets/a3cfd3e9-073a-42f7-a0ba-81f33458b8c0" width="600"/>
 
 Select next:
 
-
+<img src="https://github.com/user-attachments/assets/3a2259d1-d1b6-4047-ac3c-a0e0094f2815" width="600"/>
 
 Select finish:
 
+<img src="https://github.com/user-attachments/assets/77b0e385-6ae6-4bba-b1d3-e51f59fdd650" width="600"/>
 
+An instruction will display to remove the floppy disk:
+
+<img src="https://github.com/user-attachments/assets/f652321c-8fa1-46f2-8ce4-708a182a1d09" width="600"/>
 
 Select player → removable devices → floppy → settings:
 
+<img src="https://github.com/user-attachments/assets/56fee8cd-8c11-4662-affb-4a8618d066aa" width="600"/>
 
 Uncheck Connected and Connect at Power On and select OK:
 
-
+<img src="https://github.com/user-attachments/assets/2162666c-ba20-4676-afd0-671481d66bef" width="600"/>
 
 Select OK:
 
+<img src="https://github.com/user-attachments/assets/4aa7ff82-72f5-4bd6-b24f-34cd4d4db76a" width="600"/>
 
 
 Input a user name and select ok:
