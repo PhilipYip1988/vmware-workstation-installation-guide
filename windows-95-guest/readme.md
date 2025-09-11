@@ -315,14 +315,17 @@ To the right select Advanced Micro Devices (AMD) and to the left select AMD PCNE
 
 <img src="https://github.com/user-attachments/assets/19601514-37bc-4530-8029-09c008d3b1b4" width="600"/>
 
-Also Add Protocol Microsoft TCP/IP
+Select Add:
 
+<img src="https://github.com/user-attachments/assets/e146cf87-032c-4e19-b668-dd6bf811da42" width="600"/>
 
+Select Protocol and select Add:
 
+<img src="https://github.com/user-attachments/assets/e9ea7414-a348-42f7-bee3-047c8910c445" width="600"/>
 
+To the right select Microsoft and to the left select TCP/IP:
 
-
-
+<img src="https://github.com/user-attachments/assets/a75ddc22-0bfd-4d03-9000-aef42fa2cc61" width="600"/>
 
 Then select next:
 
