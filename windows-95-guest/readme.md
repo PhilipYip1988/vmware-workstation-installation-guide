@@ -1,4 +1,147 @@
 
+
+## Configuring the Windows 95 Guest
+
+Select File → New Virtual Machine:
+
+<img src="https://github.com/user-attachments/assets/d8857004-a04f-49c6-9768-4d874b222734" width="600"/>
+
+Select Browse:
+
+<img src="https://github.com/user-attachments/assets/81385eb4-a74e-4983-8ba7-c528bfcebb76" width="600"/>
+
+Select the `Win95_OSR25_Patcher9x.iso` and select Open:
+
+<img src="https://github.com/user-attachments/assets/8f82fa3b-d1a7-4f3d-9e2b-43ceb64de961" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/49af4614-c69d-490d-93c8-d2e93e6874fb" width="600"/>
+
+The VM Name and Location will be shown. Note when used on a Windows 11 Host which is signed in with a Microsoft Account and integrated with OneDrive, the default location will be on OneDrive. The VM can be quite large and the location can be changed to local Documents by removing the OneDrive folder:
+
+<img src="https://github.com/user-attachments/assets/35d0e326-43f0-4515-b967-194cecdc2071" width="600"/>
+
+Note the name and location as these will be used later.
+
+The default maximum size of the Windows 95 Guest is 8 GB which is a bit too restrictive. I recommend increasing this to 32 GB. Note the files on the Windows 11 Host won't be 32 GB but can be up to 32 GB if the Windows 98 Guests Virtual Drive is fully occupied with files. Windows 95 may struggle with a Virtual Drive >32 GB:
+
+<img src="https://github.com/user-attachments/assets/d527249d-b092-441b-9c14-137b50cab396" width="600"/>
+
+Select Customise Hardware:
+
+<img src="https://github.com/user-attachments/assets/b87bb276-3cf7-4f67-81a7-d5b010924a42" width="600"/>
+
+Change the memory to 256 GB:
+
+<img src="https://github.com/user-attachments/assets/8e985def-698a-4930-8905-851f98aeb6a1" width="600"/>
+
+Leave the number of processor cores at 1:
+
+<img src="https://github.com/user-attachments/assets/ccc5d5de-c1f9-4014-ad97-4d299004a946" width="600"/>
+
+Under CD/DVD, connect at power on should be checked and `Win95_OSR25_Patcher9x.iso` should already be selected:
+
+<img src="https://github.com/user-attachments/assets/ba06e003-1d86-4241-9a97-df46a685942c" width="600"/>
+
+Under Network Adaptor uncheck Connect at Power On. Windows 95 has reached end of life and is unsafe to use on the internet:
+
+<img src="https://github.com/user-attachments/assets/d70a50f3-15bb-4c9b-a788-d2ea315c17a6" width="600"/>
+
+Leave the Sound Card at the default setting:
+
+<img src="https://github.com/user-attachments/assets/2155f89e-f283-4895-a10d-19a408563d98" width="600"/>
+
+Leave display at the default setting:
+
+<img src="https://github.com/user-attachments/assets/cf3f27df-526b-43da-920c-e6656b5f150e" width="600"/>
+
+The bootable floppy disk needs to be added select Add:
+
+<img src="https://github.com/user-attachments/assets/0610a23f-43ee-4e04-8f3c-169ebcad5f49" width="600"/>
+
+Select Floppy Drive and Finish:
+
+<img src="https://github.com/user-attachments/assets/30e02e44-0d4d-4179-924a-07253c75cc27" width="600"/>
+
+Select Connect at Power On, Use Floppy Image File and Browse:
+
+<img src="https://github.com/user-attachments/assets/d736989b-03e0-49ca-a502-ba326d5540e5" width="600"/>
+
+Select `Boot Disk Windows 95.img` and select open:
+
+<img src="https://github.com/user-attachments/assets/6f7bfa24-c7de-42f2-bff8-32736cb689d2" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/6ad3f877-18fc-4953-b5e9-8009da542535" width="600"/>
+
+Some changes to the Virtual Machine COnfiguration file are recommended before beginning the installation. Uncheck Power on this Virtual Machine After Creation and select Finish:
+
+<img src="https://github.com/user-attachments/assets/1100a495-2368-4730-a2c7-bae0675fc287" width="600"/>
+
+## Windows 95 Guest Virtual Machine Configuration File
+
+Navigate to the directory on the Windows 11 Host that the Windows 98 SE Guest is installed:
+
+<img src="https://github.com/user-attachments/assets/c8cef617-546e-4c02-b68f-8b96653b45b0" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/d9938ca8-5f52-4a6e-b724-214071653905" width="600"/>
+
+Look for the Windows 95.vmx file:
+
+<img src="https://github.com/user-attachments/assets/3660a826-e295-475c-a298-36c397c769c9" width="600"/>
+
+Open in Notepad or Notepad++ (recommended):
+
+<img src="https://github.com/user-attachments/assets/9a517f86-9c33-4abd-889c-b71f3ed7e021" width="600"/>
+
+The option `bios.bootDelay` for example will change the time the Windows98 SE Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation, returning to the default value.
+
+Press Ctrl+f to begin a search for an option for example bios.bootDelay:
+
+<img src="https://github.com/user-attachments/assets/5981482a-b3b1-430c-8966-96a7a14b1982" width="600"/>
+
+If the line exists it can be modified to a new value. In this case it doesn't exist so can be appended to the end:
+
+```
+bios.bootDelay = "20000"
+```
+
+<img src="https://github.com/user-attachments/assets/ac7a3851-452e-481c-a7bb-5ae4db89a13d" width="600"/>
+
+### 12th-14 Generation Processors
+
+On a 12th–14th Generation Intel processor, certain legacy settings may need to be configured to run older guest operating systems such as Windows 95.
+
+Legacy CPU settings:
+
+```
+cpuid.0.eax = "0000000X"
+cpuid.1.ecx = "00000001"
+```
+
+These settings help emulate older CPU instructions that Windows 98 SE (patched) expects.
+
+Legacy monitor / virtualization settings
+
+```
+mks.enableVulkanRenderer = "FALSE"
+```
+
+This disables the Vulkan renderer, forcing VMware to use a more compatible DirectX/software renderer.
+
+Legacy monitor / virtualization settings:
+
+```
+monitor.virtual_exec = "hardware"
+monitor.virtual_mmu = "software"
+```
+
+These settings ensure proper CPU and MMU handling for legacy guests.
+
+<img src="https://github.com/user-attachments/assets/8a0eb120-62ae-4fef-b5cc-70aec7e91e00" width="600"/>
+
 ## Windows 95 Setup
 
 Select the Windows 95 Guest and select Play. Windows 95 will boot from the floppy disk:
