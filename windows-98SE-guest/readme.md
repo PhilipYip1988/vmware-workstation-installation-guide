@@ -32,7 +32,7 @@ Windows 98SE is considered abandonware and the Windows 98SE ISO and Product Key 
 
 Use the OEM Full ISO as the Retail Full ISO doesn't boot in VMware Player without use of a floppy disk and use the provided Product Key. For this version of Windows there was only a Product Key. Windows 98 SE was too primitive for Product Activation and a high proportion of Windows 98 SE computers were offline meaning internet activation mechanisms were unfeasible during this version fo Windows lifecycle.
 
-## #VMware Tools ISO
+### VMware Tools ISO
 
 The Windows 98SE drivers for the Windows 98SE Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
 
