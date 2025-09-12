@@ -599,6 +599,8 @@ Launch the unofficial service pack `Osr2sp1`:
 
 <img src="https://github.com/user-attachments/assets/202db583-a072-42b0-9516-5cdb0cc53764" width="600" />
 
+Select Main Updates only:
+
 <img src="https://github.com/user-attachments/assets/76bceda2-ebdb-47df-b99a-21306977efe1" width="600"/>
 
 Select yes:
@@ -615,28 +617,31 @@ Select yes:
 
 Press `↵` to log in:
 
-<img width="642" height="537" alt="Screenshot 2025-09-12 004713" src="https://github.com/user-attachments/assets/359c8308-db18-42cc-9355-82bc28796f24" />
+<img src="https://github.com/user-attachments/assets/359c8308-db18-42cc-9355-82bc28796f24" width="600"/>
 
-
-
-
-
-
-Service Pack First run:
-
-* Main Updates
-
-Service Pack Second run:
+Now select the following:
 
 * Adaptec ASPI Drivers
 * Unimodem Drivers
 * Windows Management Instrumentation 1.3
 * MS System Information 4.0 & System Tools
 
+<img src="https://github.com/user-attachments/assets/c35c07bf-f233-4898-b1d5-320c068b36c5" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/599d1016-39a1-4b5c-a559-435c60e54ecc" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/0d19bffb-2644-40b8-97a2-f3b0422857ed" width="600"/>
+
+
 Service Pack Third run:
 
 * winsock
 
+Internet Explorer
 
 VMware Tools
 
