@@ -24,7 +24,7 @@ The first setting allows the CPU to optimise the VM performance, the VM may be v
 
 ## Downloads
 
-### Windows 95 Floppy and CD
+### Windows 95 Floppy IMG and CD ISO
 
 Note the Windows 95 floppy disk hosted by WinWorld lacks the CD driver required to install Windows 95 OSR 2.5. They recommend using a Windows 98 Floppy Disk but I had a better experience using the floppy disk from Archive.org:
 
