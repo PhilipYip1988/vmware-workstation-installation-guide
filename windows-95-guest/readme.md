@@ -200,7 +200,13 @@ Extract all the files and delete old zipped files:
 
 <img src="https://github.com/user-attachments/assets/2c1b9013-3076-47e7-bcbb-524affafae89" width="600"/>
 
+Use ImgBurn to create an ISO of the Update folder as instructed above. Delete old files:
 
+<img src="https://github.com/user-attachments/assets/a3a64186-f6f7-441c-a8c5-5d4e8f07de48" width="600"/>
+
+You should have the following 3 ISOs and boot disk:
+
+<img src="https://github.com/user-attachments/assets/12137ea9-17c1-4478-849e-1423e725ea00" width="600"/>
 
 ## Configuring the Windows 95 Guest
 
