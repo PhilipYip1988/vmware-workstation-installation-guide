@@ -64,7 +64,7 @@ Download and install on the Windows 11 Guest:
 
 * [ImgBurn](https://www.imgburn.com/)
 
-### Patching the Installation ISO
+## Patching the Installation ISO
 
 The Windows 95 installation errors out on a VM on a modern computer:
 
