@@ -52,18 +52,153 @@ The Windows 95 installation errors out on a VM on a modern computer:
 
 Essentially the processor is too fast and windows 95 expects to wait more than "zero seconds" for an operation. Therefore the WIndows 95 installation media needs to be patched with patcher9x. Extract patcher9x:
 
+<img src="https://github.com/user-attachments/assets/ea0c757a-24e6-409a-b3e7-b1bcfc15cf28" width="600"/>
 
+Extract the Windows 95 OSR 2.5 ISO:
 
+<img src="https://github.com/user-attachments/assets/8df9a596-5c30-4620-82ab-7d7de8ae39d5" width="600"/>
 
+Select Extract:
 
+<img src="https://github.com/user-attachments/assets/e768cf02-1057-4e72-a5d5-3e4c4bb6c4b2" width="600"/>
 
+Navigate to the extracted ISO:
 
+<img src="https://github.com/user-attachments/assets/34a02c5a-96ba-4cb9-999b-30f693bb346a" width="600"/>
 
+Open the ISO file in Windows Explorer:
 
+<img src="https://github.com/user-attachments/assets/7fcc0933-8795-4e26-96e9-d6971b3ac58b" width="600"/>
 
+Select Open:
 
+<img src="https://github.com/user-attachments/assets/295d79e3-fb5f-4fb7-94d6-ebd78038613f" width="600"/>
 
+Select all the files and select Copy:
 
+<img src="https://github.com/user-attachments/assets/c2de2269-e07a-4fbb-8642-f560599e9181" width="600"/>
+
+Create a new folder called CD:
+
+<img src="https://github.com/user-attachments/assets/89dee5cb-5703-4b63-9edd-b0ed35df8dfa" width="600"/>
+
+Select Paste:
+
+<img src="https://github.com/user-attachments/assets/8ec24841-d88b-4f36-b266-d69f0102fe76" width="600"/>
+
+Delete the old folders:
+
+<img src="https://github.com/user-attachments/assets/25b01e28-3287-4ecb-8570-956192a07b46" width="600"/>
+
+Right click the patcher9x and select Extract:
+
+<img src="https://github.com/user-attachments/assets/a430f3e5-96db-47e9-93ef-f98622a1e728" width="600"/>
+
+Select Extract:
+
+<img src="https://github.com/user-attachments/assets/39cc98c2-640b-4986-8c0f-5f6e47c68894" width="600"/>
+
+Launch `patcher9x`:
+
+<img src="https://github.com/user-attachments/assets/fc7e0858-140f-4a14-bfab-f321e22a1c53" width="600"/>
+
+Select More Info:
+
+<img src="https://github.com/user-attachments/assets/ffd3d1fb-6a3a-4479-a481-7cfa4624dfa2" width="600"/>
+
+Select Run Anyway:
+
+<img src="https://github.com/user-attachments/assets/4ba5972d-48a3-4e4e-af4f-75b56217680f" width="600"/>
+
+Go to the copy of the extracted CD and look at the win95 folder:
+
+<img src="https://github.com/user-attachments/assets/103259f2-5acc-42bd-b498-9c6f432feed2" width="600"/>
+
+Select copy as path:
+
+<img src="https://github.com/user-attachments/assets/3137f2bd-cb96-42b1-837e-f9ec51b8ac4d" width="600"/>
+
+Paste in the path:
+
+<img src="https://github.com/user-attachments/assets/f8a0fb44-d1bb-4a3f-99b9-7c1ce24ce8c6" width="600"/>
+
+And remvoe the quotations:
+
+<img src="https://github.com/user-attachments/assets/ce4b1def-b0d8-4c99-a254-c8409fb9c6b1" width="600"/>
+
+Select `4`:
+
+<img src="https://github.com/user-attachments/assets/713267d2-d306-4a3c-897c-e345ba652bcf" width="600"/>
+
+Select `Y`:
+
+<img src="https://github.com/user-attachments/assets/6ae83e6d-9d0c-4057-9bf5-0206eba88f13" width="600"/>
+
+Press `↵` to exit:
+
+<img src="https://github.com/user-attachments/assets/62d25de8-c1de-409b-8946-60c87efb35c1" width="600"/>
+
+The `patcher9x` folder can be deleted:
+
+<img src="https://github.com/user-attachments/assets/4614d2e1-eec9-4cab-9e3a-d5814a6c8f99" width="600"/>
+
+Select create image from files/folder:
+
+<img src="https://github.com/user-attachments/assets/91b909ce-6b29-4d09-8c0e-132b61dc90b0" width="600"/>
+
+Select the open folder icon:
+
+<img src="https://github.com/user-attachments/assets/7d225a3c-1e40-43c5-936a-92df0c9744f9" width="600"/>
+
+Select the CD folder:
+
+<img src="https://github.com/user-attachments/assets/c506ba61-602d-4d63-a8c5-a8330cc576ef" width="600"/>
+
+Select the destination filder:
+
+<img src="https://github.com/user-attachments/assets/2da8c47a-9fa7-41ba-a8bb-db060b87fb1c" width="600"/>
+
+Name the ISO and select save:
+
+<img src="https://github.com/user-attachments/assets/affca1bc-b7b3-403b-a467-0933689ff097" width="600"/>
+
+Select the folder to Image button:
+
+<img src="https://github.com/user-attachments/assets/e5c24d75-aa39-4c33-8d53-058f042d33c7" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/3e257d20-c88c-4401-9281-aa7eaee1a452" width="300"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/68a22136-1c72-41c0-b1e3-e6f2c3fe5ca0" width="300"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/356e2c8f-c376-433a-807c-579ecb2eff7a" width="300"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/e845484e-16c1-45d4-a178-9a597617a2d2" width="300"/>
+
+Delete old folders:
+
+<img src="https://github.com/user-attachments/assets/60a8ab75-5826-4c56-ab68-19eb46534420" width="600"/>
+
+The Boot Floppy Disk and Installation CD are now ready:
+
+<img src="https://github.com/user-attachments/assets/3d6eaf25-b873-4df4-b726-9493f88be762" width="600"/>
+
+## Creating an Update ISO
+
+Download the Updates:
+
+<img src="https://github.com/user-attachments/assets/5fdee15c-7fb3-44de-9408-536203f117a2" width="600"/>
+
+Extract all the files and delete old zipped files:
+
+<img src="https://github.com/user-attachments/assets/2c1b9013-3076-47e7-bcbb-524affafae89" width="600"/>
 
 
 
