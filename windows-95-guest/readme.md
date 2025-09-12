@@ -1,5 +1,33 @@
 
 
+## Downloads
+
+### Windows 95 Floppy and CD
+
+
+### VMware Tools
+
+
+
+### Windows 95 Updates
+
+* [Intel Chipset INF Software v 2.80](https://vogonsdrivers.com/getfile.php?fileid=1632&menustate=0)
+* [VOGONS: USB Storage Driver Win95 OSR 2 - Unofficial Bundle](https://vogonsdrivers.com/getfile.php?fileid=1813&menustate=0&utm_source=chatgpt.com) 
+* [AMDK6 Update](https://winworldpc.com/product/windows-95/patches)
+* [Osr2sp: Unofficial Service Pack](https://www.mdgx.com/spx/OSR2SP1.EXE)
+* [Creative Labs SB-PCI64v Sound Card Version 5.13d](https://download.cnet.com/creative-labs-sb-pci64v-sound-card-version-5-13d/3000-2110_4-107804.html)
+
+
+
+
+
+### Utilities
+
+* patcher9x
+* 7zip
+* imgburn
+
+
 ## Configuring the Windows 95 Guest
 
 Select File → New Virtual Machine:
@@ -403,6 +431,10 @@ Select OK:
 
 <img src="https://github.com/user-attachments/assets/eb214191-1abd-48dc-b84c-badfbd27935f" width="600"/>
 
+The following warning displays because Windows 95 is offline, select No:
+
+<img src="https://github.com/user-attachments/assets/555c9892-e073-49a9-a81d-e4f074d1cb42" width="600"/>
+
 Select next:
 
 <img src="https://github.com/user-attachments/assets/d64e0bb5-4a53-481b-9a64-6fbef6667642" width="600"/>
@@ -429,7 +461,7 @@ On the Windows 11 Host or Ubuntu 24.10 Host, navigate to Documents and the Virtu
 
 <img src="https://github.com/user-attachments/assets/eb042994-e9f4-4c26-80d7-62a165eb6b63" width="600"/>
 
-## Installing Windows 95 Updates
+## Installing Windows 95 Updates and Drivers
 
 Right click Computer and select Properties:
 
@@ -446,6 +478,129 @@ The Device Manager has:
 * PCI Multimedia Devices
 * PCI System Peripheral
 * Other Devices
+
+Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src="https://github.com/user-attachments/assets/3e6b2f86-85ae-49a8-911e-558f5b5827f0" width="600" />
+
+Select Browse:
+
+<img src="https://github.com/user-attachments/assets/72050d17-7778-4b3d-8472-09d719c35f70" width="600"/>
+
+Select the `Updates.iso` and select Open:
+
+<img src="https://github.com/user-attachments/assets/28622c07-b9c3-44e6-831f-da66aca1feaa" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/ab39cd6d-f5af-47fc-9ae4-04bba3b7eddf" width="600"/>
+
+Open the Updates CD:
+
+<img src="https://github.com/user-attachments/assets/2c9603c3-5a07-4090-a644-8fd72c0029fc" width="600"/>
+
+Select the `infinst_280_win32` folder:
+
+<img src="https://github.com/user-attachments/assets/d63f1dbb-b70b-42a1-8cef-d59156645b85" width="600"/>
+
+And `Disk1`:
+
+<img src="https://github.com/user-attachments/assets/432f805a-5e20-4adf-9900-145b201696a7" width="600"/>
+
+Select the `Setup`:
+
+<img src="https://github.com/user-attachments/assets/00acc772-28b3-43c0-a048-8f9ce84ef7a8" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/d635af41-d5f4-46ba-a046-58ff2dec79fa" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/7a2b60a5-9b51-43f8-8fe8-ca665c3723ee" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/f8ae77d9-8b12-4554-97cd-7b6dd8acae09" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/1ad40702-dada-4c39-b731-1e9f1cb2f734" width="600"/>
+
+Press `↵` to log in:
+
+<img src="https://github.com/user-attachments/assets/a2b8d65f-6303-4208-bdfc-1202addc69c5" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/a8718d16-4615-4b12-ab7a-bd7d4652c342" width="600"/>
+
+Select finish:
+
+<img src="https://github.com/user-attachments/assets/3c1774b1-f6c4-4f0d-af96-42c39ee330b7" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/d658afb1-93b0-4bea-a702-5b5573d06e0a" width="600"/>
+
+Press `↵` to log in:
+
+<img src="https://github.com/user-attachments/assets/2c618e93-3da2-4f57-95f9-9cac5b42966a" width="600"/>
+
+Select the `xusbsupp` folder:
+
+<img src="https://github.com/user-attachments/assets/4b2c5af1-f8a0-4ca2-b445-bba42c34409b" width="600"/>
+
+Install the `Xusbsupp` application:
+
+<img src="https://github.com/user-attachments/assets/435060a7-e3a1-4655-a9c7-39a12be33d46" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/825acb1f-fefd-4729-8aed-c5da31e71a4f" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/3a5acd48-14d7-4b94-bdeb-8e57e56cebb7" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/e990480f-796a-47b0-b95b-672469d1ce16" width="600"/>
+
+Press `↵` to log in:
+
+<img src="https://github.com/user-attachments/assets/2e6b0dfc-9ce8-48bd-888a-029f4b56cb61" width="600"/>
+
+Go to the `AMDK6 Update` folder:
+
+<img src="https://github.com/user-attachments/assets/1118e2ee-4acd-42fd-9d49-de17cbc0c8ae" width="600"/>
+
+Launch the `amdk6upd` application:
+
+<img src="https://github.com/user-attachments/assets/365f0add-a10a-43bb-bb7a-ec923069653a" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/77195094-5ab8-4041-a113-ef5e0d6bf612" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/9ba931fa-1cfb-4ab6-b12d-7fc7d425e9b5" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/ec1e9a0d-5153-4fa6-b667-6b8f0ae143d6" width="600" />
+
+Press `↵` to log in:
+
+<img src="https://github.com/user-attachments/assets/47890bb9-07a4-411e-8d16-039c785b3841" width="600"/>
+
+
+
+
+
+
+
 
 Install Chipset Software:
 
@@ -658,7 +813,8 @@ Drag and drop works, the soun blaster driver can be dragged over and installed:
 
 ### USB Storage Driver Win95 OSR 2 - Unofficial Bundle
 
-* [VOGONS: USB Storage Driver Win95 OSR 2 - Unofficial Bundle](https://vogonsdrivers.com/getfile.php?fileid=1813&menustate=0&utm_source=chatgpt.com) 
+
+
 
 ### Windows 95B/95C OSR 2.0/2.1/2.5 Service Pack 1 (SP1) Version 1.05 
 
