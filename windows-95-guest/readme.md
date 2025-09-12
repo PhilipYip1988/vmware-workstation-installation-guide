@@ -4,10 +4,10 @@
 
 ### Windows 95 Floppy and CD
 
+Note the Windows 95 floppy disk hosted by WinWorld lacks the CD driver required to install Windows 95 OSR 2.5. They recommend using a Windows 98 Floppy Disk but I had a better experience using the floppy disk from Archive.org:
 
-### VMware Tools
-
-
+* [WinWorld: Windows 95 OSR 2.5 and Microsoft Plus](https://winworldpc.com/product/windows-95/osr-3)
+* [Archive.org: Windows 95 OSR 2.5 Boot Disk](https://archive.org/details/win-95-osr-25_202103)
 
 ### Windows 95 Updates
 
@@ -18,15 +18,53 @@
 * [Internet Explorer 5.5](https://winworldpc.com/product/internet-explorer/ie-55)
 * [Creative Labs SB-PCI64v Sound Card Version 5.13d](https://download.cnet.com/creative-labs-sb-pci64v-sound-card-version-5-13d/3000-2110_4-107804.html)
 
+### VMware Tools ISO
+
+The Windows 98SE drivers for the Windows 98SE Guest are contained in the VMware Tools Installation ISO. The Website Archive.org appears to host the ISO created by VMware before Broadcom removed it:
+
+* [VMware Tools Pre2k](https://archive.org/details/winPre2k)
+
+### Patcher9x
+
+Download the `patcher9x-win64.zip` from the assets of the latest release:
+
+* [patcher9x](https://github.com/JHRobotics/patcher9x/releases/)
+
+### 7-zip
+
+Download and install on the Windows 11 Guest:
+
+* [7-zip](https://7-zip.org/download.html)
+
+### ImgBurn
+
+Download and install on the Windows 11 Guest:
+
+* [ImgBurn](https://www.imgburn.com/)
+
+### Patching the Installation ISO
+
+The Windows 95 installation errors out on a VM on a modern computer:
+
+> This program has performed an illegal operation and will be shut down.
+
+> If the problem persists, contact the program vendor
+
+Essentially the processor is too fast and windows 95 expects to wait more than "zero seconds" for an operation. Therefore the WIndows 95 installation media needs to be patched with patcher9x. Extract patcher9x:
 
 
 
 
-### Utilities
 
-* patcher9x
-* 7zip
-* imgburn
+
+
+
+
+
+
+
+
+
 
 
 ## Configuring the Windows 95 Guest
@@ -927,152 +965,76 @@ Press `↵` to log in, you will hear audio as you log in:
 
 <img src="https://github.com/user-attachments/assets/c737f83f-31ee-4f48-a306-57a22654df38" width="600"/>
 
+Launch the unofficial service pack `Osr2sp1` again and now select the following:
 
-DirectX 8.0a → after video driver installed.
+* DirectX 8.0a
 
-TweakUI 1.33 → optional customization.
+<img src="https://github.com/user-attachments/assets/5a76a984-ac48-4c09-8c2d-c365cdaa0467" width="600"/>
 
-Command Prompt Here → optional convenience utility.
+Select OK and yes and then log back in.
 
-WinTop 0.95 → optional window/taskbar management.
+<img src="https://github.com/user-attachments/assets/0d19bffb-2644-40b8-97a2-f3b0422857ed" width="600"/>
 
-Windows Media Player → optional, after DirectX.
+Launch the unofficial service pack `Osr2sp1` again and now select the following:
 
+* Windows Media Player 6.4.7.1129
 
+<img src="https://github.com/user-attachments/assets/139e89f5-ee1a-42bd-9d8e-0fd74fbcc5c6" width="600"/>
 
-Updates first
+Select OK and yes and then log back in.
 
+Launch the unofficial service pack `Osr2sp1` again and now select the following:
 
+* TweakUI 1.33
+* Command Prompt Here
+* WinTop 0.95
 
+<img src="https://github.com/user-attachments/assets/266f598e-3c1e-4c5d-8124-7026b4dd5edf" width="600"/>
 
+Right click Computer and select Properties:
 
+<img src="https://github.com/user-attachments/assets/3aac9292-96d7-4970-818f-e9fa56905643" width="600"/>
+
+Select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/53925dc5-22ad-4e0f-add1-21cb6d5285b3" width="600"/>
+
+There are two devices listed under Other Devices PCI System Peripheral and Unknown Device. For more details, select Start → Run:
+
+<img src="https://github.com/user-attachments/assets/aae9b2b2-f952-4168-ab67-ffb5c59594cf" width="600"/>
+
+And input:
 
 ```
-Class: Unknown
-  DeviceDesc: Unknown Device
-  Registry Key: HKEY_LOCAL_MACHINE\enum\ROOT\NET\0000
-  Hardware Resource Section
-    Inst1 resources: 
-      Alloc resources: 
-          None
-  Extra Registry information Section
-  Driver Information section
-    Driver: No Information
+hwinfo /ui
 ```
 
-This is:
+Press `Ctrl` + `f` and search for these devices:
+
+<img src="https://github.com/user-attachments/assets/1644d05c-167d-402f-a5e6-d08d5e8711fc" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/dc86dad1-5c1d-44cd-8712-f7e73dfe24fb" width="600" />
+
+This gies:
 
 ```
-HKEY_LOCAL_MACHINE\enum\PCI\VEN_15AD&DEV_0740&SUBSYS_074015AD&REV_10\BUS_00&DEV_07&FUNC_07
+HKEY_LOCAL_MACHINE\enum\PCI\VEN_15AD&DEV_0740\BUS_00&DEV_07&FUNC_07
 ```
 
-which is the VMware VMCI Bus which is used by VMware for folder sharing and dragging and dropping files:
+And:
 
-According to Broadcom there is no Windows 98 driver for this device:
+```
+HKEY_LOCAL_MACHINE\enum\ROOT\NET\0000
+```
+
+The first is the VMware VMCI Bus which is used by VMware for folder sharing and dragging and dropping files. According to Broadcom there is no Windows 98 driver for this device:
 
 > For Windows 98 and Windows 98SE (and Windows 95 in this case), there is no support for the VMCI device in VMware Tools. 
 
 [Broadcom Legacy Article 1023129](https://knowledge.broadcom.com/external/article?legacyId=1023129)
 
+The second is likely related to the virual network adaptor.
 
+The Windows 95 SE Guest is now setup.
 
-
-
-
-
-
-
-https://github.com/joncampbell123/dosbox-x/wiki/Guide:Installing-Windows-95/c6894fd3c687213e3466603941f4b0490c42b898
-
-https://retrosystemsrevival.blogspot.com/2018/05/windows-95-osr2x-service-pack-10x.html
-
-
-
-DirectX 8.0
-
-https://winworldpc.com/product/windows-95/patches
-
-Windows Media Player 7.1
-
-https://archive.org/details/mp71_20191017
-
-
-
-
-
-https://www.vogons.org/viewtopic.php?t=36770
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-QuickTime 4.1.2 (optional, for old media)
-
-💻 Runtimes
-
-Visual Basic runtimes (VB4, VB5, VB6)
-
-Visual C++ runtimes (MFC42, MSVCP60, etc.)
-
-🔧 Drivers (VMware)
-
-VMware Tools for Win9x (gives you SVGA graphics + mouse integration)
-
-Sound Blaster 16 driver (Creative’s official Win95 SB16 driver)
-
-AMD PCnet Ethernet driver (usually included, but install AMD’s NDIS driver if needed)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-System Patches (must-have)
-
-
-
-
-Windows Installer 2.0
-
-Internet Explorer 5.5 SP2 (last IE for Win95, brings modern system DLLs)
-
-🎮 Graphics / Multimedia
-
-DirectX 8.0a (last official for Win95, covers everything from earlier versions)
-
-Windows Media Player 7.1
-
-QuickTime 4.1.2 (optional, for old media)
-
-💻 Runtimes
-
-Visual Basic runtimes (VB4, VB5, VB6)
-
-Visual C++ runtimes (MFC42, MSVCP60, etc.)
-
-🔧 Drivers (VMware)
-
-VMware Tools for Win9x (gives you SVGA graphics + mouse integration)
-
-Sound Blaster 16 driver (Creative’s official Win95 SB16 driver)
-
-AMD PCnet Ethernet driver (usually included, but install AMD’s NDIS driver if needed)
+Return to [VMware Installation Guide](../readme.md)
