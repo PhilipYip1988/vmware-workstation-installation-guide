@@ -15,6 +15,7 @@
 * [VOGONS: USB Storage Driver Win95 OSR 2 - Unofficial Bundle](https://vogonsdrivers.com/getfile.php?fileid=1813&menustate=0&utm_source=chatgpt.com) 
 * [AMDK6 Update](https://winworldpc.com/product/windows-95/patches)
 * [Osr2sp: Unofficial Service Pack](https://www.mdgx.com/spx/OSR2SP1.EXE)
+* [Internet Explorer 5.5](https://winworldpc.com/product/internet-explorer/ie-55)
 * [Creative Labs SB-PCI64v Sound Card Version 5.13d](https://download.cnet.com/creative-labs-sb-pci64v-sound-card-version-5-13d/3000-2110_4-107804.html)
 
 
@@ -619,7 +620,7 @@ Press `↵` to log in:
 
 <img src="https://github.com/user-attachments/assets/359c8308-db18-42cc-9355-82bc28796f24" width="600"/>
 
-Now select the following:
+Launch the unofficial service pack `Osr2sp1` again and now select the following:
 
 * Adaptec ASPI Drivers
 * Unimodem Drivers
@@ -636,8 +637,24 @@ Select yes:
 
 <img src="https://github.com/user-attachments/assets/0d19bffb-2644-40b8-97a2-f3b0422857ed" width="600"/>
 
+Launch the unofficial service pack `Osr2sp1` again and now select the following:
 
-Service Pack Third run:
+* Winsock
+
+<img src="https://github.com/user-attachments/assets/baadbf98-bea6-4985-9827-b742e96fa8bd" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/86833285-9b53-4dc2-acba-37a7d7d2f748" width="600"/>
+
+
+
+
+
+
+
+
+
 
 * winsock
 
