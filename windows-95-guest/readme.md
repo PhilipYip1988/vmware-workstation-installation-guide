@@ -11,12 +11,12 @@ Note the Windows 95 floppy disk hosted by WinWorld lacks the CD driver required 
 
 ### Windows 95 Updates
 
-* [Intel Chipset INF Software v 2.80](https://vogonsdrivers.com/getfile.php?fileid=1632&menustate=0)
+* [Intel Chipset INF Software v 2.80](https://www.dell.com/support/home/en-uk/drivers/driversdetails?driverid=r26343)
 * [VOGONS: USB Storage Driver Win95 OSR 2 - Unofficial Bundle](https://vogonsdrivers.com/getfile.php?fileid=1813&menustate=0&utm_source=chatgpt.com) 
 * [AMDK6 Update](https://winworldpc.com/product/windows-95/patches)
 * [Osr2sp: Unofficial Service Pack](https://www.mdgx.com/spx/OSR2SP1.EXE)
 * [Internet Explorer 5.5](https://winworldpc.com/product/internet-explorer/ie-55)
-* [Creative Labs SB-PCI64v Sound Card Version 5.13d](https://download.cnet.com/creative-labs-sb-pci64v-sound-card-version-5-13d/3000-2110_4-107804.html)
+* [Creative Labs SB-PCI64v Sound Card Version 5.13d](https://www.dell.com/support/home/en-uk/drivers/driversdetails?driverid=r20634)
 
 ### VMware Tools ISO
 
