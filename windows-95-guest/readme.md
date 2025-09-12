@@ -1,4 +1,26 @@
+# Windows 95 Guest
 
+
+
+## Notes
+
+VMware Workstation Player 17.6.4 has Windows 95 as an option for a Virtual Machine. However Windows 95 is regarded as an ancient legacy Operating System and isn't tested by Broadcom. Modern processors are significantly faster than the processers available when WIndows 98 SE was released. As a consequence the timing for some operations is divided by 0 and there is a divide-by-zero error that needs to be addressed using patcher9x.
+
+A Windows 95 bootable floppy disk needs to be used with DOS commands to partition and format the hard drive and start the setup from CD. Usually the installation is smoother if the setup files are copied from the CD to the hard drive and the setup is invoked from these setup files. This overcomes problems when the setup reboots from the hard drive and the cannot view the CD because the CD driver which is on the floppy drive is not available. Starting the setup file from DOS invokes the Windows Setup as a GUI.
+
+VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows 95. VMware Tools WinPre2k is the last version of VMware Tools to support Windows 98SE and should be downloaded seperately as an ISO. This ISO should be mounted in the VM so they can be installed manually.
+
+On modern hardware with a 12th-14th Generation Processor, the following entries should be added to the VMX file:
+
+```
+monitor.virtual_exec = "hardware"
+monitor.virtual_mmu = "software"
+mks.enableVulkanRenderer = "FALSE"
+cpuid.0.eax = "0000000X"
+cpuid.1.ecx = "00000001"
+```
+
+The first setting allows the CPU to optimise the VM performance, the VM may be very slow without this setting. The second setting prevents use of a memory management unit that Windows 95 doesn't understand and can lead to a Blue Screen of Death (BSOD). The third setting prevents VMware from using Vulkan for rendering, which isn't supported by Windows 95 and often leads to black screens. The last two settings prevent Windows 95 from seeing unsupported CPU features which Windows 95 doesn't understand and can lead to a Blue Screen of Death (BSOD).
 
 ## Downloads
 
