@@ -647,9 +647,19 @@ Select ok:
 
 <img src="https://github.com/user-attachments/assets/86833285-9b53-4dc2-acba-37a7d7d2f748" width="600"/>
 
+Select ok:
 
+<img src="https://github.com/user-attachments/assets/feaaa686-de30-4dec-80ff-d064d3ff6342" width="600"/>
 
+Select yes:
 
+<img src="https://github.com/user-attachments/assets/84e71de6-8a31-4dbe-b61c-b9667d92d458" width="600"/>
+
+Press `↵` to log in:
+
+<img src="https://github.com/user-attachments/assets/359c8308-db18-42cc-9355-82bc28796f24" width="600"/>
+
+Now install Internet Explorer by launching `ie5setup.exe`:
 
 
 
