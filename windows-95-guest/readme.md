@@ -122,7 +122,7 @@ Paste in the path:
 
 <img src="https://github.com/user-attachments/assets/f8a0fb44-d1bb-4a3f-99b9-7c1ce24ce8c6" width="600"/>
 
-And remvoe the quotations:
+And remove the quotations:
 
 <img src="https://github.com/user-attachments/assets/ce4b1def-b0d8-4c99-a254-c8409fb9c6b1" width="600"/>
 
