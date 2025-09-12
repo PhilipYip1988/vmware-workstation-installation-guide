@@ -667,29 +667,265 @@ The Internet Explorer setup `ie5setup` extracts files in the current directory a
 
 To extract launch the `ie5setup`:
 
+<img src="https://github.com/user-attachments/assets/bfe432b8-a933-4332-9d5c-97c6c285dd20" width="600"/>
+
+This extracts the setup files:
+
 <img src="https://github.com/user-attachments/assets/18ece26e-b808-46d4-8994-e85fc03975e2" width="600"/>
 
-This creates the folder `IE 5.5 SP2 Full`:
-
-<img src="https://github.com/user-attachments/assets/bfe432b8-a933-4332-9d5c-97c6c285dd20" width="600"/>
+To the folder `IE 5.5 SP2 Full`:
 
 <img src="https://github.com/user-attachments/assets/0fb9668f-3ce7-461a-89f1-44d0e68a430e" width="600"/>
 
+Launch `ie5setup`:
 
+<img src="https://github.com/user-attachments/assets/744fd666-5bdb-4a2f-a3e2-daae453df818" width="600"/>
 
+Accept the License Agreement:
 
+<img src="https://github.com/user-attachments/assets/35f398ca-a627-4546-8a22-b29c46eda783" width="600"/>
 
+Select Install Now and next:
 
+<img src="https://github.com/user-attachments/assets/896c5863-7838-4e99-bd2c-da2b5835d0be" width="600"/>
 
+Select Finish to restart:
 
+<img src="https://github.com/user-attachments/assets/bdef44b3-a9e1-4493-a7b4-f03efcaef929" width="600"/>
 
+Press `↵` to log in:
 
+<img src="https://github.com/user-attachments/assets/63a85d70-b33a-4762-b95d-28a6c347ccfc" width="600"/>
 
-* winsock
+Select Player → Removable Devices → CD/DVD and Settings:
 
-Internet Explorer
+<img src="https://github.com/user-attachments/assets/eac363f7-cab0-44d0-87e9-1d73dc63909a" width="600"/>
 
-VMware Tools
+Select Browse:
+
+<img src="https://github.com/user-attachments/assets/36d8274e-4609-4df8-8575-c00c18cef367" width="600"/>
+
+Select `winPre2k.iso` and select Open:
+
+<img src="https://github.com/user-attachments/assets/75d9d3a1-2942-4241-8de4-d48dc4b396df" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/836ec68b-4b5f-435f-adad-0b0a9ba5d9c6" width="600"/>
+
+VMtware Tools will begin to install. Select next:
+
+<img src="https://github.com/user-attachments/assets/4a1e5fd2-e761-4758-8428-91d0eb298145" width="600"/>
+
+Select Complete and Next:
+
+<img src="https://github.com/user-attachments/assets/f1cb2b7f-490c-4d87-9343-612e72494144" width="600"/>
+
+Select Install:
+
+<img src="https://github.com/user-attachments/assets/c712fcb9-9f69-4d31-8820-9e492c743fa9" width="600"/>
+
+You will be informed that the setup failed to install the Standard Video Graphics Adaptor (SVGA) driver automatically. Select OK:
+
+<img src="https://github.com/user-attachments/assets/84e54a0f-f6f3-4636-bc30-301c6ec21350" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/d9c0ddb8-700e-492e-9dfb-910eee0111ff" width="600"/>
+
+Installation instructions display in notepad, these can be closed since you are following the more detailed instructions here:
+
+<img src="https://github.com/user-attachments/assets/75a234f7-f6db-4aba-aac3-df119eac2d49" width="600"/>
+
+Select Advanced Properties:
+
+<img src="https://github.com/user-attachments/assets/d7dd892c-2e9e-4a05-9ae0-f2e5a7ea1d8e" width="600"/>
+
+Select Change:
+
+<img src="https://github.com/user-attachments/assets/6135695f-8e74-4aa2-8ef2-125130a40fe6" width="600"/>
+
+To the left select Standard Display Type and to the right select Standard PCI Graphics Adaptor (VGA) and then select Have Disk:
+
+<img src="https://github.com/user-attachments/assets/ebe31505-96da-4519-845a-fc1a049ae2da" width="600"/>
+
+In the file path input:
+
+```
+C:\Program Files\VMware\VMware Tools\Drivers\video
+```
+
+Then select OK:
+
+<img src="https://github.com/user-attachments/assets/6b325a37-16fb-4c5e-a260-60dd16855cc7" width="600"/>
+
+If an error displays, retype the above checking you haven't made a typo. Select VMware SVGA II and select OK:
+
+<img src="https://github.com/user-attachments/assets/d3ce110c-052e-4923-8425-66ea9954fe23" width="600"/>
+
+The following error message displays, please insert the disk labeled VMware Tools and then select OK. Likely Windows 95 is expecting a floppy disk with the driver, there is no need to insert the disk. Select OK:
+
+<img src="https://github.com/user-attachments/assets/bdc4ded1-cecd-448d-9251-a4c5ce12a206" width="600"/>
+
+Select Browse:
+
+<img src="https://github.com/user-attachments/assets/b4ca3aa4-21f9-4b21-9966-9d9c590a79ba" width="600"/>
+
+To the right navigate change to `C:`:
+
+<img src="https://github.com/user-attachments/assets/4b8210b8-4719-468e-8ada-d5ad4d491392" width="600"/>
+
+Then navigate to the same folder:
+
+<img src="https://github.com/user-attachments/assets/0cfd9d7c-d000-45d8-8dd6-ef623c1f0928" width="600"/>
+
+To the left select the `vmx_svga.drv` should display, select it:
+
+<img src="https://github.com/user-attachments/assets/933e2818-acc1-434c-b656-cbbe5d27e825" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/13aaabed-569e-492a-a629-a07689cbbd92" width="600"/>
+
+This changes the path to the DOS file name which has a limit of 8 characters per folder:
+
+```
+C:\PROGA~1\VMWARE\VMWARE~1\DRIVERS\VIDEO
+```
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/9217cff0-1218-47d4-8ec5-82f4ea5b85b6" width="600"/>
+
+Select apply:
+
+<img src="https://github.com/user-attachments/assets/309fe6ce-eb0a-41cf-ae35-164710c95f75" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/c77e89d0-1ad2-41d4-9330-51c556f0d7a4" width="600"/>
+
+Select Close:
+
+<img src="https://github.com/user-attachments/assets/10461290-956d-4451-864f-b95f61e2ac2f" width="600"/>
+
+At the prompt to restart select yes:
+
+<img src="https://github.com/user-attachments/assets/34604990-133e-45a8-9f95-c43919d20a0d" width="600"/>
+
+Press `↵` to log in:
+
+<img src="https://github.com/user-attachments/assets/63a85d70-b33a-4762-b95d-28a6c347ccfc" width="600"/>
+
+Right click the desktop and select Properties:
+
+<img src="https://github.com/user-attachments/assets/e0c5bd00-12fd-45d7-a54d-5c9ccce503c0" width="600"/>
+
+Move the resolution slider to the right and select apply:
+
+<img src="https://github.com/user-attachments/assets/609554d5-58f3-401c-80c0-af32959aa660" width="600"/>
+
+You will be asked to specify a monitor, select yes:
+
+<img src="https://github.com/user-attachments/assets/e2171e70-eed9-4104-8d39-8ee714863572" width="600"/>
+
+To the left select Standard Monitor Types and to the right select Plug and Play Monitor and then select OK:
+
+<img src="https://github.com/user-attachments/assets/b12575be-bba8-485a-bf4e-99bad482ac2b" width="600"/>
+
+Move the resolution slider to the right and select apply:
+
+<img src="https://github.com/user-attachments/assets/10785af4-715c-42f7-9ba8-d3136fabd346" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/26334f2e-f063-44e1-a75c-8a025cc970c7" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/54f3a659-a041-4308-adec-4249918731de" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/b3c70eda-1033-4e6d-9219-0eaa908691c9" width="600"/>
+
+Now on the WIndows 11 Guest, the Window containing the Windows 98 VM can be aerosnapped or resized. The resolution of the VM will then automatically adjust to the size of the window.
+
+Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src="https://github.com/user-attachments/assets/214b29b2-22af-4929-9389-4c20d3be9f87" width="600"/>
+
+Select Browse:
+
+<img src="https://github.com/user-attachments/assets/89ae14d0-f938-4d90-ae7b-640dcac32f52" width="600"/>
+
+Select the  `Updates.iso` and select Open:
+
+<img src="https://github.com/user-attachments/assets/62e5e75f-f0cd-435e-9c30-ebc6feb8a3e6" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/6d814963-54c5-4d9a-9135-4c9b92e598b9" width="600"/>
+
+Run the Creative Labs SB-PCI64v Sound Card Version 5.13 driver `sb-9xeng`:
+
+<img src="https://github.com/user-attachments/assets/f9307c30-2611-4958-a42f-e91e1fb85dde" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/09b22005-16ed-4889-9931-171d4533aab9" width="600"/>
+
+Select unzip:
+
+<img src="https://github.com/user-attachments/assets/2af3d931-8c57-4bc0-8ce0-b1ac5b3e33cb" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/bc2f4683-9924-48cb-a81f-cd466668525c" width="600"/>
+
+Select Install Now:
+
+<img src="https://github.com/user-attachments/assets/b5ab183a-f7e0-4d93-a856-e7200f7e29fa" width="600"/>
+
+Select Run this Program from its Current Location and select OK:
+
+<img src="https://github.com/user-attachments/assets/fbc869bf-4e6f-4a32-957e-fa19c800c7d2" width="600"/>
+
+Select Yes:
+
+<img src="https://github.com/user-attachments/assets/926675a5-4638-4b1c-bdab-50df60d18183" width="600"/>
+
+Select Remove and Install Software and select Next:
+
+<img src="https://github.com/user-attachments/assets/2a80657c-1ec8-4215-a7b7-b5cc2fc6c009" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/9301923e-02a3-4809-9ffc-1b0746dedc6d" width="600"/>
+
+Select Yes to restart:
+
+<img src="https://github.com/user-attachments/assets/3c48dd87-8427-420f-9bd4-9e9e546d76a3" width="600"/>
+
+Press `↵` to log in:
+
+<img src="https://github.com/user-attachments/assets/c737f83f-31ee-4f48-a306-57a22654df38" width="600"/>
+
+The driver will finish installing. Select yes to restart:
+
+<img src="https://github.com/user-attachments/assets/fd727c09-e508-4525-8fd4-860cca16be91" width="600"/>
+
+Press `↵` to log in:
+
+<img src="https://github.com/user-attachments/assets/c737f83f-31ee-4f48-a306-57a22654df38" width="600"/>
+
+You will be informed about a Settigns CHange. Select Yes to restart:
+
+<img src="https://github.com/user-attachments/assets/ebbd90a7-1992-438e-857f-e4ae46272d22" width="600"/>
+
+Press `↵` to log in, you will hear audio as you log in:
+
+<img src="https://github.com/user-attachments/assets/c737f83f-31ee-4f48-a306-57a22654df38" width="600"/>
 
 
 DirectX 8.0a → after video driver installed.
@@ -746,174 +982,11 @@ According to Broadcom there is no Windows 98 driver for this device:
 
 
 
-
-
-
-
-
-
-devices in red are taken care by installing the video driver in VMware tools and the creative
-
-
-
-
-
-
-
-The install will stall at Installing RealPlayer at 78 %. Select Player → Send `Ctrl`, `Alt` + `Del`:
-
-
-
-Select R32msie4 and select End Task:
-
-
-
-Select End task:
-
-
-
-Right click the desktop and select properties:
-
-
-
-Select the web tab and uncheck View my Active Desktop as a Web Page:
-
-
-
-Select apply, ok and no. Select ok and no:
-
-
-Right click Computer and select Properties:
-
-
-
-Select Device Manager:
-
-
-
-
-Expand Other Devices:
-
-
-
-
-Remove Other Devices:
-
-
-
-Scan Add New Hardware Wizard:
-
-
-
-PCI Bridge
-PCI Multimedia Devices
-PCI System Peripheral
-Other Devices
-
-
-
-Install VMware Tools 
-
-Select complete
-
-
-
-
-Select Advanced Properties:
-
-
-
-Select Change:
-
-
-
-Standard Display Type will be checked to the left and to the right Standard PCI Graphics Adaptor (VGA) will be checked:
-
-
-
-
-Select Have Disk:
-
-
-
-Input:
-
-```
-C:\Program Files\VMware\VMware Tools\Drivers\video
-```
-
-Select VMware SVGA II and select OK:
-
-
-
-
-The Windows 95 Setup will say insert disk. Select OK and then select the `vmx_svga.drv`:
-
-
-
-Select OK. Select Apply and then OK:
-
-
-
-After restarting, right click the desktop and select Properties. Increase the resolution. To the left select standard monitor type, to the right select Plug and Play Monitor:
-
-
-
-Select apply, ok and yes:
-
-
-
-Drag and drop works, the soun blaster driver can be dragged over and installed:
-
-
-
-
-
-
-
-
-
-### USB Storage Driver Win95 OSR 2 - Unofficial Bundle
-
-
-
-
-### Windows 95B/95C OSR 2.0/2.1/2.5 Service Pack 1 (SP1) Version 1.05 
-
-Go to [MDGX](https://www.mdgx.com/). Press `Ctrl` + `f` and search for: 
-
-```
-Unofficial Windows 95B/95C OSR 2.0/2.1/2.5 Service Pack 1 (SP1) 1.05 
-```
-
-### VMware Tools
-
-[VMware Tools 3.5.0](https://archive.org/details/VMwareToolsforWin95RTM_OSR1?utm_source=chatgpt.com)
-
-
-### Creative Labs SB-PCI64v Sound Card Version 5.13d
-
-[Cnet: Creative Labs SB-PCI64v Sound Card Version 5.13d](https://download.cnet.com/creative-labs-sb-pci64v-sound-card-version-5-13d/3000-2110_4-107804.html)
-
-
-
-
-
-
 https://github.com/joncampbell123/dosbox-x/wiki/Guide:Installing-Windows-95/c6894fd3c687213e3466603941f4b0490c42b898
 
 https://retrosystemsrevival.blogspot.com/2018/05/windows-95-osr2x-service-pack-10x.html
 
-https://winworldpc.com/product/windows-95/patches
 
-* Win95 Comctl32 Leak Fix
-* Winsock 2 update
-* DCOM95 OLE Update
-* Microsoft Direct 8.0
-
-https://winworldpc.com/product/internet-explorer/ie-55
-
-* Internet Explorer 5.51.4807.2300
 
 DirectX 8.0
 
