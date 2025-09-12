@@ -595,20 +595,31 @@ Press `↵` to log in:
 
 <img src="https://github.com/user-attachments/assets/47890bb9-07a4-411e-8d16-039c785b3841" width="600"/>
 
+Launch the unofficial service pack `Osr2sp1`:
+
+<img src="https://github.com/user-attachments/assets/202db583-a072-42b0-9516-5cdb0cc53764" width="600" />
+
+<img src="https://github.com/user-attachments/assets/76bceda2-ebdb-47df-b99a-21306977efe1" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/32c1d0f9-0322-49c7-b91a-95485ef2e3dd" width="600"/>
+
+Select ok:
+
+<img src="https://github.com/user-attachments/assets/60df8657-64fb-4ef5-8269-2d6ea63937da" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/22f8675e-8e66-4783-842a-ae1225c347c5" width="600"/>
+
+Press `↵` to log in:
+
+<img width="642" height="537" alt="Screenshot 2025-09-12 004713" src="https://github.com/user-attachments/assets/359c8308-db18-42cc-9355-82bc28796f24" />
 
 
 
 
-
-
-
-Install Chipset Software:
-
-* PCI Bridge
-
-* [Intel Chipset INF Software v 2.80](https://vogonsdrivers.com/getfile.php?fileid=1632&menustate=0)
-
-Install USB Drivers:
 
 
 Service Pack First run:
