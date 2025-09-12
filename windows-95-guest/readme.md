@@ -659,7 +659,26 @@ Press `↵` to log in:
 
 <img src="https://github.com/user-attachments/assets/359c8308-db18-42cc-9355-82bc28796f24" width="600"/>
 
-Now install Internet Explorer by launching `ie5setup.exe`:
+The Internet Explorer setup `ie5setup` extracts files in the current directory and therefore cannot be ran from the CD which is read only. Copy and paste the `ie5setup` to the desktop:
+
+<img src="https://github.com/user-attachments/assets/a9cad703-6e0c-4e99-aea1-ea901958625b" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/5cfd8732-58e1-4bf0-bf13-fcc0b7c5111b" width="600"/>
+
+To extract launch the `ie5setup`:
+
+<img src="https://github.com/user-attachments/assets/18ece26e-b808-46d4-8994-e85fc03975e2" width="600"/>
+
+This creates the folder `IE 5.5 SP2 Full`:
+
+<img src="https://github.com/user-attachments/assets/bfe432b8-a933-4332-9d5c-97c6c285dd20" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/0fb9668f-3ce7-461a-89f1-44d0e68a430e" width="600"/>
+
+
+
+
+
 
 
 
