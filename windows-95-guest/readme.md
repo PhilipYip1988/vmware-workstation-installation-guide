@@ -1033,8 +1033,40 @@ The first is the VMware VMCI Bus which is used by VMware for folder sharing and 
 
 [Broadcom Legacy Article 1023129](https://knowledge.broadcom.com/external/article?legacyId=1023129)
 
-The second is likely related to the virual network adaptor.
+I was not able to find any more details about the second device.
 
-The Windows 95 SE Guest is now setup.
+## Shared Folders
+
+
+## Installing Python
+
+* [Python 2.3.3](https://www.python.org/downloads/release/python-233/) was the last version to run on Windows 95.
+
+* [Pyserial](https://sourceforge.net/projects/pyserial/files/pyserial/2.2/)
+
+
+https://sourceforge.net/projects/pyserial/files/OldFiles/pyserial-1.20.zip/download
+
+
+https://sourceforge.net/projects/pywin32/files/pywin32/Build%20210/
+
+## Serial port Passthrough
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Return to [VMware Installation Guide](../readme.md)
