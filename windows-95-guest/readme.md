@@ -1425,18 +1425,79 @@ In this case it will be left at port 3:
 
 Open VMware Player and select Edit Virtual Machine Settings:
 
+<img src="https://github.com/user-attachments/assets/97bce49b-5f03-4021-af0e-9e9f763eca25" width="600"/>
 
+Under CD/DVD select Browse:
 
+<img src="https://github.com/user-attachments/assets/8032c04b-7b68-40d4-ab2a-c48df0f653fb" width="600"/>
 
+Select the Windows 95 CD and select open:
 
-Many programs assumed the serial device was on COM1.
+<img src="https://github.com/user-attachments/assets/ba500745-8421-48cf-9dca-8765c9d22a41" width="600"/>
 
+Select Add:
 
+<img src="https://github.com/user-attachments/assets/5807be8e-f4f0-4474-8bc0-7f26426c2db7" width="600"/>
 
+Select Serial Port and Finish:
 
+<img src="https://github.com/user-attachments/assets/40fba3f8-52b5-4a1e-bec2-2c8e39354e38" width="600"/>
 
+Select the Serial Port, in this case COM3:
 
+<img src="https://github.com/user-attachments/assets/495bd7fd-625a-458c-953e-2147ec417c2f" width="600"/>
 
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/459f2261-b535-4cf9-96e5-1b327d8a9b76" width="600"/>
+
+Launch the Windows 95 Guest:
+
+<img src="https://github.com/user-attachments/assets/7dac7987-891f-4b1c-b0e4-74d267e55895" width="600"/>
+
+The Serial Port driver will automatically install. Right click Computer and select Properties:
+
+<img src="https://github.com/user-attachments/assets/d6fa23e7-12c6-43af-8124-64a44b3c6032" width="600"/>
+
+Select the Serial Port and select Proeprties:
+
+<img src="https://github.com/user-attachments/assets/0da14bf5-8d12-4e78-8d04-7b53bb1454c6" width="600"/>
+
+The Baud Rate displays:
+
+<img src="https://github.com/user-attachments/assets/9946ef05-dc2a-4600-b7e9-a3b2d3b1a756" width="600"/>
+
+Note under Advanced, there is no way to change the Port number:
+
+<img src="https://github.com/user-attachments/assets/29696463-c74a-491f-b341-574dd2e59938" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/2500a688-a545-46df-b7cb-441d2b96073e" width="600"/>
+
+Many programs assume a single Serial Port on COM1.
+
+Since pyserial isn't working, TeraTerm can be used to test the serial port:
+
+# [TeraTerm](https://www.majorgeeks.com/mg/getmirror/tera_term_(pro),1.html)
+
+The zip file can be extracted and copied over to the Windows 95 Guest. Launch the setup:
+
+<img src="https://github.com/user-attachments/assets/3d8a9955-c37c-4ebf-a75e-a11edb217303" width="600"/>
+
+Select Continue:
+
+<img src="https://github.com/user-attachments/assets/12c91f36-e733-48ca-a626-64e7134a6719" width="600"/>
+
+Select Continue:
+
+<img src="https://github.com/user-attachments/assets/faf33006-75f0-484e-ac1b-10842ecfd684" width="600"/>
+
+Select OK and launch TeraTerm:
+
+<img src="https://github.com/user-attachments/assets/1519dd73-adae-4893-87b9-d7b5ec098577" width="600"/>
+
+Select Serial, Com1 and OK:
+
+<img src="https://github.com/user-attachments/assets/4392e215-11b7-4717-a1aa-5c288537d6e3" width="600"/>
 
 
 
