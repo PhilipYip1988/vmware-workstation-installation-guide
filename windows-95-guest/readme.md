@@ -1499,8 +1499,74 @@ Select Serial, Com1 and OK:
 
 <img src="https://github.com/user-attachments/assets/4392e215-11b7-4717-a1aa-5c288537d6e3" width="600"/>
 
+Select Setup → Serial Port:
 
+<img src="https://github.com/user-attachments/assets/3dd1996d-eefb-403e-a02d-da503eacf513" width="600"/>
 
+Change the Transmit delay to 5 ms/char:
 
+<img src="https://github.com/user-attachments/assets/ee947341-6110-4f11-b436-47d7065e0a46" width="600"/>
+
+Select Setup → Terminal:
+
+<img src="https://github.com/user-attachments/assets/6f2fb941-ef98-48a0-b12e-db2ed946dcf9" width="600"/>
+
+Set Receive and Transmit both to Carriage Return and Line Feed. Check Local Echo:
+
+<img src="https://github.com/user-attachments/assets/aceeb4af-1b81-4bc5-a952-e25d860b1669" width="600"/>
+
+The Serial Port looks like the following:
+
+<img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
+
+|Pin Number|Name|
+|---|---|
+|1|Data Carrier Detect (CDC)|
+|2|Received Data (RXD)|
+|3|Transmit Data (TXD)|
+|4|Data Terminal Ready (DTR)|
+|5|Ground (GND)|
+|6|Data Set Ready (DSR)|
+|7|Request to Send (RTS)|
+|8|Clear To Send (CTS)|
+|9|Ring Indicator (RI)|
+
+Now with no pins connected:
+
+<img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
+
+When:
+
+```
+a
+```
+
+is input the following shows:
+
+<img src="https://github.com/user-attachments/assets/20394d49-a4fe-4bd9-a2f0-03fc8e113ae3" width="600"/>
+
+With pins 2 and 3 connected:
+
+<img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
+
+When:
+
+```
+b
+```
+
+is input the following shows:
+
+<img src="https://github.com/user-attachments/assets/a565db65-ef32-4cd9-9bef-abfd5da6322d" width="600"/>
+
+This `B`  has essentially been transmitted using the data pin 3 and then read back using pin 2. 
+
+## Parallel Port Passthrough
+
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. I do not have a parallel port printer available to test passthrough functionality.
+
+## PCI/PCIe Card Passthrough
+
+VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
 
 Return to [VMware Installation Guide](../readme.md)
