@@ -1190,32 +1190,344 @@ And:
 HKEY_LOCAL_MACHINE\enum\ROOT\NET\0000
 ```
 
-The first is the VMware VMCI Bus which is used by VMware for folder sharing and dragging and dropping files. According to Broadcom there is no Windows 98 driver for this device:
+The first is the VMware VMCI Bus which is used by VMware for folder sharing and dragging and dropping files. According to Broadcom there is no Windows 95/98 driver for this device:
 
-> For Windows 98 and Windows 98SE (and Windows 95 in this case), there is no support for the VMCI device in VMware Tools. 
+> For Windows 98 and Windows 98SE, there is no support for the VMCI device in VMware Tools. 
 
 [Broadcom Legacy Article 1023129](https://knowledge.broadcom.com/external/article?legacyId=1023129)
+
+On a Windows 11 Guest, bi-directional drag and drop appear to work but I was unable to get shared folders to work.
 
 I was not able to find any more details about the second device.
 
 ## Shared Folders
 
+Although the options for shared folders shows up for the Windows 95 Guest. The map as a etwork drive in Windows guests does not do anything. Therefore you cannot view the shared folder:
+
+<img src="https://github.com/user-attachments/assets/8d58ccb5-9612-4ec4-93e9-13352635eda0" width="600"/>
 
 ## Installing Python
 
-* [Python 2.3.3](https://www.python.org/downloads/release/python-233/) was the last version to run on Windows 95.
+The last version of Python to work on Windows 95 is Python 2.3.3:
 
-* [Pyserial](https://sourceforge.net/projects/pyserial/files/pyserial/2.2/)
+* [Python 2.3.3](https://www.python.org/downloads/release/python-233/)
+* [pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/Build%20214/pywin32-214.win32-py2.3.exe/download)
+* [Pyserial](https://sourceforge.net/projects/pyserial/files/pyserial/2.1/)
+
+Drag and drop the applications to the Windows 95 Desktop:
+
+<img src="https://github.com/user-attachments/assets/7bb227d0-bddf-4353-b6eb-5d4442ef5c1e" width="600"/>
+
+Launch the `Python-2.3.3.exe`:
+
+<img src="https://github.com/user-attachments/assets/4c008c46-bbaf-473a-91e5-de4b2e7ef54e" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/171364ca-97c1-4fb0-8614-870ba535bb76" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/57063334-5a5c-49a1-9932-3d0b392c6249" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/6250a0f5-e5a2-4f89-bf2e-dc8263e2103d" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/9d0ff044-1440-4b4f-9284-0b3f77759931" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/945fa936-1ac7-4abd-a2db-f62fb15bc451" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/a3d7249c-7c7f-4441-a73a-d318a19eef1f" width="600"/>
+
+GGo to Computer:
+
+<img src="https://github.com/user-attachments/assets/e33a1c2a-d6c8-4708-96b0-3e3971086487" width="600"/>
+
+Navigate to `C:`:
+
+<img src="https://github.com/user-attachments/assets/0cb836a6-986e-4964-bec8-f519f69aed5c" width="600"/>
+
+Python is installed in the `Python23` folder:
+
+<img src="https://github.com/user-attachments/assets/78bd2d2b-164c-4a03-afcd-a7d1a9cc51a0" width="600"/>
+
+Python is installed in this folder as a single environment:
+
+<img src="https://github.com/user-attachments/assets/450f19d6-12b8-4ae1-8e76-915f3d3d94be" width="600"/>
+
+This version of Python did not support Python environments.
+
+Standard libraries are found in the `lib` folder:
+
+<img src="https://github.com/user-attachments/assets/c1197822-c758-48d8-bd0a-398ab6da5838" width="600"/>
+
+Third-party libraries are installed to the `site-packages` folder:
+
+<img src="https://github.com/user-attachments/assets/d54b69da-2dc1-4dc9-8ea1-dd97f13c388f" width="600"/>
+
+Note the absense of `pip`, the Python package manager which wasn't created yet.
+
+<img src="https://github.com/user-attachments/assets/d95c999d-c13d-4f11-88aa-488e7f36c39f" width="600"/>
+
+Packages were typically available in `.exe` format. Many packages relied on `pywin32` which can be installed:
+
+<img src="https://github.com/user-attachments/assets/9757fb5d-cbdf-4bf1-8467-b4346c4576b7" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/22721b82-1d2f-4f40-9a28-d5e69a8f62a2" width="600"/>
+
+The Python directory and corresponding `site-packages` directory is found. Select next:
+
+<img src="https://github.com/user-attachments/assets/8e679575-7a73-4dab-b78a-3d20b228fe93" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/9f2d63dc-5749-4ca0-abf2-b78e735669b1" width="600"/>
+
+Select finish:
+
+<img src="https://github.com/user-attachments/assets/54880bc8-1b27-45ad-b940-a1cd1a36b0be" width="600"/>
+
+`pywin32` is installed in `site-packages`:
+
+<img src="https://github.com/user-attachments/assets/cb73fc2a-f967-4418-91a5-cddbe534d52d" width="600"/>
+
+Installation of pyserial is similar:
+
+<img src="https://github.com/user-attachments/assets/bc6c9af1-9ed0-4b40-a50f-bb240df95d69" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/7d073f99-ca46-4ace-81bc-0f2d10dc0ab8" width="600"/>
+
+<img wsrc="https://github.com/user-attachments/assets/2425c907-a0c4-4fbf-b941-1bd5330833c5" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/ec6610cb-629b-4bb2-a121-460ad31cf32d" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/94cdf958-1d0c-4d62-bf10-39627a2bb901" width="600"/>
+
+The `pyserial` folder is found in `site-packages`:
+
+<img src="https://github.com/user-attachments/assets/b64e44cc-0579-4721-bdff-e6a7970b05ec" width="600"/>
+
+The MSDOS prompt can be sued to launch Python. Select Start → Programs → MS-DOS Prompt:
+
+<img src="https://github.com/user-attachments/assets/e40aca57-45f5-4775-8d74-77d72f6e731c" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/7c842895-623b-4d43-abc2-20a0d2518dd1" width="600"/>
+
+Change directory to the Python23 directory:
+
+```powershell
+CD C:\Python23
+```
+
+<img src="https://github.com/user-attachments/assets/3fc701a3-12f2-4350-8ad2-fc37a82a6a3f" width="600"/>
+
+Launch Python using:
+
+```powershell
+python
+```
+
+Notice the prompt changes to `>>>`, the Python prompt. Test Python code can be input such as:
+
+```python
+print 'Hello World!'
+```
+
+<img src="https://github.com/user-attachments/assets/5dbb7229-0b23-4a64-9b97-4dc36d90fd0c" width="600"/>
+
+The pyserial library can be imported using:
+
+```python
+pyserial
+```
+
+<img src="https://github.com/user-attachments/assets/c4c3a514-b453-40a3-b079-a77eb95c76d6" width="600"/>
+
+This gives a traceback error. In this early version of Windows and Python it is very difficult to setup compatible libraries which work.
+
+To exit type in:
+
+```python
+exit
+```
+
+<img src="https://github.com/user-attachments/assets/2328279f-8005-4c4f-b4b1-2376bd885223" width="600"/>
+
+Press `Ctrl` + `z`:
+
+<img src="https://github.com/user-attachments/assets/fd5c98ca-9602-4e4f-b18f-70a9ccb093e5" width="600"/>
+
+A Python program can be created using notepad:
+
+<img src="https://github.com/user-attachments/assets/43de15d2-0a22-4b1f-a8cb-d4874f368aed" width="600"/>
+
+```python
+print 'Hello World!'
+```
+
+<img src="https://github.com/user-attachments/assets/63f69495-36a4-4c57-8f10-fb20f6c81c43" width="600"/>
+
+Select File → Save As...:
+
+<img src="https://github.com/user-attachments/assets/d933d714-82f1-4752-a106-f4a499e5a5df" width="600"/>
 
 
-https://sourceforge.net/projects/pyserial/files/OldFiles/pyserial-1.20.zip/download
+When saving add the `.py` extension and select All Files:
 
+<img src="https://github.com/user-attachments/assets/2c2c61fe-57e7-4642-8799-f60cb17dcb34" width="600"/>
 
-https://sourceforge.net/projects/pywin32/files/pywin32/Build%20210/
+In this Windows build, the Desktop was a subndirectory of the Windows folder! To run the Python script the following command can be used:
+
+```powershell
+C:\Python23\python C:\Windows\Desktop\script.py
+```
+
+<img src="https://github.com/user-attachments/assets/877d6491-4a8e-4be5-81bf-6f78a3cae183" width="600"/>
 
 ## Serial port Passthrough
 
+```python
+import ctypes
+import time
 
+# COM port and baudrate
+port = "COM3"
+baudrate = 9600
+
+# Windows API constants
+GENERIC_READ = 0x80000000
+GENERIC_WRITE = 0x40000000
+OPEN_EXISTING = 3
+FILE_ATTRIBUTE_NORMAL = 0x80
+
+# Load kernel32.dll
+k32 = ctypes.windll.kernel32
+
+# Open serial port
+h = k32.CreateFileA(
+    port,
+    GENERIC_READ | GENERIC_WRITE,
+    0,
+    None,
+    OPEN_EXISTING,
+    FILE_ATTRIBUTE_NORMAL,
+    None
+)
+
+if h == -1:
+    print("Cannot open port")
+    exit(1)
+print("Port opened")
+
+# DCB structure for port settings
+class DCB(ctypes.Structure):
+    _fields_ = [
+        ("DCBlength", ctypes.c_uint32),
+        ("BaudRate", ctypes.c_uint32),
+        ("flags", ctypes.c_uint32),
+        ("wReserved", ctypes.c_uint16),
+        ("XonLim", ctypes.c_uint16),
+        ("XoffLim", ctypes.c_uint16),
+        ("ByteSize", ctypes.c_uint8),
+        ("Parity", ctypes.c_uint8),
+        ("StopBits", ctypes.c_uint8),
+        ("XonChar", ctypes.c_char),
+        ("XoffChar", ctypes.c_char),
+        ("ErrorChar", ctypes.c_char),
+        ("EofChar", ctypes.c_char),
+        ("EvtChar", ctypes.c_char),
+        ("wReserved1", ctypes.c_uint16)
+    ]
+
+dcb = DCB()
+dcb.DCBlength = ctypes.sizeof(DCB)
+k32.GetCommState(h, ctypes.byref(dcb))
+dcb.BaudRate = baudrate
+dcb.ByteSize = 8
+dcb.Parity = 0
+dcb.StopBits = 0
+k32.SetCommState(h, ctypes.byref(dcb))
+
+time.sleep(2)  # wait for port
+
+# Test data
+data = b"Hello Serial\n"
+
+# Write data
+w = ctypes.c_uint32()
+k32.WriteFile(h, data, len(data), ctypes.byref(w), None)
+print("Sent: Hello Serial")
+
+# Read data
+buf = ctypes.create_string_buffer(len(data))
+r = ctypes.c_uint32()
+k32.ReadFile(h, buf, len(data), ctypes.byref(r), None)
+recv = buf.raw[:r.value]
+print("Received:", recv)
+
+# Check loopback
+if recv == data:
+    print("Loopback test passed")
+else:
+    print("Loopback test failed")
+
+# Close port
+k32.CloseHandle(h)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+```python
+import time
+import serial
+
+# Replace 'COM3' with your serial port
+port = 'COM3'
+baudrate = 9600
+
+# Open the serial port
+ser = serial.Serial(port, baudrate, timeout=1)
+
+time.sleep(2)  # give the port some time to initialize
+
+# Test data (string, not bytes)
+test_data = 'Hello Serial\n'
+
+# Write data
+ser.write(test_data)
+print('Sent: ' + test_data)
+
+# Read back data
+received = ser.read(len(test_data))
+print('Received: ' + received)
+
+# Check if the loopback worked
+if received == test_data:
+    print('Serial loopback test passed!')
+else:
+    print('Serial loopback test failed!')
+
+ser.close()
+
+```
 
 
 
