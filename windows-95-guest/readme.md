@@ -1477,7 +1477,7 @@ Many programs assume a single Serial Port on COM1.
 
 Since pyserial isn't working, TeraTerm can be used to test the serial port:
 
-# [TeraTerm](https://www.majorgeeks.com/mg/getmirror/tera_term_(pro),1.html)
+* [TeraTerm](https://www.majorgeeks.com/mg/getmirror/tera_term_(pro),1.html)
 
 The zip file can be extracted and copied over to the Windows 95 Guest. Launch the setup:
 
