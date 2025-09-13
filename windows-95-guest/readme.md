@@ -1,6 +1,6 @@
 # Windows 95 Guest
 
-
+Step-by-step guides for VMware Workstation 17.6.4, focused on running Windows 95 in a virtual environment. Due to the operating system’s age, shared folders and USB passthrough are not functional, and serial port passthrough is limited, typically restricted to COM1. Windows 95 support is highly limited, so users often prefer Windows 98 SE for better hardware compatibility and device support. These guides are useful for researchers, lab technicians, and IT staff needing to run legacy software and control older laboratory instruments on modern systems.
 
 ## Notes
 
@@ -1208,7 +1208,7 @@ Although the options for shared folders shows up for the Windows 95 Guest. The m
 
 ## Installing Python
 
-The last version of Python to work on Windows 95 is Python 2.3.3:
+Python will be used as an example of installing a program on Windows 95. The isntaller is available here:
 
 * [Python 2.3.3](https://www.python.org/downloads/release/python-233/)
 * [pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/Build%20214/pywin32-214.win32-py2.3.exe/download)
@@ -1393,145 +1393,43 @@ C:\Python23\python C:\Windows\Desktop\script.py
 
 <img src="https://github.com/user-attachments/assets/877d6491-4a8e-4be5-81bf-6f78a3cae183" width="600"/>
 
+## USB Passthrough
+
+Windows 95 had very limited support for a small subset of USB 1.0 devices and therefore USB Passthrough is not really functional.
+
 ## Serial port Passthrough
 
-```python
-import ctypes
-import time
+Close the Windows 95 Guest. Attach a USB to Serial Port to the Window 11 Host PC:
 
-# COM port and baudrate
-port = "COM3"
-baudrate = 9600
+<img src="https://github.com/user-attachments/assets/dc02277e-d8ff-4fa1-b071-993df8f0cd7b" width="600"/>
 
-# Windows API constants
-GENERIC_READ = 0x80000000
-GENERIC_WRITE = 0x40000000
-OPEN_EXISTING = 3
-FILE_ATTRIBUTE_NORMAL = 0x80
+On the Windows 11 Host PC, right click the Start Button and select Device Manager:
 
-# Load kernel32.dll
-k32 = ctypes.windll.kernel32
+<img src="https://github.com/user-attachments/assets/4c5f545f-e66c-4ece-b524-10454a2397b4" width="600"/>
 
-# Open serial port
-h = k32.CreateFileA(
-    port,
-    GENERIC_READ | GENERIC_WRITE,
-    0,
-    None,
-    OPEN_EXISTING,
-    FILE_ATTRIBUTE_NORMAL,
-    None
-)
+Expand ports (COM & LPT). In this example, the USB Serial COM Port is COM3:
 
-if h == -1:
-    print("Cannot open port")
-    exit(1)
-print("Port opened")
+<img src="https://github.com/user-attachments/assets/da226f02-457e-417d-9294-d018f54fc562" width="600"/>
 
-# DCB structure for port settings
-class DCB(ctypes.Structure):
-    _fields_ = [
-        ("DCBlength", ctypes.c_uint32),
-        ("BaudRate", ctypes.c_uint32),
-        ("flags", ctypes.c_uint32),
-        ("wReserved", ctypes.c_uint16),
-        ("XonLim", ctypes.c_uint16),
-        ("XoffLim", ctypes.c_uint16),
-        ("ByteSize", ctypes.c_uint8),
-        ("Parity", ctypes.c_uint8),
-        ("StopBits", ctypes.c_uint8),
-        ("XonChar", ctypes.c_char),
-        ("XoffChar", ctypes.c_char),
-        ("ErrorChar", ctypes.c_char),
-        ("EofChar", ctypes.c_char),
-        ("EvtChar", ctypes.c_char),
-        ("wReserved1", ctypes.c_uint16)
-    ]
+Right click it and select properties:
 
-dcb = DCB()
-dcb.DCBlength = ctypes.sizeof(DCB)
-k32.GetCommState(h, ctypes.byref(dcb))
-dcb.BaudRate = baudrate
-dcb.ByteSize = 8
-dcb.Parity = 0
-dcb.StopBits = 0
-k32.SetCommState(h, ctypes.byref(dcb))
+<img src="https://github.com/user-attachments/assets/0f1768d9-c1bf-4324-8bc6-946640ba5531" width="600"/>
 
-time.sleep(2)  # wait for port
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects:
 
-# Test data
-data = b"Hello Serial\n"
+<img src="https://github.com/user-attachments/assets/283e424d-9fea-448d-ab0a-874db7c018c1" width="600"/>
 
-# Write data
-w = ctypes.c_uint32()
-k32.WriteFile(h, data, len(data), ctypes.byref(w), None)
-print("Sent: Hello Serial")
+In this case it will be left at port 3:
 
-# Read data
-buf = ctypes.create_string_buffer(len(data))
-r = ctypes.c_uint32()
-k32.ReadFile(h, buf, len(data), ctypes.byref(r), None)
-recv = buf.raw[:r.value]
-print("Received:", recv)
+<img src="https://github.com/user-attachments/assets/bf7258a0-b073-4451-ac3c-45542580d38f" width="600"/>
 
-# Check loopback
-if recv == data:
-    print("Loopback test passed")
-else:
-    print("Loopback test failed")
-
-# Close port
-k32.CloseHandle(h)
-```
+Open VMware Player and select Edit Virtual Machine Settings:
 
 
 
 
 
-
-
-
-
-
-
-
-```python
-import time
-import serial
-
-# Replace 'COM3' with your serial port
-port = 'COM3'
-baudrate = 9600
-
-# Open the serial port
-ser = serial.Serial(port, baudrate, timeout=1)
-
-time.sleep(2)  # give the port some time to initialize
-
-# Test data (string, not bytes)
-test_data = 'Hello Serial\n'
-
-# Write data
-ser.write(test_data)
-print('Sent: ' + test_data)
-
-# Read back data
-received = ser.read(len(test_data))
-print('Received: ' + received)
-
-# Check if the loopback worked
-if received == test_data:
-    print('Serial loopback test passed!')
-else:
-    print('Serial loopback test failed!')
-
-ser.close()
-
-```
-
-
-
-
+Many programs assumed the serial device was on COM1.
 
 
 
