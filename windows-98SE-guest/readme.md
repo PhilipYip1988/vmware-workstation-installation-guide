@@ -1149,7 +1149,7 @@ import time
 import serial
 
 # Replace COM3 with your serial port
-port = 'COM3'
+port = 'COM1'
 baudrate = 9600
 
 # Open the serial port
@@ -1178,172 +1178,71 @@ else:
 ser.close()
 ```
 
-<img src="https://github.com/user-attachments/assets/f33acf19-c285-45df-b15e-257079e4cb5a" width="600"/>
+<img src="https://github.com/user-attachments/assets/00d59b12-307a-4474-9d6c-fb68ba3abcc9" width="600"/>
 
 Select file → save as:
 
-<img src="https://github.com/user-attachments/assets/f3806b60-0495-4784-874f-dc410702b960" width="600"/>
+<img src="https://github.com/user-attachments/assets/647748b1-5212-44a3-b22b-4d84ff3fd7c5" width="600"/>
 
-Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
+Save the file as `script.py` ensuring that save as type is All Files:
 
-<img src="https://github.com/user-attachments/assets/59be9405-9cb5-416c-a0be-e3219a93a1ca" width="600"/>
+<img src="https://github.com/user-attachments/assets/ffe8b069-30ec-45e1-86db-979644bdafe3" width="600"/>
 
 The script file is in Documents. Right click the script file and select Properties:
 
-<img src="https://github.com/user-attachments/assets/324ae497-9dae-42f7-9862-c1544cdade63" width="600"/>
+<img src="https://github.com/user-attachments/assets/7b98fc18-897a-4725-b13c-60e0de77d949" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/23c8da2f-acef-48fb-a4f0-a3a98dcb6b32" width="600"/>
 
 Copy the file location:
 
-<img src="https://github.com/user-attachments/assets/2952ccc1-a0c8-45eb-a84e-8e96d08e4a47" width="600"/>
+<img src="https://github.com/user-attachments/assets/959b5afa-a733-4767-80a8-8edc1a77c27a" width="600"/>
 
 The file path contains spaces:
 
 ```powershell
-C:\Documents and Settings\Philip\My Documents\script.py
+C:\My Documents\script.py
 ```
 
-To prevent CMD from taking `C:\Documents`, `and`, `Settings\Philip\My` and `Documents\script.py` as seperate command line arguments, double quotations much be used:
+To prevent CMD from taking `C: My` and `Documents\script.py` as seperate command line arguments, double quotations much be used:
 
 ```powershell
-"C:\Documents and Settings\Philip\My Documents\script.py"
+"C:\My Documents\script.py"
 ```
 
 Because this is a long path name, the DOS path is often more convenient:
 
 ```powershell
-C:\DOCUME~1\Philip\MYDOCU~1\script.py
+C:\MYDOCU~1\SCRIPT.PY
 ```
 
 The Python script can be launched using:
 
 ```powershell
-python C:\DOCUME~1\Philip\MYDOCU~1\script.py
+C:\Python25\python C:\MYDOCU~1\SCRIPT.PY\
 ```
 
 With no pins connected, the following shows:
 
 <img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/b439d546-ebef-403c-b24b-f5ecbd9d1ef8" width="600"/>
+<img src="https://github.com/user-attachments/assets/41aa400b-4b09-48fc-98ca-ca7e4a47afc3" width="600"/>
 
 With pins 2 and 3 connected, the following shows:
 
 <img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/80a262c7-1f01-43dc-b989-479977dbdbf5" width="600"/>
+<img src="https://github.com/user-attachments/assets/5e10b591-3e3a-45c1-9310-1fb46effbbb4" width="600"/>
 
-The code works as expected and interfaces with the Serial Port which is passed through to the Windows 2000 Guest VM from the Windows 11 Host PC.
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows 98 SE Guest VM from the Windows 11 Host PC.
 
 ## Parallel Port Passthrough
 
-VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 2000, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. I do not have a parallel port printer available to test passthrough functionality.
 
 ## PCI/PCIe Card Passthrough
 
 VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
-
-Return to [VMware Installation Guide](../readme.md).
-
-Python is just used as an example of a legacy program to run in a Windows 2000 VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Devices can be attached from the Windows 11 Host to the WIndows 98SE via USB or Serial Port. For a Serial Port a USB to Serial Port adaptor is required. In the Windows 11 Host, right click the start menu and select Device Manager:
-
-<img src='./images/img_172.png' alt='img_172' width='200'/>
-
-The USB to Serial Port Adaptor should be listed under Ports:
-
-<img src='./images/img_173.png' alt='img_173' width='600'/>
-
-Its properties can be examined:
-
-<img src='./images/img_174.png' alt='img_174' width='600'/>
-
-The Serial Port Speed in bits per second is displayed and Advanced can be selected to change the Serial Port number:
-
-<img src='./images/img_175.png' alt='img_175' width='600'/>
-
-Changing the Port number requires a reboot, in this case it will be left as Com3:
-
-<img src='./images/img_176.png' alt='img_176' width='600'/>
-
-The Windows 98SE Virtual Machine Settings can be modified:
-
-<img src='./images/img_177.png' alt='img_177' width='600'/>
-
-Select add:
-
-<img src='./images/img_178.png' alt='img_178' width='600'/>
-
-Select Serial Port and Finish:
-
-<img src='./images/img_179.png' alt='img_179' width='600'/>
-
-If multiple Serial Ports are used, the specific Port can be selected (otherwise for a single Serial Port, Autodetect can be used). Select ok:
-
-<img src='./images/img_180.png' alt='img_180' width='600'/>
-
-<img src='./images/img_181.png' alt='img_181' width='600'/>
-
-When the WIndows 98SE Guest boots, it will add the Serial Port using the Windows 98SE CD/DVD in Drive D:\ to find the driver:
-
-<img src='./images/img_182.png' alt='img_182' width='600'/>
-
-The Serial Port properties can be examined in the Windows 98SE Guest:
-
-<img src='./images/img_183.png' alt='img_183' width='600'/>
-
-Note this is Com3 in the Windows 11 Host and Com1 in the Windows 98SE Guest:
-
-<img src='./images/img_184.png' alt='img_184' width='600'/>
-
-The Serial Port Speed in bits per second is displayed and needs to be set to the expected value for the Device connected via Serial Port:
-
-<img src='./images/img_185.png' alt='img_185' width='600'/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Physical Media
 
@@ -1499,10 +1398,6 @@ There is no need to run the program as Windows 98SE is already patched:
 
 <img src='./images/img_217.png' alt='img_217' width='600'/>
 
-Additional Windows 98 software can be found in:
+Return to [VMware Installation Guide](../readme.md).
 
-* [Retro PC installation files](https://startup.retropc.se/win98.html)
-
-The Windows 98 SE Guest is now setup.
-
-Return to [VMware Installation Guide](../readme.md)
+Python is just used as an example of a legacy program to run in a Windows 98 SE VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials). Note Windows 98 SE is using Python 2 which has a significant number of changes from modern Python.
