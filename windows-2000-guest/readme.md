@@ -586,7 +586,7 @@ Select OK:
 
 Select Start All Programs → Accessories → Command Prompt:
 
-<img src="https://github.com/user-attachments/assets/9368f5df-19c5-4b70-9e6d-e2cafe08ea02" width="600"/>
+<img src="https://github.com/user-attachments/assets/b95729f6-99cb-422c-bcf5-c0188ae36d12" width="600"/>
 
 If the following is input:
 
@@ -594,13 +594,21 @@ If the following is input:
 python
 ```
 
-Notice the Python program is found (which is in the folder `C:\Python34\` which is on the Windows path) and the prompt changes to the Python Prompt. The Python `print` function can be called, supplying a `str` as an input argument:
+Notice the Python program is found (which is in the folder `C:\Python32\` which is on the Windows path) and the prompt changes to the Python Prompt. The Python `print` function can be called, supplying a `str` as an input argument:
 
 ```python
 print('Hello World!')
 ```
 
-<img src="https://github.com/user-attachments/assets/45a6165a-388c-47f3-988a-ec9b393c26ea" width="600"/>
+<img src="https://github.com/user-attachments/assets/b51475b2-f5cc-4d8b-bdc1-7016eda0dce3" width="600"/>
+
+The library `serial` can be imported using:
+
+```python
+import serial
+```
+
+<img src="https://github.com/user-attachments/assets/296e56fa-1949-4023-9bc1-e3d3e35c319f" width="600"/>
 
 To exit the Python program use the function call:
 
@@ -608,21 +616,9 @@ To exit the Python program use the function call:
 exit()
 ```
 
-<img src="https://github.com/user-attachments/assets/1d77514e-ec2e-4526-9222-5f8dd3c09163" width="600"/>
+<img src="https://github.com/user-attachments/assets/96313c86-f85f-46da-ab6e-78498af18149" width="600"/>
 
 This exits the Python program and returns to the command prompt.
-
-A new Python program can be ran using:
-
-```powershell
-python
-```
-
-```python
-import serial
-```
-
-<img src="https://github.com/user-attachments/assets/c971c0c7-17ce-482c-811b-ebf94a4f41de" width="600"/>
 
 ## USB Device Passthrough
 
@@ -971,9 +967,3 @@ Return to [VMware Installation Guide](../readme.md).
 
 Python is just used as an example of a legacy program to run in a Windows 7 VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
 
-
-
-
-# AAA
-
-https://www.majorgeeks.com/mg/getmirror/logitech_quickcam,2.html
