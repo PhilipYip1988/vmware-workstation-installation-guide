@@ -470,121 +470,99 @@ Then the `vmshared` folder:
 
 <img src="https://github.com/user-attachments/assets/2daab45f-77e3-4746-a3c8-83a88d47d6f7" width="600"/>
 
-Files can be bidirectionally copied and pasted to this folder between the Windows 2000 guest and the Windows 11 host:
+Files can be bidirectionally copied and pasted to this folder between the Windows 2000 guest and the Windows 11 host. On the Windows 2000 guest, the folder may need to be refreshed to view changes made on the Windows 11 or Ubuntu 25.10 host. To do this blank click some empty space in the folder and select refresh:
 
-<img src="https://github.com/user-attachments/assets/de2b166e-3840-4497-b078-d5c014b34c13" width="600"/>
-
-On the Windows 2000 guest, the folder may need to be refreshed to view changes made on the Windows 11 or Ubuntu 25.10 host. To do this blank click some empty space in the folder and select refresh:
+<img src="https://github.com/user-attachments/assets/2f5a58a4-28e1-41b0-9b68-43e1324e41b5" width="600"/>
 
 ## Installing Python
 
 Python will be used as an example of installing a program on Windows 2000:
 
-* [Python 3.2]()
-* [Pyserial 3.0.1]()
+* [Python 3.2](https://www.python.org/download/releases/3.2/)
+* [Pyserial 3.0.1](https://github.com/pyserial/pyserial/releases/tag/v3.0.1)
 
+Note the Windows Installer for Python 3.2 will work on Windows 2000 however the Windows installer for PySerial will only work on Windows XP and later. For PySerial the zipped `.tar.gz` folder should be used. This should be extracted on the Windows 11 Guest. The Python 3.2 folder and Pyserial 3.0.1 folder can be dragged and dropped from the Windows 11 Host to the Windows 2000 Guest. However drag and drop isn't totally reliable and sometimes stops working until the Windows 2000 Guest is restarted. Therefore shared folders is often better:
 
+<img src="https://github.com/user-attachments/assets/de2b166e-3840-4497-b078-d5c014b34c13" width="600"/>
 
+Launch the Python 3.2 setup:
 
+<img src="https://github.com/user-attachments/assets/5f172a30-9bd2-48dc-a6c0-f490c42a38e0" width="600"/>
 
+Select Install for all User:
 
+<img src="https://github.com/user-attachments/assets/36632e90-9089-4080-9520-27ecfaf41f00" width="600"/>
 
+Select Next:
 
+<img src="https://github.com/user-attachments/assets/c2406a9a-8486-4214-8c61-f414398301bd" width="600"/>
 
-[python-3.4.4.msi](https://www.python.org/downloads/release/python-344/) is the latest version of Python to work on Windows XP. The installer can be downloaded on the Windows 11 Host PC:
+Select Next:
 
-<img src="https://github.com/user-attachments/assets/eab7e96a-f075-4f1f-aab1-21ced600f865" width="600"/>
-
-And dragged and dropped over to the VM:
-
-<img src="https://github.com/user-attachments/assets/5b1a54a6-6c5e-4110-a901-758c521b83bd" width="600"/>
-
-Launch the setup:
-
-<img src="https://github.com/user-attachments/assets/38db7318-97aa-4b01-83d4-99de325e923a" width="600"/>
-
-Select next:
-
-<img src="https://github.com/user-attachments/assets/b0397e70-6c8a-479b-b0b4-6252c1ba6c49" width="600"/>
-
-Select next:
-
-<img src="https://github.com/user-attachments/assets/e8d09ae6-4844-4c27-a4ca-9c1599335378" width="600"/>
-
-Select next:
-
-<img src="https://github.com/user-attachments/assets/3bffc199-e63b-4bc0-ba2a-cba34e035565" width="600"/>
+<img src="https://github.com/user-attachments/assets/da4b6027-c613-4cd4-97a1-ab294094bce0" width="600"/>
 
 Select Finish:
 
-<img src="https://github.com/user-attachments/assets/c925f84d-4ec1-4124-bf06-16dc4693cdcc" width="600"/>
+<img src="https://github.com/user-attachments/assets/02180fa6-f95b-4563-9d5c-4ffda21fd0ca" width="600"/>
 
 Open My Computer:
 
-<img src="https://github.com/user-attachments/assets/bbb5da46-37d5-47ee-b74a-81b9df19d122" width="600"/>
+<img src="https://github.com/user-attachments/assets/469844d1-78a8-4aad-b51d-d9873cb2a0db" width="600"/>
 
 Navigate to the `C:` Drive:
 
-<img src="https://github.com/user-attachments/assets/ee36920e-54a7-47b5-8fd9-b387a27fff52" width="600"/>
+<img src="https://github.com/user-attachments/assets/2a785cdb-0ca7-4a26-afb0-98fbb2921a89" width="600"/>
 
-To the left, select Show Contents of this Drive:
+Python 3.2 is installed in the `Python32` folder:
 
-<img src="https://github.com/user-attachments/assets/77f5cbce-a4f5-4379-aafd-41df2287d77f" width="600"/>
-
-Python 3.4 is installed in the `Python34` folder:
-
-<img src="https://github.com/user-attachments/assets/fc1ff42d-646d-4bef-95a8-b6d86c7e6e57" width="600"/>
+<img src="https://github.com/user-attachments/assets/2920a9f1-0710-4590-a8a3-8868e52b9552" width="600"/>
 
 In this folder there is the `python.exe`:
 
-<img src="https://github.com/user-attachments/assets/ed77521e-5408-4187-8099-a78999e83eda" width="600"/>
+<img src="https://github.com/user-attachments/assets/8fafd024-7661-4554-a876-a241e74ba1ad" width="600"/>
 
-And `Scripts` subfolder:
+There is no `Scripts` folder or Python Package Manager `pip` in this version of Python. The `Lib` folder containns python's standard libraries:
 
-<img src="https://github.com/user-attachments/assets/63c85936-af8e-4103-a605-339cf8917417" width="600"/>
+<img src="https://github.com/user-attachments/assets/01ee99b7-ef54-4a76-aa27-16397fa1da4e" width="600"/>
 
-With the script called `pip`:
+In this folder is a subfolder called `site-packages`, where third-party libraries are installed:
 
-<img src="https://github.com/user-attachments/assets/1fe9f2da-de58-4d1c-8e92-fcc7ee543648" width="600"/>
+<img src="https://github.com/user-attachments/assets/274b179f-c5bb-42ad-9e92-b6bf242c283d" width="600"/>
 
-The `Lib` folder contaisn python's standard libraries:
+In the extracted folder `pyserial-3.0.1` (package), copy the `serial` folder (library):
 
-<img src="https://github.com/user-attachments/assets/3ae37bce-a18d-4c6b-ab8f-e4371b381a12" width="600"/>
+<img src="https://github.com/user-attachments/assets/1665794b-b329-4723-ae6a-5f9f85399356" width="600"/>
 
-In this folder is a subfolder called `site-packages`:
+And paste this to `site-packages`:
 
-<img src="https://github.com/user-attachments/assets/4a89e3ad-2185-47dd-9a92-5e73b5bb4da3" width="600"/>
+<img src="https://github.com/user-attachments/assets/59662f83-08c6-46dd-a733-25dfdc6cc84f" width="600"/>
 
-Where third-party libraries are installed such as the package manager Python Install Package `pip`:
+For `pyserial`, there is the `pyserial` (package) folder and `serial` (library) folder. Normally the name of package and library are consistent however sometimes these differ as in the case of `pyserial`. Usually the differences are for historical reasons (for example a package being forked and the forked package being maintained and the original package being depreciated).
 
-<img src="https://github.com/user-attachments/assets/9e9eb7c1-b505-4629-be60-1ac39bbaadf3" width="600"/>
+Python was not added to the path during installation, which means the full directory to the `python.exe` needs to be specified from the command prompt. To add to the path, right click Computer and select Properties:
 
-Normally there is a folder corresponding to the package and a second folder which gives the details and version of the package.
-
-Python was not added to the path during installation, which means the full directories to the `python.exe` and `pip` script need to be specified from the command prompt. To add to the path, right click Computer and select Properties:
-
-<img src="https://github.com/user-attachments/assets/da9c995c-379b-4dee-9038-bd797680064a" width="600"/>
+<img src="https://github.com/user-attachments/assets/b98b3c31-94aa-4fd0-8b60-99f291485fb5" width="600"/>
 
 Select the Advanced Tab and select Environmental Variables:
 
-<img src="https://github.com/user-attachments/assets/255ee501-3cd5-4bd3-9abf-591111928327" width="600"/>
+<img src="https://github.com/user-attachments/assets/60baf6f9-8659-4cb5-b552-7d3a017ea5c1" width="600"/>
 
 Under System Variables select Path and Edit:
 
-<img src="https://github.com/user-attachments/assets/68498948-f5fa-4110-b9ff-69ecc3763f24" width="600"/>
+<img src="https://github.com/user-attachments/assets/8c695d07-316a-44f2-a548-9030b8f3fd27" width="600"/>
 
-Append the two values:
+Append the value:
 
 ```
-;C:\Python34\;C:\Python34\Scripts\
+;C:\Python34\
 ```
 
-<img src="https://github.com/user-attachments/assets/f75e27e8-696b-4f89-8f25-b206d4b691e8" width="600"/>
+<img src="https://github.com/user-attachments/assets/cef9fdca-2595-4a86-8924-55b54830830b" width="600"/>
 
 For clarity my full path looks like the following. The semi-colon is a delimiter:
 
 ```
-%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Python34\;C:\Python34\Scripts\S
+%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;C:\Python32
 ```
 
 Newer versions of Windows often display this in a list for convenience. Using a new line instead, this becomes:
@@ -593,20 +571,18 @@ Newer versions of Windows often display this in a list for convenience. Using a 
 %SystemRoot%\system32
 %SystemRoot%
 %SystemRoot%\System32\Wbem
-C:\WINDOWS\system32\WindowsPowerShell\v1.0
-C:\Python34\
-C:\Python34\Scripts\
+C:\Python32\
 ```
 
 The command prompt looks for a command in all of the directories listed in the path as well as the current working directory. 
 
 Select OK:
 
-<img src="https://github.com/user-attachments/assets/ae706596-a8e5-4312-a5bf-aa7c6bf9f346" width="600"/>
+<img src="https://github.com/user-attachments/assets/4544852b-8794-4d51-a6d2-7a534a8c88a0" width="600"/>
 
 Select OK:
 
-<img src="https://github.com/user-attachments/assets/b7a13702-ad84-4ba3-add1-e1b84a5c9511" width="600"/>
+<img src="https://github.com/user-attachments/assets/5922381f-f01f-4097-9b9c-38fbf35156e6" width="600"/>
 
 Select Start All Programs → Accessories → Command Prompt:
 
@@ -634,35 +610,7 @@ exit()
 
 <img src="https://github.com/user-attachments/assets/1d77514e-ec2e-4526-9222-5f8dd3c09163" width="600"/>
 
-This exits the Python program and returns to the command prompt, the Python Install Package Command `pip` can be used:
-
-```powershell
-pip
-```
-
-<img src="https://github.com/user-attachments/assets/1b9e8062-9e09-4e42-a744-569b530b7b8c" width="600"/>
-
-`pip` is in the folder `C:\Python34\Scripts` which is on the Windows path. Use of pip requires internet access, which is risky on a legacy operating system like Windows XP. Select Player → Removable Devices → Network Adapter → Connect:
-
-<img src="https://github.com/user-attachments/assets/31991f53-9acc-4671-a83f-0bccb58b0c01" width="600"/>
-
-The network icon will display to the bottom right:
-
-<img src="https://github.com/user-attachments/assets/eb43e3b5-c9a6-4379-a45b-f07989e1e7b2" width="600"/>
-
-Now pip can be used to install pyserial:
-
-```powershell
-pip install pyserial==3.0.1
-```
-
-<img src="https://github.com/user-attachments/assets/5b465fec-addb-4c3b-90d7-f3e363ed8c3a" width="600"/>
-
-The `==` means is equal to an a specific version needs to be specified that works with Windows XP. Newerr versions rely on newer Windows protocols which aren't present in Windows XP.
-
-Notice in the `site-packages` folder there is a `pyserial` `dist-info` (package) folder giving details about the version and a `serial` (library) folder. Normally the name of package and library are consistent however sometimes these differ for historical reasons (for example a package being forked and the forked package being maintained and the original package being depreciated):
-
-<img src="https://github.com/user-attachments/assets/317f40ea-e6ca-4aba-8488-ac5b2cbe7c0b" width="600"/>
+This exits the Python program and returns to the command prompt.
 
 A new Python program can be ran using:
 
