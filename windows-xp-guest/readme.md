@@ -899,6 +899,6 @@ VMware can theoretically passthrough a physical parallel port. However, USB-to-p
 
 VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
 
-The Windows XP Guest is now setup:
+Return to [VMware Installation Guide](../readme.md).
 
-* [VMware Installation Guide](../readme.md)
+Python is just used as an example of a legacy program to run in a Windows 7 VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
