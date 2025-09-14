@@ -254,7 +254,7 @@ Uncheck show this screen at startup and select exit:
 
 <img src="https://github.com/user-attachments/assets/bcbc535c-9748-43fe-be8e-d5303de64bd0" width="600"/>
 
-## Install Windows 2000 SP4 and Post-SP4 Updates
+## Installing Windows 2000 SP4 and Post-SP4 Updates
 
 Select Player → Manage → CD/DVD and select Settings:
 
@@ -416,61 +416,265 @@ With VMware tools installed, the VM can be resized:
 
 <img src="https://github.com/user-attachments/assets/a4669e36-9128-4d04-9616-467e3819bad0" width="600"/>
 
+## Backing up the Windows 2000 VM
+
 When the VM is powered down the VM can be backed up by copying the folder Windows 2000 Professional found in Documents → Virtual Machines on the Windows 11 Host PC.
 
-## Installing Python
+## Shared Folders
 
-Python will be used as an example of installing a program on Windows 2000. [python-2.4.4.msi](https://www.python.org/downloads/release/python-244/) is the latest version of Python to work on Windows 2000. In theory drag and drop should work bi-directionally from the Windows 11 Desktop to the Windows 2000 VM. However it typically does not work correctly with a Windows 2000 VM and its older implementation of VMware tools... The python-2.4.4.msi can be copied from the Host PC and pasted to the Windows 2000 VM:
+Create a new folder on the Windows 11 Host or Ubuntu 24.10 Host PC called `vmshared`:
 
-<img src="https://github.com/user-attachments/assets/ead35b6b-9db0-4aff-bd93-ed61e92f6070" width="600"/>
+<img src="https://github.com/user-attachments/assets/af1724a7-cb93-4870-a0ad-a39a5982e1e8" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/19754735-8378-46ac-bb19-0e4693501bcd" width="600"/>
+Select Player → Manage → Virtual Machine Settings:
 
-Launch the Python 2.4.4 setup and select install for all users and then select next:
+<img src="https://github.com/user-attachments/assets/d262ae7c-8962-4ca2-a6c2-9ae4a42df2ab" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/35599691-869f-4296-b00d-b7d7c33250cf" width="600"/>
+Select Options → Shared Folders and change the setting to Always Enabled and check Map Network Drive. Select Add:
+
+<img  src="https://github.com/user-attachments/assets/3a5b8380-2f0f-4859-af3b-cdb62b8cdfef" width="600"/>
 
 Select next:
 
-<img src="https://github.com/user-attachments/assets/d0d0c9f3-ed7f-4813-b71d-4149cb549a88" width="600"/>
+<img src="https://github.com/user-attachments/assets/6a2792c7-6978-4748-9d1f-cfd2e444a4d5" width="600"/>
 
-Select next again:
+Select browse:
 
-<img src="https://github.com/user-attachments/assets/ce390724-0253-436e-bb12-2d4b9574a6c2" width="600"/>
+<img src="https://github.com/user-attachments/assets/f89fa1a7-2024-4552-b5c6-aede00e32896" width="600"/>
 
-Select finish:
+Select the folder vmshared on the Windows 11 Host PC or Ubuntu 24.10 Host PC and then next:
 
-<img src="https://github.com/user-attachments/assets/77d59572-773d-44e6-901d-e9edd6648f47" width="600"/>
+<img src="https://github.com/user-attachments/assets/a390f734-3a8f-42bd-a433-fd03ef17c154" width="600"/>
 
-Open the command prompt:
+Select next:
 
-<img src="https://github.com/user-attachments/assets/3a23d84f-d1eb-4ae9-84f6-78afc9122b7d" width="600"/>
+<img src="https://github.com/user-attachments/assets/97f27e3c-6f95-4495-9b1f-d76c86f63249" width="600"/>
 
-Change directory to the python directory and launch Python using:
+Select Enable this Share and Finish:
+
+<img src="https://github.com/user-attachments/assets/1559bd61-96fd-4ca7-998d-3a7b7dbcf8ef" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/648545e2-9ad9-4d74-a974-38d6f1dbfc31" width="600"/>
+
+The shared folder is now mapped as a network drive in the Windows 2000 Guest. Go to My Computer:
+
+<img src="https://github.com/user-attachments/assets/6b519d55-e696-44f0-b2d9-899f56015fbd" width="600"/>
+
+Select shared folders on host:
+
+<img src="https://github.com/user-attachments/assets/1c2ff062-d266-4de0-97a3-b3472403186a" width="600"/>
+
+Then the `vmshared` folder:
+
+<img src="https://github.com/user-attachments/assets/2daab45f-77e3-4746-a3c8-83a88d47d6f7" width="600"/>
+
+Files can be bidirectionally copied and pasted to this folder between the Windows 2000 guest and the Windows 11 host:
+
+<img src="https://github.com/user-attachments/assets/de2b166e-3840-4497-b078-d5c014b34c13" width="600"/>
+
+On the Windows 2000 guest, the folder may need to be refreshed to view changes made on the Windows 11 or Ubuntu 25.10 host. To do this blank click some empty space in the folder and select refresh:
+
+## Installing Python
+
+Python will be used as an example of installing a program on Windows 2000:
+
+* [Python 3.2]()
+* [Pyserial 3.0.1]()
+
+
+
+
+
+
+
+
+
+[python-3.4.4.msi](https://www.python.org/downloads/release/python-344/) is the latest version of Python to work on Windows XP. The installer can be downloaded on the Windows 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/eab7e96a-f075-4f1f-aab1-21ced600f865" width="600"/>
+
+And dragged and dropped over to the VM:
+
+<img src="https://github.com/user-attachments/assets/5b1a54a6-6c5e-4110-a901-758c521b83bd" width="600"/>
+
+Launch the setup:
+
+<img src="https://github.com/user-attachments/assets/38db7318-97aa-4b01-83d4-99de325e923a" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/b0397e70-6c8a-479b-b0b4-6252c1ba6c49" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/e8d09ae6-4844-4c27-a4ca-9c1599335378" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/3bffc199-e63b-4bc0-ba2a-cba34e035565" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/c925f84d-4ec1-4124-bf06-16dc4693cdcc" width="600"/>
+
+Open My Computer:
+
+<img src="https://github.com/user-attachments/assets/bbb5da46-37d5-47ee-b74a-81b9df19d122" width="600"/>
+
+Navigate to the `C:` Drive:
+
+<img src="https://github.com/user-attachments/assets/ee36920e-54a7-47b5-8fd9-b387a27fff52" width="600"/>
+
+To the left, select Show Contents of this Drive:
+
+<img src="https://github.com/user-attachments/assets/77f5cbce-a4f5-4379-aafd-41df2287d77f" width="600"/>
+
+Python 3.4 is installed in the `Python34` folder:
+
+<img src="https://github.com/user-attachments/assets/fc1ff42d-646d-4bef-95a8-b6d86c7e6e57" width="600"/>
+
+In this folder there is the `python.exe`:
+
+<img src="https://github.com/user-attachments/assets/ed77521e-5408-4187-8099-a78999e83eda" width="600"/>
+
+And `Scripts` subfolder:
+
+<img src="https://github.com/user-attachments/assets/63c85936-af8e-4103-a605-339cf8917417" width="600"/>
+
+With the script called `pip`:
+
+<img src="https://github.com/user-attachments/assets/1fe9f2da-de58-4d1c-8e92-fcc7ee543648" width="600"/>
+
+The `Lib` folder contaisn python's standard libraries:
+
+<img src="https://github.com/user-attachments/assets/3ae37bce-a18d-4c6b-ab8f-e4371b381a12" width="600"/>
+
+In this folder is a subfolder called `site-packages`:
+
+<img src="https://github.com/user-attachments/assets/4a89e3ad-2185-47dd-9a92-5e73b5bb4da3" width="600"/>
+
+Where third-party libraries are installed such as the package manager Python Install Package `pip`:
+
+<img src="https://github.com/user-attachments/assets/9e9eb7c1-b505-4629-be60-1ac39bbaadf3" width="600"/>
+
+Normally there is a folder corresponding to the package and a second folder which gives the details and version of the package.
+
+Python was not added to the path during installation, which means the full directories to the `python.exe` and `pip` script need to be specified from the command prompt. To add to the path, right click Computer and select Properties:
+
+<img src="https://github.com/user-attachments/assets/da9c995c-379b-4dee-9038-bd797680064a" width="600"/>
+
+Select the Advanced Tab and select Environmental Variables:
+
+<img src="https://github.com/user-attachments/assets/255ee501-3cd5-4bd3-9abf-591111928327" width="600"/>
+
+Under System Variables select Path and Edit:
+
+<img src="https://github.com/user-attachments/assets/68498948-f5fa-4110-b9ff-69ecc3763f24" width="600"/>
+
+Append the two values:
 
 ```
-cd C:\python24
+;C:\Python34\;C:\Python34\Scripts\
+```
+
+<img src="https://github.com/user-attachments/assets/f75e27e8-696b-4f89-8f25-b206d4b691e8" width="600"/>
+
+For clarity my full path looks like the following. The semi-colon is a delimiter:
+
+```
+%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Python34\;C:\Python34\Scripts\S
+```
+
+Newer versions of Windows often display this in a list for convenience. Using a new line instead, this becomes:
+
+```
+%SystemRoot%\system32
+%SystemRoot%
+%SystemRoot%\System32\Wbem
+C:\WINDOWS\system32\WindowsPowerShell\v1.0
+C:\Python34\
+C:\Python34\Scripts\
+```
+
+The command prompt looks for a command in all of the directories listed in the path as well as the current working directory. 
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/ae706596-a8e5-4312-a5bf-aa7c6bf9f346" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/b7a13702-ad84-4ba3-add1-e1b84a5c9511" width="600"/>
+
+Select Start All Programs → Accessories → Command Prompt:
+
+<img src="https://github.com/user-attachments/assets/9368f5df-19c5-4b70-9e6d-e2cafe08ea02" width="600"/>
+
+If the following is input:
+
+```powershell
 python
-print 'Hello World!'
 ```
 
-<img src="https://github.com/user-attachments/assets/ff49f6d3-1a9b-4827-a68f-0e5b747f8ae6" width="600" />
+Notice the Python program is found (which is in the folder `C:\Python34\` which is on the Windows path) and the prompt changes to the Python Prompt. The Python `print` function can be called, supplying a `str` as an input argument:
 
-## Upgrade Virtual Hardware
+```python
+print('Hello World!')
+```
 
-Now that Service Pack 4 and the post-SP4 Updates have been installed, the virtual hardware used by the VM can be upgraded. Shut down the VM and select Edit Virtual Machine Settings:
+<img src="https://github.com/user-attachments/assets/45a6165a-388c-47f3-988a-ec9b393c26ea" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/9d493a75-cf01-4820-8992-f6db27123bb7" width="600"/>
+To exit the Python program use the function call:
 
-Update the memory to 4096 MB:
+```python
+exit()
+```
 
-<img src="https://github.com/user-attachments/assets/05810138-0b76-4d1c-9d76-e57680845208" width="600"/>
+<img src="https://github.com/user-attachments/assets/1d77514e-ec2e-4526-9222-5f8dd3c09163" width="600"/>
 
-And the processor cores to 2:
+This exits the Python program and returns to the command prompt, the Python Install Package Command `pip` can be used:
 
-<img src="https://github.com/user-attachments/assets/97492860-4b62-4b18-8e5f-3686f4b91fa9" width="600"/>
+```powershell
+pip
+```
 
-Relaunch the Virtual Machine.
+<img src="https://github.com/user-attachments/assets/1b9e8062-9e09-4e42-a744-569b530b7b8c" width="600"/>
+
+`pip` is in the folder `C:\Python34\Scripts` which is on the Windows path. Use of pip requires internet access, which is risky on a legacy operating system like Windows XP. Select Player → Removable Devices → Network Adapter → Connect:
+
+<img src="https://github.com/user-attachments/assets/31991f53-9acc-4671-a83f-0bccb58b0c01" width="600"/>
+
+The network icon will display to the bottom right:
+
+<img src="https://github.com/user-attachments/assets/eb43e3b5-c9a6-4379-a45b-f07989e1e7b2" width="600"/>
+
+Now pip can be used to install pyserial:
+
+```powershell
+pip install pyserial==3.0.1
+```
+
+<img src="https://github.com/user-attachments/assets/5b465fec-addb-4c3b-90d7-f3e363ed8c3a" width="600"/>
+
+The `==` means is equal to an a specific version needs to be specified that works with Windows XP. Newerr versions rely on newer Windows protocols which aren't present in Windows XP.
+
+Notice in the `site-packages` folder there is a `pyserial` `dist-info` (package) folder giving details about the version and a `serial` (library) folder. Normally the name of package and library are consistent however sometimes these differ for historical reasons (for example a package being forked and the forked package being maintained and the original package being depreciated):
+
+<img src="https://github.com/user-attachments/assets/317f40ea-e6ca-4aba-8488-ac5b2cbe7c0b" width="600"/>
+
+A new Python program can be ran using:
+
+```powershell
+python
+```
+
+```python
+import serial
+```
+
+<img src="https://github.com/user-attachments/assets/c971c0c7-17ce-482c-811b-ebf94a4f41de" width="600"/>
 
 ## USB Device Passthrough
 
@@ -672,7 +876,152 @@ The Serial Port COM3 is now ready for use in the Windows 2000 VM:
 
 <img src="https://github.com/user-attachments/assets/a2fa4051-045f-4861-9aa4-d8c613e4db07" width="600"/>
 
+Update the COM Port Number to be consistent with the Windows 11 Host. In this case COM3. Select OK:
 
+<img src="https://github.com/user-attachments/assets/21ae0b09-164f-42dd-8481-8107e6c0d3f1" width="600"/>
+
+The Serial Port COM3 is now ready for use in the Windows XP Guest:
+
+<img src="https://github.com/user-attachments/assets/876e14b7-348c-4de3-a611-bb43bd71650e" width="600"/>
+
+If the port number has not updated, select Action → Scan for hardware changes. After refreshing COM3 now displays correctly in the device manager but is not available for use in other programs until the Windows XP Guest is restarted.
+
+I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
+
+<img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
+
+|Pin Number|Name|
+|---|---|
+|1|Data Carrier Detect (CDC)|
+|2|Received Data (RXD)|
+|3|Transmit Data (TXD)|
+|4|Data Terminal Ready (DTR)|
+|5|Ground (GND)|
+|6|Data Set Ready (DSR)|
+|7|Request to Send (RTS)|
+|8|Clear To Send (CTS)|
+|9|Ring Indicator (RI)|
+
+A Python script will be used which essentially transmits the data using pin 3 and then reads it back using pin 2. A Serial port can only read low `0` and high `1` signals, so any data sent via the Serial Port has to be in the form of a byte. In the basic American Standard for Information Interchange (ASCII), each ASCII character is an 8 bit binary sequence:
+
+| Char | Decimal | Hex  | Binary    |
+|------|---------|------|-----------|
+| H    | 72      | 0x48 | 01001000  |
+| e    | 101     | 0x65 | 01100101  |
+| l    | 108     | 0x6C | 01101100  |
+| l    | 108     | 0x6C | 01101100  |
+| o    | 111     | 0x6F | 01101111  |
+| (space) | 32   | 0x20 | 00100000  |
+| S    | 83      | 0x53 | 01010011  |
+| e    | 101     | 0x65 | 01100101  |
+| r    | 114     | 0x72 | 01110010  |
+| i    | 105     | 0x69 | 01101001  |
+| a    | 97      | 0x61 | 01100001  |
+| l    | 108     | 0x6C | 01101100  |
+| \n   | 10      | 0x0A | 00001010  |
+
+Open notepad:
+
+<img src="https://github.com/user-attachments/assets/bd381af0-08e4-46a2-9cf4-aa720a1c935c" width="600"/>
+
+Paste in the following code:
+
+```python
+import time
+import serial
+
+# Replace 'COM3' with your serial port
+port = 'COM3'
+baudrate = 9600
+
+# Open the serial port
+ser = serial.Serial(port, baudrate, timeout=1)
+
+time.sleep(2)  # give the port some time to initialize
+
+# Test data
+test_data = b'Hello Serial\n'
+
+# Write data
+ser.write(test_data)
+print('Sent: {}'.format(test_data))
+
+# Read back data
+received = ser.read(len(test_data))
+print('Received: {}'.format(received))
+
+# Check if the loopback worked
+if received == test_data:
+    print('Serial loopback test passed!')
+else:
+    print('Serial loopback test failed!')
+
+ser.close()
+```
+
+<img src="https://github.com/user-attachments/assets/b8bd70fd-7398-427f-903b-7e21df8302fe" width="600"/>
+
+Select file → save as:
+
+<img src="https://github.com/user-attachments/assets/ffb68f9c-a600-468e-8056-0a4a4cf9f1b7" width="600"/>
+
+Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
+
+<img src="https://github.com/user-attachments/assets/b990279b-0370-411b-861b-54c6d28c813a" width="600"/>
+
+The script file is in Documents. Right click the script file and selectProperties:
+
+<img src="https://github.com/user-attachments/assets/385c5d52-02fd-449f-bb2c-0cb78cbf2868" width="600"/>
+
+Copy the file location:
+
+<img src="https://github.com/user-attachments/assets/2e624086-3705-4c84-9167-2a01df927bce" width="600"/>
+
+The file path contains spaces:
+
+```powershell
+C:\Documents and Settings\Philip\My Documents\script.py
+```
+
+To prevent CMD from taking `C:\Documents`, `and`, `Settings\Philip\My` and `Documents\script.py` as seperate command line arguments, double quotations much be used:
+
+```powershell
+"C:\Documents and Settings\Philip\My Documents\script.py"
+```
+
+Because this is a long path name, the DOS path is often more convenient:
+
+```powershell
+C:\DOCUME~1\Philip\MYDOCU~1\script.py
+```
+
+The Python script can be launched using:
+
+```powershell
+python C:\DOCUME~1\Philip\MYDOCU~1\script.py
+```
+
+With no pins connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/6e595ec7-3bd9-40cb-aa13-d88515524eec" width="600"/>
+
+With pins 2 and 3 connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/04bcbbb3-16d3-42ab-b564-b5037a992c03" width="600"/>
+
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows XP Guest VM from the Windows 11 Host PC.
+
+## Parallel Port Passthrough
+
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows XP, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+
+## PCI/PCIe Card Passthrough
+
+VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
+
+Return to [VMware Installation Guide](../readme.md).
+
+Python is just used as an example of a legacy program to run in a Windows 7 VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
 
 
 
