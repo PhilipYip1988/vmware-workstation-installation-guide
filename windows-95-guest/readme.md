@@ -1329,17 +1329,17 @@ print 'Hello World!'
 The pyserial library can be imported using:
 
 ```python
-pyserial
+import serial
 ```
 
 <img src="https://github.com/user-attachments/assets/c4c3a514-b453-40a3-b079-a77eb95c76d6" width="600"/>
 
-This gives a traceback error. In this early version of Windows and Python it is very difficult to setup compatible libraries which work.
+This gives a traceback error. In this early version of Windows it is very difficult to find a compatible version of Python and libraries which work.
 
 To exit type in:
 
 ```python
-exit
+exit()
 ```
 
 <img src="https://github.com/user-attachments/assets/2328279f-8005-4c4f-b4b1-2376bd885223" width="600"/>
