@@ -1025,3 +1025,7 @@ Python is just used as an example of a legacy program to run in a Windows 7 VM a
 
 
 
+
+# AAA
+
+https://www.majorgeeks.com/mg/getmirror/logitech_quickcam,2.html
