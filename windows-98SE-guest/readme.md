@@ -885,7 +885,388 @@ The log file will display the updates installed:
 
 <img src='./images/img_171.png' alt='img_171' width='600'/>
 
-## Serial Ports and USB Devices
+## Shared Folders
+
+Although the options for shared folders shows up for the Windows 95 Guest. The map as a network drive in Windows guests does not do anything. Therefore you cannot view the shared folder:
+
+<img src="https://github.com/user-attachments/assets/1129bd5e-c16b-4492-89f7-d70c3abf52d8" width="600"/>
+
+This is likely because VMware tools did not include a driver for the PCI System Peripheral which controls the behaviour of Shared Folders for this Operating System.
+
+## Installing Python
+
+Python will be used as an example of installing a program on Windows 95. The installer is available here:
+
+* [Python 2.5.4](https://www.python.org/downloads/release/python-254/)
+* [pyserial 2.1](https://sourceforge.net/projects/pyserial/files/pyserial/2.1/)
+* [pywin32 2.18](https://sourceforge.net/projects/pywin32/files/pywin32/Build%20218/)
+
+The pywin32, version 2.18 installer for Python 2.5 needs to be downloaded.
+
+Drag and drop the applications to the Windows 98 Desktop:
+
+<img src="https://github.com/user-attachments/assets/47f707f2-6fd1-462b-a6a3-157acb9e8cff" width="600"/>
+
+Launch the `Python-2.5.4.exe`:
+
+<img src="https://github.com/user-attachments/assets/ba86324c-d6cd-4f1f-b6d2-3370b46a63f4" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/fd43709c-25b2-4127-a97c-911a49391aab" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/57063334-5a5c-49a1-9932-3d0b392c6249" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/cc2f8fdf-754f-4fc6-a161-e372c2b4bf95" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/79a2b06f-bd74-4e36-bf91-5033d684d32f" width="600"/>
+
+Go to Computer:
+
+<img src="https://github.com/user-attachments/assets/f72b7b27-ec54-4a45-9708-4cfd69ece4d1" width="600"/>
+
+Navigate to `C:`:
+
+<img src="https://github.com/user-attachments/assets/3871357b-df55-4058-94d3-b9a1f5520b84" width="600"/>
+
+Python is installed in the `Python25` folder:
+
+<img src="https://github.com/user-attachments/assets/9fddd0da-f8f8-46b1-8b2b-d0848dbcf6a3" width="600"/>
+
+Python is installed in this folder as a single environment:
+
+<img src="https://github.com/user-attachments/assets/ae17f35b-0df4-4a9c-b5ec-d5156ab01697" width="600"/>
+
+This version of Python did not support Python environments.
+
+Standard libraries are found in the `lib` folder:
+
+<img src="https://github.com/user-attachments/assets/8df884f8-5e85-4187-b1ef-f3594d0574cb" width="600"/>
+
+Third-party libraries are installed to the `site-packages` folder:
+
+<img src="https://github.com/user-attachments/assets/6a93e106-b08a-48f0-ad2f-377d4aad010b" width="600"/>
+
+Note the absense of `pip`, the Python package manager which wasn't created yet.
+
+<img src="https://github.com/user-attachments/assets/1f72ce4b-bb2a-496b-b087-9cb56c5cd8c6" width="600"/>
+
+Packages were typically available in `.exe` format. Many packages relied on `pywin32` which can be installed:
+
+<img src="https://github.com/user-attachments/assets/07c681e7-f34d-4b7b-8e11-fbbd6a68fa2a" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/e829323e-0e5c-41ec-87a5-28f05ec81c26" width="600"/>
+
+The Python directory and corresponding `site-packages` directory is found. Select next:
+
+<img src="https://github.com/user-attachments/assets/a2b6898d-44fa-4fd7-bd2b-451e9e5921e0" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/58af89b1-504c-449d-8078-1e960e7b474c" width="600"/>
+
+Select finish:
+
+<img src="https://github.com/user-attachments/assets/fb6fdf9c-1fa0-49a4-a10c-1188f4c283ff" width="600"/>
+
+Repeat the same process for pyserial. The `serial` folder is now in `site-packages`:
+
+<img src="https://github.com/user-attachments/assets/862379b8-5338-4d6d-87cd-e5a06dae1057" width="600"/>
+
+This folder also contains the dependencies based up pywin.
+
+The MSDOS prompt can be used to launch Python. Select Start → Programs → MS-DOS Prompt:
+
+<img src="https://github.com/user-attachments/assets/d4d272f5-0e19-4e3c-8113-68ce0f76d485" width="600"/>
+
+Launch Python using:
+
+```powershell
+C:\python25\python
+```
+
+Notice the prompt changes to `>>>`, the Python prompt. Test Python code can be input such as:
+
+```python
+print 'Hello World!'
+```
+
+<img src="https://github.com/user-attachments/assets/9bde7559-b34e-47d6-8917-1daeb0c230a2" width="600"/>
+
+The pyserial library can be imported using:
+
+```python
+pyserial
+```
+
+<img src="https://github.com/user-attachments/assets/e43a2348-7121-4c33-9141-384827b163aa" width="600"/>
+
+This works without any errors. To exit type in:
+
+```python
+exit()
+```
+
+<img src="https://github.com/user-attachments/assets/478c5514-3053-4e15-bf6f-6b287863eff5" width="600"/>
+
+## USB Passthrough
+
+Windows 98 had very limited support for a small subset of USB 1.1 devices, which consistent of a limited number of keyboard/mouse input devices and low capacity storage devices. DAQ devices were typically attached via Serial port.
+
+## Serial Port Passthrough
+
+Close the Windows 2000 VM. Attach a USB to Serial Port to the Window 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/0ef84622-10c0-4bff-8cf1-9edf492137ba" width="600"/>
+
+On the Windows 11 Host PC, right click the Start Button and select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/622bcb44-367d-42b6-aaf8-fea04bf18ebd" width="400"/>
+
+Expand ports (COM & LPT). In this example, the USB Serial COM Port is COM3:
+
+<img src="https://github.com/user-attachments/assets/7a133968-f0fc-4b26-9d75-2e4233f0dc1e" width="600"/>
+
+Right click it and select properties:
+
+<img src="https://github.com/user-attachments/assets/530c8c0b-ac42-4ad8-8ef4-7d1dbbe75aa5" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects:
+
+<img src="https://github.com/user-attachments/assets/60686db0-b415-4ea7-a82e-a758329f4fb0" width="600"/>
+
+The port number can be changed by selecting Advanced:
+
+<img src="https://github.com/user-attachments/assets/3ac282d1-9dbc-4a17-b42f-bb3c9aab24f2" width="600"/>
+
+In this case it will be left at port 3:
+
+<img src="https://github.com/user-attachments/assets/04cd83bf-c91f-4ca1-84ae-f93b09257e10" width="600"/>
+
+Open VMware Player and select Edit Virtual Machine Settings:
+
+<img src="https://github.com/user-attachments/assets/e4594fd4-1464-41bb-90a2-4b37caea7c0b" width="600"/>
+
+Under CD/DVD make sure the Windows 98SE Installation ISO is mounted and conencted at power on:
+
+<img src="https://github.com/user-attachments/assets/2055cc9c-6200-4528-a7d7-c676021dced6" width="600"/>
+
+Select Add...:
+
+<img src="https://github.com/user-attachments/assets/efaab223-c358-4c2e-bb9e-834af426eec3" width="600"/>
+
+Select Serial Port and Finish:
+
+<img src="https://github.com/user-attachments/assets/df4ab69c-66be-4a2f-aa81-b1935fd80a48" width="600"/>
+
+Select Connect at Power On. Autodetect is useful for a single port, but for multiple ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
+
+<img src="https://github.com/user-attachments/assets/c9873078-9dda-4388-a145-ec209840919c" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/47ce415a-ec42-4ab7-a7ab-eb2b37c83fa9" width="600"/>
+
+Launch the Windows 98 SE Guest:
+
+<img src="https://github.com/user-attachments/assets/229e7559-e75a-4391-bb87-c8b453012726" width="600"/>
+
+The driver will install for the Serial Port will automatically install from the Windows 98 SE CD and prompt for a reboot.
+
+Right click My Computer and select Properties:
+
+<img src="https://github.com/user-attachments/assets/ecc86b14-82e8-4d2a-9605-296a376c4f1f" width="600"/>
+
+
+<img width="960" height="899" alt="image" src="https://github.com/user-attachments/assets/3a77fa94-bc65-4c6b-9a70-b04818f154a0" />
+
+Expand ports, note the Windows 11 COM3 is passed through to the Windows 2000 98 SE as COM1. COM1 is the expected port number for a number of legacy applications. Select Properties:
+
+<img src="https://github.com/user-attachments/assets/6e02a387-82ff-4ea0-a263-1c047ad0db21" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
+
+<img src="https://github.com/user-attachments/assets/a6bfdfb9-f723-4833-9ac2-626134b6911c" width="600"/>
+
+Select Advanced:
+
+<img src="https://github.com/user-attachments/assets/af09de9d-872a-475e-b6f5-cf6e1bebcbe0" width="600"/>
+
+There is no way to change the port number in Advanced in this legacy version of Windows:
+
+<img src="https://github.com/user-attachments/assets/388e72dc-0daf-417d-831a-542b9d668e68" width="600"/>
+
+The Serial Port COM3 is now ready for use in the Windows 98 SE Guest VM. I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
+
+<img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
+
+|Pin Number|Name|
+|---|---|
+|1|Data Carrier Detect (CDC)|
+|2|Received Data (RXD)|
+|3|Transmit Data (TXD)|
+|4|Data Terminal Ready (DTR)|
+|5|Ground (GND)|
+|6|Data Set Ready (DSR)|
+|7|Request to Send (RTS)|
+|8|Clear To Send (CTS)|
+|9|Ring Indicator (RI)|
+
+A Python script will be used which essentially transmits the data using pin 3 and then reads it back using pin 2. A Serial port can only read low `0` and high `1` signals, so any data sent via the Serial Port has to be in the form of a byte. In the basic American Standard for Information Interchange (ASCII), each ASCII character is an 8 bit binary sequence:
+
+| Char | Decimal | Hex  | Binary    |
+|------|---------|------|-----------|
+| H    | 72      | 0x48 | 01001000  |
+| e    | 101     | 0x65 | 01100101  |
+| l    | 108     | 0x6C | 01101100  |
+| l    | 108     | 0x6C | 01101100  |
+| o    | 111     | 0x6F | 01101111  |
+| (space) | 32   | 0x20 | 00100000  |
+| S    | 83      | 0x53 | 01010011  |
+| e    | 101     | 0x65 | 01100101  |
+| r    | 114     | 0x72 | 01110010  |
+| i    | 105     | 0x69 | 01101001  |
+| a    | 97      | 0x61 | 01100001  |
+| l    | 108     | 0x6C | 01101100  |
+| \n   | 10      | 0x0A | 00001010  |
+
+Open notepad:
+
+<img src="https://github.com/user-attachments/assets/9eea59de-b12a-43dd-af57-f0d6888821c0" width="600"/>
+
+Paste in the following code:
+
+```python
+import time
+import serial
+
+# Replace COM3 with your serial port
+port = 'COM3'
+baudrate = 9600
+
+# Open the serial port
+ser = serial.Serial(port, baudrate, timeout=1)
+
+# Give the port some time to initialize
+time.sleep(2)
+
+# Test data
+test_data = 'Hello Serial\r\n'
+
+# Write data
+ser.write(test_data)
+print('Sent: %s' % test_data)
+
+# Read back data
+received = ser.read(len(test_data))
+print('Received: %s' % received)
+
+# Check if the loopback worked
+if received == test_data:
+    print('Serial loopback test passed!')
+else:
+    print('Serial loopback test failed!')
+
+ser.close()
+```
+
+<img src="https://github.com/user-attachments/assets/f33acf19-c285-45df-b15e-257079e4cb5a" width="600"/>
+
+Select file → save as:
+
+<img src="https://github.com/user-attachments/assets/f3806b60-0495-4784-874f-dc410702b960" width="600"/>
+
+Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
+
+<img src="https://github.com/user-attachments/assets/59be9405-9cb5-416c-a0be-e3219a93a1ca" width="600"/>
+
+The script file is in Documents. Right click the script file and select Properties:
+
+<img src="https://github.com/user-attachments/assets/324ae497-9dae-42f7-9862-c1544cdade63" width="600"/>
+
+Copy the file location:
+
+<img src="https://github.com/user-attachments/assets/2952ccc1-a0c8-45eb-a84e-8e96d08e4a47" width="600"/>
+
+The file path contains spaces:
+
+```powershell
+C:\Documents and Settings\Philip\My Documents\script.py
+```
+
+To prevent CMD from taking `C:\Documents`, `and`, `Settings\Philip\My` and `Documents\script.py` as seperate command line arguments, double quotations much be used:
+
+```powershell
+"C:\Documents and Settings\Philip\My Documents\script.py"
+```
+
+Because this is a long path name, the DOS path is often more convenient:
+
+```powershell
+C:\DOCUME~1\Philip\MYDOCU~1\script.py
+```
+
+The Python script can be launched using:
+
+```powershell
+python C:\DOCUME~1\Philip\MYDOCU~1\script.py
+```
+
+With no pins connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/b439d546-ebef-403c-b24b-f5ecbd9d1ef8" width="600"/>
+
+With pins 2 and 3 connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/80a262c7-1f01-43dc-b989-479977dbdbf5" width="600"/>
+
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows 2000 Guest VM from the Windows 11 Host PC.
+
+## Parallel Port Passthrough
+
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 2000, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+
+## PCI/PCIe Card Passthrough
+
+VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
+
+Return to [VMware Installation Guide](../readme.md).
+
+Python is just used as an example of a legacy program to run in a Windows 2000 VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Devices can be attached from the Windows 11 Host to the WIndows 98SE via USB or Serial Port. For a Serial Port a USB to Serial Port adaptor is required. In the Windows 11 Host, right click the start menu and select Device Manager:
 
@@ -940,6 +1321,29 @@ Note this is Com3 in the Windows 11 Host and Com1 in the Windows 98SE Guest:
 The Serial Port Speed in bits per second is displayed and needs to be set to the expected value for the Device connected via Serial Port:
 
 <img src='./images/img_185.png' alt='img_185' width='600'/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Physical Media
 
