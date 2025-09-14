@@ -499,85 +499,134 @@ With the script called `pip`:
 
 <img src="https://github.com/user-attachments/assets/1fe9f2da-de58-4d1c-8e92-fcc7ee543648" width="600"/>
 
-Because Python was added to the path during installation
+The `Lib` folder contaisn python's standard libraries:
 
+<img src="https://github.com/user-attachments/assets/3ae37bce-a18d-4c6b-ab8f-e4371b381a12" width="600"/>
 
+In this folder is a subfolder called `site-packages`:
 
+<img src="https://github.com/user-attachments/assets/4a89e3ad-2185-47dd-9a92-5e73b5bb4da3" width="600"/>
 
-Open the command prompt:
+Where third-party libraries are installed such as the package manager Python Install Package `pip`:
 
-<img src="https://github.com/user-attachments/assets/efc6bbf0-dc7d-49f9-b0d9-71510f4d0385" width="600"/>
+<img src="https://github.com/user-attachments/assets/9e9eb7c1-b505-4629-be60-1ac39bbaadf3" width="600"/>
 
-Change directory to the python directory and launch Python using:
+Normally there is a folder corresponding to the package and a second folder which gives the details and version of the package.
+
+Python was not added to the path during installation, which means the full directories to the `python.exe` and `pip` script need to be specified from the command prompt. To add to the path, right click Computer and select Properties:
+
+<img src="https://github.com/user-attachments/assets/da9c995c-379b-4dee-9038-bd797680064a" width="600"/>
+
+Select the Advanced Tab and select Environmental Variables:
+
+<img src="https://github.com/user-attachments/assets/255ee501-3cd5-4bd3-9abf-591111928327" width="600"/>
+
+Under System Variables select Path and Edit:
+
+<img src="https://github.com/user-attachments/assets/68498948-f5fa-4110-b9ff-69ecc3763f24" width="600"/>
+
+Append the two values:
 
 ```
-cd C:\python34
+;C:\Python34\;C:\Python34\Scripts\
+```
+
+<img src="https://github.com/user-attachments/assets/f75e27e8-696b-4f89-8f25-b206d4b691e8" width="600"/>
+
+For clarity my full path looks like the following. The semi-colon is a delimiter:
+
+```
+%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Python34\;C:\Python34\Scripts\S
+```
+
+Newer versions of Windows often display this in a list for convenience. Using a new line instead, this becomes:
+
+```
+%SystemRoot%\system32
+%SystemRoot%
+%SystemRoot%\System32\Wbem
+C:\WINDOWS\system32\WindowsPowerShell\v1.0
+C:\Python34\
+C:\Python34\Scripts\
+```
+
+The command prompt looks for a command in all of the directories listed in the path as well as the current working directory. 
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/ae706596-a8e5-4312-a5bf-aa7c6bf9f346" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/b7a13702-ad84-4ba3-add1-e1b84a5c9511" width="600"/>
+
+Select Start All Programs → Windows Accessories → Command Prompt:
+
+<img src="https://github.com/user-attachments/assets/9368f5df-19c5-4b70-9e6d-e2cafe08ea02" width="600"/>
+
+If the following is input:
+
+```powershell
 python
+```
+
+Notice the Python program is found (which is in the folder `C:\Python34\` which is on the Windows path) and the prompt changes to the Python Prompt. The Python `print` function can be called, supplying a `str` as an input argument:
+
+```python
 print('Hello World!')
 ```
 
-<img src="https://github.com/user-attachments/assets/f7b98d98-0152-44f1-96b0-790fcbc74e50" width="600"/>
+<img src="https://github.com/user-attachments/assets/45a6165a-388c-47f3-988a-ec9b393c26ea" width="600"/>
 
-Type in:
+To exit the Python program use the function call:
 
-```
+```python
 exit()
-cd .\Scripts
 ```
 
-<img src="https://github.com/user-attachments/assets/c450a609-4509-4a5f-86c5-12bec92f4a4c" width="600"/>
+<img src="https://github.com/user-attachments/assets/1d77514e-ec2e-4526-9222-5f8dd3c09163" width="600"/>
 
-This gives access to pip:
+This exits the Python program and returns to the command prompt, the Python Install Package Command `pip` can be used:
 
-```
+```powershell
 pip
 ```
 
-<img src="https://github.com/user-attachments/assets/539e0c30-4f00-49ab-b55d-96ce3512bd24" width="600"/>
+<img src="https://github.com/user-attachments/assets/1b9e8062-9e09-4e42-a744-569b530b7b8c" width="600"/>
 
-Use of pip requires internet access, which is risky on a legacy operating system like Windows XP. Select Player → Removable Devices → Network Adapter → Connect:
+`pip` is in the folder `C:\Python34\Scripts` which is on the Windows path. Use of pip requires internet access, which is risky on a legacy operating system like Windows XP. Select Player → Removable Devices → Network Adapter → Connect:
 
-<img src="https://github.com/user-attachments/assets/d5ff9356-59ec-4526-81ff-9dc32692886a" width="600"/>
+<img src="https://github.com/user-attachments/assets/31991f53-9acc-4671-a83f-0bccb58b0c01" width="600"/>
 
 The network icon will display to the bottom right:
 
-<img src="https://github.com/user-attachments/assets/f98272db-b343-42ee-b22f-ffc564aa8d82" width="600"/>
+<img src="https://github.com/user-attachments/assets/eb43e3b5-c9a6-4379-a45b-f07989e1e7b2" width="600"/>
 
 Now pip can be used to install pyserial:
 
-```
-pip install pyserial
-```
-
-<img src="https://github.com/user-attachments/assets/d51d429a-8cc2-4536-a78e-352d45315720" width="600"/>
-
-Now that the requested library pyserial is installed, the network adaptor can be disconnected. Select Player → Removable Devices → Network Adapter → Disconnect:
-
-<img src="https://github.com/user-attachments/assets/d7eebede-c83e-4ff2-81e2-d8a45edfeb2e" width="600"/>
-
-Now pyserial can be imported using:
-
-```
-cd ..
-python
-import serial
-```
-
-<img src="https://github.com/user-attachments/assets/62b42571-f226-401a-8b22-e3b66d1f3ad3" width="600"/>
-
-The version of pyserial installed needs to be removed an older version compatible with Windows XP needs to be installed (once again requires internet connectivity):
-
-```
-cd .\Scripts
-pip uninstall pyserial
+```powershell
 pip install pyserial==3.0.1
+```
 
-cd ..
+<img src="https://github.com/user-attachments/assets/5b465fec-addb-4c3b-90d7-f3e363ed8c3a" width="600"/>
+
+The `==` means is equal to an a specific version needs to be specified that works with Windows XP. Newerr versions rely on newer Windows protocols which aren't present in Windows XP.
+
+Notice in the `site-packages` folder there is a `pyserial` `dist-info` (package) folder giving details about the version and a `serial` (library) folder. Normally the name of package and library are consistent however sometimes these differ for historical reasons (for example a package being forked and the forked package being maintained and the original package being depreciated):
+
+<img src="https://github.com/user-attachments/assets/317f40ea-e6ca-4aba-8488-ac5b2cbe7c0b" width="600"/>
+
+A new Python program can be ran using:
+
+```powershell
 python
+```
+
+```python
 import serial
 ```
 
-<img src="https://github.com/user-attachments/assets/ad8e45e5-4a91-44c9-84f8-2cbbe3d47931" width="600"/>
+<img src="https://github.com/user-attachments/assets/c971c0c7-17ce-482c-811b-ebf94a4f41de" width="600"/>
 
 ## USB Passthrough
 
