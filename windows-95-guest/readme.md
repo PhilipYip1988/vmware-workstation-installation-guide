@@ -1202,29 +1202,31 @@ I was not able to find any more details about the second device.
 
 ## Shared Folders
 
-Although the options for shared folders shows up for the Windows 95 Guest. The map as a etwork drive in Windows guests does not do anything. Therefore you cannot view the shared folder:
+Although the options for shared folders shows up for the Windows 95 Guest. The map as a network drive in Windows guests does not do anything. Therefore you cannot view the shared folder:
 
 <img src="https://github.com/user-attachments/assets/8d58ccb5-9612-4ec4-93e9-13352635eda0" width="600"/>
 
+This is likely because VMware tools did not include a driver for the PCI System Peripheral which controls the behaviour of Shared Folders for this Operating System.
+
 ## Installing Python
 
-Python will be used as an example of installing a program on Windows 95. The isntaller is available here:
+Python will be used as an example of installing a program on Windows 95. The installer is available here:
 
-* [Python 2.3.3](https://www.python.org/downloads/release/python-233/)
-* [pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/Build%20214/pywin32-214.win32-py2.3.exe/download)
-* [Pyserial](https://sourceforge.net/projects/pyserial/files/pyserial/2.1/)
+* [Python 2.5.4](https://www.python.org/downloads/release/python-254/)
+* [pyserial 2.1](https://sourceforge.net/projects/pyserial/files/pyserial/2.1/)
+* [pywin32 2.18](https://sourceforge.net/projects/pywin32/files/pywin32/Build%20218/)
 
-Drag and drop the applications to the Windows 95 Desktop:
+The pywin32, version 2.18 installer for Python 2.5 needs to be downloaded.
 
-<img src="https://github.com/user-attachments/assets/7bb227d0-bddf-4353-b6eb-5d4442ef5c1e" width="600"/>
+<img src="https://github.com/user-attachments/assets/47f707f2-6fd1-462b-a6a3-157acb9e8cff" width="600"/>
 
-Launch the `Python-2.3.3.exe`:
+Launch the `Python-2.5.4.exe`:
 
-<img src="https://github.com/user-attachments/assets/4c008c46-bbaf-473a-91e5-de4b2e7ef54e" width="600"/>
+<img src="https://github.com/user-attachments/assets/ba86324c-d6cd-4f1f-b6d2-3370b46a63f4" width="600"/>
 
 Select next:
 
-<img src="https://github.com/user-attachments/assets/171364ca-97c1-4fb0-8614-870ba535bb76" width="600"/>
+<img src="https://github.com/user-attachments/assets/fd43709c-25b2-4127-a97c-911a49391aab" width="600"/>
 
 Select next:
 
@@ -1232,91 +1234,71 @@ Select next:
 
 Select next:
 
-<img src="https://github.com/user-attachments/assets/6250a0f5-e5a2-4f89-bf2e-dc8263e2103d" width="600"/>
-
-Select next:
-
-<img src="https://github.com/user-attachments/assets/9d0ff044-1440-4b4f-9284-0b3f77759931" width="600"/>
-
-Select next:
-
-<img src="https://github.com/user-attachments/assets/945fa936-1ac7-4abd-a2db-f62fb15bc451" width="600"/>
+<img src="https://github.com/user-attachments/assets/cc2f8fdf-754f-4fc6-a161-e372c2b4bf95" width="600"/>
 
 Select Finish:
 
-<img src="https://github.com/user-attachments/assets/a3d7249c-7c7f-4441-a73a-d318a19eef1f" width="600"/>
+<img src="https://github.com/user-attachments/assets/79a2b06f-bd74-4e36-bf91-5033d684d32f" width="600"/>
 
-GGo to Computer:
+Go to Computer:
 
-<img src="https://github.com/user-attachments/assets/e33a1c2a-d6c8-4708-96b0-3e3971086487" width="600"/>
+<img src="https://github.com/user-attachments/assets/f72b7b27-ec54-4a45-9708-4cfd69ece4d1" width="600"/>
 
 Navigate to `C:`:
 
-<img src="https://github.com/user-attachments/assets/0cb836a6-986e-4964-bec8-f519f69aed5c" width="600"/>
+<img src="https://github.com/user-attachments/assets/3871357b-df55-4058-94d3-b9a1f5520b84" width="600"/>
 
-Python is installed in the `Python23` folder:
+Python is installed in the `Python25` folder:
 
-<img src="https://github.com/user-attachments/assets/78bd2d2b-164c-4a03-afcd-a7d1a9cc51a0" width="600"/>
+<img src="https://github.com/user-attachments/assets/9fddd0da-f8f8-46b1-8b2b-d0848dbcf6a3" width="600"/>
 
 Python is installed in this folder as a single environment:
 
-<img src="https://github.com/user-attachments/assets/450f19d6-12b8-4ae1-8e76-915f3d3d94be" width="600"/>
+<img src="https://github.com/user-attachments/assets/ae17f35b-0df4-4a9c-b5ec-d5156ab01697" width="600"/>
 
 This version of Python did not support Python environments.
 
 Standard libraries are found in the `lib` folder:
 
-<img src="https://github.com/user-attachments/assets/c1197822-c758-48d8-bd0a-398ab6da5838" width="600"/>
+<img src="https://github.com/user-attachments/assets/8df884f8-5e85-4187-b1ef-f3594d0574cb" width="600"/>
 
 Third-party libraries are installed to the `site-packages` folder:
 
-<img src="https://github.com/user-attachments/assets/d54b69da-2dc1-4dc9-8ea1-dd97f13c388f" width="600"/>
+<img src="https://github.com/user-attachments/assets/6a93e106-b08a-48f0-ad2f-377d4aad010b" width="600"/>
 
 Note the absense of `pip`, the Python package manager which wasn't created yet.
 
-<img src="https://github.com/user-attachments/assets/d95c999d-c13d-4f11-88aa-488e7f36c39f" width="600"/>
+<img src="https://github.com/user-attachments/assets/1f72ce4b-bb2a-496b-b087-9cb56c5cd8c6" width="600"/>
 
 Packages were typically available in `.exe` format. Many packages relied on `pywin32` which can be installed:
 
-<img src="https://github.com/user-attachments/assets/9757fb5d-cbdf-4bf1-8467-b4346c4576b7" width="600"/>
+<img src="https://github.com/user-attachments/assets/07c681e7-f34d-4b7b-8e11-fbbd6a68fa2a" width="600"/>
 
 Select next:
 
-<img src="https://github.com/user-attachments/assets/22721b82-1d2f-4f40-9a28-d5e69a8f62a2" width="600"/>
+<img src="https://github.com/user-attachments/assets/e829323e-0e5c-41ec-87a5-28f05ec81c26" width="600"/>
 
 The Python directory and corresponding `site-packages` directory is found. Select next:
 
-<img src="https://github.com/user-attachments/assets/8e679575-7a73-4dab-b78a-3d20b228fe93" width="600"/>
+<img src="https://github.com/user-attachments/assets/a2b6898d-44fa-4fd7-bd2b-451e9e5921e0" width="600"/>
 
 Select next:
 
-<img src="https://github.com/user-attachments/assets/9f2d63dc-5749-4ca0-abf2-b78e735669b1" width="600"/>
+<img src="https://github.com/user-attachments/assets/58af89b1-504c-449d-8078-1e960e7b474c" width="600"/>
 
 Select finish:
 
-<img src="https://github.com/user-attachments/assets/54880bc8-1b27-45ad-b940-a1cd1a36b0be" width="600"/>
+<img src="https://github.com/user-attachments/assets/c6a5444d-ea7d-446f-9488-3fad2dd0fbcd" width="600"/>
 
-`pywin32` is installed in `site-packages`:
+<img src="https://github.com/user-attachments/assets/fb6fdf9c-1fa0-49a4-a10c-1188f4c283ff" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/cb73fc2a-f967-4418-91a5-cddbe534d52d" width="600"/>
+Unfortunately installation fails in Windows 95 but works in Windows 98 SE.
 
-Installation of pyserial is similar:
+Repeat the same process for pyserial. The `serial` folder is now in `site-packages`:
 
-<img src="https://github.com/user-attachments/assets/bc6c9af1-9ed0-4b40-a50f-bb240df95d69" width="600"/>
+<img src="https://github.com/user-attachments/assets/862379b8-5338-4d6d-87cd-e5a06dae1057" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/7d073f99-ca46-4ace-81bc-0f2d10dc0ab8" width="600"/>
-
-<img wsrc="https://github.com/user-attachments/assets/2425c907-a0c4-4fbf-b941-1bd5330833c5" width="600"/>
-
-<img src="https://github.com/user-attachments/assets/ec6610cb-629b-4bb2-a121-460ad31cf32d" width="600"/>
-
-<img src="https://github.com/user-attachments/assets/94cdf958-1d0c-4d62-bf10-39627a2bb901" width="600"/>
-
-The `pyserial` folder is found in `site-packages`:
-
-<img src="https://github.com/user-attachments/assets/b64e44cc-0579-4721-bdff-e6a7970b05ec" width="600"/>
-
-The MSDOS prompt can be sued to launch Python. Select Start → Programs → MS-DOS Prompt:
+The MSDOS prompt can be used to launch Python. Select Start → Programs → MS-DOS Prompt:
 
 <img src="https://github.com/user-attachments/assets/e40aca57-45f5-4775-8d74-77d72f6e731c" width="600"/>
 
@@ -1325,7 +1307,7 @@ The MSDOS prompt can be sued to launch Python. Select Start → Programs → MS-
 Change directory to the Python23 directory:
 
 ```powershell
-CD C:\Python23
+CD C:\Python25
 ```
 
 <img src="https://github.com/user-attachments/assets/3fc701a3-12f2-4350-8ad2-fc37a82a6a3f" width="600"/>
@@ -1380,7 +1362,6 @@ Select File → Save As...:
 
 <img src="https://github.com/user-attachments/assets/d933d714-82f1-4752-a106-f4a499e5a5df" width="600"/>
 
-
 When saving add the `.py` extension and select All Files:
 
 <img src="https://github.com/user-attachments/assets/2c2c61fe-57e7-4642-8799-f60cb17dcb34" width="600"/>
@@ -1388,7 +1369,7 @@ When saving add the `.py` extension and select All Files:
 In this Windows build, the Desktop was a subndirectory of the Windows folder! To run the Python script the following command can be used:
 
 ```powershell
-C:\Python23\python C:\Windows\Desktop\script.py
+C:\Python25\python C:\Windows\Desktop\script.py
 ```
 
 <img src="https://github.com/user-attachments/assets/877d6491-4a8e-4be5-81bf-6f78a3cae183" width="600"/>
