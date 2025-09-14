@@ -471,6 +471,39 @@ Select Finish:
 
 <img src="https://github.com/user-attachments/assets/c925f84d-4ec1-4124-bf06-16dc4693cdcc" width="600"/>
 
+Open My Computer:
+
+<img src="https://github.com/user-attachments/assets/bbb5da46-37d5-47ee-b74a-81b9df19d122" width="600"/>
+
+Navigate to the `C:` Drive:
+
+<img src="https://github.com/user-attachments/assets/ee36920e-54a7-47b5-8fd9-b387a27fff52" width="600"/>
+
+To the left, select Show Contents of this Drive:
+
+<img src="https://github.com/user-attachments/assets/77f5cbce-a4f5-4379-aafd-41df2287d77f" width="600"/>
+
+Python 3.4 is installed in the `Python34` folder:
+
+<img src="https://github.com/user-attachments/assets/fc1ff42d-646d-4bef-95a8-b6d86c7e6e57" width="600"/>
+
+In this folder there is the `python.exe`:
+
+<img src="https://github.com/user-attachments/assets/ed77521e-5408-4187-8099-a78999e83eda" width="600"/>
+
+And `Scripts` subfolder:
+
+<img src="https://github.com/user-attachments/assets/63c85936-af8e-4103-a605-339cf8917417" width="600"/>
+
+With the script called `pip`:
+
+<img src="https://github.com/user-attachments/assets/1fe9f2da-de58-4d1c-8e92-fcc7ee543648" width="600"/>
+
+Because Python was added to the path during installation
+
+
+
+
 Open the command prompt:
 
 <img src="https://github.com/user-attachments/assets/efc6bbf0-dc7d-49f9-b0d9-71510f4d0385" width="600"/>
@@ -546,7 +579,7 @@ import serial
 
 <img src="https://github.com/user-attachments/assets/ad8e45e5-4a91-44c9-84f8-2cbbe3d47931" width="600"/>
 
-## USB Devices
+## USB Passthrough
 
 A legacy USB Device can be passed through from the Windows 11 Host or Ubuntu 24.10 to the Windows XP Guest. In this example a Logitech Pro 9000 webcam will be used. The Logitech Pro 9000 is a USB 2.0 camera which had HD 720p (1280×720 pixels) and 30 fps which is effectively at the limit of USB 2.0. The Windows XP driver and software can be downloaded on the Windows 11 Host:
 
@@ -600,7 +633,7 @@ The webcam software can be used in Windows XP to control the Logitech Pro 9000 w
 
 <img src="https://github.com/user-attachments/assets/e505d12c-1072-4912-b75f-710b8e0a5848" width="600"/>
 
-## Serial Ports
+## Serial Port Passthrough
 
 Close the Windows XP VM. Attach a USB to Serial Port to the Window 11 Host PC:
 
