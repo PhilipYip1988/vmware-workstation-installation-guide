@@ -895,7 +895,7 @@ This is likely because VMware tools did not include a driver for the PCI System 
 
 ## Installing Python
 
-Python will be used as an example of installing a program on Windows 95. The installer is available here:
+Python will be used as an example of installing a program on Windows 98 SE. The installer is available here:
 
 * [Python 2.5.4](https://www.python.org/downloads/release/python-254/)
 * [pyserial 2.1](https://sourceforge.net/projects/pyserial/files/pyserial/2.1/)
