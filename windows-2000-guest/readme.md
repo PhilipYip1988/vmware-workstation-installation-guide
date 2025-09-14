@@ -1,5 +1,7 @@
 # Windows 2000
 
+Step-by-step guides for VMware Workstation 17.6.4, focused on running Windows 2000 in a virtual environments. Learn to enable shared folders, USB passthrough and serial port passthrough to control legacy scientific instruments and laboratory hardware, making older software and devices compatible with modern systems. Windows 2000 was an NT-based business operating system and did not include all the drivers available in the consumer-focused Windows 98 SE. Windows XP, on the other hand, bridged the business and home markets and consequently consolidated a much wider driver support base. Windows 2000 reached its official end of life in July 2010, meaning Microsoft no longer provides security updates, bug fixes, or technical support for this operating system. 
+
 ## Notes
 
 VMware Workstation Player 17.6.4 has Windows 2000 as an option for a Virtual Machine. However Windows 2000 is regarded as a legacy Operating System and isn't tested by Broadcom. Moreover the VMware Tools 12.5.3 which comes with VMware workstation player doesn't support Windows 2000. VMware Tools 6.5.5 is the last version of VMware Tools to support Windows 2000 and should be downloaded seperately as an ISO. 
@@ -820,16 +822,6 @@ The Serial Port COM3 is now ready for use in the Windows 2000 VM:
 
 <img src="https://github.com/user-attachments/assets/a2fa4051-045f-4861-9aa4-d8c613e4db07" width="600"/>
 
-Update the COM Port Number to be consistent with the Windows 11 Host. In this case COM3. Select OK:
-
-<img src="https://github.com/user-attachments/assets/21ae0b09-164f-42dd-8481-8107e6c0d3f1" width="600"/>
-
-The Serial Port COM3 is now ready for use in the Windows XP Guest:
-
-<img src="https://github.com/user-attachments/assets/876e14b7-348c-4de3-a611-bb43bd71650e" width="600"/>
-
-If the port number has not updated, select Action → Scan for hardware changes. After refreshing COM3 now displays correctly in the device manager but is not available for use in other programs until the Windows XP Guest is restarted.
-
 I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
 
 <img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
@@ -866,7 +858,7 @@ A Python script will be used which essentially transmits the data using pin 3 an
 
 Open notepad:
 
-<img src="https://github.com/user-attachments/assets/bd381af0-08e4-46a2-9cf4-aa720a1c935c" width="600"/>
+<img src="https://github.com/user-attachments/assets/d2e87382-eeb1-489c-a455-14fa06bc202b" width="600"/>
 
 Paste in the following code:
 
@@ -903,23 +895,23 @@ else:
 ser.close()
 ```
 
-<img src="https://github.com/user-attachments/assets/b8bd70fd-7398-427f-903b-7e21df8302fe" width="600"/>
+<img src="https://github.com/user-attachments/assets/f33acf19-c285-45df-b15e-257079e4cb5a" width="600"/>
 
 Select file → save as:
 
-<img src="https://github.com/user-attachments/assets/ffb68f9c-a600-468e-8056-0a4a4cf9f1b7" width="600"/>
+<img src="https://github.com/user-attachments/assets/f3806b60-0495-4784-874f-dc410702b960" width="600"/>
 
 Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
 
-<img src="https://github.com/user-attachments/assets/b990279b-0370-411b-861b-54c6d28c813a" width="600"/>
+<img src="https://github.com/user-attachments/assets/59be9405-9cb5-416c-a0be-e3219a93a1ca" width="600"/>
 
-The script file is in Documents. Right click the script file and selectProperties:
+The script file is in Documents. Right click the script file and select Properties:
 
-<img src="https://github.com/user-attachments/assets/385c5d52-02fd-449f-bb2c-0cb78cbf2868" width="600"/>
+<img src="https://github.com/user-attachments/assets/324ae497-9dae-42f7-9862-c1544cdade63" width="600"/>
 
 Copy the file location:
 
-<img src="https://github.com/user-attachments/assets/2e624086-3705-4c84-9167-2a01df927bce" width="600"/>
+<img src="https://github.com/user-attachments/assets/2952ccc1-a0c8-45eb-a84e-8e96d08e4a47" width="600"/>
 
 The file path contains spaces:
 
@@ -947,17 +939,21 @@ python C:\DOCUME~1\Philip\MYDOCU~1\script.py
 
 With no pins connected, the following shows:
 
-<img src="https://github.com/user-attachments/assets/6e595ec7-3bd9-40cb-aa13-d88515524eec" width="600"/>
+<img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/b439d546-ebef-403c-b24b-f5ecbd9d1ef8" width="600"/>
 
 With pins 2 and 3 connected, the following shows:
 
-<img src="https://github.com/user-attachments/assets/04bcbbb3-16d3-42ab-b564-b5037a992c03" width="600"/>
+<img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
 
-The code works as expected and interfaces with the Serial Port which is passed through to the Windows XP Guest VM from the Windows 11 Host PC.
+<img src="https://github.com/user-attachments/assets/80a262c7-1f01-43dc-b989-479977dbdbf5" width="600"/>
+
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows 2000 Guest VM from the Windows 11 Host PC.
 
 ## Parallel Port Passthrough
 
-VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows XP, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 2000, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
 
 ## PCI/PCIe Card Passthrough
 
@@ -965,5 +961,5 @@ VMware does not support direct passthrough of PCI or PCIe cards to a guest virtu
 
 Return to [VMware Installation Guide](../readme.md).
 
-Python is just used as an example of a legacy program to run in a Windows 7 VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
+Python is just used as an example of a legacy program to run in a Windows 2000 VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
 
