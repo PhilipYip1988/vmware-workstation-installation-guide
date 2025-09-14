@@ -560,7 +560,7 @@ Select OK:
 
 <img src="https://github.com/user-attachments/assets/b7a13702-ad84-4ba3-add1-e1b84a5c9511" width="600"/>
 
-Select Start All Programs → Windows Accessories → Command Prompt:
+Select Start All Programs → Accessories → Command Prompt:
 
 <img src="https://github.com/user-attachments/assets/9368f5df-19c5-4b70-9e6d-e2cafe08ea02" width="600"/>
 
@@ -680,7 +680,7 @@ Select quick capture:
 
 The webcam software can be used in Windows XP to control the Logitech Pro 9000 which has been passed through from the Windows 11 Host PC:
 
-<img src="https://github.com/user-attachments/assets/e505d12c-1072-4912-b75f-710b8e0a5848" width="600"/>
+<img src="https://github.com/user-attachments/assets/4c793c78-43c2-4ee4-a36b-c18c13b841ba" width="600"/>
 
 ## Serial Port Passthrough
 
@@ -760,11 +760,144 @@ Update the COM Port Number to be consistent with the Windows 11 Host. In this ca
 
 <img src="https://github.com/user-attachments/assets/21ae0b09-164f-42dd-8481-8107e6c0d3f1" width="600"/>
 
-The Serial Port COM3 is now ready for use in the Windows XP VM:
+The Serial Port COM3 is now ready for use in the Windows XP Guest:
 
 <img src="https://github.com/user-attachments/assets/876e14b7-348c-4de3-a611-bb43bd71650e" width="600"/>
 
-If the port number has not updated, select Action → Scan for hardware changes.
+If the port number has not updated, select Action → Scan for hardware changes. After refreshing COM3 now displays correctly in the device manager but is not available for use in other programs until the Windows XP Guest is restarted.
+
+I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
+
+<img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
+
+|Pin Number|Name|
+|---|---|
+|1|Data Carrier Detect (CDC)|
+|2|Received Data (RXD)|
+|3|Transmit Data (TXD)|
+|4|Data Terminal Ready (DTR)|
+|5|Ground (GND)|
+|6|Data Set Ready (DSR)|
+|7|Request to Send (RTS)|
+|8|Clear To Send (CTS)|
+|9|Ring Indicator (RI)|
+
+A Python script will be used which essentially transmits the data using pin 3 and then reads it back using pin 2. A Serial port can only read low `0` and high `1` signals, so any data sent via the Serial Port has to be in the form of a byte. In the basic American Standard for Information Interchange (ASCII), each ASCII character is an 8 bit binary sequence:
+
+| Char | Decimal | Hex  | Binary    |
+|------|---------|------|-----------|
+| H    | 72      | 0x48 | 01001000  |
+| e    | 101     | 0x65 | 01100101  |
+| l    | 108     | 0x6C | 01101100  |
+| l    | 108     | 0x6C | 01101100  |
+| o    | 111     | 0x6F | 01101111  |
+| (space) | 32   | 0x20 | 00100000  |
+| S    | 83      | 0x53 | 01010011  |
+| e    | 101     | 0x65 | 01100101  |
+| r    | 114     | 0x72 | 01110010  |
+| i    | 105     | 0x69 | 01101001  |
+| a    | 97      | 0x61 | 01100001  |
+| l    | 108     | 0x6C | 01101100  |
+| \n   | 10      | 0x0A | 00001010  |
+
+Open notepad:
+
+<img src="https://github.com/user-attachments/assets/bd381af0-08e4-46a2-9cf4-aa720a1c935c" width="600"/>
+
+Paste in the following code:
+
+```python
+import time
+import serial
+
+# Replace 'COM3' with your serial port
+port = 'COM3'
+baudrate = 9600
+
+# Open the serial port
+ser = serial.Serial(port, baudrate, timeout=1)
+
+time.sleep(2)  # give the port some time to initialize
+
+# Test data
+test_data = b'Hello Serial\n'
+
+# Write data
+ser.write(test_data)
+print('Sent: {}'.format(test_data))
+
+# Read back data
+received = ser.read(len(test_data))
+print('Received: {}'.format(received))
+
+# Check if the loopback worked
+if received == test_data:
+    print('Serial loopback test passed!')
+else:
+    print('Serial loopback test failed!')
+
+ser.close()
+```
+
+<img src="https://github.com/user-attachments/assets/b8bd70fd-7398-427f-903b-7e21df8302fe" width="600"/>
+
+Select file → save as:
+
+<img src="https://github.com/user-attachments/assets/ffb68f9c-a600-468e-8056-0a4a4cf9f1b7" width="600"/>
+
+Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
+
+<img src="https://github.com/user-attachments/assets/b990279b-0370-411b-861b-54c6d28c813a" width="600"/>
+
+The script file is in Documents. Right click the script file and selectProperties:
+
+<img src="https://github.com/user-attachments/assets/385c5d52-02fd-449f-bb2c-0cb78cbf2868" width="600"/>
+
+Copy the file location:
+
+<img src="https://github.com/user-attachments/assets/2e624086-3705-4c84-9167-2a01df927bce" width="600"/>
+
+The file path contains spaces:
+
+```powershell
+C:\Documents and Settings\Philip\My Documents\script.py
+```
+
+To prevent CMD from taking `C:\Documents`, `and`, `Settings\Philip\My` and `Documents\script.py` as seperate command line arguments, double quotations much be used:
+
+```powershell
+"C:\Documents and Settings\Philip\My Documents\script.py"
+```
+
+Because this is a long path name, the DOS path is often more convenient:
+
+```powershell
+C:\DOCUME~1\Philip\MYDOCU~1\script.py
+```
+
+The Python script can be launched using:
+
+```powershell
+python C:\DOCUME~1\Philip\MYDOCU~1\script.py
+```
+
+With no pins connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/6e595ec7-3bd9-40cb-aa13-d88515524eec" width="600"/>
+
+With pins 2 and 3 connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/04bcbbb3-16d3-42ab-b564-b5037a992c03" width="600"/>
+
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows XP Guest VM from the Windows 11 Host PC.
+
+## Parallel Port Passthrough
+
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows XP, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+
+## PCI/PCIe Card Passthrough
+
+VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
 
 The Windows XP Guest is now setup:
 
