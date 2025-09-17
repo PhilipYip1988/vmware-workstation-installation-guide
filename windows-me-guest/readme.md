@@ -190,85 +190,91 @@ Select Yes, OK and Ok:
 
 <img src="https://github.com/user-attachments/assets/fa54ba60-8f56-4795-af84-709916e50da9" width="300"/>
 
-## Configuring the Windows 98 Guest
+## Configuring the Windows ME Guest
 
 Select File → New Virtual Machine:
 
-<img src='./images/img_046.png' alt='img_046' width='600'/>
+<img src="https://github.com/user-attachments/assets/abe6751d-74c2-4787-8da4-45a845aa8070" width="600"/>
 
-It is recommended to instead use "I Will Install this Operating System Later":
+Select Browse:
 
-<img src='./images/img_047.png' alt='img_047' width='600'/>
+<img src="https://github.com/user-attachments/assets/cf0e3ff0-ac1f-4407-833c-3e9a8e903c78" width="600"/>
 
-Select Microsoft Windows and Windows 98 and select Next:
+Select the `Windows ME.iso` and select Open:
 
-<img src='./images/img_048.png' alt='img_048' width='600'/>
+<img src="https://github.com/user-attachments/assets/60b08e22-70bb-4b8b-a506-8d72a84d7fc7" width="600"/>
+
+Select Next:
+
+<img src="https://github.com/user-attachments/assets/ad2c5bd4-3b9a-4c7a-a184-4b7f0507cf3c" width="600"/>
 
 The VM Name and Location will be shown. Note when used on a Windows 11 Host which is signed in with a Microsoft Account and integrated with OneDrive, the default location will be on OneDrive. The VM can be quite large and the location can be changed to local Documents by removing the OneDrive folder:
 
-<img src='./images/img_049.png' alt='img_049' width='600'/>
+<img src="https://github.com/user-attachments/assets/6727a1f4-71d2-4f10-b2d4-14a7cf426bf9" width="600"/>
 
 Note the name and location as these will be used later.
 
-The default maximum size of the Windows 98 Guest is 8 GB which is a bit too restrictive. I recommend increasing this to 32 GB. Note the files on the Windows 11 Host won't be 32 GB but can be up to 32 GB if the Windows 98 Guests Virtual Drive is fully occupied with files. Windows 98 may struggle with a Virtual Drive > 32 GB:
+The default maximum size of the Windows ME Guest is 8 GB which is a bit too restrictive. I recommend increasing this to 32 GB. Note the files on the Windows 11 Host won't be 32 GB but can be up to 32 GB if the Windows ME Guests Virtual Drive is fully occupied with files. Windows ME may struggle with a Virtual Drive > 32 GB:
 
-<img src='./images/img_050.png' alt='img_050' width='600'/>
+<img src="https://github.com/user-attachments/assets/fee60872-d124-4353-8d66-706c6be27215" width="600"/>
 
 Select Customise Hardware:
 
-<img src='./images/img_051.png' alt='img_051' width='600'/>
+<img src="https://github.com/user-attachments/assets/87ccf584-4e00-4ef8-9c27-b4e7dcc1064f" width="600"/>
 
 Change the memory to 512 MB (Windows 98 has issues with larger memory sizes):
 
-<img src='./images/img_052.png' alt='img_052' width='600'/>
+<img src="https://github.com/user-attachments/assets/a8ff7db6-75d4-4b41-a0f3-6793b02281dc" width="600"/>
 
-Leave the processor options to their default. Windows 98 does not support any of the unticked technologies and only supports 1 processor. A modern processor may be too fast for it and the patcher9x will need to later be used to address this:
+Leave the processor options to their default. Windows ME does not support any of the unticked technologies and only supports 1 processor. A modern processor may be too fast for it and the patcher9x will need to later be used to address this:
 
-<img src='./images/img_053.png' alt='img_053' width='600'/>
+<img src="https://github.com/user-attachments/assets/793858cb-ae4f-452b-a571-88b2cf92caaa" width="600"/>
 
-In CD/DVD select the Windows 98 SE OEM ISO:
+In CD/DVD the Windows ME OEM ISO will be selected. Ensure Connect at Power On is checked:
 
-<img src='./images/img_054.png' alt='img_054' width='600'/>
+<img src="https://github.com/user-attachments/assets/a3fe2b98-e29f-4fc2-b3a4-951d4a293205" width="600"/>
 
-Under Network Adaptor uncheck Connect at Power On. Windows 98 SE has reached end of life and is unsafe to use on the internet:
+Under Network Adaptor uncheck Connect at Power On. Windows ME has reached end of life and is unsafe to use on the internet:
 
-<img src='./images/img_055.png' alt='img_055' width='600'/>
+<img src="https://github.com/user-attachments/assets/a5370562-1ccc-455d-be85-4700c01bafda" width="600"/>
 
-Leave the USB Controller at the default setting. NUSB will need to be installed later to access USB Devices:
+Leave the USB Controller at the default setting:
 
-<img src='./images/img_056.png' alt='img_056' width='600'/>
+<img src="https://github.com/user-attachments/assets/f1c2bfa5-a820-4ce1-ba6e-7a6964a38fa5" width="600"/>
 
 Leave the Sound Card at the default setting:
 
-<img src='./images/img_057.png' alt='img_057' width='600'/>
+<img src="https://github.com/user-attachments/assets/a81448f2-68cf-4f7b-956d-d3d64af76c12" width="600"/>
 
 Leave display at the default setting and select Close:
 
-<img src='./images/img_058.png' alt='img_058' width='600'/>
+<img src="https://github.com/user-attachments/assets/21c24564-3dc8-45b8-8915-af1c19c20a11" width="600"/>
 
-Select Finish:
+Some changes will be made in the Virtual Machine Configuration Files and select Uncheck Power on this Virtual Machine After Creation. Then select Finish:
 
-<img src='./images/img_059.png' alt='img_059' width='600'/>
+<img src="https://github.com/user-attachments/assets/b271bb95-5ae2-40fe-818d-502e6856581a" width="600"/>
 
-## Windows 98 SE Guest Virtual Machine Configuration File
+## Windows ME Guest Virtual Machine Configuration File
 
-Navigate to the directory on the Windows 11 Host that the Windows 98 SE Guest is installed: 
+Navigate to the directory on the Windows 11 Host that the Windows ME Guest is installed: 
 
-<img src="https://github.com/user-attachments/assets/0ef95099-1ab9-42a0-bc4e-fc09e03dbff1" width='600'/>
+<img src="https://github.com/user-attachments/assets/dcb38b68-bb31-48a5-8d55-93e271deface" width="600"/>
 
-Look for the `Windows 98 SE.vmx` file:
+<img src="https://github.com/user-attachments/assets/bdf62619-1647-4f6e-8fb3-075ee6fd4490" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/84da345f-cb0d-4d7b-ab89-d231fd9d3a7a" width='600'/>
+Look for the `Windows ME.vmx` file:
+
+<img src="https://github.com/user-attachments/assets/5839b518-72fd-4181-b7d5-e03d646292ac" width="600"/>
 
 Open in Notepad or Notepad++ (recommended):
 
-<img src="https://github.com/user-attachments/assets/b9735045-7549-42f3-8333-c4ca3007288f" width='600'/>
+<img src="https://github.com/user-attachments/assets/e9aa158f-2ebe-4a9c-8a18-afa4b0b73c15" width="600"/>
 
 The option `bios.bootDelay` for example will change the time the Windows98 SE Guest Virtual BIOS displays before selecting the default boot option giving more time to select the option to boot from CD/DVD. This line can be removed post-installation, returning to the default value.
 
 Press `Ctrl+f` to begin a search for an option for example `bios.bootDelay`:
 
-<img src="https://github.com/user-attachments/assets/accae0e7-da9f-4077-93a9-9491d77f3f6b" width='600' />
+<img src="https://github.com/user-attachments/assets/69dbb5b5-ca06-48b6-89de-71fb01facad3" width="600"/>
 
 If the line exists it can be modified to a new value. In this case it doesn't exist so can be appended to the end:
 
@@ -276,7 +282,7 @@ If the line exists it can be modified to a new value. In this case it doesn't ex
 bios.bootDelay = "20000"
 ```
 
-<img src="https://github.com/user-attachments/assets/0e82afed-fe7e-4718-a315-5d85c6898436" width='600'/>
+<img src="https://github.com/user-attachments/assets/0ba88aab-7e00-4c61-b715-dd1dade3d397" width="600"/>
 
 ### 12th-14 Generation Processors
 
@@ -308,18 +314,155 @@ monitor.virtual_mmu = "software"
 
 These settings ensure proper CPU and MMU handling for legacy guests.
 
-<img src="https://github.com/user-attachments/assets/1176ef78-a6fb-49a7-8def-96b679d54309" width='600'/>
+<img src="https://github.com/user-attachments/assets/270e0c3b-3b22-4f86-a728-a4417461df64" width="600"/>
 
+## Installing the Windows ME Guest
 
-## Installing the Windows 98 Guest
+Select the Windows ME Guest and select Play:
 
-Select the Windows 98 Guest and select Play:
+<img src="https://github.com/user-attachments/assets/180d514e-a40f-48d8-b358-105bb99c6be5" width="600"/>
 
+Click into the VM and select option 2 Boot from CD-ROM:
 
+<img src="https://github.com/user-attachments/assets/c5b3d2e5-95de-4b6d-abd3-09796a5012b4" width="600"/>
 
+Select option 1 Start Windows Setup from CD-ROM:
 
+<img src="https://github.com/user-attachments/assets/b258633f-0854-4007-8dfb-3931541cc53d" width="600"/>
 
+Press `↵`:
 
+<img src="https://github.com/user-attachments/assets/229cfa9c-2cfb-4aba-8c50-b9a3609173e0" width="600"/>
+
+Select Configure Unallocated Disk Space (Recommended):
+
+<img src="https://github.com/user-attachments/assets/e0ff4d94-96e2-4008-9d52-9ece313ac22a" width="600"/>
+
+Select Yes, Enable Large Disk Support:
+
+<img src="https://github.com/user-attachments/assets/fac33f5e-109d-42a0-b0d2-a2c428fff175" width="600"/>
+
+Press `↵`:
+
+<img src="https://github.com/user-attachments/assets/2a43933e-122b-4d43-9ebc-e33b7a228593" width="600"/>
+
+Click into the VM and select option 2 Boot from CD-ROM:
+
+<img src="https://github.com/user-attachments/assets/c5b3d2e5-95de-4b6d-abd3-09796a5012b4" width="600"/>
+
+Select option 1 Start Windows Setup from CD-ROM:
+
+<img src="https://github.com/user-attachments/assets/b258633f-0854-4007-8dfb-3931541cc53d" width="600"/>
+
+Press `↵`:
+
+<img src="https://github.com/user-attachments/assets/b700f26e-6ec2-4886-8018-034cc615bd27" width="600"/>
+
+Select Next:
+
+<img src="https://github.com/user-attachments/assets/0afc8fea-6f26-4b68-90dd-c4f6cf902320" width="600"/>
+
+Select Next:
+
+<img src="https://github.com/user-attachments/assets/4f2d4bf3-ff55-4b87-842a-801659363388" width="600"/>
+
+Select Typical and select Next:
+
+<img src="https://github.com/user-attachments/assets/8df77e6b-cb61-4319-b67a-9a5af1fb0f27" width="600"/>
+
+Select Install the Most Common COmponents and select Next:
+
+<img src="https://github.com/user-attachments/assets/c2db842c-3ea2-49c9-b2a9-1f4e8b504119" width="600"/>
+
+Input the computer anme and select Next:
+
+<img src="https://github.com/user-attachments/assets/7e3d8153-4855-4d57-9be6-6a22074ac94b" width="600"/>
+
+Select your Country/Region and select Next:
+
+<img src="https://github.com/user-attachments/assets/17f886c5-e2ab-4837-9fd3-925337df02d2" width="600"/>
+
+Select yout Time Zone and select Next:
+
+<img src="https://github.com/user-attachments/assets/26c3c7d0-d610-4a21-890b-5f0679e3ed32" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/d93940ba-1234-431e-a013-c19f772e533d" width="600"/>
+
+Input your User Name and select Next:
+
+<img src="https://github.com/user-attachments/assets/00b3e2ee-17cf-4903-9b02-c1c601908590" width="600"/>
+
+Accept the License Agreement and select Next:
+
+<img src="https://github.com/user-attachments/assets/368e18c7-2d09-4146-b83d-77b21d8edd28" width="600"/>
+
+Input the product key supplied by WinWorld and select next:
+
+<img src="https://github.com/user-attachments/assets/a4a5ab47-f706-4af2-bd90-aac4c8c11a65" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/0cd43dcc-c420-44ab-ac77-74174c8ec63e" width="600"/>
+
+Input your User Name and log in to the Windows ME Desktop:
+
+<img src="https://github.com/user-attachments/assets/337a8c19-cffc-400e-b3e8-294fb9b05a74" width="600"/>
+
+## Installing Windows ME Updates
+
+Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src="https://github.com/user-attachments/assets/489ae5e3-a3be-4a29-8af4-4a71e15f0062" width="600"/>
+
+Select Browse:
+
+<img src="https://github.com/user-attachments/assets/9cc3e8e5-7b32-42c4-81c2-c226a01fcb20" width="600"/>
+
+Select the Windows ME Update CD and select Open:
+
+<img src="https://github.com/user-attachments/assets/74a737ce-0272-49df-b020-abcb04d28af8" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/b9066d9f-d165-4ab2-9a3a-1ee8b3dcf7bb" width="600"/>
+
+Select Yes:
+
+<img src="https://github.com/user-attachments/assets/ad76b8d7-1f02-41ce-83be-49efd6d756b5" width="600"/>
+
+The Windows ME Update CD will display using Autorun. Select Update Windows:
+
+<img src="https://github.com/user-attachments/assets/d5b79a24-8317-4823-b4f3-c36275bfb9b9" width="600"/>
+
+To proceed input `Y`:
+
+<img src="https://github.com/user-attachments/assets/96465cd4-482b-4496-ae69-996ab8e8176c" width="600"/>
+
+And then `h`:
+
+<img src="https://github.com/user-attachments/assets/518a35eb-50c5-45b3-9f0c-45bb70ddb0b9" width="600"/>
+
+Select option 1 Internet Explorer 5.5 Service Pack 1:
+
+<img src="https://github.com/user-attachments/assets/c01ba2c2-74a3-4fb0-b54a-c185f20cacea" width="600"/>
+
+And then `h`:
+
+<img src="https://github.com/user-attachments/assets/f1252924-0f7d-499d-8f13-e62a927f4d89" width="600"/>
+
+Select option 1 Windows Media Player 7.1:
+
+<img src="https://github.com/user-attachments/assets/2bd15d2b-e7b3-4a31-9e8b-b1ebe5b2241d" width="600"/>
+
+And then `h`:
+
+<img src="https://github.com/user-attachments/assets/46b9bf99-c226-498c-bfa2-6b113ce3d95f" width="600"/>
+
+Windows ME will install updates and restart the Windows ME Guest multiple times:
+
+<img src="https://github.com/user-attachments/assets/443ecd96-d931-41ae-b93b-26ac08b60b58" width="600"/>
 
 
 
