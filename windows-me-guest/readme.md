@@ -630,3 +630,123 @@ Python will be used as an example of installing a program on Windows ME. The ins
 
 The pywin32, version 2.18 installer for Python 2.5 needs to be downloaded.
 
+These installers can be dragged from the Windows 11 Host to the Windows ME Guest:
+
+<img src="https://github.com/user-attachments/assets/9a854c50-075a-40f6-90a5-7ce9e6cea3b1" width="600"/>
+
+The Python installer can be launched:
+
+<img src="https://github.com/user-attachments/assets/656a7155-f866-4681-b10b-e9711100f884" width="600"/>
+
+Select Install for All Users and select Next:
+
+<img src="https://github.com/user-attachments/assets/a2ccb7a6-8ece-4aea-8a7f-1486c80c9793" width="600"/>
+
+Select Next:
+
+<img src="https://github.com/user-attachments/assets/cf176dac-0366-49cf-bacb-e11234b8b88c" width="600"/>
+
+Select Next:
+
+<img src="https://github.com/user-attachments/assets/5a4d40c3-89b0-4120-9bac-651221967500" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/4afc633c-07b3-4740-90e5-18e53ad2dc1d" width="600"/>
+
+Open My Computer:
+
+<img src="https://github.com/user-attachments/assets/e9fb3f4d-f1bb-40e5-9d8b-0d60bcd93199" width="600"/>
+
+Navigate to the `C:` Drive:
+
+<img src="https://github.com/user-attachments/assets/87943090-e906-403f-aa1e-7d51475365a5" width="600"/>
+
+Select View the Entire Contents of this Drive:
+
+<img src="https://github.com/user-attachments/assets/572d26cf-05c4-4518-9a36-3c901afa13bb" width="600"/>
+
+Python 2.5 is installed in the `Python25` folder:
+
+<img src="https://github.com/user-attachments/assets/f596e3cc-5d3d-4413-899f-3176a42fef79" width="600"/>
+
+In this folder there is the `python.exe`:
+
+<img src="https://github.com/user-attachments/assets/e7194cf0-c328-423b-be2b-22aacc3787b5" width="600"/>
+
+There is no `Scripts` folder or Python Package Manager `pip` in this version of Python. The `Lib` folder contains Python's standard libraries:
+
+<img src="https://github.com/user-attachments/assets/f0a7317d-c897-4091-810c-e98853b73a53" width="600"/>
+
+In this folder is a subfolder called `site-packages`, where third-party libraries are installed:
+
+<img src="https://github.com/user-attachments/assets/01ed1808-ef4f-4174-bb6d-a6c0e9a60871" width="600"/>
+
+Currently it is empty:
+
+<img src="https://github.com/user-attachments/assets/779c698b-04bd-40c3-9243-5e225450e570" width="600"/>
+
+Packages were typically available in `.exe` format. Many packages relied on `pywin32` which can be installed:
+
+<img src="https://github.com/user-attachments/assets/a1e67705-8277-4233-952c-875de1052c15" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/216a541c-06a7-4264-930c-9b09b0f3e52e" width="600"/>
+
+The Python directory and corresponding `site-packages` directory is found. Select next:
+
+<img src="https://github.com/user-attachments/assets/9164df32-4ee5-4908-8db0-d97c36a4296a" width="600"/>
+
+Select Next:
+
+<img src="https://github.com/user-attachments/assets/8da4bc06-0706-4d79-a7b9-45f5c513ab23" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/a58692df-8c6b-4818-b013-4bbdf2653d6b" width="600"/>
+
+These dependencies are now found in `site-packages`:
+
+<img src="https://github.com/user-attachments/assets/5f882b1e-822e-47c5-be83-c23d1db3e73a" width="600"/>
+
+Repeat the same process for `pyserial`. The serial folder is now in `site-packages`:
+
+<img src="https://github.com/user-attachments/assets/44e322e6-6c90-4e73-a7c8-37ef6d32235e" width="600"/>
+
+The MSDOS prompt can be used to launch Python. Select Start → Programs → MS-DOS Prompt:
+
+<img src="https://github.com/user-attachments/assets/1fd689ce-07dd-48c6-89b4-c14d461e9d70" width="600"/>
+
+Launch Python using:
+
+```powershell
+C:\Python25\python
+```
+
+<img src="https://github.com/user-attachments/assets/aee46067-8036-4228-9e26-47b777ede8ed" width="600"/>
+
+Notice the prompt changes to `>>>`, the Python prompt. Test Python code can be input such as:
+
+```python
+print 'Hello World!'
+```
+
+<img src="https://github.com/user-attachments/assets/4ddf366d-1712-4bb0-a216-5da5bbd19003" width="600"/>
+
+The pyserial library can be imported using:
+
+```python
+import serial
+```
+
+<img src="https://github.com/user-attachments/assets/4947462d-3931-440d-bed6-e247a1363cfc" width="600"/>
+
+To exit type in:
+
+```python
+exit()
+```
+
+<img src="https://github.com/user-attachments/assets/81d8b3df-2eae-49f3-b66a-b594c695410c" width="600"/>
+
