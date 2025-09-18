@@ -410,6 +410,12 @@ Input your User Name and log in to the Windows ME Desktop:
 
 <img src="https://github.com/user-attachments/assets/337a8c19-cffc-400e-b3e8-294fb9b05a74" width="600"/>
 
+## Backing up the Windows ME Guest
+
+When the Windows ME Guest is powered down the Windows ME Guest VM can be backed up by copying the folder Windows Me found in Documents → Virtual Machines on the Windows 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/bb312563-14ec-41c7-9251-a4c0b6709996" width="600"/>
+
 ## Installing Windows ME Updates
 
 Select Player → Removable Devices → CD/DVD → Settings:
@@ -463,6 +469,28 @@ And then `h`:
 Windows ME will install updates and restart the Windows ME Guest multiple times:
 
 <img src="https://github.com/user-attachments/assets/443ecd96-d931-41ae-b93b-26ac08b60b58" width="600"/>
+
+If error messages display:
+
+<img src="https://github.com/user-attachments/assets/4dfecf3e-95df-4b1a-b565-cbb6c10e66a2" width="600"/>
+
+Select Player → Send Ctrl+Alt+Del:
+
+<img src="https://github.com/user-attachments/assets/1f5c941a-2577-43a5-88f6-140c5ff04201" width="600"/>
+
+Then select Shut Down:
+
+<img src="https://github.com/user-attachments/assets/348e8592-5e37-4e9b-a44c-11219428a6d4" width="600"/>
+
+Installation of Updates will proceed once rebooted:
+
+<img src="https://github.com/user-attachments/assets/988eec74-6012-4dae-9a94-78c374f42e48" width="600"/>
+
+You will be informed that all updates are complete. Press `h` to restart the Windows ME Guest:
+
+<img src="https://github.com/user-attachments/assets/558ca6f9-5448-4344-a27f-c43894a0b544" width="600"/>
+
+
 
 
 
