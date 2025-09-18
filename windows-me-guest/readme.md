@@ -490,7 +490,7 @@ You will be informed that all updates are complete. Press `h` to restart the Win
 
 <img src="https://github.com/user-attachments/assets/558ca6f9-5448-4344-a27f-c43894a0b544" width="600"/>
 
-
+## Installing VMware Tools
 
 
 
