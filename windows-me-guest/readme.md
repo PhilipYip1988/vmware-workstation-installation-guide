@@ -490,9 +490,95 @@ You will be informed that all updates are complete. Press `h` to restart the Win
 
 <img src="https://github.com/user-attachments/assets/558ca6f9-5448-4344-a27f-c43894a0b544" width="600"/>
 
+## Installing Optional Updates
+
+Install the following optional updates:
+
+* DirectX 9.0c (w/ updates)
+  * Components → DurectX → 9.0c → DXSetup.exe
+  * Components → DirectX → 9.0c Updates → WindowsME.Windows98SE-KB904706-DX9-x86-ENU.exe
+* Microsoft .NET Framework 1.0, 1.1 and 2.0 (w/ updates)
+  * Components → Microsoft .NET Framework → 1.0 → dotnetfx.exe
+  * Components → Microsoft .NET Framework → 1.0 → Updates → NDP1.0sp3-KB867461-X86-Enu.exe
+  * Components → Microsoft .NET Framework → 1.0 → Updates → NDP1.0sp3-KB886906-X86-Enu.exe
+  * Components → Microsoft .NET Framework → 1.1 → dotnetfx.exe
+  * Components → Microsoft .NET Framework → 1.1 → Updates → NDP1.1sp1-KB867460-X86.exe
+  * Components → Microsoft .NET Framework → 1.1 → Updates → NDP1.1sp1-KB886903-X86.exe
+  * Components → Microsoft .NET Framework → 2.0 → dotnetfx.exe
+* Microsoft XML Core Services 2.6 SP3, 3.0 SP7 and 4.0 SP2 (w/ updates)
+  * Components → Microsoft XML Core Services → 2.6 SP3 → msxml2.msi
+  * Components → Microsoft XML Core Services → 2.6 SP3 → Updates → kb887606_msxml2.6_x86.exe
+  * Components → Microsoft XML Core Services → 3.0 SP7 → msxml3.msi
+  * Components → Microsoft XML Core Services → 4.0 SP2 → msxml4.msi
+  * Components → Microsoft XML Core Services → 4.0 SP2 → Updates → kb887606_msxml4.0_x86.exe
+* Visual Basic Runtimes
+  * Components → Visual Basic Runtime → 6.0 SP6 → vbrun60sp6.exe
+* Visual C++ Runtimes (6.0 and 2005 SP1 w/ MFC Security Update)
+  * Components → Visual C++ Runtime → 6.0 SP6 → INSTALL.BAT
+* Windows Script 5.6
+  * Components → Windows Script → 5.6 → Windows9x-Script56-KB917344-x86-enu.exe
+
 ## Installing VMware Tools
 
+Select Player → Manage → Install VMware Tools:
 
+<img src="https://github.com/user-attachments/assets/243fbaf8-d042-4911-b9c7-bc2fb811b583" width="600"/>
+
+This will give a download link to the `winPre2k.iso`:
+
+<img src="https://github.com/user-attachments/assets/b2f73a6b-930b-42ea-8dbf-6b2bcacf9e13" width="600"/>
+
+Select Player → Removable Devices → CD/DVD → Settings:
+
+<img src="https://github.com/user-attachments/assets/94c7ddfc-1209-4420-8a2a-f5538aac5596" width="600"/>
+
+Then Browse:
+
+<img src="https://github.com/user-attachments/assets/e5200d16-e399-4e22-a0a0-9b9e9758a3b7" width="600"/>
+
+Select the `winPre2K.iso` and select Open:
+
+<img src="https://github.com/user-attachments/assets/a00e80f8-c166-4a15-b0fa-2386ec3ca650" width="600"/>
+
+Select Yes:
+
+<img src="https://github.com/user-attachments/assets/9f3efcb6-c087-4567-ad77-748fc39802cb" width="300"/>
+
+Select Next:
+
+<img src="https://github.com/user-attachments/assets/78020d99-1454-4088-8c44-3ff90e82ba9c" width="600"/>
+
+Select Complete and select Next:
+
+<img src="https://github.com/user-attachments/assets/0f1b5398-fe67-4c19-84fb-11828bb1d07a" width="600"/>
+
+Select Install:
+
+<img src="https://github.com/user-attachments/assets/d47c5552-b462-4c3b-a8eb-2ef68883d4b7" width="600"/>
+
+Select Finish:
+
+<img src="https://github.com/user-attachments/assets/f82e8bd9-933a-4c60-ad54-e54981f7a965" width="600"/>
+
+Select Yes:
+
+<img src="https://github.com/user-attachments/assets/1f9fd25e-db3a-4824-be0f-ee41a872a5d8" width="600"/>
+
+After rebooting, right click the Desktop and select Properties::
+
+<img src="https://github.com/user-attachments/assets/a6c541cf-cd26-4b45-846f-8e961348c999" width="600"/>
+
+Go to settings and maximise the resolution slider and select Apply:
+
+<img src="https://github.com/user-attachments/assets/baed7789-f51b-462c-b62a-e4c65b77f66a" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/9e04993a-7ecb-48cf-a5cb-2b0d2d22ab52" width="600"/>
+
+Select Yes:
+
+<img src="https://github.com/user-attachments/assets/bfd622d1-2f96-4e2f-bb59-67a99565d521" width="600"/>
 
 
 ## Installing Python
