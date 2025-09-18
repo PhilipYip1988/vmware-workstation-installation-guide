@@ -2,6 +2,10 @@
 
 Step-by-step guides for VMware Workstation 17.6.4, focused on running Windows 95 in a virtual environment. Due to the operating system’s age, shared folders and USB passthrough are not functional, and serial port passthrough is limited, typically restricted to COM1. Windows 95 support is highly limited, so users often prefer Windows 98 SE for better hardware compatibility and device support. These guides are useful for researchers, lab technicians, and IT staff needing to run legacy software and control older laboratory instruments on modern systems.
 
+## YouTube Video
+
+* [YouTube](https://www.youtube.com/watch?v=aBUb3udzVHI&pp=ygUwaW5zdGFsbGluZyB3aW5kb3dzIDk1IGFzIGEgdmlydHVhbCBtYWNobmUgdm13YXJl)
+
 ## Notes
 
 VMware Workstation Player 17.6.4 has Windows 95 as an option for a Virtual Machine. However Windows 95 is regarded as an ancient legacy Operating System and isn't tested by Broadcom. Modern processors are significantly faster than the processers available when WIndows 98 SE was released. As a consequence the timing for some operations is divided by 0 and there is a divide-by-zero error that needs to be addressed using patcher9x.
