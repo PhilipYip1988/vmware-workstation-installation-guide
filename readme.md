@@ -19,22 +19,18 @@ A Virtual Machine Guest of the Expected Legacy Versions of Windows Version can b
 * [Windows 8.1 Guest](./windows-81-guest/readme.md)
 * [Windows 7 Guest](./windows-7-guest/readme.md)
 * [Windows Vista Guest](./windows-vista-guest/readme.md)
-* [Windows XP Guest](./windows-xp-guest/readme.md)
-* [Windows ME Guest](./windows-me-guest/readme.md)
-* [Windows 2000 Guest](./windows-2000-guest/readme.md)
-* [Windows 98SE Guest](./windows-98SE-guest/readme.md)
-* [Windows 95 Guest](./windows-95-guest/readme.md)
 
+In the 1990s there were two branches of Operating Systems. NT was the Business branch of Operating Systems and 9x was the Consumer branch of Operating Systems. The Consumer branch was DOS based and was more flexible when it came to hardware and driver support
 
-* [Windows 10 (1709) Guest](./windows-1709-guest/readme.md)
-* [Windows 8.1 Guest](./windows-81-guest/readme.md)
-* [Windows 7 Guest](./windows-7-guest/readme.md)
-* [Windows Vista Guest](./windows-vista-guest/readme.md)
-
-
-|NT (Business)|Home|
+|NT (Business)|9x (Home)|
 |---|---|
-|[Windows XP Guest](./windows-xp-guest/readme.md)|
+|[Windows XP Guest](./windows-xp-guest/readme.md)|↖|
 |[Windows 2000 Guest](./windows-2000-guest/readme.md)|[Windows ME Guest](./windows-me-guest/readme.md)|
-|[Windows 98SE Guest](./windows-98SE-guest/readme.md)||
-|[Windows 95 Guest](./windows-95-guest/readme.md)||
+|Windows NT 4.0|[Windows 98SE Guest](./windows-98SE-guest/readme.md)||
+|Windows NT 3.x|[Windows 95 Guest](./windows-95-guest/readme.md)||
+
+* Windows 3.1
+* Windows 2.x
+* Windows 1.0
+
+
