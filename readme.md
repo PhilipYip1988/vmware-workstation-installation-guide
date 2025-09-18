@@ -29,8 +29,8 @@ In the 1990s, there were two main branches of Windows operating systems. The NT 
 |Windows NT 4.0|[Windows 98SE Guest](./windows-98SE-guest/readme.md)||
 |Windows NT 3.x|[Windows 95 Guest](./windows-95-guest/readme.md)||
 
-Windows 1.x to 3.x were early operating systems that were 16-bit only and offered very limited support for virtualisation. These Operating Systems also had very limited hardware support and were before USB. VMware Tools is a 32-bit or 64-bit application, so it cannot run natively on these early Windows versions:
+Windows 1 to 3.1 were early operating systems that were 16-bit only and offered very limited support for virtualisation. These Operating Systems had very limited hardware support. In addition VMware Tools is a 32-bit or 64-bit application and no 16 Bit version was created for these early Windows versions:
 
 * Windows 3.1
-* Windows 2.x
+* Windows 2.0
 * Windows 1.0
