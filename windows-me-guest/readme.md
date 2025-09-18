@@ -580,6 +580,45 @@ Select Yes:
 
 <img src="https://github.com/user-attachments/assets/bfd622d1-2f96-4e2f-bb59-67a99565d521" width="600"/>
 
+Right click Computer and select Properties:
+
+<img src="https://github.com/user-attachments/assets/d6db889d-6a53-4e2f-9042-1d637c4708df" width="600"/>
+
+Under display adaptors the VMware SVGA II displays and under Sound, Audio and Game Controllers, the Creative AudioPCI displays:
+
+<img src="https://github.com/user-attachments/assets/f043f9de-6cf9-41c2-969c-5772df2709b0" width="600"/>
+
+Under Other Devices, there are two devices without a driver. PCI System Peripheral and PCI Universal Serial Bus. More details about these can be seen by going to Start → Run and inputting
+
+```
+hwinfo /ui
+```
+
+<img src="https://github.com/user-attachments/assets/52938231-8aa3-4c02-8f6f-97bf2512119c" width="600"/>
+
+Then pressing `Ctrl`+`f` to search for the two devices:
+
+<img src="https://github.com/user-attachments/assets/f47e8b3b-df81-46aa-b6e7-316080645830" width="600"/>
+
+The hardware ID for the PCI System Peripheral is:
+
+`HKEY_LOCAL_MACHINE\enum\PCI\VEN_15AD&DEV_0740&SUBSYS_074015AD&REV_10\BUS_00&DEV_07&FUNC_07`
+
+<img src="https://github.com/user-attachments/assets/fe0131e5-5cfe-4679-82d1-ca8a1e187b5f" width="600"/>
+
+Which is the VMware VMCI Bus which is used by VMware for folder sharing and dragging and dropping files:
+
+According to Broadcom there is no Windows 98 driver for this device:
+
+> For Windows 98 and Windows 98SE, there is no support for the VMCI device in VMware Tools. 
+
+[Broadcom Legacy Article 1023129](https://knowledge.broadcom.com/external/article?legacyId=1023129)
+
+The hardware ID for the PCI Universal Serial Bus is:
+
+`HKEY_LOCAL_MACHINE\enum\PCI\VEN_15AD&DEV_0770&SUBSYS_077015AD&REV_00\188800`
+
+<img src="https://github.com/user-attachments/assets/cb7a95f5-bcd3-4089-be2c-a8c6fa5d4540" width="600"/>
 
 ## Installing Python
 
