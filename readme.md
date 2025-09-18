@@ -20,7 +20,7 @@ A Virtual Machine Guest of the Expected Legacy Versions of Windows Version can b
 * [Windows 7 Guest](./windows-7-guest/readme.md)
 * [Windows Vista Guest](./windows-vista-guest/readme.md)
 
-In the 1990s there were two branches of Operating Systems. NT was the Business branch of Operating Systems and 9x was the Consumer branch of Operating Systems. The Consumer branch was DOS based and was more flexible when it came to hardware and driver support
+In the 1990s, there were two main branches of Windows operating systems. The NT branch targeted business and enterprise users, while the 9x branch was aimed at consumers. The consumer branch was DOS-based and generally offered more flexibility with hardware and driver support. The two branches eventually merged with the release of Windows XP, unifying business and consumer editions under the NT architecture:
 
 |NT (Business)|9x (Home)|
 |---|---|
@@ -29,8 +29,8 @@ In the 1990s there were two branches of Operating Systems. NT was the Business b
 |Windows NT 4.0|[Windows 98SE Guest](./windows-98SE-guest/readme.md)||
 |Windows NT 3.x|[Windows 95 Guest](./windows-95-guest/readme.md)||
 
+Windows 1.x to 3.x were early operating systems that were 16-bit only and offered very limited support for virtualisation. These Operating Systems also had very limited hardware support and were before USB. VMware Tools is a 32-bit or 64-bit application, so it cannot run natively on these early Windows versions:
+
 * Windows 3.1
 * Windows 2.x
 * Windows 1.0
-
-
