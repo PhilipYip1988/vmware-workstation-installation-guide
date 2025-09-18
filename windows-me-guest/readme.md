@@ -26,7 +26,7 @@ Windows ME is considered abandonware and the Windows ME ISO and Product Key can 
 
 * [Windows ME CD](https://winworldpc.com/product/windows-me/final)
 
-### Windows ME Update CD
+### Windows ME Update CD ISO
 
 Windows ME Update CD can be used to patch a Windows ME install:
 
