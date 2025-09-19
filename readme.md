@@ -15,7 +15,7 @@ Virtual Machines are often used to continue to run bespoke legacy software for a
 
 A Virtual Machine Guest of the Expected Legacy Versions of Windows Version can be created and the USB or Serial Port Device can be connected to the Virtual Machine. The Drivers and the Software used for the USB or Serial Port Device can be installed in the Virtual Machine.
 
-|NT (Unified Line)|
+|NT (Modern Unified Line)|
 |---|
 |**[Windows 10 (1709) Guest](./windows-1709-guest/readme.md)**|
 |[Windows 8.1 Guest](./windows-81-guest/readme.md)|
@@ -33,7 +33,7 @@ In the 1990s, there were two main branches of Windows operating systems. The NT 
 
 Windows 1 to 3.1 were early operating systems that were 16-bit only and offered very limited support for virtualisation. These Operating Systems had very limited hardware support. In addition VMware Tools is a 32-bit or 64-bit application and no 16 Bit version was created for these early Windows versions:
 
-|Windows 3.x (Line)|
+|3.x (Early Line)|
 |---|
 |Windows 3.1|
 |Windows 2.0|
