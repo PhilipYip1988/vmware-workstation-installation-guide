@@ -35,7 +35,7 @@ As a result, the NT operating systems most commonly virtualised are Windows 2000
 |~~Windows NT 4.0~~|[**Windows 98SE Guest**](./windows-98SE-guest/readme.md)|
 |~~Windows NT 3.x~~|[Windows 95 Guest](./windows-95-guest/readme.md)||
 
-Windows 1.0 through 3.1 were early 16-bit operating systems with very limited virtualisation support. They supported only a narrow range of hardware, and only a small number of DOS applications could run on them. Most of these DOS applications, however, are compatible with Windows 98 SE, which is generally preferred for virtualisation. Additionally, VMware Tools is available only as a 32-bit or 64-bit application, and no 16-bit version was ever created for these early Windows releases.
+Windows 1.0 through 3.1 were early 16-bit operating systems with very limited virtualisation support. They supported only a narrow range of hardware, and only a small number of DOS applications could run on them. Most of these DOS applications, however, are compatible with Windows 98 SE, which is generally preferred for virtualisation. Additionally, VMware Tools is available only as a 32-bit or 64-bit application, and no 16-bit version was ever created for these early Windows releases. Installing these even on virtual hardware is moderately difficult and there is a limited advantage in doing so because device passthrough is also limited. The [PCjs Explorer](https://www.pcjs.org/software/pcx86/) emulates most of these OS in emulated Legacy PCs within the browser.
 
 |3.x (Early Line)|
 |---|
