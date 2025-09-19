@@ -19,9 +19,9 @@ In the 2000s, Windows Vista was released, representing a significant upgrade ove
 
 |NT (Modern Unified Line)|
 |---|
-|[**Windows 10 (1709) Guest**](./windows-1709-guest/readme.md)**|
+|[**Windows 10 (1709) Guest**](./windows-1709-guest/readme.md)|
 |[Windows 8.1 Guest](./windows-81-guest/readme.md)|
-|[**Windows 7 Guest**](./windows-7-guest/readme.md)**|
+|[**Windows 7 Guest**](./windows-7-guest/readme.md)|
 |[Windows Vista Guest](./windows-vista-guest/readme.md)|
 
 In the 1990s, Windows operating systems were divided into two main branches. The NT branch targeted business and enterprise users, while the 9x branch was aimed at consumers. The consumer-focused 9x systems were DOS-based, offering greater flexibility with hardware and driver support. In contrast, the NT branch was built from the ground up for specialized hardware, such as workstations and servers, emphasizing stability and security. Because of this, NT did not support typical consumer PCs or standard consumer hardware and drivers. Windows 2000 extended NT’s capabilities to include broader support for consumer devices, and eventually the two branches merged with the release of Windows XP. This unified NT architecture combined the stability of the business-oriented systems with the wide driver compatibility of the consumer line.
@@ -30,9 +30,9 @@ As a result, the NT operating systems most commonly virtualised are Windows 2000
 
 |NT (Business Branch)|9x (Consumer Branch)|
 |---|---|
-|[**Windows XP Guest**](./windows-xp-guest/readme.md)**|↖|
+|[**Windows XP Guest**](./windows-xp-guest/readme.md)|↖|
 |[**Windows 2000 Guest**](./windows-2000-guest/readme.md)**|[Windows ME Guest](./windows-me-guest/readme.md)|
-|~~Windows NT 4.0~~|[**Windows 98SE Guest**](./windows-98SE-guest/readme.md)**|
+|~~Windows NT 4.0~~|[**Windows 98SE Guest**](./windows-98SE-guest/readme.md)|
 |~~Windows NT 3.x~~|[Windows 95 Guest](./windows-95-guest/readme.md)||
 
 Windows 1.0 through 3.1 were early 16-bit operating systems with very limited virtualisation support. They supported only a narrow range of hardware, and only a small number of DOS applications could run on them. Most of these DOS applications, however, are compatible with Windows 98 SE, which is generally preferred for virtualisation. Additionally, VMware Tools is available only as a 32-bit or 64-bit application, and no 16-bit version was ever created for these early Windows releases.
