@@ -70,12 +70,6 @@ Seklect Download:
 
 ## Installing VMWare Workstation Player
 
-Extract the `.tar` to get to the extracted folder with the `.exe` file:
-
-<img src='./images/img_007.png' alt='img_007' width='600'/>
-
-<img src='./images/img_008.png' alt='img_008' width='600'/>
-
 Launch the setup.exe to begin the install:
 
 <img src='./images/img_009.png' alt='img_009' width='600'/>
