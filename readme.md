@@ -31,7 +31,7 @@ As a result, the NT operating systems most commonly virtualised are Windows 2000
 |NT (Business Branch)|9x (Consumer Branch)|
 |---|---|
 |[**Windows XP Guest**](./windows-xp-guest/readme.md)|↖|
-|[**Windows 2000 Guest**](./windows-2000-guest/readme.md)**|[Windows ME Guest](./windows-me-guest/readme.md)|
+|[**Windows 2000 Guest**](./windows-2000-guest/readme.md)|[Windows ME Guest](./windows-me-guest/readme.md)|
 |~~Windows NT 4.0~~|[**Windows 98SE Guest**](./windows-98SE-guest/readme.md)|
 |~~Windows NT 3.x~~|[Windows 95 Guest](./windows-95-guest/readme.md)||
 
