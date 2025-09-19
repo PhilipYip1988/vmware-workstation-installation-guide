@@ -30,27 +30,43 @@ Select Restart Now:
 
 ## Downloading VMware Workstation
 
-Although a number of improvements have been made in VMware itself. The front-end to the website redirects to the Broadcom website:
+The website for VMware Workstation is here:
 
 * [Broadcom: Download VMware Workstation Pro](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)
 
-There have been a number of issues logging in to the Broadcom website. If there are issues the backend to the software downloads can be used:
+Selecting Download:
 
-* [VMware Workstation](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/)
+<img src="https://github.com/user-attachments/assets/1c29d1f5-5319-491b-a34e-31f7d8168306" width="600"/>
 
-Download the compatible version of VMware Workstation Player from VMware. This is in the core folder and has the extensions `.bundle.tar`.
+Redirects to the Broadcom website which requires an account:
 
-<img src='./images/img_001.png' alt='img_001' width='600'/>
+<img src="https://github.com/user-attachments/assets/1e0cebf9-7aea-4b20-9736-cb4bc725f6c4" width="600"/>
 
-<img src='./images/img_002.png' alt='img_002' width='600'/>
+<img src="https://github.com/user-attachments/assets/060013ee-3af8-4ed5-9f7e-6f9d2d530ccb" width="600"/>
 
-<img src='./images/img_003.png' alt='img_003' width='600'/>
+Once logged in, you are unfortunately redirected to the Broadcom Dashboard and not the VMware Workstation Download:
 
-<img src='./images/img_004.png' alt='img_004' width='600'/>
+<img src="https://github.com/user-attachments/assets/8676a74f-c1cb-4591-8e34-86c6d43c828a" width="600"/>
 
-<img src='./images/img_005.png' alt='img_005' width='600'/>
+Go back to the tab with the website for VMware Workstation and select Download again:
 
-<img src='./images/img_006.png' alt='img_006' width='600'/>
+<img src="https://github.com/user-attachments/assets/a6d58e81-5e3d-4a3f-adcb-724e0c338222" width="600"/>
+
+This now displays the Free Software Downloads:
+
+<img src="https://github.com/user-attachments/assets/cea354a2-6ca7-4993-9e8a-80e7308d2849" width="600"/>
+
+Scroll down and select VMware Workstation Pro:
+
+<img src="https://github.com/user-attachments/assets/29fe962d-75de-4499-aae0-f1e4ee59dba5" width="600"/>
+
+Select the latest version:
+
+<img src="https://github.com/user-attachments/assets/b678ccc1-a01d-4402-9570-2964d20e29ba" width="600">
+
+Seklect Download:
+
+<img src="https://github.com/user-attachments/assets/186e217a-f856-44b7-beca-9aed5c53c4d9" width="600"/>
 
 ## Installing VMWare Workstation Player
 
