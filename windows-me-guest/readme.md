@@ -750,3 +750,343 @@ exit()
 
 <img src="https://github.com/user-attachments/assets/81d8b3df-2eae-49f3-b66a-b594c695410c" width="600"/>
 
+## USB Device Passthrough
+
+A Brother QL-570 label printer will be used as an example of a USB Device that can be connected to the Windows 2000 VM. The [Brother QL-570 Windows 2000](https://support.brother.com/g/b/downloadlist.aspx?c=nz&lang=en&prod=lpql570eas&os=43) Driver can be downloaded from from the Brother website using the Windows 11 Hst PC and copied over to the Windows 2000 VM Desktop:
+
+<img src="https://github.com/user-attachments/assets/23de78d9-4710-43c4-bd88-26296cf46a4d" width="600"/>
+
+The driver can be installed:
+
+<img src="https://github.com/user-attachments/assets/5d65733a-7301-4df4-8293-024db6afe83c" width="600"/>
+
+Select unzip:
+
+<img src="https://github.com/user-attachments/assets/88b090fa-0773-46ed-b9c2-c33503008e3f" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/ba47ea42-3bc0-490f-a03b-6142d69ecf43" width="600"/>
+
+Select close:
+
+<img src="https://github.com/user-attachments/assets/4972149e-56e8-4297-a681-68c55c66c559" width="600"/>
+
+Go to the extracted folder:
+
+<img src="https://github.com/user-attachments/assets/8efcc74e-874b-45c7-8193-ea19c6ab3c47" width="600"/>
+
+Launch the setup:
+
+<img src="https://github.com/user-attachments/assets/ef8b20f1-9beb-4e2a-b8cb-937cd5b8399b" width="600"/>
+
+Select Start:
+
+<img src="https://github.com/user-attachments/assets/f2d0c8a5-017a-4a3e-b8bd-cde4a32d506a" width="600"/>
+
+The driver install will prompt for connection to the printer:
+
+<img src="https://github.com/user-attachments/assets/5076eb5d-cf36-4c82-8237-d775351b3b27" width="600"/>
+
+When a USB device is connected to the Windows 11 Host PC and the Windows 2000 VM is launched, there will be a prompt to connect it to the Windows 11 Host PC or the Windows 2000 VM:
+
+<img src="https://github.com/user-attachments/assets/c96f66a3-ffad-4a80-8256-a604c2103eb4" width="600"/>
+
+Alternatively the USB device can be connected by going to Player → Removable Devices → Brother QL-570 and selecting Connect:
+
+<img src="https://github.com/user-attachments/assets/b82aee5b-9757-4821-8ace-8e2540336a16" width="600"/>
+
+Sellect OK:
+
+<img src="https://github.com/user-attachments/assets/fefa2ae7-28c1-4579-a620-15b28b50fd70" width="600"/>
+
+The Brother QL-570 passes through to the Windows 2000 VM via the Windows 11 host USB port is detected:
+
+<img src="https://github.com/user-attachments/assets/a751ce38-4394-4d4f-af9a-9a5097031185" width="600"/>
+
+To complete the printer driver installation the Windows 2000 VM needs to be restarted:
+
+<img src="https://github.com/user-attachments/assets/92c00a06-aa10-489d-a400-bceb47b2b63d" width="600"/>
+
+The p-touch editor can now be installed:
+
+<img src="https://github.com/user-attachments/assets/5141a7c1-5976-46f6-b588-78f534f3bbf8" width="600"/>
+
+Select yes:
+
+<img src="https://github.com/user-attachments/assets/7697e79d-44e9-4faa-8c9c-b915d2d3a615" width="600"/>
+
+Input your user name and select next:
+
+<img src="https://github.com/user-attachments/assets/5344cafa-9245-46d6-a60b-60a2002dcc69" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/0b38c79d-a95b-4153-b6a1-eeb5e9a93f9d" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/e855638a-50ae-479c-a5d7-81b43e6340b5" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/d805eb43-e690-48c7-94da-b3dde348806e" width="600"/>
+
+Select next:
+
+<img src="https://github.com/user-attachments/assets/0bda3352-56a4-4898-8ace-245f65483348" width="600"/>
+
+Select finish and restart the Windows 2000 VM:
+
+<img src="https://github.com/user-attachments/assets/e3a40afd-3db8-40ce-8513-f917f8d689c4" width="600"/>
+
+Launch the p-touch editor:
+
+<img src="https://github.com/user-attachments/assets/9b640093-b1c5-49b0-8db8-6838ddd00868" width="600"/>
+
+Select the BrotherQL-570 printer:
+
+<img src="https://github.com/user-attachments/assets/66d489bc-5998-415f-be5b-f71375db8787" width="600"/>
+
+Create a test label:
+
+<img src="https://github.com/user-attachments/assets/7e17576e-63de-404a-a01b-5370cff561cd" width="600"/>
+
+Select print:
+
+<img src="https://github.com/user-attachments/assets/d3f090f4-587e-4ecb-a011-bc3a83a02220" width="600"/>
+
+The ptouch editor on the Windows 2000 VM prints to the QL-570 attached to the host PC using VMwares USB passthrough:
+
+<img src="https://github.com/user-attachments/assets/cd119cbf-51b5-4274-9715-b4646a5d361c" width="600"/>
+
+## Serial Port Passthrough
+
+Close the Windows 2000 VM. Attach a USB to Serial Port to the Window 11 Host PC:
+
+<img src="https://github.com/user-attachments/assets/0ef84622-10c0-4bff-8cf1-9edf492137ba" width="600"/>
+
+On the Windows 11 Host PC, right click the Start Button and select Device Manager:
+
+<img src="https://github.com/user-attachments/assets/622bcb44-367d-42b6-aaf8-fea04bf18ebd" width="400"/>
+
+Expand ports (COM & LPT). In this example, the USB Serial COM Port is COM3:
+
+<img src="https://github.com/user-attachments/assets/7a133968-f0fc-4b26-9d75-2e4233f0dc1e" width="600"/>
+
+Right click it and select properties:
+
+<img src="https://github.com/user-attachments/assets/530c8c0b-ac42-4ad8-8ef4-7d1dbbe75aa5" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects:
+
+<img src="https://github.com/user-attachments/assets/60686db0-b415-4ea7-a82e-a758329f4fb0" width="600"/>
+
+The port number can be changed by selecting Advanced:
+
+<img src="https://github.com/user-attachments/assets/3ac282d1-9dbc-4a17-b42f-bb3c9aab24f2" width="600"/>
+
+In this case it will be left at port 3:
+
+<img src="https://github.com/user-attachments/assets/04cd83bf-c91f-4ca1-84ae-f93b09257e10" width="600"/>
+
+Open VMware Player and select Edit Virtual Machine Settings:
+
+<img src="https://github.com/user-attachments/assets/865199af-f476-4d3a-b821-41d5568a7058" width="600"/>
+
+Select Add...:
+
+<img src="https://github.com/user-attachments/assets/8ed534f3-f9a8-4c54-b5fc-2103d640e700" width="600"/>
+
+Select Serial Port and Finish:
+
+<img src="https://github.com/user-attachments/assets/3b4c2dc4-84e5-4f27-91df-773f3a9bb67b" width="600"/>
+
+Select Connect at Power On. Autodetect is useful for a single port, but for multipe ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
+
+<img src="https://github.com/user-attachments/assets/98fc0369-8b8a-4299-b7d6-3eed19bf55dc" width="600"/>
+
+Select OK:
+
+<img src="https://github.com/user-attachments/assets/47ce415a-ec42-4ab7-a7ab-eb2b37c83fa9" width="600"/>
+
+Launch the VM:
+
+<img src="https://github.com/user-attachments/assets/c37f2fdb-e39b-46e1-83ac-59fdbabc3d14" width="600"/>
+
+Right click My Computer and select Properties:
+
+<img src="https://github.com/user-attachments/assets/30514a5d-70f4-4bf0-bc5c-245734a565d8" width="600"/>
+
+Select the hardware tab and then device manager:
+
+<img src="https://github.com/user-attachments/assets/fc66c338-8512-4b06-b982-2a7165b15acd" width="600"/>
+
+Expand ports, note the Windows 11 COM3 is passed through to the Windows 2000 VM as COM1:
+
+<img src="https://github.com/user-attachments/assets/072cbe90-58c4-4f9b-8cbe-a8c90480afde" width="600"/>
+
+Right click the communication port and select properties:
+
+<img src="https://github.com/user-attachments/assets/e85d671c-7b30-45c1-9016-fa6b55da28da" width="600"/>
+
+The Baud rate will be shown, in this case 9600 Bits per second. Update this to match the speed the device you want to connect expects (consistent with the settings on the Windows 11 Host):
+
+<img src="https://github.com/user-attachments/assets/af4fa0e1-acdc-481f-a1d6-be3e1799c5ab" width="600"/>
+
+Select Advanced:
+
+<img src="https://github.com/user-attachments/assets/b25ca227-6356-4da1-ad17-8c4b40ff92f5" width="600"/>
+
+Update the COM Port Number to be consistent with the Windows 11 Host:
+
+<img src="https://github.com/user-attachments/assets/dd217523-f84b-415e-a9f7-5730f57ff293" width="600"/>
+
+In this case COM3. Select OK:
+
+<img src="https://github.com/user-attachments/assets/8b395e07-919e-4b87-8acb-07e98dd2fc88" width="600"/>
+
+The Serial Port COM3 is now ready for use in the Windows 2000 VM:
+
+<img src="https://github.com/user-attachments/assets/a2fa4051-045f-4861-9aa4-d8c613e4db07" width="600"/>
+
+I don't have a device that connects via Serial Port, so will test the Serial Port using Python with pyserial. The Serial Port looks like the following:
+
+<img src="https://github.com/user-attachments/assets/3e4d4398-1bfc-420e-8aa5-d5492f80402b" width="600"/>
+
+|Pin Number|Name|
+|---|---|
+|1|Data Carrier Detect (CDC)|
+|2|Received Data (RXD)|
+|3|Transmit Data (TXD)|
+|4|Data Terminal Ready (DTR)|
+|5|Ground (GND)|
+|6|Data Set Ready (DSR)|
+|7|Request to Send (RTS)|
+|8|Clear To Send (CTS)|
+|9|Ring Indicator (RI)|
+
+A Python script will be used which essentially transmits the data using pin 3 and then reads it back using pin 2. A Serial port can only read low `0` and high `1` signals, so any data sent via the Serial Port has to be in the form of a byte. In the basic American Standard for Information Interchange (ASCII), each ASCII character is an 8 bit binary sequence:
+
+| Char | Decimal | Hex  | Binary    |
+|------|---------|------|-----------|
+| H    | 72      | 0x48 | 01001000  |
+| e    | 101     | 0x65 | 01100101  |
+| l    | 108     | 0x6C | 01101100  |
+| l    | 108     | 0x6C | 01101100  |
+| o    | 111     | 0x6F | 01101111  |
+| (space) | 32   | 0x20 | 00100000  |
+| S    | 83      | 0x53 | 01010011  |
+| e    | 101     | 0x65 | 01100101  |
+| r    | 114     | 0x72 | 01110010  |
+| i    | 105     | 0x69 | 01101001  |
+| a    | 97      | 0x61 | 01100001  |
+| l    | 108     | 0x6C | 01101100  |
+| \n   | 10      | 0x0A | 00001010  |
+
+Open notepad:
+
+<img src="https://github.com/user-attachments/assets/d2e87382-eeb1-489c-a455-14fa06bc202b" width="600"/>
+
+Paste in the following code:
+
+```python
+import time
+import serial
+
+# Replace 'COM3' with your serial port
+port = 'COM3'
+baudrate = 9600
+
+# Open the serial port
+ser = serial.Serial(port, baudrate, timeout=1)
+
+time.sleep(2)  # give the port some time to initialize
+
+# Test data
+test_data = b'Hello Serial\n'
+
+# Write data
+ser.write(test_data)
+print('Sent: {}'.format(test_data))
+
+# Read back data
+received = ser.read(len(test_data))
+print('Received: {}'.format(received))
+
+# Check if the loopback worked
+if received == test_data:
+    print('Serial loopback test passed!')
+else:
+    print('Serial loopback test failed!')
+
+ser.close()
+```
+
+<img src="https://github.com/user-attachments/assets/f33acf19-c285-45df-b15e-257079e4cb5a" width="600"/>
+
+Select file → save as:
+
+<img src="https://github.com/user-attachments/assets/f3806b60-0495-4784-874f-dc410702b960" width="600"/>
+
+Save the file as `script.py` ensuring that save as type is All Files and Encoding is UTF-8:
+
+<img src="https://github.com/user-attachments/assets/59be9405-9cb5-416c-a0be-e3219a93a1ca" width="600"/>
+
+The script file is in Documents. Right click the script file and select Properties:
+
+<img src="https://github.com/user-attachments/assets/324ae497-9dae-42f7-9862-c1544cdade63" width="600"/>
+
+Copy the file location:
+
+<img src="https://github.com/user-attachments/assets/2952ccc1-a0c8-45eb-a84e-8e96d08e4a47" width="600"/>
+
+The file path contains spaces:
+
+```powershell
+C:\Documents and Settings\Philip\My Documents\script.py
+```
+
+To prevent CMD from taking `C:\Documents`, `and`, `Settings\Philip\My` and `Documents\script.py` as seperate command line arguments, double quotations much be used:
+
+```powershell
+"C:\Documents and Settings\Philip\My Documents\script.py"
+```
+
+Because this is a long path name, the DOS path is often more convenient:
+
+```powershell
+C:\DOCUME~1\Philip\MYDOCU~1\script.py
+```
+
+The Python script can be launched using:
+
+```powershell
+python C:\DOCUME~1\Philip\MYDOCU~1\script.py
+```
+
+With no pins connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/e0842283-bc24-4526-a8e9-e92c91a986fe" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/b439d546-ebef-403c-b24b-f5ecbd9d1ef8" width="600"/>
+
+With pins 2 and 3 connected, the following shows:
+
+<img src="https://github.com/user-attachments/assets/0ec50a62-e408-469d-ae8f-493599320523" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/80a262c7-1f01-43dc-b989-479977dbdbf5" width="600"/>
+
+The code works as expected and interfaces with the Serial Port which is passed through to the Windows 2000 Guest VM from the Windows 11 Host PC.
+
+## Parallel Port Passthrough
+
+VMware can theoretically passthrough a physical parallel port. However, USB-to-parallel adapters are designed exclusively for printers and do not provide true parallel port functionality for other hardware. By the time of Windows 2000, parallel ports were already considered legacy and were rarely included on new PCs. I do not have a parallel port printer available to test passthrough functionality.
+
+## PCI/PCIe Card Passthrough
+
+VMware does not support direct passthrough of PCI or PCIe cards to a guest virtual machine. Additionally, there are no USB adapters that replicate the functionality of PCI/PCIe expansion cards.
+
+Return to [VMware Installation Guide](../readme.md).
+
+Python is just used as an example of a legacy program to run in a Windows 2000 VM and not covered in detail in this tutorial. For details about using Python, see my other GitHub repository [Python Tutorials](https://github.com/PhilipYip1988/python-tutorials).
