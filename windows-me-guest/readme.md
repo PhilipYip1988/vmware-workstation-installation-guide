@@ -238,7 +238,7 @@ Under Network Adaptor uncheck Connect at Power On. Windows ME has reached end of
 
 <img src="https://github.com/user-attachments/assets/a5370562-1ccc-455d-be85-4700c01bafda" width="600"/>
 
-Leave the USB Controller at the default setting:
+Change the USB Controller to USB 1.1:
 
 <img src="https://github.com/user-attachments/assets/f1c2bfa5-a820-4ce1-ba6e-7a6964a38fa5" width="600"/>
 
@@ -620,6 +620,10 @@ The hardware ID for the PCI Universal Serial Bus is:
 
 <img src="https://github.com/user-attachments/assets/cb7a95f5-bcd3-4089-be2c-a8c6fa5d4540" width="600"/>
 
+This displays when USB 2.0 is selected for USB 1.1. Microsoft provided Windows ME with an advanced USB 1.1 stack but did not create an advanced USB 2.0 Stack. 
+
+The Unofficial USB 2.0 (NUSB33 or NUSB36) stacks designed for Windows 98SE do not work on Windows ME.
+
 ## Installing Python
 
 Python will be used as an example of installing a program on Windows ME. The installer is available here:
@@ -902,7 +906,7 @@ Select Serial Port and Finish:
 
 <img src="https://github.com/user-attachments/assets/3b4c2dc4-84e5-4f27-91df-773f3a9bb67b" width="600"/>
 
-Select Connect at Power On. Autodetect is useful for a single port, but for multipe ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
+Select Connect at Power On. Autodetect is useful for a single port, but for multiple ports, it is more useful to select the serial Port indiviually. In this example COM3 will be used:
 
 <img src="https://github.com/user-attachments/assets/98fc0369-8b8a-4299-b7d6-3eed19bf55dc" width="600"/>
 
